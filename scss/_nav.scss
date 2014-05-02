@@ -1,0 +1,99 @@
+nav { /* Top Level Navigation */
+	width: 66.666%;
+	float: right;
+	margin: 0;
+	padding: 0;
+	ul {
+		list-style-type: none;
+		text-align: right;
+		margin: 0;
+		padding: 0;
+		@media only screen and (max-width: 768px) {
+			display: none;
+		}
+		li {
+			display: inline-block;
+			margin: 0;
+		}
+	}
+}
+nav a { /* Targets all menu links */
+	text-decoration: none;
+	color: #333;
+	padding: 1em;
+	&:hover, &:active, &:focus {
+		color: navy;
+		text-decoration: underline;
+	}
+}
+nav ul ul { /* Targets 1st Level Sub Menu */
+	display: none;
+	position: absolute;
+	z-index: 99999;
+	width: 175px;
+	margin-top: 0.25em;
+	margin-left: -2.5em;
+	li {
+		width: 100%;
+		margin: 0;
+		padding: 0.5em 0;
+	}
+}
+nav ul ul ul { /* Targets 2nd Level Sub Menu */
+	display: none;
+	position: absolute;
+	z-index: 99999;
+	width: 175px;
+	margin-top: -1.5em;
+	margin-left: 150px;
+	li {
+		width: 100%;
+		margin: 0;
+		padding: 0.5em 0;
+		text-align: left;
+	}
+}
+nav ul li, /* Displays sub menus on hover, active, focus */
+nav ul ul li {
+	&:hover > ul, &:active > ul, &:focus > ul {
+		display: block;
+	}
+}
+nav a#pull { /* Responsive Menu Pull */
+	display: none;
+	@media only screen and (max-width: 768px) {
+		display: block;
+		text-align: center;
+		font-size: 2em;
+		width: 1em;
+		text-decoration: none;
+		color: #333;
+		margin: 0 auto;
+		padding: 0.25em 0.5em;
+		&:hover, &:active, &:focus {
+			background: navy;
+			color: #fff;
+		}
+	}
+}
+@media only screen and (max-width: 768px) { /* Remaining Responsive Styles */
+	nav ul ul,
+	nav ul ul ul {
+		position: static;
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+	nav ul li,
+	nav ul ul li,
+	nav ul ul ul li {
+		display: block;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		line-height: 2;
+	}
+}
+nav .current-menu-item a, /* Styles for WP navigation */
+nav .current_page_item a {
+}
