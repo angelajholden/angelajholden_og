@@ -32,38 +32,36 @@
 
       <section class="pageWrap clearfix">
         <article>
-          <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
             <h2>Header Level 2 – This is an ordered list</h2>
+            <p>Posted on <time>May 1, 2014</time> in Blog</p>
+            <p>Cupcake ipsum dolor sit amet liquorice I love biscuit chocolate bar. Bonbon fruitcake jelly sweet roll I love biscuit gummi bears. Bonbon powder bonbon pie carrot cake candy carrot cake sesame snaps cupcake. Chupa chups chocolate cake I love sweet roll biscuit chocolate candy. Wafer unerdwear.com marshmallow sugar plum muffin sugar plum applicake bear claw.</p>
+         </article>
 
-            <ol>
-              <li>evet</li>
-              <li>hay<span class="turkish">ı</span>r</li>
-              <li>lütfen</li>
-              <li>benim ad<span class="turkish">ı</span>m</li>
-              <li>ad<span class="turkish">ı</span>n ne</li>
-              <li>memnun oldum</li>
-              <li>nas<span class="turkish">ı</span>ls<span class="turkish">ı</span>n</li>
-              <li>iyiyim</li>
-              <li>te<span class="turkish">ş</span>ekkürler</li>
-              <li>antalya</li>
-            </ol>
+         <article>
+            <h2>Header Level 2 – This is an ordered list</h2>
+            <p>Posted on <time>May 1, 2014</time> in Blog</p>
+            <p>Cupcake ipsum dolor sit amet liquorice I love biscuit chocolate bar. Bonbon fruitcake jelly sweet roll I love biscuit gummi bears. Bonbon powder bonbon pie carrot cake candy carrot cake sesame snaps cupcake. Chupa chups chocolate cake I love sweet roll biscuit chocolate candy. Wafer unerdwear.com marshmallow sugar plum muffin sugar plum applicake bear claw.</p>
+         </article>
 
-          <h3>Header Level 3 – This is an unordered list</h3>
 
-            <ul>
-              <li>bir <span class="turkish">ş</span>ey de<span class="turkish">ğ</span>il</li>
-              <li>ne kadar</li>
-              <li>kahvalt<span class="turkish">ı</span></li>
-              <li>o<span class="turkish">ğ</span>len yeme<span class="turkish">ğ</span>i</li>
-              <li>ak<span class="turkish">ş</span>am yeme<span class="turkish">ğ</span>i</li>
-              <li>imdat</li>
-              <li>pahal<span class="turkish">ı</span></li>
-              <li>kad<span class="turkish">ı</span>n</li>
-              <li>içecek</li>
-              <li>türkçe</li>
-            </ul>
-          </article>
+        <article>
+            <h2>Header Level 2 – This is an ordered list</h2>
+            <p>Posted on <time>May 1, 2014</time> in Blog</p>
+            <p>Cupcake ipsum dolor sit amet liquorice I love biscuit chocolate bar. Bonbon fruitcake jelly sweet roll I love biscuit gummi bears. Bonbon powder bonbon pie carrot cake candy carrot cake sesame snaps cupcake. Chupa chups chocolate cake I love sweet roll biscuit chocolate candy. Wafer unerdwear.com marshmallow sugar plum muffin sugar plum applicake bear claw.</p>
+         </article>
+
+        <article>
+            <h2>Header Level 2 – This is an ordered list</h2>
+            <p>Posted on <time>May 1, 2014</time> in Blog</p>
+            <p>Cupcake ipsum dolor sit amet liquorice I love biscuit chocolate bar. Bonbon fruitcake jelly sweet roll I love biscuit gummi bears. Bonbon powder bonbon pie carrot cake candy carrot cake sesame snaps cupcake. Chupa chups chocolate cake I love sweet roll biscuit chocolate candy. Wafer unerdwear.com marshmallow sugar plum muffin sugar plum applicake bear claw.</p>
+         </article>
+
+        <article>
+            <h2>Header Level 2 – This is an ordered list</h2>
+            <p>Posted on <time>May 1, 2014</time> in Blog</p>
+            <p>Cupcake ipsum dolor sit amet liquorice I love biscuit chocolate bar. Bonbon fruitcake jelly sweet roll I love biscuit gummi bears. Bonbon powder bonbon pie carrot cake candy carrot cake sesame snaps cupcake. Chupa chups chocolate cake I love sweet roll biscuit chocolate candy. Wafer unerdwear.com marshmallow sugar plum muffin sugar plum applicake bear claw.</p>
+         </article>
+
 
           <aside>
             <h4>Header Level 4</h4>
