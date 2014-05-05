@@ -10,7 +10,7 @@ main,
 nav,
 section,
 summary {
-    display: block;
+  display: block;
 }
 html {
 	margin: 0;
@@ -45,7 +45,7 @@ header {
 	padding: 0;
 }
 
-/* Main Content */
+/* Front Page Content */
 .pageWrap {
 	width: 1250px;
 	margin: 0 auto;
@@ -56,7 +56,7 @@ header {
 article {
 	background: #fff;
 	margin: 0 0 15px 0;
-	padding: 15px;
+	padding: 25px;
 	@include box-sizing(border-box);
 	img {
 		width: 150px;
@@ -79,12 +79,58 @@ article {
 	}
 }
 
+/* Single Post Content */
+.singleExcerpt {
+	font-style: italic;
+	font-size: 1.25em;
+	color: #555;
+}
+.singlePost {
+	padding: 50px;
+	img {
+		float: none;
+		width: auto;
+		margin: 0 auto 50px;
+	}
+	header {
+		margin-bottom: 50px;
+		padding-bottom: 25px;
+		border-bottom: 1px solid #eaeaea;
+	}
+}
+.singleTags {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline;
+		&:after {
+			content: "•";
+			color: #999;
+		}
+		&:first-child:after {
+			content: "";
+		}
+		&:last-child:after {
+			content: "";
+		}
+		a {
+			margin-right: 4px;
+			color: $pink;
+		}
+	}
+}
+
 /* Sidebar */
 aside {
 	background: #fff;
-	padding: 15px;
+	padding: 20px;
 	margin: 0 0 15px 0;
 	@include box-sizing(border-box);
+	h3 {
+		margin-bottom: 15px;
+		border-bottom: 1px solid #eaeaea;
+	}
 	ul {
 		list-style-type: none;
 		margin: 0;
