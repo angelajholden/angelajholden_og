@@ -22,10 +22,10 @@
         <nav>
           <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="/">Blog</a></li>
-            <li><a href="/">Videos</a></li>
-            <li><a href="/">Tutorials</a></li>
-            <li><a href="/">Contact</a></li>
+            <li><a href="archive.php">Blog</a></li>
+            <li><a href="videos.php">Videos</a></li>
+            <li><a href="archive.php">Tutorials</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </nav>
       </div><?php //Main Head ?>

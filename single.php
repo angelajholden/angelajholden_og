@@ -33,9 +33,6 @@
 
          </article>
 
-
-
-
        </div><?php //Blog Wrap ?>
 
 <?php include('sidebar.php'); ?>

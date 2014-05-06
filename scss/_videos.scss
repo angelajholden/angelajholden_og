@@ -1,0 +1,13 @@
+.video {
+  background: #fff;
+  padding: 10px 10px 20px;
+  @include box-sizing(border-box);
+  @include grid;
+  img {
+    width: 100%;
+    @include hover;
+  }
+  h2 {
+  	text-align: center;
+  }
+}

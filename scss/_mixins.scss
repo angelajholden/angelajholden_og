@@ -9,6 +9,19 @@ $pink: #C02942;
 // @include single-transition(all, 0.3s, ease);
 // @include box-shadow(0 1px 0 rgba(0,0,0,0.15));
 
+// Grid
+@mixin grid {
+  width: 48%;
+  margin: 0 1% 2%;
+  float: left;
+  @media (max-width: 600px) {
+    width: auto;
+    float: none;
+    display: block;
+    margin: 2%;
+  }
+}
+
 // Hover
 @mixin hover {
 	opacity: 1;

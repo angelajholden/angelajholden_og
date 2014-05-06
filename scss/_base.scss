@@ -32,8 +32,9 @@ body {
 
 /* Header */
 .mainHead {
-	margin: 0 0 1em 0;
-	padding: 1em 20em;
+	margin: 0 auto 1em;
+	padding: 0;
+	max-width: 1250px;
 	a {
 		color: #333;
 	}
@@ -47,7 +48,7 @@ header {
 
 /* Front Page Content */
 .pageWrap {
-	width: 1250px;
+	max-width: 1250px;
 	margin: 0 auto;
 	header {
 		width: 100%;
@@ -119,6 +120,28 @@ article {
 			color: $pink;
 		}
 	}
+}
+
+/* Archive View */
+.archivePost {
+	@include grid;
+	padding: 15px;
+	font-size: 0.85em;
+	h2 {
+		border-bottom: 1px solid #eaeaea;
+	}
+	img {
+		width: 100px;
+		margin-top: 5px;
+	}
+}
+.archiveExcerpt {
+	margin-bottom: 0;
+}
+.archiveLink {
+	text-transform: uppercase;
+	font-size: 0.9em;
+	color: lighten($pink,10%);
 }
 
 /* Sidebar */
@@ -203,4 +226,32 @@ a:focus {
 a:active,
 a:hover {
   outline: 0;
+}
+
+/* Footer */
+.aboutWrap {
+	padding: 50px 0;
+	background: #fff;
+}
+.aboutMe {
+	max-width: 1000px;
+	margin: 0 auto;
+	img {
+		width: 200px;
+		float: left;
+		margin-right: 10px;
+		@include border-radius(3px);
+	}
+}
+.socialIcons {
+	list-style-type: none;
+	li {
+		display: inline;
+	}
+}
+footer {
+	text-align: center;
+	padding: 50px 0;
+	background: lighten($pink,10%);
+	color: #fff;
 }
