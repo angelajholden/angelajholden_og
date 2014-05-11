@@ -14,8 +14,10 @@
     <body>
 
       <div class="mainHead clearfix">
-        <header>
-          <h1>Angela J. Holden</h1>
+        <header class="clearfix">
+          <a href="#">
+          <figure><?php include('inc/logo.svg'); ?></figure>
+          <h1 class="blogTitle">Angela J. Holden</h1></a>
           <p>A web design blog with videos, tutorials, and snippets.</p>
         </header>
 
@@ -25,6 +27,7 @@
             <li><a href="archive.php">Blog</a></li>
             <li><a href="videos.php">Videos</a></li>
             <li><a href="archive.php">Tutorials</a></li>
+            <li><a href="archive.php">Snippets</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>

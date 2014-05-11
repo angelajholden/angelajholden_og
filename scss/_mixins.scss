@@ -11,8 +11,8 @@ $pink: #C02942;
 
 // Grid
 @mixin grid {
-  width: 48%;
-  margin: 0 1% 2%;
+  width: 49%;
+  margin: 0 1% 1% 0;
   float: left;
   @media (max-width: 600px) {
     width: auto;

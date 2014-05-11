@@ -1,10 +1,11 @@
         <div class="sidebarWrap">
           <aside>
-            <h3>Search</h3>
-            <form>
-              <label class="screen-reader-text">Search</label>
-              <input type="text">
-              <input type="submit">
+            <form action="#" method="post">
+              <fieldset>
+                <label class="screen-reader-text">Search</label>
+                <input name="search" type="search" placeholder="Search...">
+                <input name="submit" type="image" src="inc/search.svg">
+              </fieldset>
             </form>
           </aside>
 

@@ -1,6 +1,6 @@
 .video {
   background: #fff;
-  padding: 10px 10px 20px;
+  padding: 15px;
   @include box-sizing(border-box);
   @include grid;
   img {
@@ -8,6 +8,7 @@
     @include hover;
   }
   h2 {
-  	text-align: center;
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
   }
 }
