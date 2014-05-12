@@ -1,12 +1,14 @@
         <div class="sidebarWrap">
           <aside>
-            <form action="#" method="post">
-              <fieldset>
-                <label class="screen-reader-text">Search</label>
-                <input name="search" type="search" placeholder="Search...">
-                <input name="submit" type="image" src="inc/search.svg">
-              </fieldset>
-            </form>
+            <div class="searchForm">
+              <form action="#" method="post">
+                <fieldset>
+                  <label class="screen-reader-text">Search</label>
+                  <input class="searchInput" name="search" type="search" placeholder="Search...">
+                  <input class="searchImage" name="submit" type="image" src="inc/search.svg">
+                </fieldset>
+              </form>
+            </div>
           </aside>
 
           <aside>
@@ -19,10 +21,6 @@
           </aside>
 
           <aside>
-            <a href="#"><img src="images/etsy-shop.jpg"></a>
-          </aside>
-
-          <aside>
             <h3>Latest Videos</h3>
             <ul>
               <li><a href="#">Blog Post One</a></li>
@@ -32,20 +30,12 @@
           </aside>
 
           <aside>
-            <a href="#"><img src="images/view-portfolio.jpg"></a>
-          </aside>
-
-          <aside>
             <h3>Latest Tutorials</h3>
             <ul>
               <li><a href="#">Blog Post One</a></li>
               <li><a href="#">Blog Post One</a></li>
               <li><a href="#">Blog Post One</a></li>
             </ul>
-          </aside>
-
-          <aside>
-            <a href="#"><img src="images/git-hub.jpg"></a>
           </aside>
 
           <aside>

@@ -16,7 +16,7 @@ html {
 	margin: 0;
 	padding: 0;
 }
-/* Main Styles */
+/* Main */
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 100%;
@@ -31,27 +31,23 @@ body {
 }
 
 /* Header */
-.mainHead {
-	margin: 1em auto;
-	padding: 0;
-	max-width: 1250px;
-	a {
-		color: #333;
-		text-decoration: none;
-		&:hover, &:active, &:focus {
-			color: $pink;
-		}
-	}
+.headerWrap {
+	background: #fff;
 }
-header {
-	width: 60%;
-	float: left;
-	margin: 0;
-	padding: 0;
-	figure {
-		width: 155px;
+.mainHead {
+	margin: 0 auto;
+	padding: 1em 0;
+	max-width: 1250px;
+	header {
+		width: 60%;
 		float: left;
-		padding-right: 10px;
+		margin: 0;
+		padding: 0;
+		figure {
+			width: 155px;
+			float: left;
+			padding-right: 10px;
+		}
 	}
 	.blogTitle {
 		font-family: 'Roboto', sans-serif;
@@ -63,14 +59,68 @@ header {
 		font-weight: 300;
 		margin: 0;
 	}
+	a {
+		color: #333;
+		text-decoration: none;
+		&:hover, &:active, &:focus {
+			color: #666;
+		}
+	}
 }
 
-/* Front Page Content */
+/* Social Buttons */
+.socialIcons {
+	width: 40%;
+	float: right;
+	list-style-type: none;
+	text-align: right;
+	margin: 4% 0 0 0;
+	padding: 0;
+	li {
+		display: inline-block;
+		margin: 0 5px;
+		&:hover, &:active, &:focus {
+			opacity: 0.8;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+}
+.facebook,
+.twitter,
+.github,
+.google,
+.screen {
+	padding: 15px;
+}
+.facebook {
+	background: $facebook;
+}
+.twitter {
+	background: $twitter;
+}
+.github {
+	background: $github;
+}
+.google {
+	background: $google;
+}
+.screen {
+	background: #669999;
+}
+
+/* Front Page */
 .pageWrap {
 	max-width: 1250px;
 	margin: 0 auto;
 	header {
-		width: 100%;
+		width: 75%;
+		p {
+			font-weight: 400;
+			font-size: 1.1em;
+			margin: 0 0 1em;
+		}
 	}
 }
 article {
@@ -80,19 +130,19 @@ article {
 	@include box-sizing(border-box);
 	h2 {
 		border-bottom: 1px solid #eaeaea;
+		a {
+			color: #333;
+			text-decoration: none;
+			&:hover, &:active, &:focus {
+				color: $pink;
+			}
+		}
 	}
 	img {
 		width: 150px;
 		float: left;
 		margin: 0 10px 0 0;
 		border-radius: 3px;
-	}
-	a {
-		color: #333;
-		text-decoration: none;
-		&:hover, &:active, &:focus {
-			color: $pink;
-		}
 	}
 	.posted a {
 		color: $pink;
@@ -102,7 +152,7 @@ article {
 	}
 }
 
-/* Single Post Content */
+/* Single Post */
 .singlePost {
 	padding: 50px;
 	img {
@@ -114,6 +164,7 @@ article {
 		margin-bottom: 50px;
 		padding-bottom: 10px;
 		border-bottom: 1px solid #eaeaea;
+		width: auto;
 	}
 	h1 {
 		font-family: 'Roboto Condensed', sans-serif;
@@ -137,7 +188,6 @@ article {
 		}
 		a {
 			margin-right: 4px;
-			color: $pink;
 		}
 	}
 }
@@ -261,6 +311,36 @@ img {
 	border: 0;
 }
 
+/* Typography */
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 3em;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.75em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+h4, h5, h6 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
 /* Links & Buttons */
 .readMore {
 	background: lighten($pink,10%);
@@ -277,6 +357,11 @@ img {
 }
 a {
   background: transparent;
+  color: lighten($pink, 10%);
+  text-decoration: none;
+  &:hover, &:active, &:focus {
+  	color: $pink;
+  }
 }
 a:focus {
   outline: thin dotted;
@@ -291,14 +376,9 @@ a:hover {
 	padding: 50px 0;
 	background: #fff;
 }
-.aboutContainer {
-	max-width: 1250px;
-	margin: 0 auto;
-}
 .aboutMe {
-	width: 85%;
-	float: left;
-	margin: 0;
+	max-width: 1200px;
+	margin: 0 auto;
 	padding: 0;
 	img {
 		width: 200px;
@@ -306,25 +386,19 @@ a:hover {
 		margin-right: 10px;
 		@include border-radius(3px);
 	}
-}
-.social {
-	width: 15%;
-	float: right;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	li {
-		text-align: center;
-		padding: 10px 0;
-		width: 100%;
-		a {
-			text-decoration: none;
-		}
+	p {
+		margin-top: 0;
+	}
+	.signature {
+		width: auto;
+		float: none;
+		display: inline;
+		margin: 0 0 0 210px;
 	}
 }
 footer {
 	text-align: center;
 	padding: 50px 0;
-	background: #266C8A;
+	background: $pink;
 	color: #fff;
 }
