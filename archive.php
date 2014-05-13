@@ -5,7 +5,7 @@
   <p>Cupcake ipsum dolor sit amet liquorice I love biscuit chocolate bar. Bonbon fruitcake jelly sweet roll I love biscuit gummi bears.</p>
 </header>
 
-	<div class="blogWrap">
+	<div class="blogWrap clearfix">
 
 		<article class="archivePost clearfix">
       <h2><a href="#">This is a blog post</a></h2>

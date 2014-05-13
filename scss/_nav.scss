@@ -3,6 +3,9 @@ nav { /* Top Level Navigation */
 	padding: 2em 0;
 	background: lighten($pink,10%);
 	//background: lighten($pink, 10%);
+	@media (max-width: 1024px) {
+		margin: 0;
+	}
 	ul {
 		list-style-type: none;
 		text-align: center;

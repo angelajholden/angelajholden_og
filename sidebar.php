@@ -1,6 +1,6 @@
         <div class="sidebarWrap">
-          <aside>
-            <div class="searchForm">
+          <aside class="searchForm">
+            <div class="searchField">
               <form action="#" method="post">
                 <fieldset>
                   <label class="screen-reader-text">Search</label>

@@ -62,6 +62,17 @@ legend {
 
 /* Search Styles */
 .searchForm {
+  @media (max-width: 1024px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    box-sizing: border-box;
+    background: transparent;
+  }
+}
+.searchField {
   position: relative;
 }
 .searchInput {
@@ -74,11 +85,16 @@ legend {
   padding: 5px;
   margin: 0;
   @include box-sizing(border-box);
+  @media (max-width: 1024px) {
+    border-bottom: 2px solid #eaeaea;
+    padding: 5px 0;
+    background: transparent;
+  }
 }
 .searchImage {
   position: absolute;
   top: 0;
-  left: 88%;
+  right: 10px;
   border: none;
   outline: none;
   width: 25px;
