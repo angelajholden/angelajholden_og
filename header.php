@@ -32,6 +32,7 @@
       </div><?php //Header Wrap ?>
 
         <nav>
+          <a href="#" id="pull"><?php include('inc/menu.svg'); ?> Menu</a>
           <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="archive.php">Blog</a></li>

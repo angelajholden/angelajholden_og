@@ -5,6 +5,7 @@
   @include grid;
   img {
     width: 100%;
+    float: none;
     @include hover;
   }
   h2 {

@@ -70,6 +70,7 @@ legend {
     padding: 25px 0;
     box-sizing: border-box;
     background: transparent;
+    @include box-shadow(none);
   }
 }
 .searchField {
