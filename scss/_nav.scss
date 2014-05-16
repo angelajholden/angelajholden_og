@@ -79,6 +79,9 @@ nav ul ul li {
 		display: block;
 	}
 }
+.menu {
+	fill: #fff;
+}
 nav a#pull { /* Responsive Menu Pull */
 	display: none;
 	@media (max-width: 768px) {

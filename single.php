@@ -1,5 +1,7 @@
 <?php include('header.php'); ?>
 
+        <div class="blogSpace"></div>
+
         <div class="blogWrap">
 
         <article class="singlePost">
