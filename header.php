@@ -16,15 +16,17 @@
       <div class="headerWrap">
         <div class="mainHead clearfix">
           <header class="clearfix">
-            <figure><a href="#"><?php include('inc/logo.svg'); ?></a></figure>
-            <h1 class="blogTitle"><a href="#">Angela J. Holden</h1></a>
+            <a href="/angelajholden/blog">
+              <figure><?php include('inc/logo.svg'); ?></figure>
+              <h1 class="blogTitle">Angela J. Holden</h1>
+            </a>
             <p>A web design blog with videos, tutorials, and snippets.</p>
           </header>
 
           <ul class="socialIcons">
             <li><a href="//facebook.com/angelajholden" target="_blank"><?php include('inc/facebook.svg'); ?></a></li>
             <li><a href="//twitter.com/angelaholden" target="_blank"><?php include('inc/twitter.svg'); ?></a></li>
-            <li><a href="//www.google.com/+AngelaHoldenDesign" target="_blank"><?php include('inc/googleplus.svg'); ?></a></li>
+            <li><a href="//google.com/+AngelaHoldenDesign" target="_blank"><?php include('inc/googleplus.svg'); ?></a></li>
             <li><a href="//github.com/angelajholden" target="_blank"><?php include('inc/github.svg'); ?></a></li>
             <li><a href="//angelaholdendesign.com" target="_blank"><?php include('inc/screen.svg'); ?></a></li>
           </ul> 
