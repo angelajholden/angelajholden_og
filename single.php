@@ -33,6 +33,10 @@
                 <li><a href="#">amet</a></li>
               </ul>
 
+            <hr>
+
+          <?php include('inc/share.php'); ?>
+
          </article>
 
        </div><?php //Blog Wrap ?>
