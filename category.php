@@ -1,26 +1,17 @@
 <?php 
-/*
-
-Template Name: Main Archive
-
-*/
-get_header(); ?>
+  get_header(); 
+  global $query_string;
+  query_posts( $query_string . '&showposts=-1' );
+?>
 
   <header>
-    <h1>Archives</h1>
-    <p>All Post Archive</p>
+    <h1><?php single_cat_title(); ?></h1>
+    <p><?php echo category_description(); ?></p>
   </header>
 
   	<div class="blogWrap clearfix">
 
-      <?php
-        $args = array(
-          'post_type'   => 'post',
-          'post_status' => 'publish',
-          'showposts'   => -1
-        );
-        $posts_loop = new WP_Query( $args );
-        while ( $posts_loop->have_posts() ) : $posts_loop->the_post(); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
   		<article class="archivePost clearfix">
 
@@ -42,8 +33,8 @@ get_header(); ?>
 
         </article>
 
-      <?php  endwhile; ?>
-      <?php wp_reset_postdata(); ?>
+      <?php endwhile; else: ?>
+      <?php endif; ?>
 
   	</div>
 

@@ -4,11 +4,9 @@
   $url .= $_SERVER["REQUEST_URI"];
   return $url;
 } ?>
-
 <?php $encoded_url = urlencode( getUrl() );
   if ( !empty($encoded_url) ) { ?>
-  <a class="readMore share" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $encoded_url; ?>" target="_blank">Facebook</a>
-	<a class="readMore share" href="https://twitter.com/intent/tweet?url=<?php echo $encoded_url; ?>" target="_blank">Twitter</a>
-	<a class="readMore share" href="https://plus.google.com/share?url=<?php echo $encoded_url; ?>" target="_blank">Google+</a>
-  <a class="readMore share" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $encoded_url; ?>" target="_blank">LinkedIn</a>
+  <a class="facebook share" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $encoded_url; ?>" target="_blank"><?php include('facebook.svg'); ?><span>Facebook</span></a>
+	<a class="twitter share" href="https://twitter.com/intent/tweet?url=<?php echo $encoded_url; ?>" target="_blank"><?php include('twitter.svg'); ?><span>Twitter</span></a>
+	<a class="google share" href="https://plus.google.com/share?url=<?php echo $encoded_url; ?>" target="_blank"><?php include('googleplus.svg'); ?><span>Google</span></a>
  <?php } ?>

@@ -4,23 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Angela J. Holden</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="favicon.ico">
+    <?php if (is_search()) { ?>
+      <meta name="robots" content="noindex, nofollow">
+    <?php } ?>
+    <title><?php wp_title(''); ?></title>
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.css">
+    <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <?php wp_head(); ?>
   </head>
-    <body>
+    <body <?php body_class(); ?>>
 
       <div class="headerWrap">
         <div class="mainHead clearfix">
           <header class="clearfix">
-            <a href="/angelajholden/blog">
+            <a href="<?php bloginfo('url'); ?>">
               <figure><?php include('inc/logo.svg'); ?></figure>
-              <h1 class="blogTitle">Angela J. Holden</h1>
+              <h1 class="blogTitle"><?php bloginfo('name'); ?></h1>
             </a>
-            <p>A web design blog with videos, tutorials, and snippets.</p>
+            <p><?php bloginfo('description'); ?></p>
           </header>
 
           <ul class="socialIcons">
@@ -35,14 +41,14 @@
 
         <nav>
           <a href="#" id="pull"><?php include('inc/menu.svg'); ?> Menu</a>
-          <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="archive.php">Blog</a></li>
-            <li><a href="videos.php">Videos</a></li>
-            <li><a href="archive.php">Tutorials</a></li>
-            <li><a href="archive.php">Snippets</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+          <?php
+            wp_nav_menu( array( 
+              'name'            => 'Main Menu',
+              'theme_location'  => 'main_menu',
+              'container'       => 'false',
+              'container_class' => ''
+            ));
+          ?>
         </nav>
 
       <section class="pageWrap clearfix">

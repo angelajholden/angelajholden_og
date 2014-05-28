@@ -130,17 +130,47 @@ body {
 }
 
 /* SVGs */
-.facebook,
-.twitter,
-.github,
-.google,
-.screen {
+.facebookSVG,
+.twitterSVG,
+.githubSVG,
+.googleSVG,
+.screenSVG {
 	fill: #fff;
 	padding: 15px;
+	@include border-radius(3px);
 	@media (max-width: 480px) {
 		width: 20px;
 		height: 20px;
 		padding: 10px;
+	}
+}
+.facebookSVG {
+	background: $facebook;
+}
+.twitterSVG {
+	background: $twitter;
+}
+.githubSVG {
+	background: $github;
+}
+.googleSVG {
+	background: $google;
+}
+.screenSVG {
+	background: $yellow;
+}
+.share {
+	.facebookSVG,
+	.twitterSVG,
+	.googleSVG {
+		margin-bottom: -4px;
+		padding: 0 3px 0 0;
+		width: 20px;
+		height: 20px;
+		background: none;
+		@media (max-width: 480px) {
+			padding: 0;
+		}
 	}
 }
 .facebook {
@@ -149,15 +179,30 @@ body {
 .twitter {
 	background: $twitter;
 }
-.github {
-	background: $github;
-}
 .google {
 	background: $google;
 }
-.screen {
-	background: $yellow;
+.facebook,
+.twitter,
+.google {
+	font-size: 0.85em;
+	font-weight: 500;
+	color: #fff;
+	padding: 10px 13px 10px 10px;
+	text-transform: uppercase;
+	@include border-radius(3px);
+	&:hover, &:active, &:focus {
+		color: #fff;
+		opacity: 0.8;
+	}
+	@media (max-width: 480px) {
+		padding: 10px;
+		span {
+			display: none;
+		}
+	}
 }
+
 
 /* Front Page */
 .pageWrap {
@@ -249,7 +294,7 @@ article {
 }
 .singleTags {
 	list-style-type: none;
-	margin: 0;
+	margin: 25px 0 35px;
 	padding: 0;
 	li {
 		display: inline;
@@ -279,7 +324,9 @@ article {
 	}
 	h2 {
 		border-bottom: 1px solid #eaeaea;
-		font-size: 2.1em;
+		font-size: 1.55em;
+		font-weight: 400;
+		text-transform: uppercase;
 	}
 	img {
 		width: 100px;
@@ -386,9 +433,9 @@ hr {
   border: 0;
   height: 1px;
   @include background(linear-gradient(left, 
-    rgba(#fff, 0),
-    rgba(#fff, 0.5),
-    rgba(#fff, 0)
+    rgba(#999, 0),
+    rgba(#999, 0.5),
+    rgba(#999, 0)
     )
   );
   margin: 35px 0;

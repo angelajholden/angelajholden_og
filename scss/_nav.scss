@@ -79,7 +79,7 @@ nav ul ul li {
 		display: block;
 	}
 }
-.menu {
+.menuSVG {
 	fill: #fff;
 }
 nav a#pull { /* Responsive Menu Pull */
@@ -116,4 +116,5 @@ nav a#pull { /* Responsive Menu Pull */
 }
 nav .current-menu-item a, /* Styles for WP navigation */
 nav .current_page_item a {
+	border-bottom: 2px solid #fff;
 }

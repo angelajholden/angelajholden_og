@@ -1,38 +1,32 @@
-<?php include('header.php'); ?>
+<?php get_header(); ?>
 
-  <header>
-    <h1>Latest Posts</h1>
-    <p>Cupcake ipsum dolor sit amet liquorice I love biscuit chocolate bar. Bonbon fruitcake jelly sweet roll I love biscuit gummi bears.</p>
-  </header>
+  <div class="blogSpace"></div>
 
     <div class="blogWrap">
+
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           
-      <article class="clearfix">
-        <h2><a href="#">This is a blog post</a></h2>
-          <p class="posted">Posted in <a href="#">Blog</a> on <time>May 1, 2014</time> &bull; <a href="#">99 Comments</a></p>
-          <img src="images/green-flower.jpg" />
-          <p>Cupcake ipsum dolor sit amet liquorice I love biscuit chocolate bar. Bonbon fruitcake jelly sweet roll I love biscuit gummi bears. Bonbon powder bonbon pie carrot cake candy carrot cake sesame snaps cupcake. Chupa chups chocolate cake I love sweet roll biscuit chocolate candy. Wafer unerdwear.com marshmallow sugar plum muffin sugar plum applicake bear claw.</p>
-          <p class="singleButton"><a class="readMore" href="single.php">Read more</a></p>
-       </article>
+        <article class="clearfix">
 
-       <article class="clearfix">
-          <h2>This is a blog post</h2>
-          <p>Posted on <time>May 1, 2014</time> in Snippets</p>
-          <img src="images/green-flower.jpg" />
-          <p>Cupcake ipsum dolor sit amet liquorice I love biscuit chocolate bar. Bonbon fruitcake jelly sweet roll I love biscuit gummi bears. Bonbon powder bonbon pie carrot cake candy carrot cake sesame snaps cupcake. Chupa chups chocolate cake I love sweet roll biscuit chocolate candy. Wafer unerdwear.com marshmallow sugar plum muffin sugar plum applicake bear claw.</p>
-          <p class="singleButton"><a class="readMore" href="single.php">Read more</a></p>
-       </article>
+          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
+            <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time>.</p>
 
-      <article class="clearfix">
-          <h2>This is a blog post</h2>
-          <p>Posted on <time>May 1, 2014</time> in Videos</p>
-          <img src="images/green-flower.jpg" />
-          <p>Cupcake ipsum dolor sit amet liquorice I love biscuit chocolate bar. Bonbon fruitcake jelly sweet roll I love biscuit gummi bears. Bonbon powder bonbon pie carrot cake candy carrot cake sesame snaps cupcake. Chupa chups chocolate cake I love sweet roll biscuit chocolate candy. Wafer unerdwear.com marshmallow sugar plum muffin sugar plum applicake bear claw.</p>
-          <p class="singleButton"><a class="readMore" href="single.php">Read more</a></p>
-       </article>
+            <?php if ( has_post_thumbnail() ) { ?>
+              <figure><?php the_post_thumbnail('thumbnail'); ?></figure>
+            <?php } ?>
 
-     </div><?php //Blog Wrap ?>
+            <p><?php the_excerpt(); ?></p>
 
-<?php include('sidebar.php'); ?>
-<?php include('footer.php'); ?>
+          <p class="singleButton"><a class="readMore" href="<?php the_permalink(); ?>">Read more</a></p>
+
+        </article>
+
+      <?php endwhile; else: ?>
+      <?php endif; ?>
+
+    </div><?php //Blog Wrap ?>
+
+  <?php get_sidebar(); ?>
+
+<?php get_footer(); ?>
