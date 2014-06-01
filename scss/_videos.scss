@@ -1,15 +1,24 @@
 .video {
   background: #fff;
-  padding: 15px;
+  padding: 20px;
   @include box-sizing(border-box);
-  @include grid;
-  img {
-    width: 100%;
-    float: none;
-    @include hover;
+  figure {
+    width: 300px;
+    float: left;
+    @media (max-width: 480px) {
+      float: none;
+      width: auto;
+    }
   }
   h2 {
     margin: 0 0 10px 0;
     font-size: 1.8em;
+  }
+}
+.videoButton {
+  margin: 0 0 0 310px;
+  @media (max-width: 675px) {
+    margin-left: 0;
+    margin-bottom: 0.5em;
   }
 }

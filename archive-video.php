@@ -23,17 +23,18 @@ get_header(); the_post(); ?>
 					$video_loop = new WP_Query($args);
 					while ( $video_loop->have_posts() ) : $video_loop->the_post(); ?>
 
-					<article class="video">
+					<article class="video clearfix">
 					<h2 class="videoTitle"><?php the_title(); ?></h2>
-				    <figure>
-				    	<?php 
-								$video = get_post_meta( get_the_ID(), 'video_url', true );
-								// check if the custom field has a value
-								if( ! empty( $video ) ) { ?>
-								  <a class="fancybox fancybox.iframe" href="<?php echo parse_youtube_url($video,'embedurl'); ?>">
-							    <img class="videoThumb" src="<?php echo parse_youtube_url($video,'mqthumb'); ?>"></a>
-								<?php } ?>
+					<p>Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time>.</p>
+		    	<?php 
+						$video = get_post_meta( get_the_ID(), 'video_url', true );
+						if( ! empty( $video ) ) { ?>
+						<figure>
+					    <img class="videoThumb" src="<?php echo parse_youtube_url($video,'mqthumb'); ?>">
 				    </figure>
+				    <?php the_excerpt(); ?>
+				    <p class="videoButton"><a class="readMore fancybox fancybox.iframe" href="<?php echo parse_youtube_url($video,'embedurl'); ?>">Watch Video</a></p>
+						<?php } ?>
 				  </article>
 
 			  <?php endwhile; ?>
