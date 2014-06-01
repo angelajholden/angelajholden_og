@@ -4,11 +4,11 @@
 Template Name: Main Archive
 
 */
-get_header(); ?>
+get_header(); the_post(); ?>
 
   <header>
     <h1>Archives</h1>
-    <p>All Post Archive</p>
+    <?php the_content(); ?>
   </header>
 
   	<div class="blogWrap clearfix">
