@@ -19,6 +19,14 @@
 
         <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time>. <?php the_tags( 'Tagged: ', ', ' ); ?></p>
 
+          <?php 
+            $video = get_post_meta( get_the_ID(), 'video_url', true );
+            if( ! empty( $video ) ) { ?>
+            <figure class="iframe">
+              <?php echo parse_youtube_url($video,'embed'); ?>
+            </figure>
+          <?php } ?>
+
           <?php the_content(); ?>
 
             <?php edit_post_link('Edit'); ?>
