@@ -25,6 +25,8 @@
       <?php endwhile; else: ?>
       <?php endif; ?>
 
+      <p><a href="<?php bloginfo('url') ?>/main-archive/">View All Articles</a></p>
+
     </div><?php //Blog Wrap ?>
 
   <?php get_sidebar(); ?>
