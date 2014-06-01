@@ -188,6 +188,7 @@ body {
 	font-size: 0.85em;
 	font-weight: 500;
 	color: #fff;
+	margin-right: 5px;
 	padding: 10px 13px 10px 10px;
 	text-transform: uppercase;
 	@include border-radius(3px);
@@ -226,7 +227,7 @@ body {
 article {
 	background: #fff;
 	margin: 0 1% 1% 0;
-	padding: 25px;
+	padding: 20px;
 	@include box-sizing(border-box);
 	@include box-shadow(0 1px 1px rgba(0,0,0,0.1));
 	@media (max-width: 1024px) {
@@ -243,11 +244,10 @@ article {
 			}
 		}
 	}
-	img {
+	figure {
 		width: 150px;
 		float: left;
 		margin: 0 10px 0 0;
-		border-radius: 3px;
 		@media (max-width: 768px) {
 			width: 100px;
 		}
@@ -271,10 +271,19 @@ article {
 	@media (max-width: 768px) {
 		padding: 25px;
 	}
-	img {
+	figure {
 		float: none;
 		width: auto;
 		margin: 0 auto 50px;
+		text-align: center;
+		img {
+			display: inline;
+		}
+		figcaption p {
+			margin: 0;
+			font-size: 0.85em;
+			font-style: italic;
+		}
 	}
 	header {
 		margin-bottom: 50px;
@@ -292,6 +301,18 @@ article {
 		}
 	}
 }
+.tags {
+	margin: 25px 0;
+}
+.sharing {
+	border-bottom: 1px solid #eaeaea;
+	padding: 35px 0;
+}
+.comments {
+	margin: 25px 0;
+}
+
+/* Not Using */
 .singleTags {
 	list-style-type: none;
 	margin: 25px 0 35px;
@@ -328,7 +349,7 @@ article {
 		font-weight: 400;
 		text-transform: uppercase;
 	}
-	img {
+	figure {
 		width: 100px;
 		margin-top: 5px;
 	}
@@ -448,7 +469,31 @@ img {
 	height: auto;
 	display: block;
 	border: 0;
+	@include border-radius(3px);
 }
+
+/* Gallery Images */
+.gallery img {
+	border: none !important;
+}
+.gallery-item {
+	margin: 0;
+	padding: 5px;
+	@include box-sizing(border-box);
+}
+.gallery-caption {
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
+/* Insert Images into Post & Pages */
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 
 /* Typography */
 h1 {
@@ -481,6 +526,7 @@ h4, h5, h6 {
 }
 
 /* Links & Buttons */
+.post-edit-link,
 .readMore {
 	background: lighten($pink,10%);
 	padding: 10px 15px;
@@ -539,7 +585,6 @@ a:hover {
 		width: 200px;
 		float: left;
 		margin-right: 10px;
-		@include border-radius(3px);
 		@media (max-width: 768px) {
 			width: 150px;
 		}
