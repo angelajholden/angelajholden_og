@@ -29,7 +29,7 @@ function custom_post_type_videos() {
     'hierarchical'          => false,
     'menu_position'         => null,
     'rewrite'               => array('slug' => ''),
-    'supports'              => array('title','thumbnail','excerpt','custom-fields'),
+    'supports'              => array('title','thumbnail', 'editor', 'excerpt','custom-fields'),
     'taxonomies'            => array('post_tag / categories')
   );
   register_post_type( 'video' , $args );
@@ -347,9 +347,34 @@ function ajh_logo_url() {
   }
   add_filter( 'login_headerurl', 'ajh_logo_url' );
 
-  function ajh_logo_url_title() {
+function ajh_logo_url_title() {
     return 'Angela J. Holden';
   }
 add_filter( 'login_headertitle', 'ajh_logo_url_title' );
+
+// Get Image Caption
+function the_post_thumbnail_caption() {
+  global $post;
+
+  $thumbnail_id    = get_post_thumbnail_id($post->ID);
+  $thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
+
+  if ($thumbnail_image && isset($thumbnail_image[0])) {
+    echo '<p>'.$thumbnail_image[0]->post_excerpt.'</p>';
+  }
+}
+
+// Add Width & Height Column to Media Library
+function wh_column( $cols ) {
+  $cols["dimensions"] = "Dimensions (w, h)";
+  return $cols;
+}
+function wh_value( $column_name, $id ) {
+  $meta = wp_get_attachment_metadata($id);
+     if(isset($meta['width']))
+     echo $meta['width'].' x '.$meta['height'];
+}
+add_filter( 'manage_media_columns', 'wh_column' );
+add_action( 'manage_media_custom_column', 'wh_value', 10, 2 );
 
 ?>
