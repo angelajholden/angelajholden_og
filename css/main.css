@@ -586,6 +586,9 @@ blockquote {
   padding: 15px;
   border-left: 3px solid #ccc;
 }
+blockquote p {
+  margin: 0;
+}
 
 /* Responsive Images */
 img {
