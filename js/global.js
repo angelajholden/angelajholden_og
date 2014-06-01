@@ -2,6 +2,9 @@ $(document).ready(function() {
 
 // Fancybox
   $('.fancybox').fancybox({
+    beforeShow: function () {
+      this.title = $(this.element).find("img").attr("alt"); // shows alt tag as image title
+    },
     padding     : 0,
     maxWidth    : '100%',
     maxHeight   : '100%',
@@ -10,7 +13,12 @@ $(document).ready(function() {
     autoSize    : true,
     closeClick  : true,
     openEffect  : 'elastic',
-    closeEffect : 'elastic'
+    closeEffect : 'elastic',
+    helpers: {
+      title : {
+        type : 'float'
+      }
+    }
   });
 
 // Responsive Nav
