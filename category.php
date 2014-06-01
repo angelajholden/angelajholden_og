@@ -36,6 +36,8 @@
       <?php endwhile; else: ?>
       <?php endif; ?>
 
+      <div><?php posts_nav_link(' • ','« Previous','Next »'); ?></div>
+
   	</div>
 
   <?php get_sidebar(); ?>
