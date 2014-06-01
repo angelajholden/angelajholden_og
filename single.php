@@ -11,20 +11,29 @@
         </header>
 
         <?php if ( has_post_thumbnail() ) { ?>
-          <figure><?php the_post_thumbnail('full'); ?></figure>
+          <figure>
+            <?php the_post_thumbnail('full'); ?>
+            <figcaption><?php the_post_thumbnail_caption(); ?></figcaption>
+          </figure>
         <?php } ?>
 
         <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time>.</p>
 
           <?php the_content(); ?>
 
-          <?php the_tags( 'Tagged: ', ' • ' ); ?>
+            <div class="tags"><?php the_tags( 'Tagged: ', ' • ' ); ?></div>
 
-          <hr>
+            <br style="clear:both;">
 
-        <?php include('inc/share.php'); ?>
+            <?php edit_post_link('Edit'); ?>
+
+          <?php include('inc/share.php'); ?>
+
+        <div class="comments"><?php comments_template(); ?></div>
 
       </article>
+
+      <p><a href="<?php bloginfo('url') ?>/main-archive/">View All Articles</a></p>
 
     </div><?php //Blog Wrap ?>
 
