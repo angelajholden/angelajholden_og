@@ -26,7 +26,7 @@ get_header(); ?>
 
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-          <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time>.</p>
+          <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
 
           <?php if ( has_post_thumbnail() ) { ?>
             <figure><?php the_post_thumbnail('thumbnail'); ?></figure>
