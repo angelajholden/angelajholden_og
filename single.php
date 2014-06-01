@@ -17,7 +17,7 @@
           </figure>
         <?php } ?>
 
-        <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time>. <?php the_tags( 'Tagged: ', ', ' ); ?>.</p>
+        <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time>. <?php the_tags( 'Tagged: ', ', ' ); ?></p>
 
           <?php the_content(); ?>
 
