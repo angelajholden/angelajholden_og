@@ -21,8 +21,6 @@
 
           <?php the_content(); ?>
 
-            <br style="clear:both;">
-
             <?php edit_post_link('Edit'); ?>
 
           <?php include('inc/share.php'); ?>
