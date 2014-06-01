@@ -459,6 +459,14 @@ hr {
   margin: 35px 0;
   @include box-sizing(content-box);
 }
+blockquote {
+	font-family: "Times New Roman", serif;
+	font-size: 1.1em;
+	font-style: italic;
+	margin: 25px 0;
+	padding: 15px;
+	border-left: 3px solid #ccc;
+}
 
 /* Responsive Images */
 img {
