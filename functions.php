@@ -119,6 +119,10 @@ if ( !is_admin() ) {
   wp_register_script('prism', get_stylesheet_directory_uri() . "/js/prism.min.js");
   wp_enqueue_script('prism');
 
+  wp_deregister_script('fitvids');
+  wp_register_script('fitvids', get_stylesheet_directory_uri() . "/js/fitvids.min.js");
+  wp_enqueue_script('fitvids');
+
   wp_deregister_script('global');
   wp_register_script('global', get_stylesheet_directory_uri() . "/js/global.min.js");
   wp_enqueue_script('global');

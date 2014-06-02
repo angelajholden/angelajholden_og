@@ -37,5 +37,8 @@ $(document).ready(function() {
       menu.removeAttr('style');  
     }  
   });
+
+// Fit Vids
+  $("figure").fitVids();
   
 });
