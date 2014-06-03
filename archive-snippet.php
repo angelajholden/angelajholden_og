@@ -8,7 +8,7 @@ get_header(); the_post(); ?>
 
   <header>
     <h1>Snippets</h1>
-    <?php the_content(); ?>
+    <?php //the_content(); ?>
   </header>
 
   	<div class="blogWrap clearfix">
@@ -19,8 +19,8 @@ get_header(); the_post(); ?>
           'post_status' => 'publish',
           'showposts'   => -1
         );
-        $snippets_loop = new WP_Query( $args );
-        while ( $snippets_loop->have_posts() ) : $snippets_loop->the_post(); ?>
+        $snippet_loop = new WP_Query( $args );
+        while ( $snippet_loop->have_posts() ) : $snippet_loop->the_post(); ?>
 
   		<article class="archivePost clearfix">
 
