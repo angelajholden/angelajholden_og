@@ -28,7 +28,7 @@ function custom_post_type_videos() {
     'has_archive'        		=> true,
     'hierarchical'          => false,
     'menu_position'         => null,
-    'rewrite'               => array('slug' => ''),
+    'rewrite'               => array('slug' => 'videos'),
     'supports'              => array('title','thumbnail', 'editor', 'excerpt','custom-fields'),
     'taxonomies'            => array('post_tag / categories')
   );
@@ -101,6 +101,43 @@ function parse_youtube_url($url,$return='embed',$width='',$height='',$rel=0){
       return $id;
     }
 }
+
+// Custom Post Type Videos
+function custom_post_type_snippets() {
+    $labels = array(
+    'name'               => 'Snippets',
+    'singular_name'      => 'Snippet',
+    'add_new'            => 'Add a Snippet',
+    'add_new_item'       => 'Add New Snippet',
+    'edit_item'          => 'Edit Snippet',
+    'new_item'           => 'New Snippet',
+    'view_item'          => 'View Snippet',
+    'search_items'       => 'Search Snippets',
+    'not_found'          => 'Nothing found',
+    'not_found_in_trash' => 'Nothing found in Trash',
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Snippets',
+    );
+
+    $args = array(
+    'labels'                => $labels,
+    'public'                => true,
+    'publicly_queryable'    => true,
+    'show_ui'               => true,
+    'query_var'             => true,
+    'rewrite'               => true,
+    'capability_type'       => 'post',
+    'has_archive'           => true,
+    'hierarchical'          => false,
+    'menu_position'         => null,
+    'rewrite'               => array('slug' => 'snippets'),
+    'supports'              => array('title','thumbnail', 'editor', 'excerpt','custom-fields'),
+    'taxonomies'            => array('post_tag / categories')
+  );
+  register_post_type( 'snippet' , $args );
+};
+add_action('init', 'custom_post_type_snippets');
+
 
 // Hide Admin Bar
 add_filter('show_admin_bar', '__return_false');
