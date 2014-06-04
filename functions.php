@@ -36,6 +36,41 @@ function custom_post_type_videos() {
 };
 add_action('init', 'custom_post_type_videos');
 
+// Add new taxonomy, NOT hierarchical (like tags)
+function create_video_taxonomy() {
+  $labels = array(
+    'name'                       => _x( 'Topics', 'taxonomy general name' ),
+    'singular_name'              => _x( 'Topic', 'taxonomy singular name' ),
+    'search_items'               => __( 'Search Topics' ),
+    'popular_items'              => __( 'Popular Topics' ),
+    'all_items'                  => __( 'All Topics' ),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __( 'Edit Topic' ),
+    'update_item'                => __( 'Update Topic' ),
+    'add_new_item'               => __( 'Add New Topic' ),
+    'new_item_name'              => __( 'New Topic Name' ),
+    'separate_items_with_commas' => __( 'Separate Topics with commas' ),
+    'add_or_remove_items'        => __( 'Add or remove Topics' ),
+    'choose_from_most_used'      => __( 'Choose from the most used Topics' ),
+    'not_found'                  => __( 'No Topics found.' ),
+    'menu_name'                  => __( 'Topics' ),
+  );
+
+  $args = array(
+    'hierarchical'          => false,
+    'labels'                => $labels,
+    'show_ui'               => true,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+    'rewrite'               => array( 'slug' => 'topic' ),
+  );
+
+  register_taxonomy( 'topic', 'video', $args );
+}
+add_action( 'init', 'create_video_taxonomy', 0 );
+
 /*
 * parse_youtube_url() PHP function
 * @param string $url URL to be parsed, eg:
@@ -138,6 +173,40 @@ function custom_post_type_snippets() {
 };
 add_action('init', 'custom_post_type_snippets');
 
+// Add new taxonomy, NOT hierarchical (like tags)
+function create_snippet_taxonomy() {
+  $labels = array(
+    'name'                       => _x( 'Keywords', 'taxonomy general name' ),
+    'singular_name'              => _x( 'Keyword', 'taxonomy singular name' ),
+    'search_items'               => __( 'Search Keywords' ),
+    'popular_items'              => __( 'Popular Keywords' ),
+    'all_items'                  => __( 'All Keywords' ),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __( 'Edit Keyword' ),
+    'update_item'                => __( 'Update Keyword' ),
+    'add_new_item'               => __( 'Add New Keyword' ),
+    'new_item_name'              => __( 'New Keyword Name' ),
+    'separate_items_with_commas' => __( 'Separate Keywords with commas' ),
+    'add_or_remove_items'        => __( 'Add or remove Keywords' ),
+    'choose_from_most_used'      => __( 'Choose from the most used Keywords' ),
+    'not_found'                  => __( 'No Keywords found.' ),
+    'menu_name'                  => __( 'Keywords' ),
+  );
+
+  $args = array(
+    'hierarchical'          => false,
+    'labels'                => $labels,
+    'show_ui'               => true,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+    'rewrite'               => array( 'slug' => 'keyword' ),
+  );
+
+  register_taxonomy( 'keyword', 'snippet', $args );
+}
+add_action( 'init', 'create_snippet_taxonomy', 0 );
 
 // Hide Admin Bar
 add_filter('show_admin_bar', '__return_false');
