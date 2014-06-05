@@ -1,0 +1,31 @@
+/* Responsive Images */
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border: 0;
+	@include border-radius(3px);
+}
+
+/* Gallery Images */
+.gallery img {
+	border: none !important;
+}
+.gallery-item {
+	margin: 0;
+	padding: 5px;
+	@include box-sizing(border-box);
+}
+.gallery-caption {
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
+/* Insert Images into Post & Pages */
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
