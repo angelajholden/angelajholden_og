@@ -312,9 +312,9 @@ add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
 		'id'            => 'sidebar',
 		'description'		=> 'Widgets in this sidebar will be displayed on Posts & Pages.',
     'class'         => 'sidebar',
-		'before_widget' => '<aside>',
+		'before_widget' => '<aside class="widget">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h3>',
+		'before_title'  => '<h3 class="h3">',
 		'after_title'   => '</h3>' );
   register_sidebar( $side );
 
