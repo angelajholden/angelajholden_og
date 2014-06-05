@@ -26,7 +26,9 @@ get_header(); the_post(); ?>
 
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-          <p>Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
+          <p class="archiveTime">Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
+
+          <div class="theTags"><?php the_terms( $snippet->ID, 'keyword', 'Keywords: ', ' <span>•</span> ' ); ?></div>
 
           <?php if ( has_post_thumbnail() ) { ?>
             <figure><?php the_post_thumbnail('thumbnail'); ?></figure>

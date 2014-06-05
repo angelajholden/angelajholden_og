@@ -17,7 +17,9 @@
           </figure>
         <?php } ?>
 
-        <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time>. <?php the_tags( 'Tagged: ', ', ' ); ?></p>
+        <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
+
+         <div class="theTags"><?php the_tags( 'Tagged: ', ' <span>•</span> ', '' ); ?></div>
 
           <?php 
             $video = get_post_meta( get_the_ID(), 'video_url', true );

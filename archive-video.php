@@ -25,7 +25,8 @@ get_header(); the_post(); ?>
 
 					<article class="video clearfix">
 					<h2 class="videoTitle"><?php the_title(); ?></h2>
-					<p>Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time>.</p>
+					<p class="theTags">Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time>. <?php the_terms( $video->ID, 'topic', 'Topics: ', ' <span>•</span> ' ); ?></p>
+
 		    	<?php 
 						$video = get_post_meta( get_the_ID(), 'video_url', true );
 						if( ! empty( $video ) ) { ?>
