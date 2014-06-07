@@ -31,7 +31,7 @@ get_header(); the_post(); ?>
           <div class="theTags"><?php the_terms( $snippet->ID, 'keyword', 'Keywords: ', ' <span>•</span> ' ); ?></div>
 
           <?php if ( has_post_thumbnail() ) { ?>
-            <figure><?php the_post_thumbnail('thumbnail'); ?></figure>
+            <figure class="snippetImage"><?php the_post_thumbnail('full'); ?></figure>
           <?php } ?>
 
           <p class="archiveExcerpt">
