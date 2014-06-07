@@ -252,6 +252,9 @@ figure.iframe {
 		font-size: 1.55em;
 		font-weight: 400;
 		text-transform: uppercase;
+		span {
+			text-transform: none;
+		}
 	}
 	figure {
 		width: 100px;
@@ -272,7 +275,6 @@ figure.iframe {
 
 /* Snippet Style */
 figure.snippetImage {
-	margin-top: 0;
 	width: 85px;
 }
 
