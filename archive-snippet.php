@@ -4,11 +4,10 @@
 Template Name: Snippets
 
 */
-get_header(); the_post(); ?>
+get_header(); ?>
 
   <header>
     <h1>Snippets</h1>
-    <?php //the_content(); ?>
   </header>
 
   	<div class="blogWrap clearfix">
