@@ -30,7 +30,7 @@
 
       </article>
 
-      <p><a href="<?php bloginfo('url') ?>/main-archive/">View All Articles</a></p>
+      <p><a href="<?php bloginfo('url') ?>/snippets/">View All Snippets</a></p>
 
     </div><?php //Blog Wrap ?>
 
