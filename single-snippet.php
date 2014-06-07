@@ -10,13 +10,6 @@
           <h1><?php the_title(); ?></h1>
         </header>
 
-        <?php if ( has_post_thumbnail() ) { ?>
-          <figure>
-            <?php the_post_thumbnail('full'); ?>
-            <figcaption><?php the_post_thumbnail_caption(); ?></figcaption>
-          </figure>
-        <?php } ?>
-
         <p>Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
 
         <div class="theTags"><?php the_terms( $snippet->ID, 'keyword', 'Keywords: ', ' <span>•</span> ' ); ?></div>
@@ -31,9 +24,9 @@
 
           <?php the_content(); ?>
 
-            <?php edit_post_link('Edit'); ?>
+          <?php edit_post_link('Edit'); ?>
 
-          <?php include('inc/share.php'); ?>
+        <?php include('inc/share.php'); ?>
 
       </article>
 
