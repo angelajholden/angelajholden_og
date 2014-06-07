@@ -19,18 +19,7 @@
 
         <p>Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
 
-        <div class="theTags">Keywords: 
-          <?php $args = array(
-            'smallest'                  => 1, 
-            'largest'                   => 1,
-            'unit'                      => 'em', 
-            'number'                    => 45,  
-            'format'                    => 'flat',
-            'separator'                 => " <span>•</span> ",
-            'taxonomy'                  => 'keyword'
-          );
-            wp_tag_cloud( $args ); ?>
-        </div>
+        <div class="theTags"><?php the_terms( $snippet->ID, 'keyword', 'Keywords: ', ' <span>•</span> ' ); ?></div>
 
           <?php 
             $video = get_post_meta( get_the_ID(), 'video_url', true );
