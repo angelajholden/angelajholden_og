@@ -36,7 +36,7 @@ get_header(); ?>
           <p class="archiveExcerpt">
             <?php
               $content = get_the_content();
-              $trimmed_content = wp_trim_words( $content, 30, '... <a class="archiveLink" href="'. get_permalink() .'">Read More</a>' );
+              $trimmed_content = wp_trim_words( $content, 20, '... <a class="archiveLink" href="'. get_permalink() .'">Read More</a>' );
               echo $trimmed_content;
             ?>
           </p>
