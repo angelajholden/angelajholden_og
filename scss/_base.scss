@@ -247,6 +247,7 @@ figure.iframe {
 	@media (max-width: 768px) {
 		font-size: 1em;
 	}
+	.archiveTitle,
 	h2 {
 		border-bottom: 1px solid #eaeaea;
 		font-size: 1.55em;
@@ -265,10 +266,11 @@ figure.iframe {
 	}
 }
 .archiveExcerpt {
-	margin: 0.25em 0 0 0;
+	margin: 0.5em 0 0 0;
 }
 .archiveLink {
 	text-transform: uppercase;
+	white-space: nowrap;
 	font-size: 0.9em;
 	color: lighten($pink,10%);
 }
