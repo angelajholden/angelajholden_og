@@ -1,33 +1,76 @@
 /* SVGs */
-.facebookSVG,
-.twitterSVG,
-.githubSVG,
-.googleSVG,
-.screenSVG {
-	fill: #fff;
-	padding: 15px;
-	@include border-radius(3px);
-	@media (max-width: 480px) {
+
+/* Icons in the Header */
+.socialIcons {
+	width: 33.333%;
+	float: right;
+	list-style-type: none;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+	@media (max-width: 1225px) {
+		width: auto;
+		float: none;
+		text-align: center;
+	}
+	li {
+		display: inline-block;
+		margin: 0;
+		@media (max-width: 480px) {
+			margin: 0 2px;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+	.facebookSVG,
+	.twitterSVG,
+	.githubSVG,
+	.googleSVG,
+	.screenSVG {
+		fill: #ccc;
+		background-color: transparent;
+		padding: 13px;
+		@include border-radius(3px);
 		width: 20px;
 		height: 20px;
 		padding: 10px;
 	}
 }
-.facebookSVG {
-	background: $facebook;
+.socialIcons {
+	.facebookSVG {
+		&:hover, &:active, &:focus {
+			fill: #fff;
+			background-color: $facebook;			
+		}
+	}
+	.twitterSVG {
+		&:hover, &:active, &:focus {
+			fill: #fff;
+			background-color: $twitter;			
+		}
+	}
+	.googleSVG {
+		&:hover, &:active, &:focus {
+			fill: #fff;
+			background-color: $google;			
+		}
+	}
+	.githubSVG {
+		&:hover, &:active, &:focus {
+			fill: #fff;
+			background-color: $github;			
+		}
+	}
+	.screenSVG {
+		&:hover, &:active, &:focus {
+			fill: #fff;
+			background-color: $yellow;			
+		}
+	}
 }
-.twitterSVG {
-	background: $twitter;
-}
-.githubSVG {
-	background: $github;
-}
-.googleSVG {
-	background: $google;
-}
-.screenSVG {
-	background: $yellow;
-}
+
+/* Sharing Buttons on Posts */
 .share {
 	.facebookSVG,
 	.twitterSVG,
@@ -69,34 +112,6 @@
 		padding: 10px;
 		span {
 			display: none;
-		}
-	}
-}
-
-/* Social Buttons */
-.socialIcons {
-	width: 33.333%;
-	float: right;
-	list-style-type: none;
-	text-align: right;
-	margin: 4% 0 0 0;
-	padding: 0;
-	@media (max-width: 1225px) {
-		width: auto;
-		float: none;
-		text-align: center;
-	}
-	li {
-		display: inline-block;
-		margin: 0 5px;
-		@media (max-width: 480px) {
-			margin: 0 2px;
-		}
-		&:hover, &:active, &:focus {
-			opacity: 0.8;
-		}
-		a {
-			text-decoration: none;
 		}
 	}
 }

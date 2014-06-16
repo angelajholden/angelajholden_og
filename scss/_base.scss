@@ -59,16 +59,17 @@ body {
 		figure {
 			width: auto;
 			float: left;
-			padding-right: 10px;
 			@media (max-width: 768px) {
 				width: auto;
 				float: none;
 				padding: 0;
 			}
 			.logoSVG {
+				width: 140px;
+				height: 124px;
 				@media (max-width: 768px) {
 					width: 100px;
-					height: 120px;
+					height: 89px;
 				}
 			}
 		}
@@ -76,7 +77,9 @@ body {
 	.blogTitle {
 		font-family: 'Roboto', sans-serif;
 		font-weight: 300;
-		font-size: 4.5em;
+		font-size: 3.5em;
+		line-height: 1.25;
+		margin: 0;
 		@media (max-width: 768px) {
 			font-size: 3em;
 		}
