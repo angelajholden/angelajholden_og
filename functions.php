@@ -27,7 +27,8 @@ function custom_post_type_videos() {
     'capability_type'       => 'post',
     'has_archive'        		=> true,
     'hierarchical'          => false,
-    'menu_position'         => null,
+    'menu_position'         => 6,
+    'menu_icon'             => 'dashicons-format-video',
     'rewrite'               => array('slug' => 'videos'),
     'supports'              => array('title','thumbnail', 'editor', 'excerpt','custom-fields'),
     'taxonomies'            => array('post_tag / categories')
@@ -164,7 +165,8 @@ function custom_post_type_snippets() {
     'capability_type'       => 'post',
     'has_archive'           => true,
     'hierarchical'          => false,
-    'menu_position'         => null,
+    'menu_position'         => 7,
+    'menu_icon'             => 'dashicons-media-code',
     'rewrite'               => array('slug' => 'snippets'),
     'supports'              => array('title','thumbnail', 'editor', 'excerpt','custom-fields'),
     'taxonomies'            => array('post_tag / categories')
