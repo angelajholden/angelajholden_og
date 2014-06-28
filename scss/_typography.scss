@@ -1,3 +1,4 @@
+
 /* Typography */
 h1 {
   font-family: 'Roboto Condensed', sans-serif;
@@ -64,9 +65,8 @@ a:hover {
   outline: 0;
 }
 .singleButton {
-	margin-left: 160px;
+	margin: 22px 0 0 160px;
 	@media (max-width: 768px) {
-		margin-left: 0;
-		margin-bottom: 0.5em;
+		margin: 0 0 0.5em 0;
 	}
 }

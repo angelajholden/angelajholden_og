@@ -109,7 +109,9 @@ nav a#pull { /* Responsive Menu Pull */
 		}
 	}
 }
-nav .current-menu-item a, /* Styles for WP navigation */
+nav .current-post-ancestor a,
+nav .current-menu-parent a,
+nav .current-menu-item a,
 nav .current_page_item a {
 	background-color: lighten($pink,10%);
 	@media (max-width: 768px) {
