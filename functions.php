@@ -284,7 +284,7 @@ function rc_add_rel_attribute($link) {
 
 // Edit the Excerpt Length & String
 	function custom_excerpt_length( $length ) {
-		return 60;
+		return 40;
 	}
 		add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
