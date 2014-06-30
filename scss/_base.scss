@@ -23,7 +23,7 @@ body {
 	font-weight: 400;
 	color: #333;
 	line-height: 1.5;
-	background: #f6f6f6;
+	background: #fff;
   margin: 0;
   padding: 0;
   -ms-text-size-adjust: 100%;
@@ -109,8 +109,9 @@ body {
 	position: relative;
 	@include main-grid;
 	margin: 0 auto;
+	padding: 0 0 15px;
 	header {
-		width: 75%;
+		width: 66.666%;
 		@media (max-width: 1024px) {
 			width: auto;
 			margin: 0 auto;
@@ -123,18 +124,17 @@ body {
 		}
 	}
 }
+
 article {
 	background: #fff;
 	margin: 0 1% 1% 0;
-	padding: 20px;
+	padding: 20px 25px 20px 0;
 	@include box-sizing(border-box);
-	@include box-shadow(0 1px 1px rgba(0,0,0,0.1));
 	@media (max-width: 1024px) {
 		margin-right: 0;
 		padding: 20px;
 	}
 	h2 {
-		border-bottom: 1px solid #eaeaea;
 		font-family: 'Roboto Condensed', sans-serif;
 	  font-size: 2em;
 	  font-weight: 300;
@@ -148,14 +148,6 @@ article {
 			}
 		}
 	}
-	figure {
-		width: 150px;
-		float: left;
-		margin: 0 10px 0 0;
-		@media (max-width: 768px) {
-			width: 100px;
-		}
-	}
 	.posted a {
 		color: $pink;
 		&:hover, &:active, &:focus {
@@ -164,6 +156,43 @@ article {
 	}
 }
 
+/* Archive View */
+.archivePost {
+	@include grid;
+	padding: 20px 25px 20px 0;
+	@media (max-width: 768px) {
+		font-size: 1em;
+	}
+	.archiveTitle {
+		font-size: 1.55em;
+		font-weight: 400;
+		text-transform: uppercase;
+		span {
+			text-transform: none;
+		}
+	}
+	figure {
+		width: 100%;
+		margin: 10px 0 0;
+		&:hover, &:active, &:focus {
+			opacity: 0.8;
+		}
+	}
+	.archiveTime {
+		margin: 0.25em 0;
+	}
+}
+.archiveExcerpt {
+	margin: 0.5em 0 0 0;
+}
+.archiveLink {
+	text-transform: uppercase;
+	white-space: nowrap;
+	font-size: 0.9em;
+	color: lighten($pink,10%);
+}
+
+
 /* Single Post */
 .blogSpace {
 	@media (max-width: 1024px) {
@@ -171,10 +200,7 @@ article {
 	}
 }
 .singlePost {
-	padding: 50px;
-	@media (max-width: 768px) {
-		padding: 25px;
-	}
+	padding: 0 25px 0 0;
 	figure {
 		float: none;
 		width: auto;
@@ -190,9 +216,7 @@ article {
 		}
 	}
 	header {
-		margin-bottom: 50px;
 		padding-bottom: 10px;
-		border-bottom: 1px solid #eaeaea;
 		width: auto;
 		@media (max-width: 1024px) {
 			padding-top: 0;
@@ -219,73 +243,20 @@ figure.iframe {
 	color: #999;
 }
 
-/* Not Using */
-.singleTags {
-	list-style-type: none;
-	margin: 25px 0 35px;
-	padding: 0;
-	li {
-		display: inline;
-		&:after {
-			content: "•";
-			color: #999;
-		}
-		&:first-child:after {
-			content: "";
-		}
-		&:last-child:after {
-			content: "";
-		}
-		a {
-			margin-right: 4px;
-		}
-	}
-}
-
-/* Archive View */
-.archivePost {
-	@include grid;
-	padding: 20px;
-	font-size: 0.85em;
-	@media (max-width: 768px) {
-		font-size: 1em;
-	}
-	.archiveTitle,
-	h2 {
-		border-bottom: 1px solid #eaeaea;
-		font-size: 1.55em;
-		font-weight: 400;
-		text-transform: uppercase;
-		span {
-			text-transform: none;
-		}
-	}
-	figure {
-		width: 85px;
-		margin-top: 0;
-	}
-	.archiveTime {
-		margin: 0.25em 0;
-	}
-}
-.archiveExcerpt {
-	margin: 0.5em 0 0 0;
-}
-.archiveLink {
-	text-transform: uppercase;
-	white-space: nowrap;
-	font-size: 0.9em;
-	color: lighten($pink,10%);
-}
-
-/* Snippet Style */
+/* Snippet Styles */
 figure.snippetImage {
 	width: 85px;
+	float: left;
+	margin: 5px 5px 0 0;
+}
+.post-type-archive-snippet article,
+.tax-keyword article {
+	font-size: 85%;
 }
 
 /* Main Content Layout */
 .blogWrap {
-	width: 75%;
+	width: 67.5%;
 	float: left;
 	margin: 0;
 	@media (max-width: 1024px) {
@@ -294,7 +265,7 @@ figure.snippetImage {
 	}
 }
 .sidebarWrap {
-	width: 25%;
+	width: 32.5%;
 	float: left;
 	margin: 0;
 	@media (max-width: 1024px) {
