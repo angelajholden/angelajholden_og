@@ -8,6 +8,7 @@ get_header(); ?>
 
 	<header>
 		<h1>Videos</h1>
+		<p>Here you will find screencasts I've recorded related to WordPress, web design and workflow.</p>
 	</header>
 
 		<div class="blogWrap clearfix">
