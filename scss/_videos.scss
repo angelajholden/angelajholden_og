@@ -1,10 +1,11 @@
 .video {
   background: #fff;
-  padding: 20px;
+  padding: 20px 20px 20px 0;
   @include box-sizing(border-box);
   figure {
     width: 300px;
     float: left;
+    margin: 0 10px 0 0;
     @media (max-width: 480px) {
       float: none;
       width: auto;
