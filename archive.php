@@ -7,8 +7,8 @@ Template Name: Main Archive
 get_header(); the_post(); ?>
 
   <header>
-    <h1>Archives</h1>
-    <?php the_content(); ?>
+    <h1><?php the_title(); ?></h1>
+    <p><?php the_content(); ?></p>
   </header>
 
   	<div class="blogWrap clearfix">
@@ -26,11 +26,11 @@ get_header(); the_post(); ?>
 
         <h2 class="archiveTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-          <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
+        <?php if ( has_post_thumbnail() ) { ?>
+          <figure><?php the_post_thumbnail('large'); ?></figure>
+        <?php } ?>
 
-          <?php if ( has_post_thumbnail() ) { ?>
-            <figure><?php the_post_thumbnail('thumbnail'); ?></figure>
-          <?php } ?>
+          <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
 
           <p class="archiveExcerpt">
             <?php
@@ -42,7 +42,7 @@ get_header(); the_post(); ?>
 
         </article>
 
-      <?php  endwhile; ?>
+      <?php endwhile; ?>
       <?php wp_reset_postdata(); ?>
 
   	</div>
