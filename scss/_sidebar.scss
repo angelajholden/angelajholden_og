@@ -4,13 +4,11 @@ aside {
 	padding: 20px;
 	margin: 0 0 2.5% 0;
 	@include box-sizing(border-box);
-	@include box-shadow(0 1px 1px rgba(0,0,0,0.1));
 	@media (max-width: 1024px) {
 		margin-bottom: 1%;
 	}
 	h3.h3 {
 		margin: 0 0 15px 0;
-		border-bottom: 1px solid #eaeaea;
 		font-family: 'Roboto Condensed', sans-serif;
 	  font-size: 1.5em;
 	  font-weight: 400;
