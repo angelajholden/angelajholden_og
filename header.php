@@ -26,15 +26,10 @@
               <figure><?php include('inc/logo.svg'); ?></figure>
               <h1 class="blogTitle"><?php bloginfo('name'); ?></h1>
             </a>
-            <p><?php bloginfo('description'); ?></p>
           </header>
 
           <ul class="socialIcons">
-            <li><a href="//facebook.com/angelajholden" target="_blank"><?php include('inc/facebook.svg'); ?></a></li>
-            <li><a href="//twitter.com/angelaholden" target="_blank"><?php include('inc/twitter.svg'); ?></a></li>
-            <li><a href="//google.com/+AngelaHoldenDesign" target="_blank"><?php include('inc/googleplus.svg'); ?></a></li>
-            <li><a href="//github.com/angelajholden" target="_blank"><?php include('inc/github.svg'); ?></a></li>
-            <li><a href="//angelaholdendesign.com" target="_blank"><?php include('inc/screen.svg'); ?></a></li>
+            <?php include('inc/svg-icons.php'); ?>
           </ul> 
         </div><?php //Main Head ?>
       </div><?php //Header Wrap ?>
