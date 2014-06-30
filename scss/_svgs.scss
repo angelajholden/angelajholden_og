@@ -1,5 +1,10 @@
 /* SVGs */
-
+.logoSVG {
+	fill: lighten($pink,10%);
+}
+.signatureSVG {
+	fill: #272727;
+}
 /* Icons in the Header */
 .socialIcons {
 	width: 33.333%;
