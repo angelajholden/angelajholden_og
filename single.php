@@ -17,7 +17,7 @@
             <figure class="iframe">
               <?php echo parse_youtube_url($video,'embed'); ?>
             </figure>
-        <?php } else ( has_post_thumbnail() ) { ?>
+        <?php } elseif ( has_post_thumbnail() ) { ?>
           <figure>
             <?php the_post_thumbnail('full'); ?>
             <figcaption><?php the_post_thumbnail_caption(); ?></figcaption>
