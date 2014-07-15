@@ -9,15 +9,15 @@ get_header(); the_post(); ?>
 
   <div class="blogSpace"></div>
 
+  <header>
+    <h1><?php the_title(); ?></h1>
+  </header>
+
   <?php include('search.php'); ?>
 
     <div class="blogWrap">
 
       <article class="singlePost">
-
-        <header>
-          <h1><?php the_title(); ?></h1>
-        </header>
 
           <?php if ( has_post_thumbnail() ) { ?>
             <figure>
