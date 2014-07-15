@@ -2,15 +2,15 @@
 
   <div class="blogSpace"></div>
 
+  <header>
+    <h1><?php the_title(); ?></h1>
+  </header>
+
   <?php include('search.php'); ?>
 
     <div class="blogWrap">
 
       <article class="singlePost">
-
-        <header>
-          <h1><?php the_title(); ?></h1>
-        </header>
 
         <?php $video = get_post_meta( get_the_ID(), 'video_url', true );
             if( ! empty( $video ) ) { ?>
