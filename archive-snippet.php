@@ -11,6 +11,8 @@ get_header(); ?>
     <p>These are some of the snippets that I've collected, modified, and use frequently in my projects. When possible, an attribution for the original source is provided.</p>
   </header>
 
+  <?php include('search.php'); ?>
+
   	<div class="blogWrap clearfix">
 
       <?php

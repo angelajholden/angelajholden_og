@@ -9,6 +9,8 @@ get_header(); the_post(); ?>
 
   <div class="blogSpace"></div>
 
+  <?php include('search.php'); ?>
+
     <div class="blogWrap">
 
       <article class="singlePost">

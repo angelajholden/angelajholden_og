@@ -9,6 +9,8 @@
     <p>These are all of the posts tagged ‘<?php single_cat_title(); ?>’</p>
   </header>
 
+  <?php include('search.php'); ?>
+
   	<div class="blogWrap clearfix">
 
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

@@ -2,6 +2,8 @@
 
   <div class="blogSpace"></div>
 
+  <?php include('search.php'); ?>
+
     <div class="blogWrap">
 
       <article class="singlePost">

@@ -9,6 +9,8 @@
     <?php echo category_description(); ?>
   </header>
 
+  <?php include('search.php'); ?>
+
   	<div class="blogWrap clearfix">
 
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

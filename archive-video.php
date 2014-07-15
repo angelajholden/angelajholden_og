@@ -11,6 +11,8 @@ get_header(); ?>
 		<p>Here you will find screencasts I've recorded related to WordPress, web design and workflow.</p>
 	</header>
 
+	<?php include('search.php'); ?>
+
 		<div class="blogWrap clearfix">
 
 			<?php
