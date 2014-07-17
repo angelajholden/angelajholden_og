@@ -287,3 +287,31 @@ figure.snippetImage {
 .frontWrap {
 	clear: none;
 }
+
+/* Demo Button */
+.demo-button {
+	text-align: center;
+	margin-bottom: 50px;
+}
+.demo-button a {
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #fff;
+	padding: 15px 25px;
+	background: $pink;
+	border-radius: 5px;
+	margin: 0 10px;
+}
+@media (max-width: 480px) {
+	.demo-button a {
+		display: block;
+		margin: 0 auto 10px;
+		width: 75%;
+	}
+}
+.demo-button a:hover,
+.demo-button a:active,
+.demo-button a:focus {
+	background: lighten($pink,5%);
+	color: #fff;
+}
