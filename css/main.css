@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300|Roboto:400italic,300,400,500);
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 
@@ -79,6 +80,10 @@ figure.iframe { margin: 0 0 50px; }
 .theTags { margin: 0 0 15px; }
 
 .theTags span { color: #999; }
+
+.tagcloud a { font-size: 1em !important; }
+.tagcloud a:after { content: "•"; color: #999; margin-left: 5px; }
+.tagcloud a:last-child:after { content: ""; }
 
 /* Page w/o Sidebar */
 .page-no-sidebar { width: auto; float: none; }

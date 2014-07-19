@@ -249,6 +249,17 @@ figure.iframe {
 .theTags span {
 	color: #999;
 }
+.tagcloud a {
+	font-size: 1em !important;
+	&:after {
+		content: "•";
+		color: #999;
+		margin-left: 5px;
+	}
+	&:last-child:after {
+		content: "";
+	}
+}
 
 /* Page w/o Sidebar */
 .page-no-sidebar {
