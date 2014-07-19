@@ -26,6 +26,7 @@
   }
 }
 .videoThumb {
+  height: 219px;
   @media (max-width: 1300px ) {
     height: 218px;
   }
@@ -41,7 +42,7 @@
   @media (max-width: 1296px ) {
     height: 214px;
   }
-  }@media (max-width: 1295px ) {
+  @media (max-width: 1295px ) {
     height: 213px;
   }
   @media (max-width: 1294px ) {
