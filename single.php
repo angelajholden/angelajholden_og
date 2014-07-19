@@ -24,6 +24,10 @@
           </figure>
         <?php } ?>
 
+        <?php if ( has_tag('demo') ) { ?>
+          <p class="demo-button"><a href="<?php echo get_post_meta(get_the_ID(), 'live_demo', true); ?>">Live Demo</a> <a href="<?php echo get_post_meta(get_the_ID(), 'download', true); ?>">Download</a></p>
+        <?php } ?>
+
         <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
 
          <div class="theTags"><?php the_tags( 'Tagged: ', ' <span>•</span> ', '' ); ?></div>
