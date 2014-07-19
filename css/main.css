@@ -64,7 +64,7 @@ article .posted a:hover, article .posted a:active, article .posted a:focus { col
 
 .singlePost { padding: 0 25px 0 0; }
 .singlePost figure { float: none; width: auto; margin: 0 auto 50px; text-align: center; }
-.singlePost figure img { display: inline; }
+.singlePost figure img { display: inline; width: auto; }
 .singlePost figure figcaption p { margin: 0; font-size: 0.85em; font-style: italic; }
 .singlePost header { padding-bottom: 10px; width: auto; float: none; }
 @media (max-width: 1024px) { .singlePost header { padding-top: 0; } }
