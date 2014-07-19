@@ -322,9 +322,8 @@ add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
 
 // Featured Images
   add_theme_support( 'post-thumbnails' );
-  //add_image_size('960x400', 960, 400, true);
-  //add_image_size('300x230', 300, 230, true);
-  //add_image_size('240x100', 240, 100, true);
+  add_image_size('960x400', 650, 366, true);
+  add_image_size('300x169', 300, 169, true);
 
 // SHOW FEATURED IMAGES ON POST & PAGE ADMIN VIEW
 
