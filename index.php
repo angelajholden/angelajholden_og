@@ -15,7 +15,7 @@
           <?php $video = get_post_meta( get_the_ID(), 'video_url', true );
               if( ! empty( $video ) ) { ?>
             <a href="<?php the_permalink(); ?>">
-              <figure><img class="videoThumb" src="<?php echo parse_youtube_url($video,'mqthumb'); ?>"></figure></a>
+              <figure><img src="<?php echo parse_youtube_url($video,'mqthumb'); ?>"></figure></a>
           <?php } elseif ( has_post_thumbnail() ) { ?>
             <a href="<?php the_permalink(); ?>">
               <figure><?php the_post_thumbnail('650x366'); ?></figure>
