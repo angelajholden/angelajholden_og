@@ -7,7 +7,16 @@
     <?php if (is_search()) { ?>
       <meta name="robots" content="noindex, nofollow">
     <?php } ?>
-    <title><?php wp_title(''); ?></title>
+    <?php if ( is_front_page() || is_home() ) { ?>
+      <title>Angela J. Holden Website Design</title>
+    <?php } else { ?>
+      <title><?php wp_title(' '); ?> | Angela J. Holden Website Design</title>
+    <?php } ?>
+    <?php if (is_single() || is_page() ) : if (have_posts() ) : while (have_posts() ) : the_post(); ?>
+    <meta name="description" content="<?php echo get_the_excerpt();?>">
+    <?php endwhile; endif; elseif (is_home() ): ?>
+    <meta name="description" content="<?php bloginfo('description'); ?>">
+    <?php endif; ?>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.css">
     <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />

@@ -1,20 +1,20 @@
 <?php 
 
-// Custom Post Type Videos
-function custom_post_type_videos() {
+// Custom Post Type Portfolio
+function custom_post_type_portfolio() {
     $labels = array(
-    'name'               => 'Videos',
-    'singular_name'      => 'Video',
-    'add_new'            => 'Add a Video',
-    'add_new_item'       => 'Add New Video',
-    'edit_item'          => 'Edit Video',
-    'new_item'           => 'New Video',
-    'view_item'          => 'View Video',
-    'search_items'       => 'Search Videos',
+    'name'               => 'Portfolio',
+    'singular_name'      => 'Project',
+    'add_new'            => 'Add Project',
+    'add_new_item'       => 'Add New Project',
+    'edit_item'          => 'Edit Project',
+    'new_item'           => 'New Project',
+    'view_item'          => 'View Project',
+    'search_items'       => 'Search Portfolio',
     'not_found'          => 'Nothing found',
     'not_found_in_trash' => 'Nothing found in Trash',
     'parent_item_colon'  => '',
-    'menu_name'          => 'Videos',
+    'menu_name'          => 'Portfolio',
     );
 
     $args = array(
@@ -28,34 +28,34 @@ function custom_post_type_videos() {
     'has_archive'        		=> true,
     'hierarchical'          => false,
     'menu_position'         => 6,
-    'menu_icon'             => 'dashicons-format-video',
-    'rewrite'               => array('slug' => 'videos'),
+    'menu_icon'             => 'dashicons-format-gallery',
+    'rewrite'               => array('slug' => 'portfolio'),
     'supports'              => array('title','thumbnail', 'editor', 'excerpt','custom-fields'),
     'taxonomies'            => array('post_tag / categories')
   );
-  register_post_type( 'video' , $args );
+  register_post_type( 'ajhportfolio' , $args );
 };
-add_action('init', 'custom_post_type_videos');
+add_action('init', 'custom_post_type_portfolio');
 
 // Add new taxonomy, NOT hierarchical (like tags)
-function create_video_taxonomy() {
+function create_portfolio_taxonomy() {
   $labels = array(
-    'name'                       => _x( 'Topics', 'taxonomy general name' ),
-    'singular_name'              => _x( 'Topic', 'taxonomy singular name' ),
-    'search_items'               => __( 'Search Topics' ),
-    'popular_items'              => __( 'Popular Topics' ),
-    'all_items'                  => __( 'All Topics' ),
+    'name'                       => _x( 'Keywords', 'taxonomy general name' ),
+    'singular_name'              => _x( 'Keyword', 'taxonomy singular name' ),
+    'search_items'               => __( 'Search Keywords' ),
+    'popular_items'              => __( 'Popular Keywords' ),
+    'all_items'                  => __( 'All Keywords' ),
     'parent_item'                => null,
     'parent_item_colon'          => null,
-    'edit_item'                  => __( 'Edit Topic' ),
-    'update_item'                => __( 'Update Topic' ),
-    'add_new_item'               => __( 'Add New Topic' ),
-    'new_item_name'              => __( 'New Topic Name' ),
-    'separate_items_with_commas' => __( 'Separate Topics with commas' ),
-    'add_or_remove_items'        => __( 'Add or remove Topics' ),
-    'choose_from_most_used'      => __( 'Choose from the most used Topics' ),
-    'not_found'                  => __( 'No Topics found.' ),
-    'menu_name'                  => __( 'Topics' ),
+    'edit_item'                  => __( 'Edit Keyword' ),
+    'update_item'                => __( 'Update Keyword' ),
+    'add_new_item'               => __( 'Add New Keyword' ),
+    'new_item_name'              => __( 'New Keyword Name' ),
+    'separate_items_with_commas' => __( 'Separate Keywords with commas' ),
+    'add_or_remove_items'        => __( 'Add or remove Keywords' ),
+    'choose_from_most_used'      => __( 'Choose from the most used Keywords' ),
+    'not_found'                  => __( 'No Keywords found.' ),
+    'menu_name'                  => __( 'Keywords' ),
   );
 
   $args = array(
@@ -65,12 +65,12 @@ function create_video_taxonomy() {
     'show_admin_column'     => true,
     'update_count_callback' => '_update_post_term_count',
     'query_var'             => true,
-    'rewrite'               => array( 'slug' => 'topic' ),
+    'rewrite'               => array( 'slug' => 'keyword' ),
   );
 
-  register_taxonomy( 'topic', 'video', $args );
+  register_taxonomy( 'ajhkeyword', 'ajhportfolio', $args );
 }
-add_action( 'init', 'create_video_taxonomy', 0 );
+add_action( 'init', 'create_portfolio_taxonomy', 0 );
 
 /*
 * parse_youtube_url() PHP function
@@ -138,7 +138,7 @@ function parse_youtube_url($url,$return='embed',$width='',$height='',$rel=0){
     }
 }
 
-// Custom Post Type Videos
+// Custom Post Type Snippets
 function custom_post_type_snippets() {
     $labels = array(
     'name'               => 'Snippets',

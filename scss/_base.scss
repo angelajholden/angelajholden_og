@@ -156,16 +156,29 @@ article {
 }
 
 /* Archive View */
+.home .archivePost {
+	padding-bottom: 525px;
+}
 .archivePost {
 	@include grid;
-	padding: 20px 25px 20px 0;
+	height: 0;
+	padding: 0 25px 25em 0;
+	@include box-sizing(border-box);
+	@media (max-width: 1024px) {
+		padding-bottom: 30em;
+	}
 	@media (max-width: 768px) {
 		font-size: 1em;
+		padding-bottom: 25em;
+	}
+	@media (max-width: 600px) {
+		padding-bottom: 32em;
 	}
 	.archiveTitle {
 		font-size: 1.55em;
 		font-weight: 400;
 		text-transform: uppercase;
+		white-space: nowrap;
 		span {
 			text-transform: none;
 		}
@@ -279,6 +292,7 @@ figure.snippetImage {
 .post-type-archive-snippet article,
 .tax-keyword article {
 	font-size: 85%;
+	padding: 20px 25px 25% 0;
 }
 
 /* Main Content Layout */
