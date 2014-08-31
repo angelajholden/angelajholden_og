@@ -33,9 +33,8 @@
 	.githubSVG,
 	.googleSVG,
 	.screenSVG {
-		fill: #777;
-		background-color: transparent;
-		border: 1px solid #eaeaea;
+		fill: #999;
+		background-color: #f7f7f7;
 		padding: 13px;
 		@include border-radius(3px);
 		width: 30px;
@@ -53,35 +52,30 @@
 		&:hover, &:active, &:focus {
 			fill: #fff;
 			background-color: $facebook;
-			border: 1px solid transparent;
 		}
 	}
 	.twitterSVG {
 		&:hover, &:active, &:focus {
 			fill: #fff;
 			background-color: $twitter;
-			border: 1px solid transparent;			
 		}
 	}
 	.googleSVG {
 		&:hover, &:active, &:focus {
 			fill: #fff;
 			background-color: $google;
-			border: 1px solid transparent;			
 		}
 	}
 	.githubSVG {
 		&:hover, &:active, &:focus {
 			fill: #fff;
 			background-color: $github;
-			border: 1px solid transparent;			
 		}
 	}
 	.screenSVG {
 		&:hover, &:active, &:focus {
 			fill: #fff;
 			background-color: $yellow;
-			border: 1px solid transparent;			
 		}
 	}
 }
