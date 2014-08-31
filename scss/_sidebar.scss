@@ -6,6 +6,7 @@ aside {
 	@include box-sizing(border-box);
 	@media (max-width: 1024px) {
 		margin-bottom: 1%;
+		padding: 20px 0;
 	}
 	h3.h3 {
 		margin: 0 0 15px 0;
