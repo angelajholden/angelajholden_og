@@ -103,3 +103,47 @@ legend {
   width: 25px;
   height: auto;
 }
+
+/* Contact Form 7 */
+.wpcf7-form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.wpcf7 {
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="tel"],
+  textarea {
+    outline: none;
+    @include border-radius(5px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    @include box-sizing(border-box);
+    width: 100%;
+  }
+  .cf-col1 {
+    width: 48%;
+    margin: 1% 1% 1% 0;
+    float: left;
+  }
+  .cf-col2 {
+    width: 48%;
+    margin: 1% 1% 1% 0;
+    float: right;
+  }
+  @media (max-width: 600px) {
+    .cf-col1, .cf-col2 {
+      width: 99%;
+      float: none;
+    }
+  }
+  textarea {
+    width: 99%;
+    margin: 1% 1% 1% 0;
+  }
+  input[type="submit"] {
+    width: 100px;
+  }
+}
