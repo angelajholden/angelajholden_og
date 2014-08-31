@@ -31,7 +31,7 @@
       <div class="headerWrap">
         <div class="mainHead clearfix">
           <header class="clearfix">
-            <a href="<?php bloginfo('url'); ?>">
+            <a class="clearfix" href="<?php bloginfo('url'); ?>">
               <figure><?php include('inc/logo.svg'); ?></figure>
               <h1 class="blogTitle"><?php bloginfo('name'); ?></h1>
             </a>

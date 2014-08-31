@@ -55,6 +55,7 @@ a {
   background: transparent;
   color: lighten($pink, 10%);
   text-decoration: none;
+  @include single-transition(all, 0.25s, ease);
   &:hover, &:active, &:focus {
   	color: $pink;
   }

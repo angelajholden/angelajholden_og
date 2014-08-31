@@ -7,11 +7,11 @@
 }
 /* Icons in the Header */
 .socialIcons {
-	width: 33.333%;
+	width: 50%;
 	float: right;
 	list-style-type: none;
-	text-align: right;
-	margin: 0;
+	text-align: center;
+	margin: 15px 0 0;
 	padding: 0;
 	@media (max-width: 1225px) {
 		width: auto;
@@ -33,44 +33,55 @@
 	.githubSVG,
 	.googleSVG,
 	.screenSVG {
-		fill: #ccc;
+		fill: #777;
 		background-color: transparent;
+		border: 1px solid #eaeaea;
 		padding: 13px;
 		@include border-radius(3px);
-		width: 20px;
-		height: 20px;
+		width: 30px;
+		height: 30px;
 		padding: 10px;
+		@include single-transition(all, 0.25s, ease);
+		@media (max-width: 410px) {
+			width: 20px;
+			height: 20px;
+		}
 	}
 }
 .socialIcons {
 	.facebookSVG {
 		&:hover, &:active, &:focus {
 			fill: #fff;
-			background-color: $facebook;			
+			background-color: $facebook;
+			border: 1px solid transparent;
 		}
 	}
 	.twitterSVG {
 		&:hover, &:active, &:focus {
 			fill: #fff;
-			background-color: $twitter;			
+			background-color: $twitter;
+			border: 1px solid transparent;			
 		}
 	}
 	.googleSVG {
 		&:hover, &:active, &:focus {
 			fill: #fff;
-			background-color: $google;			
+			background-color: $google;
+			border: 1px solid transparent;			
 		}
 	}
 	.githubSVG {
 		&:hover, &:active, &:focus {
 			fill: #fff;
-			background-color: $github;			
+			background-color: $github;
+			border: 1px solid transparent;			
 		}
 	}
 	.screenSVG {
 		&:hover, &:active, &:focus {
 			fill: #fff;
-			background-color: $yellow;			
+			background-color: $yellow;
+			border: 1px solid transparent;			
 		}
 	}
 }
