@@ -27,7 +27,7 @@
           <ul>
             <li><a href="http://angelaholdendesign.com">Angela Holden Design</a></li>
             <li><a href="http://fazilsayfan.com">Fazıl Say Fan</a></li>
-            <li><a href="http://circleof5ths.com">Circle of 5ths</a></li>
+            <li><a style="cursor:pointer;">The Circle of 5ths</a></li>
             <li><a href="http://responsivevideogallery.com">Responsive Video Gallery</a></li>
             <li><a href="http://wikipediageeks.com">Wikipedia Geeks</a></li>
           </ul>
