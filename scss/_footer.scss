@@ -1,6 +1,6 @@
 /* Footer */
 .aboutWrap {
-	padding: 50px 0;
+	padding: 5% 0;
 	margin: 0;
 	background: #f4f4f4;
 }
@@ -40,7 +40,61 @@
 }
 footer {
 	text-align: center;
-	padding: 50px 0;
-	background: darken($pink,5%);
-	color: #fff;
+	background: #333;
+	color: #eaeaea;
+	line-height: 1.75;
+	.footer-wrap {
+		max-width: 1250px;
+		margin: 0 auto;
+		padding: 5% 0;
+		a {
+			color: #eaeaea;
+			&:active, &:hover, &:focus {
+				color: $pink;
+			}
+		}
+		.bold-title {
+			font-size: 1.1em;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+		.ajh-footer {
+			width: 33.333%;
+			padding: 15px;
+			@include box-sizing(border-box);
+			float: left;
+			img {
+				width: 125px;
+				height: auto;
+				display: block;
+				margin: 0 auto;
+			}
+			ul {
+				list-style-type: none;
+				margin: 0 0 35px;
+				padding: 0;
+			}
+			.searchForm {
+				width: auto;
+				float: none;
+				display: block;
+				padding: 0;
+				margin: 40px 0 0;
+				.searchInput {
+					padding: 13px;
+					background: #555;
+					border: none;
+					color: #eaeaea;
+				}
+				.searchImage {
+					top: 10px;
+				}
+			}
+		}
+	}
+		.bottom-footer {
+		background: #D8445E;
+		padding: 2.5% 0;
+	}
 }
+

@@ -13,7 +13,49 @@
     </section>
 
     <footer>
-      <p>Copyright &copy; <?php echo date('Y'); ?> Angela Holden Design LLC</p>
+
+      <div class="footer-wrap clearfix">
+
+        <div class="ajh-footer">
+          <img src="<?php bloginfo('template_url') ?>/images/logo.png">
+          <p><?php echo date('Y'); ?> &copy; Angela Holden Design LLC</p>
+          <?php include('search.php'); ?>
+        </div>
+
+        <div class="ajh-footer">
+          <h3 class="bold-title">Projects</h3>
+          <ul>
+            <li><a href="http://angelaholdendesign.com">Angela Holden Design</a></li>
+            <li><a href="http://fazilsayfan.com">Fazıl Say Fan</a></li>
+            <li><a href="http://circleof5ths.com">Circle of 5ths</a></li>
+            <li><a href="http://responsivevideogallery.com">Responsive Video Gallery</a></li>
+            <li><a href="http://wikipediageeks.com">Wikipedia Geeks</a></li>
+          </ul>
+          <p class="bold-title"><a href="<?php bloginfo('url') ?>/contact/">Contact me for a quote</a></p>
+        </div>
+
+        <div class="ajh-footer">
+          <h3 class="bold-title">Social</h3>
+          <ul>
+            <li><a href="http://facebook.com/angelajholdendesignllc">Facebook</a></li>
+            <li><a href="http://twitter.com/angelaholden">Twitter</a></li>
+            <li><a href="https://plus.google.com/u/0/+AngelaHoldenDesign/posts">Google Plus</a></li>
+          </ul>
+          <h3 class="bold-title">Work</h3>
+          <ul>
+            <li><a href="http://github.com/angelajholden">Fork my work on Github</a></li>
+            <li><a href="http://etsy.com/shop/angelajholden">Visit my Etsy Shop</a></li>
+          </ul>
+        </div>
+
+      </div> <?php // End Footer Wrap ?>
+
+      <div style="clear:both;"></div>
+
+      <div class="bottom-footer">
+        <p>Made with &#10084; in San Diego, California</p>
+      </div>
+
     </footer>
     <?php wp_footer(); ?>
   </body>
