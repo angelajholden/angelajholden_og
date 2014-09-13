@@ -43,10 +43,11 @@ footer {
 	background: #333;
 	color: #eaeaea;
 	line-height: 1.75;
+	@include box-sizing(border-box);
 	.footer-wrap {
 		max-width: 1250px;
 		margin: 0 auto;
-		padding: 5% 0;
+		padding: 5% 2%;
 		a {
 			color: #eaeaea;
 			&:active, &:hover, &:focus {
@@ -57,29 +58,39 @@ footer {
 			font-size: 1.1em;
 			font-weight: 400;
 			text-transform: uppercase;
+			color: #eaeaea;
+			margin: 0 0 10px;
 		}
 		.ajh-footer {
 			width: 33.333%;
-			padding: 15px;
 			@include box-sizing(border-box);
 			float: left;
+			@media (max-width: 768px) {
+				width: auto;
+				float: none;
+				display: block;
+			}
 			img {
-				width: 125px;
+				width: 100px;
 				height: auto;
 				display: block;
 				margin: 0 auto;
 			}
 			ul {
 				list-style-type: none;
-				margin: 0 0 35px;
+				margin: 0 0 25px;
 				padding: 0;
 			}
 			.searchForm {
 				width: auto;
+				max-width: 320px;
 				float: none;
 				display: block;
 				padding: 0;
-				margin: 40px 0 0;
+				margin: 40px auto;
+				@media (max-width: 1024px) {
+					position: static;
+				}
 				.searchInput {
 					padding: 13px;
 					background: #555;
