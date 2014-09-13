@@ -106,6 +106,12 @@ footer {
 		.bottom-footer {
 		background: #D8445E;
 		padding: 2.5% 0;
+		a {
+			color: #eaeaea;
+			&:active, &:hover, &:focus {
+				color: #eaeaea;
+			}
+		}
 	}
 }
 

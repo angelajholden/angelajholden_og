@@ -53,7 +53,7 @@
       <div style="clear:both;"></div>
 
       <div class="bottom-footer">
-        <p>Made with &#10084; in San Diego, California</p>
+        <p><a href="https://goo.gl/maps/GfWkG">Made with &#10084; in San Diego, California</a></p>
       </div>
 
     </footer>
