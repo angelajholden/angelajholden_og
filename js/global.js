@@ -1,9 +1,11 @@
-$(document).ready(function() {
+var $a = jQuery.noConflict();
+
+$a(document).ready(function() {
 
 // Fancybox
-  $('.fancybox').fancybox({
+  $a('.fancybox').fancybox({
     beforeShow: function () {
-      this.title = $(this.element).find("img").attr("alt"); // shows alt tag as image title
+      this.title = $a(this.element).find("img").attr("alt"); // shows alt tag as image title
     },
     padding     : 0,
     maxWidth    : '100%',
@@ -22,23 +24,23 @@ $(document).ready(function() {
   });
 
 // Responsive Nav
-  $(function() {  
-    var pull      = $('#pull');  
-      menu        = $('nav ul');  
+  $a(function() {  
+    var pull      = $a('#pull');  
+      menu        = $a('nav ul');  
       menuHeight  = menu.height();
-    $(pull).on('click', function(e) {  
+    $a(pull).on('click', function(e) {  
       e.preventDefault();  
       menu.slideToggle();  
     });  
   });
-  $(window).resize(function(){  
-    var w = $(window).width();  
+  $a(window).resize(function(){  
+    var w = $a(window).width();  
     if(w > 768 && menu.is(':hidden')) {  
       menu.removeAttr('style');  
     }  
   });
 
 // Fit Vids
-  $("figure").fitVids();
+  $a("figure").fitVids();
   
 });
