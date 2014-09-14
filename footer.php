@@ -43,7 +43,7 @@
           </ul>
           <h3 class="bold-title">Work</h3>
           <ul>
-            <li><a href="http://github.com/angelajholden">Fork my work on Github</a></li>
+            <li><a href="http://github.com/angelajholden">Fork my code on Github</a></li>
             <li><a href="http://etsy.com/shop/angelajholden">Visit my Etsy Shop</a></li>
           </ul>
         </div>
