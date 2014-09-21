@@ -182,10 +182,9 @@ article {
 	}
 }
 .archiveTitle {
-	font-size: 1.55em;
-	font-weight: 400;
+	font-size: 2em;
+	font-weight: 300;
 	text-transform: uppercase;
-	white-space: nowrap;
 	span {
 		text-transform: none;
 	}
@@ -292,6 +291,8 @@ figure.snippetImage {
 	@include grid;
 	padding: 20px 25px 3em 0;
 	h2.archiveTitle {
+		font-size: 1.35em;
+		font-weight: 400;
 		@media (max-width: 600px) {
 			white-space: normal;
 		}
