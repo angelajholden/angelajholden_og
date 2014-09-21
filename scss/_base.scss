@@ -153,12 +153,26 @@ article {
 	width: auto;
 	height: auto;
 	padding: 0 25px 25px 0;
+	.archiveTitle {
+		white-space: normal;
+	}
 	figure {
-		width: 350px;
+		width: auto;
 		height: auto;
 		float: left;
 		margin: 1em 1em 1em 0;
 		padding-bottom: 0;
+		@media (max-width: 600px) {
+			float: none;
+			display: block;
+			margin: 0;
+		}
+		img {
+			width: 350px;
+			@media (max-width: 600px) {
+				width: 100%;
+			}
+		}
 	}
 }
 .archivePost {
