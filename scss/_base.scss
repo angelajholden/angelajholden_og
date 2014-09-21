@@ -39,7 +39,7 @@ body {
 }
 .mainHead {
 	margin: 0 auto;
-	padding: 1em 0;
+	padding: 2.5em 0;
 	@include main-grid;
 	header {
 		width: 50%;
@@ -150,15 +150,15 @@ article {
 
 /* Archive View */
 .home .archivePost {
-	padding-bottom: 32em;
-	@media (max-width: 1024px) {
-		padding-bottom: 34em;
-	}
-	@media (max-width: 600px) {
-		padding-bottom: 37em;
-	}
-	@media (max-width: 480px) {
-		padding-bottom: 33em;
+	width: auto;
+	height: auto;
+	padding: 0 25px 25px 0;
+	figure {
+		width: 350px;
+		height: auto;
+		float: left;
+		margin: 1em 1em 1em 0;
+		padding-bottom: 0;
 	}
 }
 .archivePost {
@@ -196,6 +196,7 @@ article {
 		height: 0;
 	  padding-bottom: 56.3076923077%;
 		margin: 10px 0 0;
+		@include single-transition(all, 0.25s, ease);
 		&:hover, &:active, &:focus {
 			opacity: 0.8;
 		}
