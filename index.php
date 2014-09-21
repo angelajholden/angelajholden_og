@@ -4,6 +4,11 @@
 
   <?php include('search.php'); ?>
 
+    <header>
+      <h1>Welcome!</h1>
+      <p>My name is Angela and I'm a freelance web designer and developer in San Diego, CA. My expertise is Photoshop to finsih WordPress development, but I get hired to do all sorts of web related stuff.</p>
+    </header>
+
     <div class="blogWrap frontWrap">
 
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -24,9 +29,9 @@
 
             <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
 
-            <p><?php the_excerpt(); ?></p>
+            <?php the_excerpt(); ?>
 
-          <p class="singleButton"><a class="readMore" href="<?php the_permalink(); ?>">Read more</a></p>
+          <a class="readMore singleButton" href="<?php the_permalink(); ?>">Read more</a>
 
         </article>
 
