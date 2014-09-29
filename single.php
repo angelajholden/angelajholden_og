@@ -6,8 +6,6 @@
     <h1><?php the_title(); ?></h1>
   </header>
 
-  <?php include('search.php'); ?>
-
     <div class="blogWrap">
 
       <article class="singlePost">

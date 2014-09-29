@@ -11,8 +11,6 @@ query_posts( $query_string . '&showposts=-1' );
 
   	<div class="blogWrap clearfix">
 
-      <?php include('search.php'); ?>
-
       <?php while (have_posts() ) : the_post(); ?>
 
   		<article class="archivePost clearfix">

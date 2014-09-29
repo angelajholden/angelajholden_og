@@ -11,8 +11,6 @@ get_header(); the_post(); ?>
     <p><?php the_content(); ?></p>
   </header>
 
-  <?php include('search.php'); ?>
-
   	<div class="blogWrap clearfix">
 
       <?php

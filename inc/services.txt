@@ -1,0 +1,67 @@
+I am a WordPress front end developer. My expertise is designing and developing websites from Photoshop to finish using HTML5, CSS, JQuery, and WordPress/PHP. All of my websites are mobile ready and responsive.
+
+	<hr>
+
+<h2 class="servicesTitle">My skillset is versatile and I get hired to work on many different types of projects.</h2>
+
+	<div class="ajh-skillset clearfix">
+		<div><span class="fa fa-code fa-3x"></span><h3>Site Edits</h3>Modify or add functionality to an existing website.</div>
+		<div><span class="fa fa-paint-brush fa-3x"></span><h3>Styling</h3>Use CSS &amp; JQuery to style a website’s markup.</div>
+		<div><span class="fa fa-desktop fa-3x"></span><h3>Design</h3>Create website mockups in Photoshop.</div>
+		<div><span class="fa fa-pencil fa-3x"></span><h3>Information Architecture</h3>Content inventory, audit, and strategy.</div>
+		<div><span class="fa fa-wordpress fa-3x"></span><h3>WordPress Setup</h3>Install WordPress on your domain.</div>
+		<div><span class="fa fa-mobile fa-3x"></span><h3>App Landing Page</h3>One page scrolling website to support an app.</div>
+	</div>
+
+	<hr>
+
+<h2><span class="fa fa-shopping-cart"></span>Bundle Pricing</h2>
+<ul>
+	<li>WordPress Setup = $750.00 | Includes a complimentary, premium WordPress theme and 5 royalty-free images.</li>
+	<li>App Landing Page = $250.00 | Includes a complimentary, premium HTML5 template and 3 royalty-free images.</li>
+</ul>
+
+<hr>
+
+<h2><span class="fa fa-usd"></span>Custom Pricing</h2>
+My hourly rate for custom work is $40. For small projects, or anything less than 5 hours, I require $100 up front and invoice the remaining amount due after work is completed.
+For projects that take more than 5 hours, I estimate the amount of time needed to do the requested work and quote a fixed price. I require 50% to begin work, and the remaining amount due upon completion.
+
+<hr>
+
+<h2><span class="fa fa-clock-o"></span>Turn Around Time</h2>
+For most projects my turn around time is 7-10 days, but hopefully much sooner. For a custom WordPress website the process generally takes 3-4 weeks.
+
+<hr>
+
+<h2><span class="fa fa-picture-o"></span>Images</h2>
+For all projects I provide 3-5 complimentary, royalty-free, high resolution images for use on your website.
+
+<hr>
+
+<h2><span class="fa fa-users"></span>Social Media</h2>
+I can suggest ways for you to implement a social media strategy that integrates with your website. For long term social media coaching and branding, I recommend you contact a firm like Social Networkit.
+
+You may consider a subscription to the website Lynda.com and a course called Social Media Marketing with Facebook &amp; Twitter for more information about how to market your business with social media.
+
+<hr>
+
+<h2><span class="fa fa-tint"></span>Logos &amp; Illustrations</h2>
+I do not provide complex graphic design and illustration services. If you need a logo or specialized graphics, I recommend you hire one of the excellent designers on Dribbble.
+
+<hr>
+
+<h2><span class="fa fa-database"></span>Domains, Hosting &amp; Email</h2>
+I do not provide domain names, hosting services or email accounts. I recommend GoDaddy for most websites and Media Temple for premium hosting of larger, high traffic websites. All three provide domains, hosting, and email, and I’m happy to help you navigate this process.
+
+<hr>
+
+<h2><span class="fa fa-wrench"></span>Some of my tools…</h2>
+<ul>
+	<li>Bootstrap &amp; Foundation for layout, CSS, and responsive web design.</li>
+	<li>Font Awesome for icons and simple graphics.</li>
+	<li>Dollar Photo Club for royalty-free images and illustrations.</li>
+	<li>Themeforest for premium HTML5 templates and WordPress themes.</li>
+	<li>WooThemes &amp; WooCommerce for WordPress eCommerce.</li>
+	<li>Github for open source work like Responsive Slides JS, FitVids JS, HTML5 Boilerplate, Normalize CSS, and Options Framework, just to name a few.</li>
+</ul>

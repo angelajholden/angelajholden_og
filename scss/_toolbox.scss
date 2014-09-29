@@ -34,14 +34,7 @@ figure {
 }
 hr {
 	clear: both;
-  border: 0;
-  height: 1px;
-  @include background(linear-gradient(left, 
-    rgba(#999, 0),
-    rgba(#999, 0.5),
-    rgba(#999, 0)
-    )
-  );
+  border: 3px solid #eaeaea;
   margin: 35px 0;
   @include box-sizing(content-box);
 }

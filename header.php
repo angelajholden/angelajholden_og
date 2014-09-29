@@ -18,6 +18,7 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <?php endif; ?>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>

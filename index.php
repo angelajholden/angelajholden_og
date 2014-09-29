@@ -2,8 +2,6 @@
 
   <div class="blogSpace"></div>
 
-  <?php include('search.php'); ?>
-
     <header>
       <h1>Welcome!</h1>
       <p>My name is Angela and I'm a freelance web designer and developer in San Diego, CA. My expertise is Photoshop to finsih WordPress development, but I get hired to do all sorts of web related stuff.</p>
@@ -27,7 +25,7 @@
             </a>
           <?php } ?>
 
-            <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
+            <p class="postMeta">Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
 
             <?php the_excerpt(); ?>
 

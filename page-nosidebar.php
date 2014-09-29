@@ -11,8 +11,6 @@ get_header(); the_post(); ?>
 
     <div class="blogPost page-no-sidebar">
 
-      <?php include('search.php'); ?>
-
       <article class="singlePost">
 
         <header>
