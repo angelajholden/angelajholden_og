@@ -34,7 +34,7 @@ figure {
 }
 hr {
 	clear: both;
-  border: 3px solid #eaeaea;
+  border-bottom: 3px solid #eaeaea;
   margin: 35px 0;
   @include box-sizing(content-box);
 }
