@@ -26,6 +26,8 @@ get_header(); the_post(); ?>
 
           <?php the_content(); ?>
 
+          <?php if (is_page('Services')) : include ('inc/services.php'); endif; ?>
+
         <?php edit_post_link('Edit'); ?>
 
       </article>
