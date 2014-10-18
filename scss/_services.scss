@@ -81,16 +81,16 @@ h2 span {
 }
 
 .tint {
-	border-bottom: 3px solid $yellow;
+	border-bottom: 3px solid $dkYellow;
 	a {
-		color: $yellow;
+		color: $dkYellow;
 		&:active, &:hover, &:focus {
-			color: lighten($yellow,10%);
+			color: lighten($dkYellow,10%);
 		}
 	}
 }
 .fa-tint {
-	color: $yellow;
+	color: $dkYellow;
 }
 
 .database {
