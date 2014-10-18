@@ -60,50 +60,6 @@ legend {
   padding: 0;
 }
 
-/* Search Styles */
-.searchForm {
-  width: 32.5%;
-  float: right;
-  @media (max-width: 1024px) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 25px 0;
-    box-sizing: border-box;
-    background: transparent;
-    @include box-shadow(none);
-  }
-}
-.searchField {
-  position: relative;
-}
-.searchInput {
-  width: 100%;
-  outline: none;
-  border-top: none;
-  border-right: none;
-  border-bottom: 1px solid #eaeaea;
-  border-left: none;
-  padding: 5px;
-  margin: 0;
-  @include box-sizing(border-box);
-  @media (max-width: 1024px) {
-    border-bottom: 2px solid #eaeaea;
-    padding: 5px 0;
-    background: transparent;
-  }
-}
-.searchImage {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  border: none;
-  outline: none;
-  width: 25px;
-  height: auto;
-}
-
 /* Contact Form 7 */
 .wpcf7-form:after {
   content: "";
