@@ -33,13 +33,12 @@
 	.githubSVG,
 	.googleSVG,
 	.screenSVG {
-		fill: #f7f7f7;
-		background-color: lighten($pink,10%);
-		padding: 13px;
-		@include border-radius(3px);
-		width: 30px;
+		fill: #999;
+		background-color: #f5f5f5;
+		@include border-radius(10px);
+		width: 25px;
 		height: 30px;
-		padding: 10px;
+		padding: 15px;
 		@include single-transition(all, 0.25s, ease);
 		@media (max-width: 410px) {
 			width: 20px;
