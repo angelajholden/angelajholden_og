@@ -81,26 +81,6 @@ footer {
 				margin: 0 0 25px;
 				padding: 0;
 			}
-			.searchForm {
-				width: auto;
-				max-width: 320px;
-				float: none;
-				display: block;
-				padding: 0;
-				margin: 40px auto;
-				@media (max-width: 1024px) {
-					position: static;
-				}
-				.searchInput {
-					padding: 13px;
-					background: #555;
-					border: none;
-					color: #eaeaea;
-				}
-				.searchImage {
-					top: 10px;
-				}
-			}
 		}
 	}
 		.bottom-footer {
