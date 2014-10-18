@@ -1,0 +1,120 @@
+/* Services */
+.ajh-skillset div {
+	width: 33%;
+	float: left;
+	height: 255px;
+	padding: 20px;
+	@include box-sizing(border-box);
+	text-align: center;
+	@media (max-width: 768px) {
+		width: 49.5%;
+	}
+	@media (max-width: 480px) {
+		width: auto;
+		float: none;
+	}
+}
+
+.ajh-skillset span {
+	display: block;
+	border: 2px solid #ccc;
+	width: 75px;
+	height: 75px;
+	line-height: 75px;
+	border-radius: 50%;
+	margin: 0 auto;
+	font-size: 2.25em;
+	color: #555;
+}
+
+.fa-mobile {
+	font-size: 3em !important;
+}
+
+.servicesTitle {
+	text-align: center;
+	margin-bottom: 1em !important;
+}
+
+h2 span {
+	margin-right: 15px;
+	color: #555;
+}
+
+.srvc {
+	@include box-sizing(border-box);
+	@include box-shadow(0 1px 1px rgba(0,0,0,0.2));
+	padding: 25px;
+	margin-bottom: 25px;
+	background: #fafafa;
+	ul {
+		padding-left: 1em;
+	}
+}
+
+.usd {
+	border-bottom: 3px solid $fuchsia;
+}
+.fa-usd {
+	color: $fuchsia;
+}
+
+.clock {
+	border-bottom: 3px solid $dkBlue;
+}
+.fa-clock-o {
+	color: $dkBlue;
+}
+
+.picture {
+	border-bottom: 3px solid $pink;
+}
+.fa-picture-o {
+	color: $pink;
+}
+
+.users {
+	border-bottom: 3px solid $blue;
+}
+.fa-users {
+	color: $blue;
+}
+
+.tint {
+	border-bottom: 3px solid $yellow;
+	a {
+		color: $yellow;
+		&:active, &:hover, &:focus {
+			color: lighten($yellow,10%);
+		}
+	}
+}
+.fa-tint {
+	color: $yellow;
+}
+
+.database {
+	border-bottom: 3px solid $fuchsia;
+	a {
+		color: $fuchsia;
+		&:active, &:hover, &:focus {
+			color: lighten($fuchsia,10%);
+		}
+	}
+}
+.fa-database {
+	color: $fuchsia;
+}
+
+.wrench {
+	border-bottom: 3px solid $dkBlue;
+	a {
+		color: $dkBlue;
+		&:active, &:hover, &:focus {
+			color: lighten($dkBlue,10%);
+		}
+	}
+}
+.fa-wrench {
+	color: $dkBlue;
+}
