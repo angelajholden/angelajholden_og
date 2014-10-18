@@ -37,10 +37,9 @@
               <h1 class="blogTitle"><?php bloginfo('name'); ?></h1>
             </a>
           </header>
-
           <ul class="socialIcons">
             <?php include('inc/svg-icons.php'); ?>
-          </ul> 
+          </ul>
         </div><?php //Main Head ?>
       </div><?php //Header Wrap ?>
 
