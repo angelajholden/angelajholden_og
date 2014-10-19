@@ -28,6 +28,8 @@
 
         <?php include('inc/share.php'); ?>
 
+        <div class="comments"><?php comments_template(); ?></div>
+
       </article>
 
       <p><a href="<?php bloginfo('url') ?>/snippets/">View All Snippets</a></p>

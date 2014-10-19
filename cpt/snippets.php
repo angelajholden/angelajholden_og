@@ -29,7 +29,7 @@ function custom_post_type_snippets() {
     'menu_position'         => 7,
     'menu_icon'             => 'dashicons-media-code',
     'rewrite'               => array('slug' => 'snippets'),
-    'supports'              => array('title','thumbnail', 'editor', 'excerpt','custom-fields'),
+    'supports'              => array('title','thumbnail', 'editor', 'excerpt','custom-fields','comments'),
     'taxonomies'            => array('post_tag / categories')
   );
   register_post_type( 'snippet' , $args );
