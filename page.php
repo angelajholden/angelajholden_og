@@ -19,6 +19,11 @@
 
           <?php the_content(); ?>
 
+          <?php if (is_page('Contact')) {
+          	echo do_shortcode('[contact-form-7 id="1453" title="Website Inquiry"]');
+          	echo '<style>.side{padding:0;margin-bottom:0;}</style>';
+          } ?>
+
         <?php edit_post_link('Edit'); ?>
 
       </article>
