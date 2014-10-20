@@ -18,6 +18,7 @@ function ajh_setup() {
 
 	// Featured Images
   add_theme_support( 'post-thumbnails' );
+  add_image_size('75x75', 75, 75, true);
   add_image_size('650x366', 650, 366, true);
   add_image_size('300x169', 300, 169, true);
 
@@ -25,14 +26,40 @@ function ajh_setup() {
 endif; // ajh_setup
 add_action( 'after_setup_theme', 'ajh_setup' );
 
-// Register Dynamic Sidebar 'Sidebar'
+// Over-ride image_size_names_choose
+function ajh_add_image_insert_override($size_names){
+  global $_wp_additional_image_sizes;
+   //default array with hardcoded values for add_image_size
+    $size_names = array(
+    	'75x75'     => __('Tiny'),
+			'thumbnail' => __('Thumbnail'), 
+			'300x169'   => __('Medium'), 
+			'650x366' 	=> __('Post Size'),
+			'full'    	=> __('Full Size')
+		);
+  return $size_names;
+};
+add_filter('image_size_names_choose', 'ajh_add_image_insert_override' );
+
+// Register Dynamic Sidebars
 function ajh_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'ajh' ),
 		'id'            => 'sidebar',
 		'description'		=> 'Widgets in this sidebar will be displayed on Posts & Pages.',
-    'class'         => 'sidebar',
-		'before_widget' => '<aside class="widget">',
+    'class'         => '',
+		'before_widget' => '<aside class="widget side">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="h3">',
+		'after_title'   => '</h3>'
+  ) );
+
+  register_sidebar( array(
+		'name'          => __( 'Contact Page', 'ajh' ),
+		'id'            => 'contact-page',
+		'description'		=> 'Widgets in this sidebar will be displayed on the Contact Page.',
+    'class'         => '',
+		'before_widget' => '<aside class="widget side">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="h3">',
 		'after_title'   => '</h3>'
@@ -80,32 +107,12 @@ function remove_more_link_scroll( $link ) {
 }
 add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
 
-// Attach a class to linked image's parent anchors
-function give_linked_images_class($html, $id, $caption, $title, $align, $url, $size, $alt = '' ){
-  $classes = 'fancybox';
-
-  if ( preg_match('/<a.*? class=".*?">/', $html) ) {
-    $html = preg_replace('/(<a.*? class=".*?)(".*?>)/', '$1 ' . $classes . '$2', $html);
-  } else {
-    $html = preg_replace('/(<a.*?)>/', '$1 class="' . $classes . '" >', $html);
-  }
-  return $html;
-}
-add_filter('image_send_to_editor','give_linked_images_class',10,8);
-
-// Add class and rel to WordPress Galleries
-function rc_add_rel_attribute($link) {
-  global $post;
-  return str_replace('<a href', '<a class="fancybox" rel="gallery" href', $link);
-}
-add_filter('wp_get_attachment_link', 'rc_add_rel_attribute');
-
 // SHOW FEATURED IMAGES ON POST & PAGE ADMIN VIEW
 // Get the Featured Image
 	function ahd_get_featured_image($post_ID) {
     $post_thumbnail_id = get_post_thumbnail_id($post_ID);
     if ($post_thumbnail_id) {
-        $post_thumbnail_img = wp_get_attachment_image_src($post_thumbnail_id, 'thumbnail');
+        $post_thumbnail_img = wp_get_attachment_image_src($post_thumbnail_id, '75x75');
       return $post_thumbnail_img[0];
     }
 	}
@@ -202,7 +209,7 @@ add_action( 'login_enqueue_scripts', 'ajh_login_logo' );
 function ajh_logo_url() {
     return home_url();
   }
-  add_filter( 'login_headerurl', 'ajh_logo_url' );
+add_filter( 'login_headerurl', 'ajh_logo_url' );
 
 function ajh_logo_url_title() {
     return 'Angela J. Holden';
