@@ -27,7 +27,7 @@
 
 	<div class="srvc users">
 		<h2><span class="fa fa-users"></span>Social Media</h2>
-		<p>I can help you implement a social media strategy that's integrated with your website, and is part of an overall content strategy. I believe this is an important aspect to the success of your endeavour.</p>
+		<p>I can help you implement a social media strategy that's integrated with your website, and is part of an overall content strategy. I believe this is an important aspect to the success of your business.</p>
 	</div>
 
 	<div class="srvc tint">
