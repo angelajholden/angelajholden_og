@@ -43,21 +43,16 @@ aside {
 	}
 }
 
+.widget {
+	margin-top: 1em;
+}
+
 .side {
 	padding: 12px;
 	@include box-sizing(border-box);
-	&:nth-child(1) {
-		margin-bottom: 0;
-	}
 	@media (max-width: 900px) {
 		padding: 0;
 	}
-}
-
-.fa-bullhorn {
-	margin-right: 10px;
-	color: #555;
-	vertical-align: middle;
 }
 
 .hire-me {

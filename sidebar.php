@@ -1,8 +1,8 @@
 <div class="sidebarWrap">
 
-	<!-- Only show this content if it's NOT the Contact Page. -->
-
 	<?php if ( ! is_page ( 'Contact' ) ) { ?>
+
+	<!-- Only show this content if it's NOT the Contact Page. -->
 
 		<!-- Hire Me -->
 
