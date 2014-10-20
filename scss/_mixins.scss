@@ -43,6 +43,6 @@ $dkBlue: #155C71;
 @mixin hover {
 	opacity: 1;
 	&:hover, &:active, &:focus {
-		opacity: 0.75;
+		opacity: 0.8;
 	}
 }

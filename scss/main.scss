@@ -2,9 +2,12 @@
 @import "compass/css3";
 @import "mixins";
 @import "base";
-@import "search";
 @import "typography";
+@import "header";
 @import "nav";
+@import "archive";
+@import "single";
+@import "snippets";
 @import "svgs";
 @import "toolbox";
 @import "images";
@@ -12,6 +15,6 @@
 @import "prism";
 @import "videos";
 @import "services";
-@import "normalize";
-@import "fancybox";
 @import "footer";
+@import "search";
+@import "normalize";
