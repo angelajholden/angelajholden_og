@@ -1,0 +1,59 @@
+/* Header */
+.headerWrap {
+	background: #fff;
+}
+.mainHead {
+	margin: 0 auto;
+	padding: 1.5em 0;
+	@include main-grid;
+	header {
+		width: 67%;
+		float: left;
+		margin: 0;
+		padding: 0;
+		@media (max-width: 1024px) {
+			width: auto;
+			float: none;
+			text-align: center;
+		}
+		figure {
+			width: auto;
+			float: left;
+			@media (max-width: 1024px) {
+				width: auto;
+				float: none;
+				padding: 0;
+			}
+			.logoSVG {
+				width: 85px;
+				height: 75px;
+			}
+		}
+	}
+	.blogTitle {
+		font-family: 'Roboto', sans-serif;
+		font-weight: 300;
+		font-size: 4em;
+		line-height: 1.2;
+		margin: 0;
+		@media (max-width: 480px) {
+			font-size: 2.5em;
+		}
+	}
+	p {
+		font-size: 1.5em;
+		font-weight: 300;
+		margin: 0;
+		@media (max-width: 768px) {
+			font-size: 1.25em;
+		}
+	}
+	a {
+		color: #555;
+		text-decoration: none;
+		display: block;
+		&:hover, &:active, &:focus {
+			color: $pink;
+		}
+	}
+}
