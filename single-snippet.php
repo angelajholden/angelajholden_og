@@ -1,7 +1,5 @@
 <?php get_header(); the_post(); ?>
 
-  <div class="blogSpace"></div>
-
     <div class="blogWrap">
 
       <article class="singlePost">
