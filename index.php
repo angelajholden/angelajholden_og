@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-  <div class="blogSpace"></div>
-
     <header>
       <h1>Welcome!</h1>
       <p>My name is Angela and I'm a freelance web designer and developer in San Diego, CA. My expertise is Photoshop to finish WordPress development, but I get hired to do all sorts of web related stuff.</p>
