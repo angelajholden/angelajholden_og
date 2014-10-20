@@ -36,15 +36,11 @@ get_header(); the_post(); ?>
           </a>
         <?php } ?>
 
-          <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
+          <p class="postMeta">Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
 
-          <p class="archiveExcerpt">
-            <?php
-              $content = get_the_content();
-              $trimmed_content = wp_trim_words( $content, 20, '... <a class="archiveLink" href="'. get_permalink() .'">Read More</a>' );
-              echo $trimmed_content;
-            ?>
-          </p>
+          <?php the_excerpt(); ?>
+
+          <a class="readMore singleButton" href="<?php the_permalink(); ?>">Read more</a>
 
         </article>
 
