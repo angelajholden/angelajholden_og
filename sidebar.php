@@ -37,7 +37,27 @@
 
 			  		<a href="<?php the_permalink(); ?>">
 
-				  		<figure><?php the_post_thumbnail( 'tiny' ); ?></figure>
+			  			<?php if (has_tag('wp')) { ?>
+
+				  			<figure class="side-snip-img wp"><span>wp</span></figure>
+
+				  		<?php } elseif (has_tag('php')) { ?>
+
+		        		<figure class="side-snip-img php"><span>php</span></figure>
+
+		        	<?php } elseif (has_tag('css')) { ?>
+
+		        		<figure class="side-snip-img css"><span>css</span></figure>
+
+		        	<?php } elseif (has_tag('html')) { ?>
+
+		        		<figure class="side-snip-img html"><span>html</span></figure>
+
+		        	<?php } elseif (has_tag('js')) { ?>
+
+		        		<figure class="side-snip-img js"><span>js</span></figure>
+
+		        	<?php } ?>
 
 				  		<h4><?php the_title(); ?></h4>
 

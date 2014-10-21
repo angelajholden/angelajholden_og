@@ -27,25 +27,41 @@ get_header(); ?>
 
         while ( $snippet_loop->have_posts() ) : $snippet_loop->the_post(); ?>
 
-  		<article class="archivePost clearfix">
+		  		<article class="archivePost clearfix">
 
-          <?php if ( has_post_thumbnail() ) { ?>
+		        <a href="<?php the_permalink(); ?>">
 
-            <a href="<?php the_permalink(); ?>">
+		        	<h2 class="archiveTitle"><?php the_title(); ?></h2>
 
-            	<h2 class="archiveTitle"><?php the_title(); ?></h2>
+		        	<?php if (has_tag('wp')) { ?>
 
-              <figure class="snippetImage"><?php the_post_thumbnail('tiny'); ?></figure>
+		          	<figure class="snippetImage wp"><span>wp</span></figure>
 
-            </a>
+		        	<?php } elseif (has_tag('php')) { ?>
 
-          <?php } ?>
+		        		<figure class="snippetImage php"><span>php</span></figure>
 
-          <div class="theTags"><?php the_terms( $snippet->ID, 'keyword', 'Keywords: ', ' <span>•</span> ' ); ?></div>
+		        	<?php } elseif (has_tag('css')) { ?>
 
-        </article>
+		        		<figure class="snippetImage css"><span>css</span></figure>
 
-      <?php endwhile; ?>
+		        	<?php } elseif (has_tag('html')) { ?>
+
+		        		<figure class="snippetImage html"><span>html</span></figure>
+
+		        	<?php } elseif (has_tag('js')) { ?>
+
+		        		<figure class="snippetImage js"><span>js</span></figure>
+
+		        	<?php } ?>
+
+		        </a>
+
+		      	<div class="theTags"><?php the_terms( $snippet->ID, 'keyword', 'Keywords: ', ' <span>•</span> ' ); ?></div>
+
+		      </article>
+
+	      <?php endwhile; ?>
 
       <?php wp_reset_postdata(); ?>
 

@@ -1,45 +1,54 @@
-<?php 
-get_header(); 
-global $query_string;
-query_posts( $query_string . '&showposts=-1' );
-?>
+<?php get_header(); ?>
 
   <header>
-    <h1>Snippets for <?php single_tag_title(); ?></h1>
-    <p>These are all of the snippets with the keyword ‘<?php single_tag_title(); ?>’</p>
+
+    <h1>Snippets</h1>
+
+    <p>These are some of the snippets that I've collected, modified, and use frequently in my projects. When possible, an attribution for the original source is provided.</p>
+
   </header>
 
   	<div class="blogWrap clearfix">
 
-      <?php while (have_posts() ) : the_post(); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-  		<article class="archivePost clearfix">
+		  		<article class="archivePost clearfix">
 
-        <h2 class="archiveTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		        <a href="<?php the_permalink(); ?>">
 
-          <p class="archiveTime">Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
+		        	<h2 class="archiveTitle"><?php the_title(); ?></h2>
 
-          <div class="theTags"><?php the_terms( $snippet->ID, 'keyword', 'Keywords: ', ' <span>•</span> ' ); ?></div>
+		        	<?php if (has_tag('wp')) { ?>
 
-          <?php if ( has_post_thumbnail() ) { ?>
-            <a href="<?php the_permalink(); ?>">
-              <figure class="snippetImage"><?php the_post_thumbnail('full'); ?></figure>
-            </a>
-          <?php } ?>
+		          	<figure class="snippetImage wp"><span>wp</span></figure>
 
-          <p class="archiveExcerpt">
-            <?php
-              $content = get_the_content();
-              $trimmed_content = wp_trim_words( $content, 20, '... <a class="archiveLink" href="'. get_permalink() .'">Read More</a>' );
-              echo $trimmed_content;
-            ?>
-          </p>
+		        	<?php } elseif (has_tag('php')) { ?>
 
-        </article>
+		        		<figure class="snippetImage php"><span>php</span></figure>
 
-      <?php endwhile; ?>
+		        	<?php } elseif (has_tag('css')) { ?>
 
-      <div style="clear:both;"><a href="<?php bloginfo('url') ?>/snippets/">View All Snippets</a></div>
+		        		<figure class="snippetImage css"><span>css</span></figure>
+
+		        	<?php } elseif (has_tag('html')) { ?>
+
+		        		<figure class="snippetImage html"><span>html</span></figure>
+
+		        	<?php } elseif (has_tag('js')) { ?>
+
+		        		<figure class="snippetImage js"><span>js</span></figure>
+
+		        	<?php } ?>
+
+		        </a>
+
+		      	<div class="theTags"><?php the_terms( $snippet->ID, 'keyword', 'Keywords: ', ' <span>•</span> ' ); ?></div>
+
+		      </article>
+
+	      <?php endwhile; else: ?>
+	      
+      <?php endif; ?>
 
   	</div>
 

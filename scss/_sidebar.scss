@@ -62,16 +62,6 @@ aside {
 /* Latest Snippets */
 .side-snips {
 	margin: 0 0 0.5em 0.5em;
-	figure {
-		width: auto;
-		float: left;
-		margin-right: 10px;
-		@include single-transition(all, 0.25s, ease);
-		@include hover;
-	}
-	img {
-		width: 50px;
-	}
 	h4 {
 		font-size: 1em;
 		text-transform: uppercase;
@@ -87,6 +77,21 @@ aside {
 			color: $pink;
 		}
 	}
+}
+.side-snip-img {
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-right: 10px;
+	color: #fff;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 300;
+	line-height: 45px;
+	@include border-radius(3px);
+	@include box-sizing(border-box);
+	@include single-transition(all, 0.25s, ease);
+	@include hover;
 }
 
 /* Latest Videos */

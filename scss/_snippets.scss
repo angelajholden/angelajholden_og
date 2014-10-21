@@ -1,11 +1,33 @@
 /* Snippet Styles */
 figure.snippetImage {
 	width: 75px;
+	height: 75px;
 	float: left;
 	margin: 5px 10px 0 0;
-	padding-bottom: 0;
-	height: auto;
+	color: #fff;
+	text-align: center;
+	font-size: 1.8em;
+	font-weight: 300;
+	line-height: 70px;
+	@include border-radius(3px);
+	@include box-sizing(border-box);
 }
+.wp {
+	background: $fuchsia;
+}
+.php {
+	background: $dkYellow;
+}
+.css {
+	background: $blue;
+}
+.html {
+	background: $dkBlue;
+}
+.js {
+	background: $pink;
+}
+
 .post-type-archive-snippet article,
 .tax-keyword article {
 	width: 49%;
