@@ -64,7 +64,7 @@ function create_snippet_taxonomy() {
     'show_admin_column'     => true,
     'update_count_callback' => '_update_post_term_count',
     'query_var'             => true,
-    'rewrite'               => array( 'slug' => '' ),
+    'rewrite'               => array( 'slug' => 'keywords' ),
   );
 
   register_taxonomy( 'keyword', 'snippet', $args );

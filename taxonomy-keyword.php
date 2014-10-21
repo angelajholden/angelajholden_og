@@ -2,7 +2,7 @@
 
   <header>
 
-    <h1>Snippets</h1>
+    <h1>Snippets for <span><?php single_tag_title(); ?></span></h1>
 
     <p>These are some of the snippets that I've collected, modified, and use frequently in my projects. When possible, an attribution for the original source is provided.</p>
 
