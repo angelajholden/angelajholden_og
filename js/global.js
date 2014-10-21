@@ -21,5 +21,5 @@ $a(document).ready(function() {
 
 // Fit Vids
   $a("figure").fitVids();
-  
+
 });

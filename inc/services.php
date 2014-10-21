@@ -3,10 +3,10 @@
 	<div class="ajh-skillset clearfix">
 		<div><span class="fa fa-code"></span><h3>Site Edits</h3>Modify or add functionality to an existing website.</div>
 		<div><span class="fa fa-paint-brush"></span><h3>Styling</h3>Use CSS &amp; JQuery to style a website’s markup.</div>
-		<div><span class="fa fa-desktop"></span><h3>Design</h3>Create website mockups in Photoshop.</div>
+		<div><span class="fa fa-mobile"></span><h3>App Landing Page</h3>One page scrolling website to support an app.</div>
 		<div><span class="fa fa-pencil"></span><h3>Information Architecture</h3>Content inventory, audit, and strategy.</div>
 		<div><span class="fa fa-wordpress"></span><h3>WordPress Setup</h3>Install WordPress on your domain.</div>
-		<div><span class="fa fa-mobile"></span><h3>App Landing Page</h3>One page scrolling website to support an app.</div>
+		<div><span class="fa fa-desktop"></span><h3>Design</h3>Create website mockups in Photoshop.</div>
 	</div>
 
 	<div class="srvc usd">

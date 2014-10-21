@@ -6,9 +6,6 @@
 	padding: 0;
 	margin: 40px auto;
 	@include box-sizing(border-box);
-	@media (max-width: 1024px) {
-		position: static;
-	}
 	.searchInput {
 		width: 100%;
 		outline: none;
