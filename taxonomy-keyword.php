@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+  get_header(); 
+  global $query_string;
+  query_posts( $query_string . '&showposts=-1' );
+?>
 
   <header>
 
