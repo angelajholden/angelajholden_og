@@ -37,23 +37,23 @@
 
 			  		<a href="<?php the_permalink(); ?>">
 
-			  			<?php if (has_tag('wp')) { ?>
+			  			<?php if (has_tag('wp-snippet')) { ?>
 
 				  			<figure class="side-snip-img wp"><span>wp</span></figure>
 
-				  		<?php } elseif (has_tag('php')) { ?>
+				  		<?php } elseif (has_tag('php-snippet')) { ?>
 
 		        		<figure class="side-snip-img php"><span>php</span></figure>
 
-		        	<?php } elseif (has_tag('css')) { ?>
+		        	<?php } elseif (has_tag('css-snippet')) { ?>
 
 		        		<figure class="side-snip-img css"><span>css</span></figure>
 
-		        	<?php } elseif (has_tag('html')) { ?>
+		        	<?php } elseif (has_tag('html-snippet')) { ?>
 
 		        		<figure class="side-snip-img html"><span>html</span></figure>
 
-		        	<?php } elseif (has_tag('js')) { ?>
+		        	<?php } elseif (has_tag('js-snippet')) { ?>
 
 		        		<figure class="side-snip-img js"><span>js</span></figure>
 
