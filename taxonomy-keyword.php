@@ -22,23 +22,23 @@
 
 		        	<h2 class="archiveTitle"><?php the_title(); ?></h2>
 
-		        	<?php if (has_tag('wp')) { ?>
+		        	<?php if (has_tag('wp-snippet')) { ?>
 
 		          	<figure class="snippetImage wp"><span>wp</span></figure>
 
-		        	<?php } elseif (has_tag('php')) { ?>
+		        	<?php } elseif (has_tag('php-snippet')) { ?>
 
 		        		<figure class="snippetImage php"><span>php</span></figure>
 
-		        	<?php } elseif (has_tag('css')) { ?>
+		        	<?php } elseif (has_tag('css-snippet')) { ?>
 
 		        		<figure class="snippetImage css"><span>css</span></figure>
 
-		        	<?php } elseif (has_tag('html')) { ?>
+		        	<?php } elseif (has_tag('html-snippet')) { ?>
 
 		        		<figure class="snippetImage html"><span>html</span></figure>
 
-		        	<?php } elseif (has_tag('js')) { ?>
+		        	<?php } elseif (has_tag('js-snippet')) { ?>
 
 		        		<figure class="snippetImage js"><span>js</span></figure>
 
