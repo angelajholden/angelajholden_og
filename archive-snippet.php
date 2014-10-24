@@ -21,6 +21,7 @@ get_header(); ?>
         $args = array(
           'post_type'   => 'snippet',
           'post_status' => 'publish',
+          'orderby'			=>	'rand',
           'showposts'   => -1
         );
         $snippet_loop = new WP_Query( $args );

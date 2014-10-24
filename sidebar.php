@@ -18,14 +18,14 @@
     
 	  <aside class="side">
 
-	  	<h3 class="h3">Latest Snippets</h3>
+	  	<h3 class="h3">Random Snippets</h3>
 
 	  	<?php
 
 		  	$args = array(
 		  		'post_type' => 'snippet',
 		  		'post_status' => 'publish',
-		  		'order' => 'desc',
+		  		'orderby' => 'rand',
 		  		'showposts' => 4
 		  	);
 
