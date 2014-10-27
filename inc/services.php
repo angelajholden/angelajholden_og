@@ -17,7 +17,7 @@
 
 	<div class="srvc clock">
 		<h2><span class="fa fa-clock-o"></span>Turn Around Time</h2>
-		<p>For most projects my turn around time is 7-10 days, but hopefully much sooner. For a custom WordPress website the process generally takes 3-4 weeks.</p>
+		<p>For most projects my turn around time is 5-7 days, but hopefully much sooner. For a custom WordPress website the process generally takes 2-3 weeks.</p>
 	</div>
 
 	<div class="srvc picture">
