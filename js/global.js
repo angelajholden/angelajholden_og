@@ -89,7 +89,7 @@ $a(document).ready(function() {
 // Initialize Popup Window
 $a('.share').popupWindow({ 
 	height:500, 
-	width:587,
+	width:570,
 	centerScreen:1,
 	scrollbars:0
 	}); 
