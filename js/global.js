@@ -89,9 +89,9 @@ $a(document).ready(function() {
 // Initialize Popup Window
 $a('.share').popupWindow({ 
 	height:500, 
-	width:800, 
-	top:50, 
-	left:50 
+	width:587,
+	centerScreen:1,
+	scrollbars:0
 	}); 
 
 });
