@@ -25,7 +25,7 @@ $a(document).ready(function() {
 // Popup Window for Share Buttons
 	window.onload = function() {
 	  document.getElementById("popup").onclick = function(){
-	    return !window.open(this.href, "pop", "width=200,height=600");
+	    return !window.open(this.href, "pop", "width=400,height=400");
 	  }
 	}
 
