@@ -22,4 +22,11 @@ $a(document).ready(function() {
 // Fit Vids
   $a("figure").fitVids();
 
+// Popup Window for Share Buttons
+	window.onload = function() {
+	  document.getElementById("popup").onclick = function(){
+	    return !window.open(this.href, "pop", "width=200,height=600");
+	  }
+	}
+
 });
