@@ -48,7 +48,7 @@
 			<li><a href="http://mbsy.co/9clQc">Dollar Photo Club</a> for royalty-free images and illustrations.</li>
 			<li><a href="http://themeforest.net/">Themeforest</a> for premium HTML5 templates and WordPress themes.</li>
 			<li><a href="http://www.woothemes.com/">WooCommerce</a> & <a href="http://easydigitaldownloads.com">Easy Digital Downloads</a> for WordPress eCommerce.</li>
-			<li><a href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> & <a href="https://wordpress.org/plugins/ninja-forms/">Ninja Forms</a> for secure WordPress forms. And <a href="https://wordpress.org/plugins/disqus-comment-system/">Disqus</a> to elminate comment spam.</li>
+			<li><a href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> & <a href="https://wordpress.org/plugins/ninja-forms/">Ninja Forms</a> for secure WordPress forms. I recommend <a href="https://wordpress.org/plugins/disqus-comment-system/">Disqus</a> for secure commenting and to elminate comment spam.</li>
 			<li>Github for open source work like <a href="https://github.com/viljamis/ResponsiveSlides.js">Responsive Slides</a>, <a href="https://github.com/davatron5000/FitVids.js">FitVids</a>, <a href="https://github.com/Automattic/_s">Underscores</a>, <a href="https://github.com/necolas/normalize.css">Normalize</a>, and <a href="https://github.com/devinsays/options-framework-plugin">Options Framework</a>, just to name a few.</li>
 		</ul>
 	</div>
