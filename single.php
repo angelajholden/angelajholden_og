@@ -22,8 +22,16 @@
 
         <?php if ( has_tag('demo') ) { ?>
           <p class="demo-button">
-          	<a href="<?php echo get_post_meta(get_the_ID(), 'live_demo', true); ?>">Live Demo</a>
-          	<a href="<?php echo get_post_meta(get_the_ID(), 'download', true); ?>">Download</a>
+          	<a href="<?php echo get_post_meta(get_the_ID(), 'live_demo', true); ?>" target="_blank">Live Demo</a>
+
+          	<?php if (get_post_meta(get_the_ID(), 'download', true)) { ?>
+          		<a href="<?php echo get_post_meta(get_the_ID(), 'download', true); ?>">Download</a>
+          	<?php } ?>
+
+          	<?php if (get_post_meta(get_the_ID(), 'purchase', true)) { ?>
+          		<a href="<?php echo get_post_meta(get_the_ID(), 'purchase', true); ?>" target="_blank">Download</a>
+          	<?php } ?>
+
           </p>
         <?php } ?>
 
