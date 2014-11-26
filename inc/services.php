@@ -22,22 +22,22 @@
 
 	<div class="srvc picture">
 		<h2><span class="fa fa-picture-o"></span>Images</h2>
-		<p>For all projects I provide 3 complimentary, royalty-free, high resolution images from <a href="http://mbsy.co/9clQc">Dollar Photo Club</a> for use on your website. Additional images are just $1.</p>
+		<p>For all projects I provide five complimentary, royalty-free, high resolution images from <a href="http://mbsy.co/9clQc">Dollar Photo Club</a> for use on your website. Additional images are just $1.</p>
 	</div>
 
 	<div class="srvc users">
 		<h2><span class="fa fa-users"></span>Social Media</h2>
-		<p>I can help you implement a social media strategy that's integrated with your website, and is part of an overall content strategy. I believe this is an important aspect to the success of your business.</p>
+		<p>I can incorporate social media with your website, and make recommendations for widespread social media and content strategy. I believe this is an important aspect to the success of your business.</p>
 	</div>
 
 	<div class="srvc tint">
 		<h2><span class="fa fa-tint"></span>Logos &amp; Illustrations</h2>
-		<p>I don't provide complex graphic design and illustration services. If you need a logo or graphics, I recommend you hire one of the awesome designers on <a href="http://dribbble.com">Dribbble</a>.</p>
+		<p>I don't provide complex graphic design and illustration services. If you need a logo or graphics, I can recommend a designer, or you can hire one of the awesome designers on <a href="http://dribbble.com">Dribbble</a>.</p>
 	</div>
 
 	<div class="srvc database">
 		<h2><span class="fa fa-database"></span>Domains, Hosting &amp; Email</h2>
-		<p>I do not provide domain names, hosting services or email accounts. I recommend <a href="http://mdtm.pl/ZIEdAF">Media Temple</a> for domains and hosting, and I recommend Gmail or Google Apps for email. If this is unfamiliar territory, I’m happy to help you through the process.</p>
+		<p>I don't provide domain names, hosting services or email accounts. I recommend <a href="http://mdtm.pl/ZIEdAF">Media Temple</a> or <a href="http://godaddy.com">GoDaddy</a> for domains and hosting, and I encourage clients to use Gmail or Google Apps for email. If this is unfamiliar territory, I’m happy to help you through the process.</p>
 	</div>
 
 	<div class="srvc wrench">
