@@ -29,7 +29,7 @@
           	<?php } ?>
 
           	<?php if (get_post_meta(get_the_ID(), 'purchase', true)) { ?>
-          		<a href="<?php echo get_post_meta(get_the_ID(), 'purchase', true); ?>" target="_blank">Download</a>
+          		<a href="<?php echo get_post_meta(get_the_ID(), 'purchase', true); ?>" target="_blank">Purchase</a>
           	<?php } ?>
 
           </p>
