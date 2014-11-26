@@ -37,7 +37,6 @@ h4, h5, h6 {
 }
 
 /* Links & Buttons */
-.edd-add-to-cart.button,
 .post-edit-link,
 .readMore {
 	background: lighten($pink, 10%);
@@ -74,4 +73,7 @@ a:hover {
 	@media (max-width: 768px) {
 		margin: 0 0 0.5em 0;
 	}
+}
+.edit-button {
+	margin-top: 10px;
 }
