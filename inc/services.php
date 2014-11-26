@@ -3,7 +3,7 @@
 	<div class="ajh-skillset clearfix">
 		<div><span class="fa fa-code"></span><h3>Site Edits</h3>Modify or add functionality to an existing website.</div>
 		<div><span class="fa fa-paint-brush"></span><h3>Styling</h3>Use CSS &amp; JQuery to style a website’s markup.</div>
-		<div><span class="fa fa-mobile"></span><h3>App Landing Page</h3>One page scrolling website to support an app.</div>
+		<div><span class="fa fa-mobile"></span><h3>App Landing Page</h3>One page scrolling websites to support an app or product.</div>
 		<div><span class="fa fa-pencil"></span><h3>Information Architecture</h3>Content inventory, audit, and strategy.</div>
 		<div><span class="fa fa-wordpress"></span><h3>WordPress Setup</h3>Install WordPress on your domain.</div>
 		<div><span class="fa fa-desktop"></span><h3>Design</h3>Create website mockups in Photoshop.</div>
@@ -12,7 +12,7 @@
 	<div class="srvc usd">
 		<h2><span class="fa fa-usd"></span>Pricing</h2>
 		<p>My hourly rate is $40, but I have special pricing for WordPress installation, setup and theme customization. For custom work I estimate the amount of time I think it will take to complete a project and quote a fixed price. My terms are 50% to begin work, and the remaining amount due upon completion.</p>
-		<p>If you want mockups for custom work prior to formalizing an arrangement, I charge a flat fee of $250 which I'll credit towards the total cost of the project.</p>
+		<p>If you want mockups for custom work prior to formalizing an arrangement, I charge a flat fee of $250 which I'll credit towards the total cost of the project if you hire me.</p>
 	</div>
 
 	<div class="srvc clock">
@@ -47,7 +47,8 @@
 			<li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> for icons and simple graphics.</li>
 			<li><a href="http://mbsy.co/9clQc">Dollar Photo Club</a> for royalty-free images and illustrations.</li>
 			<li><a href="http://themeforest.net/">Themeforest</a> for premium HTML5 templates and WordPress themes.</li>
-			<li><a href="http://www.woothemes.com/">WooThemes &amp; WooCommerce</a> for WordPress eCommerce.</li>
+			<li><a href="http://www.woothemes.com/">WooCommerce</a> & <a href="http://easydigitaldownloads.com">Easy Digital Downloads</a> for WordPress eCommerce.</li>
+			<li><a href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> & <a href="https://wordpress.org/plugins/ninja-forms/">Ninja Forms</a> for secure WordPress forms. And <a href="https://wordpress.org/plugins/disqus-comment-system/">Disqus</a> to elminate comment spam.</li>
 			<li>Github for open source work like <a href="https://github.com/viljamis/ResponsiveSlides.js">Responsive Slides</a>, <a href="https://github.com/davatron5000/FitVids.js">FitVids</a>, <a href="https://github.com/Automattic/_s">Underscores</a>, <a href="https://github.com/necolas/normalize.css">Normalize</a>, and <a href="https://github.com/devinsays/options-framework-plugin">Options Framework</a>, just to name a few.</li>
 		</ul>
 	</div>
