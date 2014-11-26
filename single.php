@@ -41,7 +41,7 @@
 
           <?php the_content(); ?>
 
-            <?php edit_post_link('Edit'); ?>
+          <div class="edit-button"><?php edit_post_link('Edit'); ?></div>
 
           <?php include('inc/share.php'); ?>
 
