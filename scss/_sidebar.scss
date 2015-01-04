@@ -75,6 +75,7 @@ aside {
 	a {
 		color: #777;
 		text-decoration: none;
+		display: block;
 		&:hover, &:active, &:focus {
 			color: $pink;
 		}
