@@ -1,73 +1,24 @@
-<?php 
-/*
+<?php get_header(); ?>
 
-Template Name: Snippets
-
-*/
-get_header(); ?>
+  <div class="wrap clearfix">
 
   <header>
-
     <h1>Snippets</h1>
-
     <p>These are some of the snippets that I've collected, modified, and use frequently in my projects. When possible, an attribution for the original source is provided.</p>
-
   </header>
 
-  	<div class="blogWrap clearfix">
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-      <?php
+  		<article class="archivePost clearfix">
+				<h2 class="archiveTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<div class="theTags"><?php the_terms( $snippet->ID, 'keyword', 'Keywords: ', ' <span>•</span> ' ); ?></div>
+			</article>
 
-        $args = array(
-          'post_type'   => 'snippet',
-          'post_status' => 'publish',
-          'orderby'			=>	'rand',
-          'showposts'   => -1
-        );
-        $snippet_loop = new WP_Query( $args );
+		<?php endwhile; else : ?>
+		<?php endif; ?>
 
-        while ( $snippet_loop->have_posts() ) : $snippet_loop->the_post(); ?>
+		<?php the_posts_navigation(); ?>
 
-		  		<article class="archivePost clearfix">
-
-		        <a href="<?php the_permalink(); ?>">
-
-		        	<h2 class="archiveTitle"><?php the_title(); ?></h2>
-
-		        	<?php if (has_tag('wp-snippet')) { ?>
-
-		          	<figure class="snippetImage wp"><span>wp</span></figure>
-
-		        	<?php } elseif (has_tag('php-snippet')) { ?>
-
-		        		<figure class="snippetImage php"><span>php</span></figure>
-
-		        	<?php } elseif (has_tag('css-snippet')) { ?>
-
-		        		<figure class="snippetImage css"><span>css</span></figure>
-
-		        	<?php } elseif (has_tag('html-snippet')) { ?>
-
-		        		<figure class="snippetImage html"><span>html</span></figure>
-
-		        	<?php } elseif (has_tag('js-snippet')) { ?>
-
-		        		<figure class="snippetImage js"><span>js</span></figure>
-
-		        	<?php } ?>
-
-		        </a>
-
-		      	<div class="theTags"><?php the_terms( $snippet->ID, 'keyword', 'Keywords: ', ' <span>•</span> ' ); ?></div>
-
-		      </article>
-
-	      <?php endwhile; ?>
-
-      <?php wp_reset_postdata(); ?>
-
-  	</div>
-
-  <?php get_sidebar(); ?>
+  </div>
 
 <?php get_footer(); ?>

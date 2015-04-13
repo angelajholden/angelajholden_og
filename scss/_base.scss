@@ -14,17 +14,28 @@ summary {
 }
 
 html {
-	margin: 0;
-	padding: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  @include box-sizing(border-box);
 }
 
-/* Main Body */
+*, *:before, *:after {
+  @include box-sizing(inherit);
+}
+
+/* 
+------------------------
+--------- Main ---------
+------------------------
+*/
+
 body {
-	font-family: 'Roboto', sans-serif;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 100%;
-	font-weight: 400;
+	font-weight: 300;
 	color: #333;
-	line-height: 1.5;
+	line-height: 1.75;
 	background: #fff;
   margin: 0;
   padding: 0;
@@ -35,140 +46,44 @@ body {
   }
 }
 
-p {
-	font-size: 1.05em;
-}
-
-/* Main Page Wrap */
-.pageWrap {
+.page-wrap {
 	position: relative;
-	@include main-grid;
-	min-height: 1909px;
+	top: 103px;
+}
+
+.wrap {
+	max-width: 1000px;
 	margin: 0 auto;
-	padding: 0 0 5%;
-	/* Header for Posts & Pages, not the Main Header. */
-	header {
-		width: 66.666%;
-		float: left;
-		padding: 0 20px 20px 0;
-		@include box-sizing(border-box);
-		@media (max-width: 1250px) {
-			width: 60%;
-		}
-		@media (max-width: 1024px) {
-			width: 50%;
-		}
-		@media (max-width: 900px) {
-			width: auto;
-			margin: 0 auto;
-			padding: 10px;
-		}
-		p {
-			font-weight: 400;
-			font-size: 1.1em;
-			margin: 0 0 1em;
+	padding: 5% 0;
+}
+
+/* 
+------------------------
+--------- Home ---------
+------------------------
+*/
+
+.home {
+	.banner {
+		position: relative;
+		img {
+			width: 100%;
 		}
 	}
-}
-
-/* Main Content Layout */
-.blogWrap {
-	width: 71.2%;
-	clear: both;
-	@media (max-width: 1250px) {
-		width: 60%;
-	}
-	@media (max-width: 1024px) {
-		width: 50%;
-	}
-	@media (max-width: 900px) {
-		width: auto;
+	.page-title {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		margin-left: -106px;
+		color: #fff;
+		z-index: 0;
 	}
 }
 
-.sidebarWrap {
-	width: 360px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	@media (max-width: 900px) {
-		position: static;
-		width: auto;
-		margin-top: 25px;
-	}
+/* SVGs */
+.logoSVG {
+	fill: lighten($pink,10%);
 }
-
-/* General Article Styles */
-article {
-	background: #fff;
-	margin: 0 1% 1% 0;
-	padding: 20px 25px 20px 0;
-	@include box-sizing(border-box);
-	@media (max-width: 1024px) {
-		margin-right: 0;
-		padding: 20px;
-	}
-	h2 {
-		font-family: 'Roboto Condensed', sans-serif;
-	  margin: 0;
-	  padding: 0;
-		a {
-			color: #333;
-			text-decoration: none;
-			&:hover, &:active, &:focus {
-				color: $pink;
-			}
-		}
-	}
-	.posted a {
-		color: $pink;
-		&:hover, &:active, &:focus {
-			color: lighten($pink,10%);
-		}
-	}
-}
-
-/* Post Meta */
-.postMeta {
-	font-size: 0.9em;
-	text-transform: uppercase;
-	margin-bottom: 0;
-}
-
-/* Page w/o Sidebar */
-.page-no-sidebar {
-	width: 1000px;
-	float: none;
-	margin: 0 auto;
-}
-
-/* Demo Button */
-.demo-button {
-	text-align: center;
-	margin-bottom: 50px;
-}
-
-.demo-button a {
-	font-size: 1.5em;
-	font-weight: 300;
-	color: #fff;
-	margin: 0 10px;
-	padding: 15px 25px;
-	background: $pink;
-	@include border-radius(5px);
-}
-
-@media (max-width: 480px) {
-	.demo-button a {
-		display: block;
-		margin: 0 auto 10px;
-		width: 75%;
-	}
-}
-
-.demo-button a:hover,
-.demo-button a:active,
-.demo-button a:focus {
-	background: lighten($pink,5%);
-	color: #fff;
+.signatureSVG {
+	fill: #272727;
 }

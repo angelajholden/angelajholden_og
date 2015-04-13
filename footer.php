@@ -1,62 +1,55 @@
-      </section><?php //Page Wrap ?>
 
-    <section class="aboutWrap">
-      <div class="aboutMe clearfix">
-      	<img src="<?php bloginfo('template_url'); ?>/images/angela.jpg" alt="About Angela J. Holden Website Design" title="Angela J. Holden">
-      	<p>My name is Angela Holden and I’m a freelance web designer and technical writer from Minneapolis, MN, now living in San Diego, CA. I love WordPress, content, color, typography, and providing great user experiences. I’ve been designing websites for five years and I love every minute that I spend doing it. In 2009 I built my first website, and in 2013 I earned a Master’s Degree in Technical Communication from Metropolitan State University.</p>
+		    <div id="contact"></div>
 
-        <p>I work from my home in San Diego and I have clients in the U.S. and overseas. For more information about what I can do, please <a href="<?php bloginfo('url'); ?>/contact/">contact</a> me for a consultation.</p>
+		    <section class="contact clearfix">
+		    	<div class="wrap">
+		    		<h1>Contact Me</h1>
+			    	<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); } ?>
+			    	<p class="info">
+			    		<span>(619) 798-6024</span>
+			    		<span>info@angelajholden.com</span>
+			    		<span>San Diego, CA</span>
+			    	</p>
+			    </div>
+		    </section>
 
-        <p>Cheers!</p>
-        <div class="signature"><?php include('inc/signature.svg'); ?></div>
-      </div>
-    </section>
+		    <footer>
 
-    <footer>
+		      <div class="wrap clearfix">
 
-      <div class="footer-wrap clearfix">
+		        <div class="ajh-footer">
+		          <a id="totop" href="#top"><img src="<?php bloginfo('template_url') ?>/images/logo.png" title="Angela J. Holden" alt="Angela J. Holden Website Design"></a>
+		          <p class="copyright"><?php echo date('Y'); ?> &copy; Angela J. Holden<br>Angela Holden Design</p>
+		          <?php include('search.php'); ?>
+		        </div>
 
-        <div class="ajh-footer">
-          <img src="<?php bloginfo('template_url') ?>/images/logo.png">
-          <p><?php echo date('Y'); ?> &copy; Angela Holden Design LLC</p>
-          <?php include('search.php'); ?>
-        </div>
+		        <nav class="ajh-footer">
+		        	<h3>Main Menu</h3>
+		          <?php wp_nav_menu( array( 
+		            'name'            => 'Footer One',
+		            'theme_location'  => 'footer_one',
+		            'container'       => 'false',
+		            'menu_class' 			=> 'footer-nav',
+		            'depth'						=> '1'
+		          )); ?>
+		          <?php include('inc/social.php'); ?>
+		        </nav>
 
-        <div class="ajh-footer">
-          <h3 class="bold-title">Projects</h3>
-          <ul>
-            <li><a href="http://angelaholdendesign.com">Angela Holden Design</a></li>
-            <li><a href="http://fazilsayfan.com">Fazıl Say Fan</a></li>
-            <li><a style="cursor:pointer;">The Circle of 5ths</a></li>
-            <li><a href="http://responsivevideogallery.com">Responsive Video Gallery</a></li>
-            <li><a href="http://wikipediageeks.com">Wikipedia Geeks</a></li>
-          </ul>
-          <p class="bold-title"><a href="<?php bloginfo('url') ?>/contact/">Contact me for a quote</a></p>
-        </div>
+		        <nav class="ajh-footer">
+		        	<h3>Projects</h3>
+		          <?php wp_nav_menu( array( 
+		            'name'            => 'Footer Two',
+		            'theme_location'  => 'footer_two',
+		            'container'       => 'false',
+		            'menu_class' 			=> 'footer-nav',
+		            'depth'						=> '1'
+		          )); ?>
+		        </nav>
 
-        <div class="ajh-footer">
-          <h3 class="bold-title">Social</h3>
-          <ul>
-            <li><a href="http://facebook.com/angelajholdendesignllc">Facebook</a></li>
-            <li><a href="http://twitter.com/angelaholden">Twitter</a></li>
-            <li><a href="https://plus.google.com/u/0/+AngelaHoldenDesign/posts">Google Plus</a></li>
-          </ul>
-          <h3 class="bold-title">Work</h3>
-          <ul>
-            <li><a href="http://github.com/angelajholden">Fork my code on Github</a></li>
-            <li><a href="http://etsy.com/shop/angelajholden">Visit my Etsy Shop</a></li>
-          </ul>
-        </div>
+		      </div><?php // End Footer Wrap ?>
 
-      </div> <?php // End Footer Wrap ?>
-
-      <div style="clear:both;"></div>
-
-      <div class="bottom-footer">
-        <p><a href="https://goo.gl/maps/GfWkG">Made with &#10084; in San Diego, California</a></p>
-      </div>
-
-    </footer>
+		    </footer>
+  		</div><?php // End .page-wrap ?>
     <?php wp_footer(); ?>
   </body>
 </html>

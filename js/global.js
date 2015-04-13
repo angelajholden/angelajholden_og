@@ -22,6 +22,29 @@ $a(document).ready(function() {
 // Fit Vids
   $a("figure").fitVids();
 
+// Smooth Scrolling
+$a(function() {
+  $a('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $a(this.hash);
+      target = target.length ? target : $a('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $a('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+// jQuery UI
+$a( "#accordion" ).accordion({
+      collapsible: true,
+      active: false,
+      heightStyle: "content"
+});
+
 // jquery.popupWindow.js (http://swip.codylindley.com/popupWindowDemo.html)
 (function($){ 		  
 	$.fn.popupWindow = function(instanceSettings){

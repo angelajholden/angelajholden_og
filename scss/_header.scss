@@ -1,13 +1,23 @@
-/* Header */
+/* 
+------------------------
+-------- Header --------
+------------------------
+*/
 .headerWrap {
 	background: #fff;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 .mainHead {
 	margin: 0 auto;
-	padding: 1.5em 0;
-	@include main-grid;
+	padding: 0.75em 0 0.5em;
+	max-width: 1250px;
 	header {
-		width: 67%;
+		width: 50%;
 		float: left;
 		margin: 0;
 		padding: 0;
@@ -31,10 +41,10 @@
 		}
 	}
 	.blogTitle {
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Open Sans', sans-serif;
 		font-weight: 300;
-		font-size: 4em;
-		line-height: 1.2;
+		font-size: 3.5em;
+		line-height: 1.35;
 		margin: 0;
 		@media (max-width: 480px) {
 			font-size: 2.5em;
@@ -56,4 +66,52 @@
 			color: $pink;
 		}
 	}
+}
+
+/* 
+------------------------
+------ Navigation ------
+------------------------
+*/
+.mainMenu {
+	width: 50%;
+	float: right;
+	ul {
+		list-style-type: none;
+		margin: 25px 0 0;
+		padding: 0;
+		font-size: 1.2em;
+		text-align: right;
+		li {
+			display: inline;
+			margin: 0 0 0 40px;
+			padding: 0;
+		}
+	}
+}
+
+.mainMenu a {
+	display: inline;
+	color: #333;
+	padding-bottom: 3px;
+	border-bottom: 2px solid transparent;
+	&:hover, &:active, &:focus {
+		color: #333;
+		border-bottom: 2px solid $pink;
+	}
+}
+
+.menuSVG {
+	fill: #555;
+}
+
+.mainMenu a#pull {
+	display: none;
+}
+
+.mainMenu .current-post-ancestor a,
+.mainMenu .current-menu-parent a,
+.mainMenu .current-menu-item a,
+.mainMenu .current_page_item a {
+	border-bottom: 2px solid $pink;
 }

@@ -1,40 +1,23 @@
-<?php 
-/*
+<?php get_header(); ?>
 
-Template Name: Main Archive
-
-*/
-get_header(); the_post(); ?>
+  <div class="wrap clearfix">
 
   <header>
-    <h1><?php the_title(); ?></h1>
-    <p><?php the_content(); ?></p>
+	  <?php if (is_category()) : ?>
+	    <h1><?php single_cat_title(); ?></h1>
+	    <p><?php echo category_description(); ?></p>
+	  <?php elseif (is_tag()) : ?>
+	  	<h1>Tag: <?php single_tag_title(); ?></h1>
+	  <?php elseif (is_archive()) : ?>
+	  	<h1>Latest Posts</h1>
+	  <?php endif; ?>
   </header>
 
-  	<div class="blogWrap clearfix">
-
-      <?php
-        $args = array(
-          'post_type'   => 'post',
-          'post_status' => 'publish',
-          'showposts'   => -1
-        );
-        $posts_loop = new WP_Query( $args );
-        while ( $posts_loop->have_posts() ) : $posts_loop->the_post(); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
   		<article class="archivePost clearfix">
 
         <h2 class="archiveTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
-        <?php $video = get_post_meta( get_the_ID(), 'video_url', true );
-            if( ! empty( $video ) ) { ?>
-          <a href="<?php the_permalink(); ?>">
-            <figure><img class="videoThumb" src="<?php echo parse_youtube_url($video,'mqthumb'); ?>"></figure></a>
-        <?php } elseif ( has_post_thumbnail() ) { ?>
-          <a href="<?php the_permalink(); ?>">
-            <figure><?php the_post_thumbnail('650x366'); ?></figure>
-          </a>
-        <?php } ?>
 
           <p class="postMeta">Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
 
@@ -42,13 +25,13 @@ get_header(); the_post(); ?>
 
           <a class="readMore singleButton" href="<?php the_permalink(); ?>">Read more</a>
 
-        </article>
+      </article>
 
-      <?php endwhile; ?>
-      <?php wp_reset_postdata(); ?>
+		<?php endwhile; else : ?>
+		<?php endif; ?>
 
-  	</div>
+		<?php the_posts_navigation(); ?>
 
-  <?php get_sidebar(); ?>
+  </div>
 
 <?php get_footer(); ?>

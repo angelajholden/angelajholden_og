@@ -4,7 +4,6 @@ img {
 	height: auto;
 	display: block;
 	border: 0;
-	@include border-radius(3px);
 }
 
 /* Gallery Images */
@@ -14,12 +13,6 @@ img {
 .gallery-item {
 	margin: 0;
 	padding: 5px;
-	@include box-sizing(border-box);
-}
-.gallery-caption {
-	@media (max-width: 768px) {
-		display: none;
-	}
 }
 
 /* Insert Images into Post & Pages */

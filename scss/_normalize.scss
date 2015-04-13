@@ -60,46 +60,88 @@ legend {
   padding: 0;
 }
 
-/* Contact Form 7 */
-.wpcf7-form:after {
-  content: "";
-  display: table;
-  clear: both;
+/* Forms */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="search"],
+textarea {
+	outline: none;
+	border: none;
+	padding: 15px;
+	background: #eaeaea;
 }
-.wpcf7 {
-  input[type="text"],
-  input[type="email"],
-  input[type="url"],
-  input[type="tel"],
-  textarea {
-    outline: none;
-    @include border-radius(5px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    @include box-sizing(border-box);
-    width: 100%;
-  }
-  .cf-col1 {
-    width: 48%;
-    margin: 1% 1% 1% 0;
-    float: left;
-  }
-  .cf-col2 {
-    width: 48%;
-    margin: 1% 1% 1% 0;
-    float: right;
-  }
-  @media (max-width: 600px) {
-    .cf-col1, .cf-col2 {
-      width: 99%;
-      float: none;
-    }
-  }
-  textarea {
-    width: 99%;
-    margin: 1% 1% 1% 0;
-  }
-  input[type="submit"] {
-    width: 100px;
-  }
+
+input[type="submit"] {
+	border: none;
+	outline: none;
+	background: pink;
+	color: #fff;
+	padding: 15px;
+	text-align: center;
+	font-size: 1.1em;
+	@include single-transition(all, 0.3s, ease);
+	&:hover, &:active, &:focus {
+		background: darken(pink, 5%);
+	}
+}
+
+#contact {
+	position: relative;
+	top: -65px;
+}
+
+/* Ninja Forms */
+.home .contact {
+	/* Just Home */
+	background: #fff;
+}
+
+.contact {
+	background: #f7f7f7;
+}
+
+.contact h1 {
+	text-align: center;
+	margin: 0 0 0.5em;
+	line-height: 1;
+}
+
+.info {
+	text-align: center;
+	font-size: 1.1em;
+	span:after {
+		content: "•";
+		color: pink;
+		margin: 0 6px 0 10px;
+	}
+	span:last-child:after {
+		content: "";
+	}
+}
+
+.contact .wrap {
+	max-width: 1000px;
+}
+
+.ninja-forms-form-wrap *,
+.ninja-forms-form-wrap *:after,
+.ninja-forms-form-wrap *:before {
+	color: #888;
+}
+
+.contact .text-wrap {
+	width: 33.333%;
+	float: left;
+	padding: 1%;
+}
+
+.contact .textarea-wrap,
+.contact .submit-wrap {
+	padding: 1%;
+	margin: 0;
+}
+
+.contact input[type="submit"] {
+	width: 100%;
 }

@@ -1,33 +1,31 @@
-<?php get_header(); the_post(); ?>
+<?php get_header(); ?>
 
-  <header>
-    <h1><?php the_title(); ?></h1>
-  </header>
+  <div class="wrap clearfix">
 
-    <div class="blogWrap">
+  	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-      <article class="singlePost">
+		  <header>
+		    <h1><?php the_title(); ?></h1>
+		  </header>
 
-          <?php if ( has_post_thumbnail() ) { ?>
-            <figure>
-              <?php the_post_thumbnail('full'); ?>
-              <figcaption><?php the_post_thumbnail_caption(); ?></figcaption>
-            </figure>
-          <?php } ?>
+	      <article class="singlePost">
 
-          <?php the_content(); ?>
+	        <?php if ( has_post_thumbnail() ) { ?>
+	          <figure>
+	            <?php the_post_thumbnail('full'); ?>
+	            <figcaption><?php the_post_thumbnail_caption(); ?></figcaption>
+	          </figure>
+	        <?php } ?>
 
-          <?php if (is_page('Contact')) {
-          	echo do_shortcode('[contact-form-7 id="1453" title="Website Inquiry"]');
-          	echo '<style>.side{padding:0;margin-bottom:0;}</style>';
-          } ?>
+	        <?php the_content(); ?>
 
-        <?php edit_post_link('Edit'); ?>
+	        <?php edit_post_link('Edit'); ?>
 
-      </article>
+	      </article>
 
-    </div><?php //Blog Wrap ?>
+    <?php endwhile; else : ?>
+		<?php endif; ?>
 
-  <?php get_sidebar(); ?>
+  </div>
 
 <?php get_footer(); ?>
