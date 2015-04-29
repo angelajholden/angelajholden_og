@@ -12,7 +12,7 @@ get_header(); the_post(); ?>
 	  <section class="skills">
 	    <div class="wrap">
 
-	    	<article>
+	    	<article id="<?php post_name(); ?>">
 	    		<?php the_content(); ?>
 	    	</article>
 
@@ -29,7 +29,7 @@ get_header(); the_post(); ?>
 		    	while ( $skill_loop->have_posts() ) : $skill_loop->the_post(); ?>
 
 			    	<h2><?php the_title(); ?></h2>
-					  <article>
+					  <article id="<?php post_name(); ?>">
 					  	<?php the_content(); ?>
 					  </article>
 		    	
