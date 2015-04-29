@@ -1,10 +1,10 @@
 .searchField {
 	position: relative;
 	width: 100%;
-	//max-width: 320px;
+	max-width: 285px;
 	display: block;
 	padding: 0;
-	margin: 40px auto 0;
+	margin: 2em auto 0;
 	@include box-sizing(border-box);
 	.searchInput {
 		width: 100%;

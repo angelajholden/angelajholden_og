@@ -75,15 +75,19 @@ textarea {
 input[type="submit"] {
 	border: none;
 	outline: none;
-	background: pink;
+	background: lighten($pink,15%);
 	color: #fff;
 	padding: 15px;
 	text-align: center;
 	font-size: 1.1em;
 	@include single-transition(all, 0.3s, ease);
 	&:hover, &:active, &:focus {
-		background: darken(pink, 5%);
+		background: $pink;
 	}
+}
+
+.field-wrap {
+	margin-bottom: 10px !important;
 }
 
 #contact {
@@ -94,11 +98,12 @@ input[type="submit"] {
 /* Ninja Forms */
 .home .contact {
 	/* Just Home */
-	background: #fff;
+	//background: #fff;
 }
 
 .contact {
-	background: #f7f7f7;
+	background: #f3f5f7 url(../images/symphony.png);
+	border-top: 1px solid #eaeaea;
 }
 
 .contact h1 {
@@ -109,19 +114,16 @@ input[type="submit"] {
 
 .info {
 	text-align: center;
-	font-size: 1.1em;
+	font-size: 0.95em;
+	color: #555;
 	span:after {
 		content: "•";
-		color: pink;
+		color: $pink;
 		margin: 0 6px 0 10px;
 	}
 	span:last-child:after {
 		content: "";
 	}
-}
-
-.contact .wrap {
-	max-width: 1000px;
 }
 
 .ninja-forms-form-wrap *,
@@ -133,12 +135,19 @@ input[type="submit"] {
 .contact .text-wrap {
 	width: 33.333%;
 	float: left;
-	padding: 1%;
+	padding: 0 10px 0 0;
+	&:nth-child(3) {
+		padding: 0;
+	}
 }
 
-.contact .textarea-wrap,
+.contact .textarea-wrap {
+	padding: 0;
+	margin-bottom: 2px !important;
+}
+
 .contact .submit-wrap {
-	padding: 1%;
+	padding: 0;
 	margin: 0;
 }
 

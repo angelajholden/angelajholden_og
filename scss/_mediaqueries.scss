@@ -1,0 +1,169 @@
+@media (max-width: 1024px) {
+
+	.headerWrap {
+		position: relative;
+	}
+
+	.mainHead {
+		padding: 0.25em 0 0;
+		max-width: inherit;
+		header {
+			width: 85%;
+			.logoSVG {
+				margin: 0 0.5em 0;
+				width: 45px;
+				height: 50px;
+				svg {
+					width: 45px;
+					height: 50px;
+					margin-left: 0;
+				}
+			}
+		}
+	.blogTitle {
+			font-size: 2em;
+		}
+	}
+
+	.page-wrap {
+		top: 0;
+	}
+
+	.mainMenu {
+		width: 100%;
+		margin-top: 0.25em;
+		background: url(../images/symphony.png);
+	  ul {
+			display: none;
+			margin: 0;
+			padding: 0.5em 0;
+			li {
+				display: block;
+				margin: 0 0 0.25em;
+			}
+			a {
+				display: block;
+				padding-right: 1em;
+				padding-bottom: 0;
+				border-bottom: none;
+				color: #333;
+				&:hover, &:active, &:focus {
+					border-bottom: none;
+					color: $pink;
+				}
+			}
+		}
+	}
+
+	.mainMenu .current-post-ancestor a,
+	.mainMenu .current-menu-parent a,
+	.mainMenu .current-menu-item a,
+	.mainMenu .current_page_item a {
+		border-bottom: none;
+		color: $pink;
+	}
+
+	.mainHead a#pull {
+		display: block;
+		width: 10%;
+		float: right;
+		text-align: right;
+	  text-decoration: none;
+	  border-bottom: none;
+	  margin-top: 0.5em;
+	  margin-right: 1em;
+	}
+
+	#contact {
+		top: 0;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.wrap {
+		padding: 2.5em 10px;
+	}
+
+	.ui-accordion .ui-accordion-icons {
+		padding-left: 0.5em;
+	}
+
+	.ui-accordion .ui-accordion-content {
+		padding: 1em 0.5em;
+	}
+
+	.contact {
+		.text-wrap {
+			width: 100%;
+			float: none;
+			padding: 0;
+		}
+		.submit-wrap,
+		.textarea-wrap {
+			padding: 0;
+		}
+	}
+
+	.textarea-wrap textarea {
+		height: 100px !important;
+	}
+
+	input[type="text"],
+	input[type="tel"],
+	input[type="email"],
+	input[type="search"],
+	input[type="submit"],
+	textarea {
+		padding: 10px;
+		font-size: 0.9em;
+	}
+
+	.info {
+		margin-top: 1em;
+		span {
+			display: block;
+		}
+		span:after {
+			content: "";
+		}
+	}
+
+	.ajh-footer {
+		width: 100%;
+		float: none;
+	}
+
+}
+
+@media (max-width: 600px) {
+
+	.mainHead a#pull {
+	  margin-right: 0.5em;
+	}
+
+	.mainMenu ul a {
+		padding-right: 0;
+		text-align: center;
+	}
+
+	.home {
+		.banner {
+			height: 200px;
+		}
+		.page-title {
+			top: 80px;
+		}
+	}
+
+}
+
+@media (max-width: 370px) {
+	.mainHead .blogTitle {
+		font-size: 1.75em;
+		line-height: 1.75;
+	}
+
+}
+

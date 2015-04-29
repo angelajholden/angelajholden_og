@@ -779,7 +779,7 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-tabs {
 	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-	padding: .2em;
+	padding: 0;
 }
 .ui-tabs .ui-tabs-nav {
 	margin: 0;
@@ -795,19 +795,29 @@ button.ui-button::-moz-focus-inner {
 	padding: 0;
 	white-space: nowrap;
 }
+
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
 	float: left;
 	padding: .5em 1em;
 	text-decoration: none;
+	width: 100%;
+	&:hover, &:active, &:focus {
+		color: #fff;
+	}
 }
+
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
-	margin-bottom: -1px;
-	padding-bottom: 1px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	a {
+		color: #fff;
+	}
 }
+
 .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
 .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
 .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
-	cursor: text;
+	cursor: pointer;
 }
 .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
 	cursor: pointer;
@@ -828,6 +838,43 @@ button.ui-button::-moz-focus-inner {
 }
 body .ui-tooltip {
 	border-width: 2px;
+}
+
+/* VERTICAL TABS */
+
+.ui-tabs-vertical { 
+	width: auto; 
+}
+
+.ui-tabs-vertical .ui-tabs-nav { 
+	padding: 0; 
+	float: left; 
+	width: 25%;
+	min-width: 12em; 
+}
+
+.ui-tabs-vertical .ui-tabs-nav li { 
+	clear: left; 
+	width: 100%; 
+	border-bottom-width: 1px !important; 
+	border-right-width: 0 !important; 
+	margin: 0; 
+}
+
+.ui-tabs-vertical .ui-tabs-nav li a { 
+	display:block; 
+}
+
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { 
+	padding-bottom: 0; 
+	padding-right: .1em; 
+	border-right-width: 1px; 
+}
+
+.ui-tabs-vertical .ui-tabs-panel { 
+	padding: 0 0 0 1em; 
+	float: right; 
+	width: 75%;
 }
 
 /* Component containers
@@ -855,9 +902,9 @@ body .ui-tooltip {
 	color: #222222;
 }
 .ui-widget-header {
-	border: 1px solid #aaaaaa;
+	//border: 1px solid #aaaaaa;
 	//background: #cccccc url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
-	color: #222222;
+	color: #fff;
 	font-weight: bold;
 }
 .ui-widget-header a {
