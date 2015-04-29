@@ -25,13 +25,13 @@
           
           <header class="headerContainer clearfix">
             <a class="clearfix" href="<?php bloginfo('url'); ?>">
-              <figure><?php include('svg/logo.svg'); ?></figure>
+              <figure class="logoSVG"><?php include('svg/logo.svg'); ?></figure>
               <h1 class="blogTitle"><?php bloginfo('name'); ?></h1>
             </a>
           </header>
 
+          <a href="#" id="pull"><?php include('svg/menu.svg'); ?></a>
           <nav class="mainMenu">
-	          <a href="#" id="pull"><?php include('svg/menu.svg'); ?> Menu</a>
 	          <?php
 	            wp_nav_menu( array( 
 	              'name'            => 'Main Menu',

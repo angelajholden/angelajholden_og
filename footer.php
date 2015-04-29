@@ -1,3 +1,5 @@
+				
+				<?php //include_once('inc/instafeed.php'); ?>
 
 		    <div id="contact"></div>
 
@@ -7,7 +9,7 @@
 			    	<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); } ?>
 			    	<p class="info">
 			    		<span>(619) 798-6024</span>
-			    		<span>info@angelajholden.com</span>
+			    		<span><a href="mailto:info@angelajholden.com">info@angelajholden.com</a></span>
 			    		<span>San Diego, CA</span>
 			    	</p>
 			    </div>
@@ -19,21 +21,13 @@
 
 		        <div class="ajh-footer">
 		          <a id="totop" href="#top"><img src="<?php bloginfo('template_url') ?>/images/logo.png" title="Angela J. Holden" alt="Angela J. Holden Website Design"></a>
-		          <p class="copyright"><?php echo date('Y'); ?> &copy; Angela J. Holden<br>Angela Holden Design</p>
-		          <?php include('search.php'); ?>
+		          <p class="copyright"><?php echo date('Y'); ?> &copy; <?php bloginfo('title'); ?><br>Angela Holden Design</p>
 		        </div>
 
-		        <nav class="ajh-footer">
-		        	<h3>Main Menu</h3>
-		          <?php wp_nav_menu( array( 
-		            'name'            => 'Footer One',
-		            'theme_location'  => 'footer_one',
-		            'container'       => 'false',
-		            'menu_class' 			=> 'footer-nav',
-		            'depth'						=> '1'
-		          )); ?>
+		        <div class="ajh-footer">
 		          <?php include('inc/social.php'); ?>
-		        </nav>
+		          <?php include('search.php'); ?>
+		        </div>
 
 		        <nav class="ajh-footer">
 		        	<h3>Projects</h3>

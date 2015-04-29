@@ -1,16 +1,35 @@
 <?php get_header(); ?>
 
-  <div class="wrap">
+  <section class="wrap">
 
   	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	  <header>
-	    <h1><?php the_title(); ?></h1>
-	  </header>
+    <div class="clearfix">
 
-      <article class="singlePost">
+    	<aside class="single-top clearfix">
 
-        <p>Posted in <?php the_category(','); ?> on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
+      	<div class="single-author clearfix">
+      		<figure class="gravatar"><?php echo get_avatar( get_the_author_meta( 'email' ), 75 ); ?></figure>
+      		<p><?php the_author(); ?><br>
+      		<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
+      	</div>
+
+        <div class="single-meta">
+        	<p>Category <span class="bullet">&bull;</span> <?php the_category(','); ?>
+          	<?php comments_popup_link(
+	          	__( '<span class="comments-icon fa fa-comment-o"></span>0', 'angelajholden-v3' ), 
+					    __( '<span class="comments-icon fa fa-comment-o"></span>1', 'angelajholden-v3' ), 
+					    __( '<span class="comments-icon fa fa-comment-o"></span>%', 'angelajholden-v3' )
+	          ); ?></p>
+          </div>
+
+        </aside>
+
+      <article>
+
+	    <header>
+		    <h1><?php the_title(); ?></h1>
+		  </header>
 
         <?php $video = get_post_meta( get_the_ID(), 'video_url', true );
           if( ! empty( $video ) ) { ?>
@@ -37,7 +56,11 @@
 
         </article>
 
-         <div class="theTags"><?php the_tags( 'Tagged: ', ' <span>•</span> ', '' ); ?></div>
+      </div>
+
+        <?php if (has_tag()) : ?>
+          <div class="theTags"><?php the_tags( 'Tagged <span class="bullet">&bull;</span> ', ' <span class="bullet">&bull;</span> ', '' ); ?></div>
+        <?php endif; ?>
 
           <?php the_post_navigation(); ?>
 
@@ -45,11 +68,15 @@
 
           <?php //include('inc/share.php'); ?>
 
-        <div class="comments"><?php comments_template(); ?></div>
+	        <?php
+						if ( comments_open() || '0' != get_comments_number() ) :
+							comments_template();
+						endif;
+					?>
 
       <?php endwhile; else : ?>
 			<?php endif; ?>
 
-    </div><?php //Blog Wrap ?>
+    </section><?php //Blog Wrap ?>
 
 <?php get_footer(); ?>
