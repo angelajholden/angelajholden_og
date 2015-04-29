@@ -4,8 +4,8 @@ $a(document).ready(function() {
 
 // Responsive Nav
   $a(function() {  
-    var pull      = $a('#pull');  
-      menu        = $a('nav ul');  
+    var pull      = $a('a#pull');  
+      menu        = $a('.mainMenu ul');  
       menuHeight  = menu.height();
     $a(pull).on('click', function(e) {  
       e.preventDefault();  
@@ -14,7 +14,7 @@ $a(document).ready(function() {
   });
   $a(window).resize(function(){  
     var w = $a(window).width();  
-    if(w > 768 && menu.is(':hidden')) {  
+    if(w > 1024 && menu.is(':hidden')) {  
       menu.removeAttr('style');  
     }  
   });
@@ -23,8 +23,10 @@ $a(document).ready(function() {
   $a("figure").fitVids();
 
 // Smooth Scrolling
+// $('a[href*=#]:not([href=#])').not('#myCarousel a').click(function() {
+// https://css-tricks.com/snippets/jquery/smooth-scrolling/#comment-1584376
 $a(function() {
-  $a('a[href*=#]:not([href=#])').click(function() {
+  $a('a[href*=#]:not([href=#])').not('#tabs a').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $a(this.hash);
       target = target.length ? target : $a('[name=' + this.hash.slice(1) +']');
@@ -38,12 +40,26 @@ $a(function() {
   });
 });
 
+// Instafeed
+//$a(function() {
+//	var feed = new Instafeed({
+//    get: 'tagged',
+//    tagName: 'sheltie',
+//    clientId: '5baf313b970847e69b2f5ce2b65300de',
+//    limit: 12
+//	});
+//	feed.run();
+//});
+
 // jQuery UI
 $a( "#accordion" ).accordion({
       collapsible: true,
       active: false,
       heightStyle: "content"
 });
+
+$a( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+$a( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
 
 // jquery.popupWindow.js (http://swip.codylindley.com/popupWindowDemo.html)
 (function($){ 		  
