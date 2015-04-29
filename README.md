@@ -1,4 +1,3 @@
-ajh-blog-wptheme
-================
-
+AJH v3
+======
 WordPress theme for AJH Blog
