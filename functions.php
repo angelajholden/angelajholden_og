@@ -64,6 +64,10 @@ function ajh_enqueue_scripts_styles() {
   wp_register_script('fitvids', get_stylesheet_directory_uri() . "/js/fitvids.min.js");
   wp_enqueue_script('fitvids');
 
+  // Instafeed
+  //wp_register_script('instafeed', get_stylesheet_directory_uri() . "/js/instafeed.min.js");
+  //wp_enqueue_script('instafeed');
+
   // Global
   wp_register_script('global', get_stylesheet_directory_uri() . "/js/global.min.js");
   wp_enqueue_script('global');
@@ -71,6 +75,13 @@ function ajh_enqueue_scripts_styles() {
 }
 add_action("wp_enqueue_scripts", "ajh_enqueue_scripts_styles", 11);
 
+// Sanitized Version of the Post Title
+function post_name() {
+  global $post;
+  $title = sanitize_title($post->post_title);
+  echo $title;
+}
+  
 // Edit the Excerpt Length & String
 function custom_excerpt_length( $length ) {
 	return 40;
@@ -78,7 +89,7 @@ function custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 function new_excerpt_more( $more ) {
-	return '...';
+	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More') . '</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
