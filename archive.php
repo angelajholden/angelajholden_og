@@ -14,7 +14,7 @@
 				  	); wp_list_categories( $args ); ?>
 				  </ul>
 				</nav>
-		    <p><?php echo category_description(); ?></p>
+		    <?php echo category_description(); ?>
 		  <?php elseif (is_tag()) : ?>
 		  	<h1>Posts Tagged <?php single_tag_title(); ?></h1>
 		  <?php elseif (is_archive()) : ?>

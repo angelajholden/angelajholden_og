@@ -166,6 +166,15 @@
 
 }
 
+@media (max-width: 400px) {
+	.postMeta {
+		time {
+			float: none;
+			display: block;
+		}
+	}
+}
+
 @media (max-width: 370px) {
 	.mainHead .blogTitle {
 		font-size: 1.5em;
