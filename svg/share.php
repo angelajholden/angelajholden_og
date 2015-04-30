@@ -7,8 +7,8 @@
 <?php $encoded_url = urlencode( getUrl() );
   if ( !empty($encoded_url) ) { ?>
   <div class="sharing">
-	  <a class="facebook share" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $encoded_url; ?>" target="_blank"><?php include('facebook.svg'); ?><span>Facebook</span></a>
-		<a class="twitter share" href="https://twitter.com/intent/tweet?url=<?php echo $encoded_url; ?>" target="_blank"><?php include('twitter.svg'); ?><span>Twitter</span></a>
-		<a class="google share" href="https://plus.google.com/share?url=<?php echo $encoded_url; ?>" target="_blank"><?php include('googleplus.svg'); ?><span>Google</span></a>
+	  <a class="facebook share" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $encoded_url; ?>" target="_blank"><?php include('facebook.svg'); ?><span class="screen-reader-text">Facebook</span></a>
+		<a class="twitter share" href="https://twitter.com/intent/tweet?url=<?php echo $encoded_url; ?>" target="_blank"><?php include('twitter.svg'); ?><span class="screen-reader-text">Twitter</span></a>
+		<a class="google share" href="https://plus.google.com/share?url=<?php echo $encoded_url; ?>" target="_blank"><?php include('googleplus.svg'); ?><span class="screen-reader-text">Google</span></a>
 	</div>
  <?php } ?>
