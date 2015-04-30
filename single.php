@@ -15,16 +15,11 @@
       	</div>
 
         <div class="single-meta">
-        	<p>Category <span class="bullet">&bull;</span> <?php the_category(','); ?>
-          	<?php comments_popup_link(
-	          	__( '<span class="comments-icon fa fa-comment-o"></span>0', 'angelajholden-v3' ), 
-					    __( '<span class="comments-icon fa fa-comment-o"></span>1', 'angelajholden-v3' ), 
-					    __( '<span class="comments-icon fa fa-comment-o"></span>%', 'angelajholden-v3' )
-	          ); ?></p>
-          </div>
+        	<p>Category <span class="bullet">&bull;</span> <?php the_category(','); ?></p>
+        </div>
 
         </aside>
-
+        
       <article>
 
 	    <header>
@@ -56,17 +51,19 @@
 
         </article>
 
+        <?php include_once('svg/share.php'); ?>
+
       </div>
 
         <?php if (has_tag()) : ?>
-          <div class="theTags"><?php the_tags( 'Tagged <span class="bullet">&bull;</span> ', ' <span class="bullet">&bull;</span> ', '' ); ?></div>
+          <div class="theTags"><?php the_tags( 'Tagged: ', ' <span class="bullet">&bull;</span> ', '' ); ?></div>
         <?php endif; ?>
 
           <?php the_post_navigation(); ?>
 
-          <div class="edit-button"><?php edit_post_link('Edit'); ?></div>
+          <hr>
 
-          <?php //include('inc/share.php'); ?>
+          <div class="edit-button"><?php edit_post_link('Edit'); ?></div>
 
 	        <?php
 						if ( comments_open() || '0' != get_comments_number() ) :
