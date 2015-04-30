@@ -98,6 +98,12 @@ body {
 	}
 }
 
+.single {
+	section.wrap {
+		padding-top: 1em;
+	}
+}
+
 /* SVGs */
 .logoSVG {
 	fill: lighten($pink,10%);
@@ -128,9 +134,14 @@ body {
 	text-transform: uppercase;
 }
 
+.theTags {
+	font-weight: 400;
+	margin: 1em 0;
+}
+
 /* Archive & Post Navigation */
 .post-navigation {
-	margin-top: 1em;
+	margin: 1em 0;
 }
 
 .post-navigation:after,
@@ -252,6 +263,46 @@ body {
 		img {
 			display: inline;
 			@include box-shadow(0 1px 1px rgba(0,0,0,0.25));
+		}
+	}
+}
+
+/* Sharing */
+.sharing {
+	margin: 2em 0 1em;
+	a {
+		display: inline-block;
+	  padding: 10px;
+	  line-height: 10px;
+	}
+	.facebook.share {
+		background: $facebook;
+	}
+	.twitter.share {
+		background: $twitter;
+	}
+	.google.share {
+		background: $google;
+	}
+	svg {
+		fill: #fff;
+		width: 20px;
+		height: 20px;
+	}
+}
+
+/* Demo Button */
+.demo-button {
+	text-align: center;
+	margin: 2em 0;
+	a {
+		background: lighten($pink,10%);
+		padding: 15px 25px;
+		color: #fff;
+		font-weight: 400;
+		&:hover, &:active, &:focus {
+			color: #fff;
+			background: $pink;
 		}
 	}
 }
