@@ -7,7 +7,6 @@ function ajh_setup() {
 	register_nav_menus( array(
 		'main_menu' => 'Main Menu',
 		'footer_one' => 'Footer One',
-		'footer_two' => 'Footer Two',
 	) );
 
 	add_theme_support( 'html5', array(
@@ -16,28 +15,10 @@ function ajh_setup() {
 
 	// Featured Images
   add_theme_support( 'post-thumbnails' );
-  add_image_size('75x75', 75, 75, true);
-  add_image_size('650x366', 650, 366, true);
-  add_image_size('300x169', 300, 169, true);
 
 }
 endif; // ajh_setup
 add_action( 'after_setup_theme', 'ajh_setup' );
-
-// Over-ride image_size_names_choose
-function ajh_add_image_insert_override($size_names){
-  global $_wp_additional_image_sizes;
-   //default array with hardcoded values for add_image_size
-    $size_names = array(
-    	'75x75'     => __('Tiny'),
-			'thumbnail' => __('Thumbnail'), 
-			'300x169'   => __('Medium'), 
-			'650x366' 	=> __('Post Size'),
-			'full'    	=> __('Full Size')
-		);
-  return $size_names;
-};
-add_filter('image_size_names_choose', 'ajh_add_image_insert_override' );
 
 // Load jQuery
 if (!is_admin()) {
@@ -224,3 +205,6 @@ require get_template_directory() . '/cpt/cpt.php';
 
 // Parse Youtube URL
 require get_template_directory() . '/cpt/youtube-url.php';
+
+// Template Tags
+require get_template_directory() . '/inc/template-tags.php';

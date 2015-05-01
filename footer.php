@@ -26,14 +26,14 @@
 
 		        <div class="ajh-footer">
 		          <?php include('inc/social.php'); ?>
-		          <?php include('search.php'); ?>
+		          <?php echo get_search_form(); ?>
 		        </div>
 
 		        <nav class="ajh-footer">
 		        	<h3>Projects</h3>
 		          <?php wp_nav_menu( array( 
-		            'name'            => 'Footer Two',
-		            'theme_location'  => 'footer_two',
+		            'name'            => 'Footer One',
+		            'theme_location'  => 'footer_one',
 		            'container'       => 'false',
 		            'menu_class' 			=> 'footer-nav',
 		            'depth'						=> '1'

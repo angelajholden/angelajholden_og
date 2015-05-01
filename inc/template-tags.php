@@ -252,6 +252,20 @@ function angelajholden_v3_categorized_blog() {
 	}
 }
 
+if ( ! function_exists( 'ajh_search' ) ) :
+function ajh_search() { ?>
+	<div class="search404">
+		  <form action="<?php echo home_url( '/' ); ?>" method="get">
+		    <fieldset>
+		      <label class="screen-reader-text">Search</label>
+		      <input class="Input404" name="s" type="search" placeholder="Search...">
+		      <input class="Image404" name="submit" type="submit" value="Submit">
+		    </fieldset>
+		  </form>
+		</div>
+<?php }
+endif;
+
 /**
  * Flush out the transients used in angelajholden_v3_categorized_blog.
  */

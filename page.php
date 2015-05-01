@@ -8,6 +8,8 @@
 		    <h1><?php the_title(); ?></h1>
 		  </header>
 
+		  <hr>
+
 	      <article class="singlePost">
 
 	        <?php if ( has_post_thumbnail() ) { ?>
@@ -19,12 +21,12 @@
 
 	        <?php the_content(); ?>
 
-	        <?php edit_post_link('Edit'); ?>
-
 	      </article>
 
-    <?php endwhile; else : ?>
-		<?php endif; ?>
+	    <?php endwhile; else : ?>
+			<?php endif; ?>
+
+		<?php edit_post_link('Edit'); ?>
 
   </div>
 

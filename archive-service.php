@@ -7,10 +7,10 @@
   <section class="wrap clearfix">
 
 	  <header>
-	  	<h1>Services</h1>
+	  	<h1>Projects</h1>
 	  </header>
 
-	  <p>I'm a UI Designer and Front End Developer with an expertise building responsive Photoshop to finish WordPress websites. My skillset, however, is versatile and I'm hired to work on many different types of projects. This will give you an idea of the work I do, the tools I use, and my terms if you’d like to hire me.</p>
+	  <p>I'm a Front End Developer with an expertise building responsive Photoshop to finish WordPress websites. My skillset, however, is versatile and I'm hired to work on many different types of projects. This will give you an idea of the work I do, the tools I use, and my terms if you’d like to hire me.</p>
 
 	  <hr>
 
