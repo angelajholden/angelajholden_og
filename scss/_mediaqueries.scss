@@ -153,6 +153,24 @@
 		font-size: 0.9em;
 	}
 
+	.search404 {
+		.Input404 {
+			width: 100%;
+		}
+		.Image404 {
+			display: block;
+			width: 100%;
+			font-size: 0.9em;
+		}
+	}
+
+	.error404 {
+		.widget {
+			width: 100%;
+			float: none;
+		}
+	}
+
 	.info {
 		margin-top: 1em;
 		span {

@@ -24,3 +24,51 @@
 	  height: auto;
 	}
 }
+
+.search404 {
+	margin-bottom: 2em;
+	.Input404 {
+		width: 75%;
+	}
+	.Image404 {
+		font-size: 1em;
+	  margin-top: 10px;
+	  width: 24%;
+	}
+}
+
+.error404 {
+	.widget.widget_archive {
+		margin-bottom: 2em;
+	}
+	#archives-dropdown--1 {
+		border: 1px solid #ccc;
+	  padding: 10px;
+	  width: 100%;
+	  max-width: 250px;
+	  outline: none;
+	}
+	.widget {
+		width: 50%;
+		float: left;
+		font-weight: 400;
+	}
+}
+
+.widget_tag_cloud h2.widgettitle {
+	margin-bottom: 0.5em;
+}
+
+.tagcloud {
+	a {
+		font-size: 1em !important;
+		&:after {
+			content: "•";
+			color: #ccc;
+			margin-left: 5px;
+		}
+		&:last-child:after {
+			content: "";
+		}
+	}
+}
