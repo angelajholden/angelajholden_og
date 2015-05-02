@@ -32,14 +32,14 @@
 	    'menu_icon'             => 'dashicons-store',
 	    'rewrite'               => array('slug' => ''),
 	    'supports'              => array('title', 'editor', 'custom-fields'),
-	    'taxonomies'            => array('category', 'post_tag')
+	    'taxonomies'            => array('')
 	  );
-	  register_post_type( 'skill' , $args );
+	  register_post_type( 'ajhskill' , $args );
 	};
 	add_action('init', 'custom_post_type_skills');
 
 	// PROJECTS
-	function custom_post_type_services() {
+	function custom_post_type_projects() {
 	    $labels = array(
 	    'name'               => 'Projects',
 	    'singular_name'      => 'Project',
@@ -70,15 +70,15 @@
 	    'menu_icon'             => 'dashicons-star-filled',
 	    'rewrite'               => array('slug' => 'projects'),
 	    'supports'              => array('title', 'editor', 'custom-fields'),
-	    'taxonomies'            => array('category', 'post_tag')
+	    'taxonomies'            => array('')
 	  );
-	  register_post_type( 'service' , $args );
+	  register_post_type( 'ajhproject' , $args );
 	};
-	add_action('init', 'custom_post_type_services');
+	add_action('init', 'custom_post_type_projects');
 
 	// Flush Permalinks Upon Activation
 	function ajh_rewrite_flush() {
-		custom_post_type_services();
+		custom_post_type_projects();
 		custom_post_type_skills();
 	  flush_rewrite_rules();
 	}

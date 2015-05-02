@@ -20,7 +20,7 @@ get_header(); the_post(); ?>
 
 	    	<?php
 		    	$args = array(
-		    		'post_type' => 'skill',
+		    		'post_type' => 'ajhskill',
 		    		'post_status' => 'publish',
 		    		'order' => 'desc',
 		    		'showposts' => -1
@@ -44,9 +44,9 @@ get_header(); the_post(); ?>
       <div class="wrap clearfix">
       	<img src="<?php bloginfo('template_url'); ?>/images/angela.jpg" alt="About Angela J. Holden Website Design" title="Angela J. Holden">
       	<h1>About Me</h1>
-      	<p>My name is Angela Holden and I’m a freelance web designer and technical writer from Minneapolis, MN, now living in San Diego, CA. I love WordPress, content, color, typography, and providing great user experiences. I’ve been designing websites for five years and I love every minute that I spend doing it. In 2009 I built my first website, and in 2013 I earned a Master’s Degree in Technical Communication from Metropolitan State University.</p>
+      	<p>My name is Angela Holden and I’m a freelance web designer, front end developer and technical writer from Minneapolis, MN, now living in San Diego, CA. I love WordPress, content, color, typography, and providing great user experiences. I’ve been designing websites for over six years and I love every minute that I spend doing it.</p>
 
-        <p>I work from my home in San Diego and I have clients in the U.S. and overseas. For more information about what I can do, please <a href="#contact">contact</a> me for a consultation.</p>
+        <p>I work from my home in San Diego and I have clients in the U.S. and overseas. For more information about what I can do, please <a href="#contact">contact</a> me for a complementary consultation.</p>
 
         <p>Cheers!</p>
         <div class="signature"><?php include('svg/signature.svg'); ?></div>
