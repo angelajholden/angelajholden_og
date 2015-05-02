@@ -899,7 +899,7 @@ body .ui-tooltip {
 	color: #333;
 }
 .ui-widget-content a {
-	color: #222222;
+	color: lighten($pink, 10%);
 }
 .ui-widget-header {
 	//border: 1px solid #aaaaaa;
@@ -933,7 +933,7 @@ body .ui-tooltip {
 .ui-widget-header .ui-state-hover {
 	outline: none;
 	//border: 1px solid #999999;
-	background: rgba($pink,0.35);
+	background: rgba($pink,0.65);
 	font-weight: normal;
 	color: #fff;
 	@include single-transition(all, 0.25s, ease);
@@ -961,7 +961,7 @@ body .ui-tooltip {
 .ui-widget-header .ui-state-active {
 	outline: none;
 	//border: 1px solid #aaaaaa;
-	background: rgba($pink,0.35);
+	background: rgba($pink,0.65);
 	font-weight: normal;
 	color: #fff;
 	@include single-transition(all, 0.25s, ease);
