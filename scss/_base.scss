@@ -245,6 +245,17 @@ body {
 	margin: 2.5em 0;
 }
 
+.single-ajhproject {
+	header {
+		margin: 1em 0 2em;
+		p {
+			text-transform: uppercase;
+			font-size: 0.95em;
+			color: $pink;
+		}
+	}
+}
+
 /* Instafeed */
 .instagram {
 	background: #333;
@@ -274,8 +285,18 @@ body {
 	margin: 2em 0 1em;
 	a {
 		display: inline-block;
-	  padding: 10px;
-	  line-height: 10px;
+	  padding: 0;
+	  line-height: 40px;
+	  width: 40px;
+	  height: 40px;
+	  text-align: center;
+	  opacity: 1;
+	  span {
+	  	color: #fff;
+	  }
+	  &:hover, &:active, &:focus {
+	  	opacity: 0.8;
+	  }
 	}
 	.facebook.share {
 		background: $facebook;
@@ -286,10 +307,11 @@ body {
 	.google.share {
 		background: $google;
 	}
-	svg {
-		fill: #fff;
-		width: 20px;
-		height: 20px;
+	.linkedin.share {
+		background: $linkedin;
+	}
+	.email.share {
+		background: $pink;
 	}
 }
 
