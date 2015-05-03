@@ -55,8 +55,11 @@
 	}
 }
 
-.widget_tag_cloud h2.widgettitle {
-	margin-bottom: 0.5em;
+.widget_archive,
+.widget_tag_cloud {
+	h2.widgettitle {
+		margin-bottom: 0.5em;
+	}
 }
 
 .tagcloud {
