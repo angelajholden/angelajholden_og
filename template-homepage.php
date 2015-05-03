@@ -7,6 +7,7 @@ get_header(); the_post(); ?>
   	<div class="banner">
   		<?php //the_post_thumbnail(); ?>
   		<h1 class="page-title"><?php the_title(); ?></h1>
+  		<p><?php //bloginfo('description'); ?></p>
   	</div>
 
 	  <section class="skills">

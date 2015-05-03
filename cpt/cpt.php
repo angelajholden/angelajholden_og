@@ -59,7 +59,7 @@
 	    'labels'                => $labels,
 	    'public'                => true,
 	    'publicly_queryable'    => true,
-	    'exclude_from_search'		=> true,
+	    'exclude_from_search'		=> false,
 	    'show_ui'               => true,
 	    'show_in_nav_menus'			=> false,
 	    'query_var'             => true,
@@ -69,8 +69,8 @@
 	    'hierarchical'          => false,
 	    'menu_icon'             => 'dashicons-star-filled',
 	    'rewrite'               => array('slug' => 'projects'),
-	    'supports'              => array('title', 'editor', 'custom-fields'),
-	    'taxonomies'            => array('')
+	    'supports'              => array('title', 'editor', 'custom-fields', 'thumbnail'),
+	    'taxonomies'            => array('post_tag')
 	  );
 	  register_post_type( 'ajhproject' , $args );
 	};

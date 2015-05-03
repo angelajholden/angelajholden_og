@@ -47,11 +47,11 @@
           </p>
         <?php } ?>
 
-          <?php the_content(); ?>
+          <div class="main"><?php the_content(); ?></div>
 
         </article>
 
-        <?php include_once('svg/share.php'); ?>
+        <?php wordpress_sharing(); ?>
 
       </div>
 
