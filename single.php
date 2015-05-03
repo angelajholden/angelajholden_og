@@ -4,8 +4,6 @@
 
   	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <div class="clearfix">
-
     	<aside class="single-top clearfix">
 
       	<div class="single-author clearfix">
@@ -18,62 +16,62 @@
         	<p>Category <span class="bullet">&bull;</span> <?php the_category(','); ?></p>
         </div>
 
-        </aside>
+      </aside>
         
-      <article>
+      <article class="clearfix">
 
-	    <header>
-		    <h1><?php the_title(); ?></h1>
-		  </header>
+		    <header>
+			    <h1><?php the_title(); ?></h1>
+			  </header>
 
-        <?php $video = get_post_meta( get_the_ID(), 'video_url', true );
-          if( ! empty( $video ) ) { ?>
-            <figure class="iframe">
-              <?php echo parse_youtube_url($video,'embed'); ?>
-            </figure>
-        <?php } ?>
+		    <?php $video = get_post_meta( get_the_ID(), 'video_url', true );
+		      if( ! empty( $video ) ) { ?>
+		        <figure class="iframe">
+		          <?php echo parse_youtube_url($video,'embed'); ?>
+		        </figure>
+		    <?php } ?>
 
-        <?php if ( has_tag('demo') ) { ?>
-          <p class="demo-button">
-          	<a href="<?php echo get_post_meta(get_the_ID(), 'live_demo', true); ?>" target="_blank">Live Demo</a>
+		    <?php if ( has_tag('demo') ) { ?>
+		      <p class="demo-button">
+		      	<a href="<?php echo get_post_meta(get_the_ID(), 'live_demo', true); ?>" target="_blank">Live Demo</a>
 
-          	<?php if (get_post_meta(get_the_ID(), 'download', true)) { ?>
-          		<a href="<?php echo get_post_meta(get_the_ID(), 'download', true); ?>">Download</a>
-          	<?php } ?>
+		      	<?php if (get_post_meta(get_the_ID(), 'download', true)) { ?>
+		      		<a href="<?php echo get_post_meta(get_the_ID(), 'download', true); ?>">Download</a>
+		      	<?php } ?>
 
-          	<?php if (get_post_meta(get_the_ID(), 'purchase', true)) { ?>
-          		<a href="<?php echo get_post_meta(get_the_ID(), 'purchase', true); ?>" target="_blank">Purchase</a>
-          	<?php } ?>
-          </p>
-        <?php } ?>
+		      	<?php if (get_post_meta(get_the_ID(), 'purchase', true)) { ?>
+		      		<a href="<?php echo get_post_meta(get_the_ID(), 'purchase', true); ?>" target="_blank">Purchase</a>
+		      	<?php } ?>
+		      </p>
+		    <?php } ?>
 
-          <div class="main"><?php the_content(); ?></div>
+	      <div class="main"><?php the_content(); ?></div>
 
-        </article>
+	    </article>
 
-        <?php wordpress_sharing(); ?>
+	    <hr>
 
-      </div>
+		    <?php wordpress_sharing(); ?>
 
-        <?php if (has_tag()) : ?>
-          <div class="theTags"><?php the_tags( 'Tagged: ', ' <span class="bullet">&bull;</span> ', '' ); ?></div>
-        <?php endif; ?>
+		    <?php if (has_tag()) : ?>
+		      <div class="theTags"><?php the_tags( 'Tagged: ', ' <span class="bullet">&bull;</span> ', '' ); ?></div>
+		    <?php endif; ?>
 
-          <?php the_post_navigation(); ?>
+		    <?php the_post_navigation(); ?>
 
-          <hr>
+	    <hr>
 
-          <div class="edit-button"><?php edit_post_link('Edit'); ?></div>
+		    <div class="edit-button"><?php edit_post_link('Edit'); ?></div>
 
-	        <?php
-						if ( comments_open() || '0' != get_comments_number() ) :
-							comments_template();
-						endif;
-					?>
+	    <?php
+				if ( comments_open() || '0' != get_comments_number() ) :
+					comments_template();
+				endif;
+			?>
 
-      <?php endwhile; else : ?>
-			<?php endif; ?>
+    <?php endwhile; else : ?>
+		<?php endif; ?>
 
-    </section><?php //Blog Wrap ?>
+  </section><?php //Blog Wrap ?>
 
 <?php get_footer(); ?>
