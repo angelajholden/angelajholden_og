@@ -31,17 +31,19 @@
 		        </figure>
 		    <?php } ?>
 
-		    <?php if ( has_tag('demo') ) { ?>
+		    <?php if (get_post_meta(get_the_ID(), 'live_demo', true)) { ?>
 		      <p class="demo-button">
-		      	<a href="<?php echo get_post_meta(get_the_ID(), 'live_demo', true); ?>" target="_blank">Live Demo</a>
 
-		      	<?php if (get_post_meta(get_the_ID(), 'download', true)) { ?>
-		      		<a href="<?php echo get_post_meta(get_the_ID(), 'download', true); ?>">Download</a>
-		      	<?php } ?>
+	      		<a href="<?php echo get_post_meta(get_the_ID(), 'live_demo', true); ?>" target="_blank">Live Demo</a>
 
-		      	<?php if (get_post_meta(get_the_ID(), 'purchase', true)) { ?>
-		      		<a href="<?php echo get_post_meta(get_the_ID(), 'purchase', true); ?>" target="_blank">Purchase</a>
-		      	<?php } ?>
+	      	<?php if (get_post_meta(get_the_ID(), 'download', true)) { ?>
+	      		<a href="<?php echo get_post_meta(get_the_ID(), 'download', true); ?>" target="_blank">Download</a>
+	      	<?php } ?>
+
+	      	<?php if (get_post_meta(get_the_ID(), 'purchase', true)) { ?>
+	      		<a href="<?php echo get_post_meta(get_the_ID(), 'purchase', true); ?>" target="_blank">Purchase</a>
+	      	<?php } ?>
+
 		      </p>
 		    <?php } ?>
 

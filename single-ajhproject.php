@@ -13,6 +13,22 @@
 
         <figure class="project-img"><?php the_post_thumbnail('full'); ?></figure>
 
+        <?php if (get_post_meta(get_the_ID(), 'live_demo', true)) { ?>
+		      <p class="demo-button">
+		      	
+	      		<a href="<?php echo get_post_meta(get_the_ID(), 'live_demo', true); ?>" target="_blank">Live Site</a>
+
+	      	<?php if (get_post_meta(get_the_ID(), 'download', true)) { ?>
+	      		<a href="<?php echo get_post_meta(get_the_ID(), 'download', true); ?>" target="_blank">Github</a>
+	      	<?php } ?>
+
+	      	<?php if (get_post_meta(get_the_ID(), 'purchase', true)) { ?>
+	      		<a href="<?php echo get_post_meta(get_the_ID(), 'purchase', true); ?>" target="_blank">Purchase</a>
+	      	<?php } ?>
+
+		      </p>
+		    <?php } ?>
+
         <div class="main"><?php the_content(); ?></div>
 
       </article>
