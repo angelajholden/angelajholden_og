@@ -16,9 +16,11 @@ function ajh_setup() {
 	// Featured Images
   add_theme_support( 'post-thumbnails' );
 
+
 }
 endif; // ajh_setup
 add_action( 'after_setup_theme', 'ajh_setup' );
+add_image_size( 'project', 1000, 563, array( 'center', 'top') );
 
 // Load jQuery
 if (!is_admin()) {

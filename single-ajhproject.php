@@ -11,7 +11,7 @@
 		    <p class="completed">Completed <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F Y'); ?></time></p>
 		  </header>
 
-        <figure><?php the_post_thumbnail('full'); ?></figure>
+        <figure class="project-img"><?php the_post_thumbnail('full'); ?></figure>
 
         <div class="main"><?php the_content(); ?></div>
 

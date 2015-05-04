@@ -12,13 +12,14 @@
 
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		    <article class="ajh-port">
-		    	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		    	<?php the_excerpt(); ?>
-		    	<figure><?php the_post_thumbnail('full'); ?></figure>
-		    </article>
+		    <a class="ajh-port" href="<?php the_permalink(); ?>">
+			    <article>
+			    	<h2><?php the_title(); ?></h2>
+			    	<figure class="project-img"><?php the_post_thumbnail('full'); ?></figure>
+			    	<?php //the_excerpt(); ?>
+			    </article>
+		    </a>
 
-		    <hr>
 
 		  <?php endwhile; else : ?>
 			<?php endif; ?>
