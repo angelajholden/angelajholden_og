@@ -182,6 +182,14 @@
 		}
 	}
 
+	.ajh-port {
+		width: 100%;
+		float: none;
+		&:nth-child(even) {
+			margin-right: 0;
+		}
+	}
+
 	.ajh-footer {
 		width: 100%;
 		float: none;

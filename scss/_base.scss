@@ -216,6 +216,10 @@ body {
 	}
 }
 
+.main p:last-child {
+	margin-bottom: 0;
+}
+
 .gravatar {
 	float: left;
 	margin-right: 0.75em;
@@ -282,7 +286,7 @@ body {
 
 /* Sharing */
 .sharing {
-	margin: 2em 0 1em;
+	margin: 2em 0 1.5em;
 	a {
 		display: inline-block;
 	  padding: 0;
@@ -329,4 +333,25 @@ body {
 			background: $pink;
 		}
 	}
+}
+
+/* Project */
+.ajh-port {
+	display: block;
+	width: 48%;
+	margin-bottom: 4%;
+	float: left;
+	&:nth-child(even) {
+		margin-right: 4%;
+	}
+	h2 {
+		font-size: 1.65em;
+	  margin-bottom: 5px;
+	}
+}
+
+.project-img {
+	height: 0;
+	padding-bottom: 56%;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
