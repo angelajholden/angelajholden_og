@@ -16,10 +16,10 @@
         <?php if (get_post_meta(get_the_ID(), 'live_demo', true)) { ?>
 		      <p class="demo-button">
 		      	
-	      		<a href="<?php echo get_post_meta(get_the_ID(), 'live_demo', true); ?>" target="_blank">Live Site</a>
+	      		<a href="<?php echo get_post_meta(get_the_ID(), 'live_demo', true); ?>" target="_blank">View Site</a>
 
 	      	<?php if (get_post_meta(get_the_ID(), 'download', true)) { ?>
-	      		<a href="<?php echo get_post_meta(get_the_ID(), 'download', true); ?>" target="_blank">Github</a>
+	      		<a href="<?php echo get_post_meta(get_the_ID(), 'download', true); ?>" target="_blank">View Code</a>
 	      	<?php } ?>
 
 	      	<?php if (get_post_meta(get_the_ID(), 'purchase', true)) { ?>
