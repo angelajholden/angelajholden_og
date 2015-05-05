@@ -6,7 +6,7 @@
 	  	<h1>Projects</h1>
 	  </header>
 
-	  <p>I'm a Front End Developer with an expertise building responsive WordPress websites. My skillset, however, is versatile and I'm hired to work on many different types of projects.</p>
+	  <p>I'm a Front End Developer with an expertise building responsive WordPress websites. My skillset, however, is versatile and I'm hired to work on many different types of projects. Please see my <a href="https://github.com/angelajholden" target="_blank">Github</a> profile for code examples.</p>
 
 	  <hr>
 
@@ -16,10 +16,8 @@
 			    <article>
 			    	<h2><?php the_title(); ?></h2>
 			    	<figure class="project-img"><?php the_post_thumbnail('full'); ?></figure>
-			    	<?php //the_excerpt(); ?>
 			    </article>
 		    </a>
-
 
 		  <?php endwhile; else : ?>
 			<?php endif; ?>
