@@ -6,7 +6,7 @@ get_header(); the_post(); ?>
     
   	<div class="banner">
 
-  		<video id="bgvideo" preload="auto" muted autoplay loop>
+  		<video id="bgvideo" preload="auto" muted="true" autoplay="true" loop="true">
   			<source src="<?php echo get_template_directory_uri(); ?>/video/bamboo.mp4" type="video/mp4"></source>
   		</video>
 

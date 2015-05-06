@@ -116,10 +116,8 @@ $a(function() {
 // http://www.webdesignerdepot.com/2013/11/how-to-use-video-backgrounds-for-incredible-visual-impact-part-1/
 $a(document).ready(function() {
 
-	var vid = document.getElementById("bgvideo");
-	vid.playbackRate = 0.65;
-
 	$a('video#bgvideo').on("loadedmetadata", scaleVideo);
+	$a(window).on("resize", scaleVideo);
 
 		function scaleVideo() {
 

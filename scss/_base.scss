@@ -83,6 +83,7 @@ video#bgvideo {
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 100%;
 	z-index: -1;
 }
 
@@ -391,9 +392,9 @@ video#bgvideo {
 }
 
 .fadeIn {
-	-webkit-animation:fadeIn 1000ms ease;
-	-moz-animation:fadeIn 1000ms ease;
-	-ms-animation:fadeIn 1000ms ease;
-	-o-animation:fadeIn 1000ms ease;
-	animation:fadeIn 1000ms ease;
+	-webkit-animation:fadeIn 500ms ease;
+	-moz-animation:fadeIn 500ms ease;
+	-ms-animation:fadeIn 500ms ease;
+	-o-animation:fadeIn 500ms ease;
+	animation:fadeIn 500ms ease;
 }
