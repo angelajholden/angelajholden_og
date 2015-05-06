@@ -1,26 +1,22 @@
 var $a = jQuery.noConflict();
 
-$a(document).ready(function() {
-
 // Responsive Nav
-  $a(function() {  
-    var pull      = $a('a#pull');  
-      menu        = $a('.mainMenu ul');  
-      menuHeight  = menu.height();
-    $a(pull).on('click', function(e) {  
-      e.preventDefault();  
-      menu.slideToggle();  
-    });  
-  });
-  $a(window).resize(function(){  
-    var w = $a(window).width();  
-    if(w > 1024 && menu.is(':hidden')) {  
-      menu.removeAttr('style');  
-    }  
-  });
+$a(function() {  
+  var pull      = $a('a#pull');  
+    menu        = $a('.mainMenu ul');  
+    menuHeight  = menu.height();
+  $a(pull).on('click', function(e) {  
+    e.preventDefault();  
+    menu.slideToggle();  
+  });  
+});
+$a(window).resize(function(){  
+  var w = $a(window).width();  
+  if(w > 1024 && menu.is(':hidden')) {  
+    menu.removeAttr('style');  
+  }  
+});
 
-// Fit Vids
-  $a("figure").fitVids();
 
 // Smooth Scrolling
 // $('a[href*=#]:not([href=#])').not('#myCarousel a').click(function() {
@@ -51,17 +47,8 @@ $a(function() {
 //	feed.run();
 //});
 
-// jQuery UI
-$a( "#accordion" ).accordion({
-      collapsible: true,
-      active: false,
-      heightStyle: "content"
-});
-
-$a( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
-$a( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
-
-// jquery.popupWindow.js (http://swip.codylindley.com/popupWindowDemo.html)
+// PopupWindow.js
+// (http://swip.codylindley.com/popupWindowDemo.html)
 (function($){ 		  
 	$.fn.popupWindow = function(instanceSettings){
 		
@@ -125,12 +112,69 @@ $a( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
 	};
 })(jQuery);
 
-// Initialize Popup Window
-$a('.share').popupWindow({ 
-	height:500, 
-	width:570,
-	centerScreen:1,
-	scrollbars:0
-	}); 
+// Background Video
+// http://www.webdesignerdepot.com/2013/11/how-to-use-video-backgrounds-for-incredible-visual-impact-part-1/
+$a(document).ready(function() {
+
+	var vid = document.getElementById("bgvideo");
+	vid.playbackRate = 0.75;
+
+	$a('video#bgvideo').on("loadedmetadata", scaleVideo);
+
+		function scaleVideo() {
+
+			// Got the window height and width and saved them as variables
+
+			var windowHeight = $a(window).height();
+			var windowWidth = $a(window).width();
+
+			// Got the video width and video height
+
+			var videoNativeWidth = $a('video#bgvideo')[0].videoWidth;
+			var videoNativeHeight = $a('video#bgvideo')[0].videoHeight;
+
+			// Got the scale factors
+
+			var heightScaleFactor = windowHeight / videoNativeHeight;
+			var widthScaleFactor = windowWidth / videoNativeWidth;
+
+			// Got the highest scale factor
+
+			if (widthScaleFactor > heightScaleFactor) {
+				var scale = widthScaleFactor;
+			}
+			else {
+				var scale = heightScaleFactor;
+			}
+
+			var scaledVideoHeight = videoNativeHeight * scale;
+			var scaledVideoWidth = videoNativeWidth * scale;
+
+			$a('video#bgvideo').height(scaledVideoHeight);
+			$a('video#bgvideo').width(scaledVideoWidth);
+	}
+
+})
+
+// Initialize jQuery
+$a(document).ready(function() {
+
+	// Popup Window
+	$a('.share').popupWindow({ 
+		height:500, 
+		width:570,
+		centerScreen:1,
+		scrollbars:0
+		}); 
+
+	// jQuery Accordian
+	$a( "#accordion" ).accordion({
+    collapsible: true,
+    active: false,
+    heightStyle: "content"
+	});
+
+	// Fit Vids
+	$a("figure").fitVids();
 
 });

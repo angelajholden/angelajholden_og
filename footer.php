@@ -21,7 +21,7 @@
 
 		        <div class="ajh-footer">
 		          <a id="totop" href="#top"><img src="<?php bloginfo('template_url') ?>/images/logo.png" title="Angela J. Holden" alt="Angela J. Holden Website Design"></a>
-		          <p class="copyright"><?php echo date('Y'); ?> &copy; <?php bloginfo('title'); ?><br>Angela Holden Design</p>
+		          <p class="copyright"><?php echo date('Y'); ?> &copy; <?php bloginfo('title'); ?></p>
 		        </div>
 
 		        <div class="ajh-footer">

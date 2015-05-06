@@ -39,6 +39,7 @@ body {
 	background: #fff;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -62,8 +63,8 @@ body {
 
 .home {
 	.banner {
-		background: url(../images/ajh-banner.jpg) no-repeat center center;
-		background-size: cover;
+		//background: url(../images/ajh-banner.jpg) no-repeat center center;
+		//background-size: cover;
 		position: relative;
 		height: 300px;
 	}
@@ -76,6 +77,13 @@ body {
 		font-size: 3.5em;
 		text-shadow: 0 1px 1px rgba(0,0,0,0.25);
 	}
+}
+
+video#bgvideo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
 
 #welcome p {
@@ -94,7 +102,8 @@ body {
 }
 
 .skills {
-	margin-bottom: 7em;
+	background: #fff;
+	padding-bottom: 7em;
 	.wrap {
 		padding-top: 2em;
 	}
