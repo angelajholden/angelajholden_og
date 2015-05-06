@@ -6,35 +6,47 @@
 	padding: 0;
 	margin: 2em auto 0;
 	@include box-sizing(border-box);
-	.searchInput {
-		width: 100%;
-		outline: none;
-		padding: 13px;
-		background: #555;
-		border: none;
-		color: #eaeaea;
-	}
-	.searchImage {
-		position: absolute;
-	  top: 11.5px;
-	  right: 10px;
-	  border: none;
-	  outline: none;
-	  width: 25px;
-	  height: auto;
-	}
+}
+
+input[type="search"].searchInput {
+	width: 100%;
+	padding: 13px;
+	background: #555;
+	color: #eaeaea;
+}
+
+.searchImage {
+	position: absolute;
+  top: 11.5px;
+  right: 10px;
+  border: none;
+  outline: none;
+  width: 25px;
+  height: auto;
+  cursor: pointer;
+  input[type="submit"] {
+  	padding: 0;
+  	background: transparent;
+  	font-size: 0;
+  }
+  svg {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  }
 }
 
 .search404 {
 	margin-bottom: 2em;
-	.Input404 {
-		width: 75%;
-	}
-	.Image404 {
-		font-size: 1em;
-	  margin-top: 10px;
-	  width: 24%;
-	}
+}
+
+.Input404 {
+	width: 75%;
+}
+
+.Image404 {
+  margin-top: 10px;
+  width: 24%;
 }
 
 .error404 {
