@@ -63,10 +63,11 @@ body {
 
 .home {
 	.banner {
-		//background: url(../images/ajh-banner.jpg) no-repeat center center;
-		//background-size: cover;
+		background: url(../images/ajh-banner.jpg) no-repeat center center;
+		background-size: cover;
 		position: relative;
 		height: 300px;
+		z-index: -2;
 	}
 	.page-title {
 		position: relative;

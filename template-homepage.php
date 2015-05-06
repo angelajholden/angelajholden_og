@@ -5,12 +5,9 @@
 get_header(); the_post(); ?>
     
   	<div class="banner">
-
   		<video id="bgvideo" preload="auto" muted="true" autoplay="true" loop="true">
   			<source src="<?php echo get_template_directory_uri(); ?>/video/bamboo.mp4" type="video/mp4"></source>
   		</video>
-
-  		<?php //the_post_thumbnail(); ?>
   		<h1 class="page-title"><?php the_title(); ?></h1>
   		<p><?php //bloginfo('description'); ?></p>
   	</div>

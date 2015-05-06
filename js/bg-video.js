@@ -10,7 +10,11 @@ var $a = jQuery.noConflict();
 
 $a(document).ready(function() {
 
+	//var vid = document.getElementById("bgvideo");
+	//vid.playbackRate = 0.65;
+
 	$a('video#bgvideo').on("loadedmetadata", scaleVideo);
+	$a(window).on("resize", scaleVideo);
 
 		function scaleVideo() {
 
