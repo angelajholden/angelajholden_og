@@ -363,3 +363,37 @@ video#bgvideo {
 	height: 0;
 	padding-bottom: 56%;
 }
+
+/* Animaton */
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+	-webkit-animation:fadeIn 1000ms ease;
+	-moz-animation:fadeIn 1000ms ease;
+	-ms-animation:fadeIn 1000ms ease;
+	-o-animation:fadeIn 1000ms ease;
+	animation:fadeIn 1000ms ease;
+}
