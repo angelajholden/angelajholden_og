@@ -325,3 +325,14 @@
   root.Instafeed = Instafeed;
 
 }).call(this);
+
+// Initialize Instafeed
+//$a(function() {
+//	var feed = new Instafeed({
+//    get: 'tagged',
+//    tagName: 'sheltie',
+//    clientId: '5baf313b970847e69b2f5ce2b65300de',
+//    limit: 12
+//	});
+//	feed.run();
+//});

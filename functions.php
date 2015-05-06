@@ -1,26 +1,25 @@
 <?php 
 
 if ( ! function_exists( 'ajh_setup' ) ) :
-function ajh_setup() {
+	function ajh_setup() {
 
-	// Main Nav
-	register_nav_menus( array(
-		'main_menu' => 'Main Menu',
-		'footer_one' => 'Footer One',
-	) );
+		// Main Nav
+		register_nav_menus( array(
+			'main_menu' => 'Main Menu',
+			'footer_one' => 'Footer One',
+		) );
 
-	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
-	) );
+		add_theme_support( 'html5', array(
+			'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
+		) );
 
-	// Featured Images
-  add_theme_support( 'post-thumbnails' );
+		// Featured Images
+	  add_theme_support( 'post-thumbnails' );
+	  add_image_size( 'project', 1000, 563, array( 'center', 'top') );
 
-
-}
+	}
 endif; // ajh_setup
 add_action( 'after_setup_theme', 'ajh_setup' );
-add_image_size( 'project', 1000, 563, array( 'center', 'top') );
 
 // Load jQuery
 if (!is_admin()) {
@@ -38,18 +37,6 @@ function ajh_enqueue_scripts_styles() {
   wp_deregister_script('jquery-ui');
   wp_register_script('jquery-ui', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js", false, null);
   wp_enqueue_script('jquery-ui');
-
-  // Prism
-  wp_register_script('prism', get_stylesheet_directory_uri() . "/js/prism.min.js");
-  wp_enqueue_script('prism');
-
-  // Fitvids
-  wp_register_script('fitvids', get_stylesheet_directory_uri() . "/js/fitvids.min.js");
-  wp_enqueue_script('fitvids');
-
-  // Instafeed
-  //wp_register_script('instafeed', get_stylesheet_directory_uri() . "/js/instafeed.min.js");
-  //wp_enqueue_script('instafeed');
 
   // Global
   wp_register_script('global', get_stylesheet_directory_uri() . "/js/global.min.js");
@@ -152,31 +139,6 @@ function ajh_logo_url_title() {
   }
 add_filter( 'login_headertitle', 'ajh_logo_url_title' );
 
-// Get Image Caption
-function the_post_thumbnail_caption() {
-  global $post;
-
-  $thumbnail_id    = get_post_thumbnail_id($post->ID);
-  $thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
-
-  if ($thumbnail_image && isset($thumbnail_image[0])) {
-    echo '<p>'.$thumbnail_image[0]->post_excerpt.'</p>';
-  }
-}
-
-// Add Width & Height Column to Media Library
-function wh_column( $cols ) {
-  $cols["dimensions"] = "Dimensions (w, h)";
-  return $cols;
-}
-function wh_value( $column_name, $id ) {
-  $meta = wp_get_attachment_metadata($id);
-     if(isset($meta['width']))
-     echo $meta['width'].' x '.$meta['height'];
-}
-add_filter( 'manage_media_columns', 'wh_column' );
-add_action( 'manage_media_custom_column', 'wh_value', 10, 2 );
-
 // Include Google Analytics Tracking Code
   function google_analytics_tracking_code(){ ?>
     <script type="text/javascript">
@@ -190,6 +152,35 @@ add_action( 'manage_media_custom_column', 'wh_value', 10, 2 );
     </script>
 <?php }
 add_action('wp_footer', 'google_analytics_tracking_code');
+
+/**
+ * Disable the emoji's
+ */
+function disable_emojis() {
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );	
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+}
+add_action( 'init', 'disable_emojis' );
+
+/**
+ * Filter function used to remove the tinymce emoji plugin.
+ * 
+ * @param    array  $plugins  
+ * @return   array             Difference betwen the two arrays
+ */
+function disable_emojis_tinymce( $plugins ) {
+	if ( is_array( $plugins ) ) {
+		return array_diff( $plugins, array( 'wpemoji' ) );
+	} else {
+		return array();
+	}
+}
 
 // Shows Performance in the Footer
 function ajh_performance( $visible = false ) {
