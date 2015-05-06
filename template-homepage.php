@@ -3,18 +3,19 @@
 * Template Name: Homepage
 */
 get_header(); the_post(); ?>
-    
+
   	<div class="banner">
-  		<video id="bgvideo" preload="auto" muted="true" autoplay="true" loop="true">
-  			<source src="<?php echo get_template_directory_uri(); ?>/video/bamboo.mp4" type="video/mp4"></source>
+  		<script type="text/javascript"><?php include_once('js/bg-video.min.js'); ?></script>
+  		<video id="bgvideo" preload="auto" muted="true" autoplay="true" loop="true" poster="<?php echo get_template_directory_uri(); ?>/images/honeybee.jpg">
+  			<source src="<?php echo get_template_directory_uri(); ?>/video/honeybee.mp4" type="video/mp4"></source>
+  			<img src="<?php echo get_template_directory_uri(); ?>/images/honeybee.jpg">
   		</video>
   		<h1 class="page-title"><?php the_title(); ?></h1>
-  		<p><?php //bloginfo('description'); ?></p>
+  		<p class="page-desc"><?php bloginfo('description'); ?></p>
   	</div>
 
 	  <section class="skills">
 	    <div class="wrap">
-
 	    	<article id="<?php post_name(); ?>">
 	    		<?php the_content(); ?>
 	    	</article>
