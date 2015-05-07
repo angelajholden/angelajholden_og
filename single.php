@@ -29,6 +29,8 @@
 		        <figure class="iframe">
 		          <?php echo parse_youtube_url($video,'embed'); ?>
 		        </figure>
+		    <?php } elseif (has_post_thumbnail()) { ?>
+		    	<figure class="project-img"><?php the_post_thumbnail('full'); ?></figure>
 		    <?php } ?>
 
 		    <?php if (get_post_meta(get_the_ID(), 'live_demo', true)) { ?>
