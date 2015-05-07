@@ -1,14 +1,14 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+@import "fakeLoader";
 @import "compass/css3";
 @import "mixins";
 @import "base";
-@import "jqueryui";
-@import "typography";
 @import "header";
+@import "jqueryui";
 @import "toolbox";
 @import "images";
 @import "prism";
 @import "footer";
 @import "search";
 @import "normalize";
+@import "typography";
 @import "mediaqueries";

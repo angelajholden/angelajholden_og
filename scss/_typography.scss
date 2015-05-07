@@ -22,6 +22,7 @@ h1 {
     text-transform: capitalize;
   }
 }
+
 h2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 2em;
@@ -31,16 +32,17 @@ h2 {
   border: none;
   line-height: 1.25;
 }
-.single h3,
-.page h3 {
+
+h3 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.5em;
-  font-weight: 400;
+  font-size: 1.25em;
+  font-weight: 300;
   text-transform: uppercase;
   color: $pink;
   margin: 0.5em 0 0 0;
   padding: 0;
 }
+
 h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.25em;
