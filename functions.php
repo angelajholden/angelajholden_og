@@ -147,6 +147,7 @@ function ajh_bg_video() { ?>
 	</script>
 <?php endif; ?>
 <?php }
+add_action('wp_head', 'ajh_bg_video');
 
 // Update Your Browser
 function update_your_browser() { ?>
