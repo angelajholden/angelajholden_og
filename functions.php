@@ -212,7 +212,10 @@ add_action( 'wp_footer', 'ajh_performance', 20 );
 require get_template_directory() . '/cpt/cpt.php';
 
 // Parse Youtube URL
-require get_template_directory() . '/cpt/youtube-url.php';
+require get_template_directory() . '/inc/youtube-url.php';
 
 // Template Tags
 require get_template_directory() . '/inc/template-tags.php';
+
+// SVGs
+require get_template_directory() . '/inc/svg.php';
