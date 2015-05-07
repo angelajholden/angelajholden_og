@@ -5,7 +5,6 @@
 get_header(); the_post(); ?>
 
   	<div class="banner">
-  		<script type="text/javascript"><?php include_once('js/bg-video.min.js'); ?></script>
   		<video id="bgvideo" preload="auto" muted="true" autoplay="true" loop="true" poster="<?php echo get_template_directory_uri(); ?>/images/honeybee.jpg">
   			<source src="<?php echo get_template_directory_uri(); ?>/video/honeybee.mp4" type="video/mp4"></source>
   			<img src="<?php echo get_template_directory_uri(); ?>/images/honeybee.jpg">
@@ -57,7 +56,7 @@ get_header(); the_post(); ?>
         <p>I work from my home in San Diego and I have clients in the U.S. and overseas. For more information about what I can do, please <a href="#contact">contact</a> me for a complementary consultation.</p>
 
         <p>Cheers!</p>
-        <div class="signature"><?php include('svg/signature.svg'); ?></div>
+        <div class="signature"><?php ajh_signature(); ?></div>
       </div>
     </section>
 

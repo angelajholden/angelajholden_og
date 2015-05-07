@@ -1,5 +1,5 @@
 				
-				<?php //include_once('inc/instafeed.php'); ?>
+				<?php //ajh_instafeed(); ?>
 
 		    <div id="contact"></div>
 
@@ -25,7 +25,7 @@
 		        </div>
 
 		        <div class="ajh-footer">
-		          <?php include('inc/social.php'); ?>
+		          <?php ajh_social_profiles(); ?>
 		          <?php echo get_search_form(); ?>
 		        </div>
 

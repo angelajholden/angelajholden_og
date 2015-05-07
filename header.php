@@ -25,12 +25,12 @@
           
           <header class="headerContainer clearfix">
             <a class="clearfix" href="<?php bloginfo('url'); ?>">
-              <figure class="logoSVG"><?php include('svg/logo.svg'); ?></figure>
+              <figure class="logoSVG"><?php ajh_logo(); ?></figure>
               <h1 class="blogTitle"><?php bloginfo('name'); ?></h1>
             </a>
           </header>
 
-          <a href="#" id="pull"><?php include('svg/menu.svg'); ?></a>
+          <a href="#" id="pull"><?php ajh_menu_icon(); ?></a>
           <nav class="mainMenu">
 	          <?php
 	            wp_nav_menu( array( 
