@@ -45,7 +45,7 @@ get_header(); the_post(); ?>
 
     <section class="aboutMe">
       <div class="wrap clearfix">
-      	<img src="<?php bloginfo('template_url'); ?>/images/angela.jpg" width="250" height="250" alt="About Angela J. Holden Website Design" title="Angela J. Holden">
+      	<img src="<?php bloginfo('template_url'); ?>/images/angela.jpg" draggable="false" width="250" height="250" alt="About Angela J. Holden Website Design" title="Angela J. Holden">
       	<h1>About Me</h1>
       	<p>Hi, my name is Angela and I’m originally from Minneapolis, Minnesota, but now I live in San Diego, California. I moved in 2014 after I finished my Master’s Degree in Technical Communication. I also have a B.A. in Management & Employment Law, and an A.S. in Paralegal Studies. I worked for the law firm <a href="http://lawmoss.com">Moss & Barnett</a> in Minneapolis for many years as a paralegal and commercial debt collector before I started learning to code.</p>
 				
