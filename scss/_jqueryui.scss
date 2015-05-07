@@ -125,7 +125,7 @@
 .ui-widget-content .ui-state-hover,
 .ui-widget-header .ui-state-hover {
 	outline: none;
-	background: rgba($pink,0.65);
+	background: lighten($pink,10%);
 	font-weight: normal;
 	color: #fff;
 	@include single-transition(all, 0.25s, ease);
@@ -151,7 +151,7 @@
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
 	outline: none;
-	background: rgba($pink,0.65);
+	background: lighten($pink,10%);
 	font-weight: normal;
 	color: #fff;
 	@include single-transition(all, 0.25s, ease);
