@@ -27,6 +27,7 @@ function ajh_enqueue_scripts_styles() {
   // Styles
 	wp_enqueue_style( 'main', get_stylesheet_directory_uri() . "/css/main.css" );
 	wp_enqueue_style( 'font-awesome', "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" );
+	wp_enqueue_style( 'web-fonts', "//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600" );
 
   // jQuery
   wp_deregister_script('jquery');

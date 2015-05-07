@@ -19,7 +19,7 @@ get_header(); the_post(); ?>
 	    		<?php the_content(); ?>
 	    	</article>
 
-	    	<div id="accordion">
+	    	<div id="accordion" class="fadeIn">
 
 	    	<?php
 		    	$args = array(

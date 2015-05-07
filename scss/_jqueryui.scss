@@ -84,7 +84,7 @@
 	margin: 0;
 	padding: 1em;
 	min-height: 0; /* support: IE7 */
-	font-size: 1em;
+	font-size: 100%;
 	border-top: 1px solid rgba($pink,0.15);
 }
 .ui-accordion .ui-accordion-icons {
@@ -107,65 +107,58 @@
 
 /* Interaction states
 ----------------------------------*/
-h2.ui-state-default,
+.ui-state-default,
 .ui-widget-content .ui-state-default,
-h2.ui-widget-header .ui-state-default {
+.ui-widget-header .ui-state-default {
 	background: transparent;
 	font-weight: normal;
 	color: #333;
-	font-size: 1em;
 	@include single-transition(all, 0.25s, ease);
 }
-h2.ui-state-default a,
-h2.ui-state-default a:link,
-h2.ui-state-default a:visited {
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
 	color: #555555;
 	text-decoration: none;
-	font-size: 1em;
 }
-h2.ui-state-hover,
+.ui-state-hover,
 .ui-widget-content .ui-state-hover,
-h2.ui-widget-header .ui-state-hover {
+.ui-widget-header .ui-state-hover {
 	outline: none;
 	background: rgba($pink,0.65);
 	font-weight: normal;
 	color: #fff;
-	font-size: 1em;
 	@include single-transition(all, 0.25s, ease);
 }
-h2.ui-state-focus,
+.ui-state-focus,
 .ui-widget-content .ui-state-focus,
-h2.ui-widget-header .ui-state-focus {
+.ui-widget-header .ui-state-focus {
 	outline: none;
-	font-size: 1em;
 }
 
-h2.ui-state-hover a,
-h2.ui-state-hover a:hover,
-h2.ui-state-hover a:link,
-h2.ui-state-hover a:visited,
-h2.ui-state-focus a,
-h2.ui-state-focus a:hover,
-h2.ui-state-focus a:link,
-h2.ui-state-focus a:visited {
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited,
+.ui-state-focus a,
+.ui-state-focus a:hover,
+.ui-state-focus a:link,
+.ui-state-focus a:visited {
 	outline: none;
 	text-decoration: none;
-	font-size: 1em;
 }
-h2.ui-state-active,
+.ui-state-active,
 .ui-widget-content .ui-state-active,
-h2.ui-widget-header .ui-state-active {
+.ui-widget-header .ui-state-active {
 	outline: none;
 	background: rgba($pink,0.65);
 	font-weight: normal;
 	color: #fff;
-	font-size: 1em;
 	@include single-transition(all, 0.25s, ease);
 }
-h2.ui-state-active a,
-h2.ui-state-active a:link,
-h2.ui-state-active a:visited {
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
 	text-decoration: none;
 	outline: none;
-	font-size: 1em;
 }
