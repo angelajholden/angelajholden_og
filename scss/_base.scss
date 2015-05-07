@@ -128,9 +128,14 @@ video#bgvideo {
 }
 
 /* SVGs */
-.logoSVG {
+.pink {
 	fill: lighten($pink,10%);
 }
+
+.white {
+	fill: #fff;
+}
+
 .signatureSVG {
 	fill: #272727;
 }

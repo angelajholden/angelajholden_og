@@ -25,11 +25,13 @@
 		margin: 0;
 		padding: 0;
 		.logoSVG {
-			width: auto;
+			width: 65px;
 			height: 75px;
 			float: left;
+			margin-right: 10px;
 			svg {
-				margin-left: -10px;
+				width: 65px;
+				height: 75px;
 			}
 		}
 	}
