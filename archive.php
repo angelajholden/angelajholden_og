@@ -30,14 +30,7 @@
 
         <h2 class="archiveTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-          <p class="postMeta">Category <span class="bullet">&bull;</span> <?php the_category(','); ?> 
-          	<?php comments_popup_link(
-	          	__( '<span class="comments-icon fa fa-comment-o"></span>0', 'angelajholden-v3' ), 
-					    __( '<span class="comments-icon fa fa-comment-o"></span>1', 'angelajholden-v3' ), 
-					    __( '<span class="comments-icon fa fa-comment-o"></span>%', 'angelajholden-v3' )
-	          ); ?>
-          	<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time>
-          </p>
+          <p class="postMeta">Category <span class="bullet">&bull;</span> <?php the_category(','); ?><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
 
           <?php the_excerpt(); ?>
 
