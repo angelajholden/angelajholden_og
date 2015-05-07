@@ -20,7 +20,7 @@
 		      <div class="wrap clearfix">
 
 		        <div class="ajh-footer">
-		          <a id="totop" href="#top"><img src="<?php bloginfo('template_url') ?>/images/logo.png" title="Angela J. Holden" alt="Angela J. Holden Website Design"></a>
+		          <a id="totop" href="#top"><figure class="logoSVGfooter"><?php ajh_logo(); ?></figure></a>
 		          <p class="copyright"><?php echo date('Y'); ?> &copy; <?php bloginfo('title'); ?></p>
 		        </div>
 
