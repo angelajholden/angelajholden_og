@@ -38,6 +38,43 @@
 	};
 	add_action('init', 'custom_post_type_skills');
 
+	// HOMEPAGE
+	function custom_post_type_reviews() {
+	    $labels = array(
+	    'name'               => 'Reviews',
+	    'singular_name'      => 'Review',
+	    'add_new'            => 'Add a Review',
+	    'add_new_item'       => 'Add New Review',
+	    'edit_item'          => 'Edit Review',
+	    'new_item'           => 'New Review',
+	    'view_item'          => 'View Review',
+	    'search_items'       => 'Search Reviews',
+	    'not_found'          => 'Nothing found',
+	    'not_found_in_trash' => 'Nothing found in Trash',
+	    'menu_name'          => 'Reviews',
+	    );
+
+	    $args = array(
+	    'labels'                => $labels,
+	    'public'                => true,
+	    'publicly_queryable'    => false,
+	    'exclude_from_search'		=> true,
+	    'show_ui'               => true,
+	    'show_in_nav_menus'			=> false,
+	    'query_var'             => true,
+	    'rewrite'               => true,
+	    'capability_type'       => 'post',
+	    'has_archive'           => false,
+	    'hierarchical'          => false,
+	    'menu_icon'             => 'dashicons-heart',
+	    'rewrite'               => array('slug' => ''),
+	    'supports'              => array('title', 'editor'),
+	    'taxonomies'            => array('')
+	  );
+	  register_post_type( 'ajhreview' , $args );
+	};
+	add_action('init', 'custom_post_type_reviews');
+
 	// PROJECTS
 	function custom_post_type_projects() {
 	    $labels = array(
