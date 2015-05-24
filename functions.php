@@ -207,6 +207,13 @@ function disable_emojis_tinymce( $plugins ) {
 	}
 }
 
+// Check if there are any search results
+function is_search_has_results() {
+  global $wp_query;
+  $result = ( 0 != $wp_query->found_posts ) ? true : false;
+  return $result;
+}
+
 // Shows Performance in the Footer
 function ajh_performance( $visible = false ) {
   $stat = sprintf(  '%d queries in %.3f seconds, using %.2fMB memory',

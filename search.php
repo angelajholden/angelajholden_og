@@ -6,6 +6,14 @@
 		  <h1>Search Results</h1>
 	  </header>
 
+	  <?php if (is_search_has_results()) :
+	  	echo '<p>Not what you were looking for? Try searching again!</p>';
+	  else :
+	  	echo '<p>Sorry, no posts matched your criteria. Try searching again!</p>';
+		endif; ?>
+
+		<?php ajh_search(); ?>
+
 	  <hr>
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -21,10 +29,7 @@
       </article>
 
 		<?php endwhile; else : ?>
-		<p><?php _e( 'Sorry, no posts matched your criteria. Try searching again.' ); ?></p>
 		<?php endif; ?>
-
-		<?php ajh_search(); ?>
 
 		<?php the_posts_navigation(); ?>
 

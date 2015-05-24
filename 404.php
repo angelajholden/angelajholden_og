@@ -6,11 +6,11 @@
   		<h1>Error 404</h1>
   	</header>
 
-  	<hr>
-
 		<p><?php _e( 'Nothing found. Try one of the links below or try searching again.', 'angelajholden-v3' ); ?></p>
 
 		<?php ajh_search(); ?>
+
+		<hr>
 
 		<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
