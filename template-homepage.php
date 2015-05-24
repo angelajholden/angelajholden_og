@@ -60,4 +60,33 @@ get_header(); the_post(); ?>
       </div>
     </section>
 
+    <section class="reviews">
+    	<div class="reviewbg">
+	    	<div class="wrap">
+
+	    		<h1>Reviews & Testimonials</h1>
+
+		    	<ul class="rslides">
+
+			    	<?php
+				    	$args = array(
+				    		'post_type' => 'ajhreview',
+				    		'post_status' => 'publish',
+				    		'order' => 'desc',
+				    		'showposts' => -1
+				    	);
+			    	$ajhreview_loop = new WP_Query( $args );
+			    	while ( $ajhreview_loop->have_posts() ) : $ajhreview_loop->the_post(); ?>
+
+				    	<li><?php the_content(); ?></li>
+			    	
+			    	<?php	endwhile; ?>
+			    	<?php wp_reset_postdata(); ?>
+
+			    </ul>
+
+			  </div>
+			</div>
+    </section>
+
 <?php get_footer(); ?>
