@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /email-img/
+Disallow: /helsinki/
+Disallow: /helsinki/wp-admin
+Disallow: /v3/wp-admin
+Disallow: /ajh.jpg
+Disallow: /Thumbs.db
