@@ -105,20 +105,17 @@ video#bgvideo {
 
 .contact h1 {
 	text-align: center;
-	margin: 0 0 0.75em;
+	margin: 0 0 1em;
 }
 
 .aboutMe h1 {
 	text-align: center;
-	margin: 0.5em 0;
+	margin: 1em 0;
 }
 
 .skills {
 	background: #fff;
 	padding-bottom: 7em;
-	.wrap {
-		padding-top: 2em;
-	}
 }
 
 .single {
@@ -379,6 +376,9 @@ video#bgvideo {
 .project-img {
 	height: 0;
 	padding-bottom: 56%;
+	img {
+		width: 100%;
+	}
 }
 
 /* Animaton */

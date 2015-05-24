@@ -2,14 +2,11 @@
 
 .aboutMe {
 	background: #f3f5f7;
-	border-top: 1px solid #eaeaea;
+	border-top: 2px solid #eaeaea;
 	img {
 		width: 250px;
 		margin: -200px auto 0;
 		@include border-radius(50%);
-	}
-	h1 {
-		//text-align: center;
 	}
 	p {
 		margin-top: 0;
