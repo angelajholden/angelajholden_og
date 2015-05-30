@@ -23,7 +23,7 @@
 
 	      </article>
 
-	    <?php endwhile; else : ?>
+	    <?php endwhile; ?>
 			<?php endif; ?>
 
 		<?php edit_post_link('Edit'); ?>
