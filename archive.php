@@ -7,6 +7,7 @@
 		    <h1><?php single_cat_title(); ?></h1>
   	  	<nav>
 			  	<ul class="cat-nav">
+			  		<li><a href="<?php bloginfo('url') ?>/main-archive/">Main Archive</a></li>
 				  	<?php $args = array(
 				  		'hierarchical' => 0, 
 				  		'title_li' => __( '' ),

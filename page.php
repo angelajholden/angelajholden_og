@@ -15,7 +15,6 @@
 	        <?php if ( has_post_thumbnail() ) { ?>
 	          <figure>
 	            <?php the_post_thumbnail('full'); ?>
-	            <figcaption><?php the_post_thumbnail_caption(); ?></figcaption>
 	          </figure>
 	        <?php } ?>
 
