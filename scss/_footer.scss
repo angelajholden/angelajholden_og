@@ -71,14 +71,14 @@ footer {
 		display: inline-block;
 	}
 	span {
-		width: 48px;
-		height: 48px;
-		line-height: 48px;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
 		font-size: 1.25em;
 		color: #eaeaea;
 		background: #555;
 		@include border-radius(50%);
-		margin: 4px;
+		margin: 2px;
 		@include single-transition(all, 0.25s, ease);
 		&:hover, &:active, &:focus {
 			color: #eaeaea;
@@ -107,6 +107,18 @@ footer {
 .github span {
 	&:hover, &:active, &:focus {
 		background: $github;
+	}
+}
+
+.google span {
+	&:hover, &:active, &:focus {
+		background: $google;
+	}
+}
+
+.pinterest span {
+	&:hover, &:active, &:focus {
+		background: $pinterest;
 	}
 }
 

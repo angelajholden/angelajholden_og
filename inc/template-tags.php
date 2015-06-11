@@ -58,6 +58,21 @@ function ajh_social_profiles() { ?>
 				<span class="screen-reader-text">Facebook</span>
 			</a>
 		</li>
+
+		<li class="github">
+			<a href="//github.com/angelajholden" title="Github" target="_blank">
+				<span class="fa fa-github-alt"></span>
+				<span class="screen-reader-text">Github</span>
+			</a>
+		</li>
+
+		<li class="google">
+			<a href="//plus.google.com/u/0/+AngelaHoldenDesign/posts" title="Google Plus" target="_blank">
+				<span class="fa fa-google-plus"></span>
+				<span class="screen-reader-text">Google Plus</span>
+			</a>
+		</li>
+
 		<li class="instagram">
 			<a href="//instagram.com/angelajholden" title="Instagram" target="_blank">
 				<span class="fa fa-instagram"></span>
@@ -70,10 +85,11 @@ function ajh_social_profiles() { ?>
 				<span class="screen-reader-text">LinkedIn</span>
 			</a>
 		</li>
-		<li class="github">
-			<a href="//github.com/angelajholden" title="Github" target="_blank">
-				<span class="fa fa-github-alt"></span>
-				<span class="screen-reader-text">Github</span>
+
+		<li class="pinterest">
+			<a href="//www.pinterest.com/angelajholden/" title="Pinterest" target="_blank">
+				<span class="fa fa-pinterest-p"></span>
+				<span class="screen-reader-text">Pinterest</span>
 			</a>
 		</li>
 	</ul>
