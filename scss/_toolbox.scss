@@ -4,16 +4,23 @@
 	top: -9999px;
 	left: -9999px;
 }
+
 .clearfix:after {
 	content: "";
   display: table;
   clear: both;
 }
+
+.clear {
+	clear: both;
+}
+
 b,
 strong {
   font-weight: bold;
   color: $pink;
 }
+
 sub,
 sup {
   font-size: 75%;
@@ -21,18 +28,23 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sup {
   top: -0.5em;
 }
+
 sub {
   bottom: -0.25em;
 }
+
 svg:not(:root) {
   overflow: hidden;
 }
+
 figure {
   margin: 0;
 }
+
 hr {
 	clear: both;
 	height: 0;
@@ -40,6 +52,7 @@ hr {
   margin: 35px 0;
   @include box-sizing(content-box);
 }
+
 blockquote {
 	font-family: "Times New Roman", serif;
 	font-size: 1.1em;

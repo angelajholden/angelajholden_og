@@ -7,6 +7,10 @@ img {
 	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
+img.signature {
+	box-shadow: none;
+}
+
 /* Gallery Images */
 .gallery img {
 	border: none !important;
