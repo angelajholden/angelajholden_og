@@ -51,8 +51,6 @@
 				<p class="author-desc"><?php the_author_meta( 'description' ); ?></p>
 			</div>
 
-	    <hr>
-
       <div class="edit-button"><?php edit_post_link('Edit'); ?></div>
 
     <?php endwhile; else : ?>
