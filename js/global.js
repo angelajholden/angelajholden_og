@@ -1220,6 +1220,7 @@ $a(document).ready(function() {
 	});
 
 	// Fit Vids
+	$a("figure").fitVids();
 	$a("article p").fitVids();
 
 });
