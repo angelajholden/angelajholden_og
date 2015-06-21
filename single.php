@@ -26,7 +26,7 @@
 
 		    <?php $video = get_post_meta( get_the_ID(), 'video_url', true );
 		      if( ! empty( $video ) ) { ?>
-		        <figure class="iframe">
+		        <figure class="fitvids">
 		          <?php echo parse_youtube_url($video,'embed'); ?>
 		        </figure>
 		    <?php } elseif (has_post_thumbnail()) { ?>
@@ -49,7 +49,17 @@
 		      </p>
 		    <?php } ?>
 
-	      <div class="main"><?php the_content(); ?></div>
+	      <div class="main">
+
+		      <?php if (get_post_meta(get_the_ID(), 'post_intro', true)) { ?>
+		      	<aside class="post-intro">
+		      		<p><?php echo get_post_meta(get_the_ID(), 'post_intro', true); ?></p>
+		      	</aside>
+		      <?php } ?>
+
+	      	<?php the_content(); ?>
+
+	      </div>
 
 	    </article>
 

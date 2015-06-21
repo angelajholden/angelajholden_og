@@ -35,7 +35,7 @@
 
           <p class="postMeta">Category <span class="bullet">&bull;</span> <?php the_category(','); ?><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
 
-          <?php the_excerpt(); ?>
+          <p class="excerpt"><?php echo get_the_excerpt(); ?>... <a class="read-more" href="<?php the_permalink(); ?>">Read More</a></p>
 
       </article>
 
