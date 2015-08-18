@@ -133,7 +133,25 @@
 	}
 
 	.wrap {
-		padding: 2.5em 10px;
+		padding: 2.5em 1em;
+	}
+
+	.ajh-skills {
+		aside {
+			width: 49%;
+			&:nth-child(3) {
+				margin-right: 1%;
+			}
+			&:nth-child(4) {
+				clear: none;
+			}
+			&:nth-child(even) {
+				margin-right: 0;
+			}
+			&:nth-child(odd) {
+				clear: both;
+			}
+		}
 	}
 
 	.ui-accordion .ui-accordion-icons {
@@ -280,6 +298,20 @@
 	.theTags,
 	.sharing {
 		text-align: center;
+	}
+
+	.ajh-skills {
+		aside {
+			width: auto;
+			float: none;
+			display: block;
+			margin-right: 0;
+			margin-bottom: 15%;
+			padding: 0 5% 5%;
+			&:nth-child(3) {
+				margin-right: 0;
+			}
+		}
 	}
 
 }

@@ -130,3 +130,30 @@ footer {
 		height: 112px;
 	}
 }
+
+/* Smooth Scrolling Back to Top
+********************************************
+*/
+ 
+.scroll-top {
+  display: none;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 2;
+  font-size: 1.4rem;
+  color: #fff;
+  background: lighten($pink,10%);
+  opacity: 0.8;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+  &:hover {
+  	opacity: 1;
+  	text-decoration: none;
+  	color: #fff;
+  }
+}
