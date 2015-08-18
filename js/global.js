@@ -1222,4 +1222,20 @@ $a(document).ready(function() {
 	// Fit Vids
 	$a(".fitvids").fitVids();
 
+  // Smooth Scroll to Top
+  var offset = 220;
+  var duration = 500;
+  $a(window).scroll(function() {
+    if ($a(this).scrollTop() > offset) {
+      $a('.scroll-top').fadeIn(duration);
+    } else {
+      $a('.scroll-top').fadeOut(duration);
+    }
+  });
+$a('.scroll-top').click(function(event) {
+    event.preventDefault();
+    $a('html, body').animate({scrollTop: 0}, duration);
+    return false;
+  })
+
 });

@@ -5,7 +5,7 @@
 
 		    <section class="contact clearfix">
 		    	<div class="wrap">
-		    		<h1>Contact Me</h1>
+		    		<h2>Contact Me</h2>
 			    	<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); } ?>
 			    	<p class="info">
 			    		<span>(619) 798-6024</span>
@@ -41,7 +41,7 @@
 		        </nav>
 
 		      </div><?php // End Footer Wrap ?>
-
+		      <a href="#" class="scroll-top">↑</a>
 		    </footer>
   		</div><?php // End .page-wrap ?>
     <?php wp_footer(); ?>
