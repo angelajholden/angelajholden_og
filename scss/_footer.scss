@@ -10,6 +10,14 @@
 	}
 	p {
 		margin-top: 0;
+		.first-hi {
+			font-size: 3em;
+			font-weight: 300;
+			float: left;
+			line-height: 1.1;
+			color: #555;
+			margin-right: 10px;
+		}
 	}
 	.signature {
 		width: 145px;
