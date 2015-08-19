@@ -171,10 +171,13 @@
 	.reviews {
 		padding: 0;
 		height: auto;
+		p {
+			font-size: 1em;
+		}
 	}
 
 	.reviewbg {
-		background: rgba(255,255,255,0.75);
+		//background: rgba(255,255,255,0.75);
 	}
 
 	.rslides_tabs {

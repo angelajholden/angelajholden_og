@@ -2,14 +2,13 @@
 
 .reviews {
 	position: relative;
-	background: #f3f5f7 url(../images/symphony.png);
-	border-top: 2px solid #eaeaea;
-	border-bottom: 2px solid #eaeaea;
+	background: #000 url(../images/angela-j-holden-reviews.jpg) no-repeat center center;
+	@include background-size(cover);
 	color: #333;
 	padding: 5em 0;
 	height: 30em;
 	.wrap {
-		padding: 2em 1em;
+		padding: 1em;
 	}
 	span {
 		text-transform: uppercase;
@@ -19,14 +18,25 @@
 		text-align: center;
 		margin-bottom: 0.25em;
 		font-size: 2.5em;
+		color: #fff;
+		text-shadow: 0 2px 2px rgba(0,0,0,0.5);
 	}
 	p {
-		color: #121212;
+		font-size: 1.15em;
+		color: #fff;
+		text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+		a {
+			color: #fff;
+			border-bottom: 2px solid #fff;
+			text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+			box-shadow: 0 1px 0 rgba(0,0,0,0.5);
+			&:hover, &:active, &:focus {
+				color: lighten($pink,15%);
+				border-bottom: 2px solid lighten($pink,15%);
+				box-shadow: 0 1px 0 rgba(0,0,0,0.5);
+			}
+		}
 	}
-}
-
-.reviewbg {
-	background: rgba(#fff, 0.5);
 }
 
 .rslides {
@@ -76,9 +86,9 @@
 		a {
 			text-indent: -9999px;
 		  overflow: hidden;
-		  border: 1px solid #888;
+		  border: 1px solid #fff;
 		  border-radius: 50%;
-		  background: #888;
+		  background: #fff;
 		  display: inline-block;
 		  width: 9px;
 		  height: 9px;
