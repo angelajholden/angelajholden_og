@@ -1,7 +1,9 @@
 /* Footer */
 
 .aboutMe {
-	background: #f3f5f7;
+	//background: #f3f5f7 url(../images/pink-bee.png) no-repeat center center;
+	background: #f7f7f7;
+	@include background-size(contain);
 	border-top: 2px solid #eaeaea;
 	img {
 		width: 250px;
