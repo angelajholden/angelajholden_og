@@ -13,6 +13,7 @@
 			    		<span>San Diego, CA</span>
 			    	</p>
 			    </div>
+			    <?php //get_template_part('inc/mailchimp'); ?>
 		    </section>
 
 		    <footer>
