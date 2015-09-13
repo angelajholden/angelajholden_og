@@ -107,6 +107,33 @@ video#bgvideo {
 	margin-bottom: 2em;
 }
 
+.accepting {
+	background-image: linear-gradient($pink,lighten($pink,10%));
+	color: #fff;
+	border-bottom: 2px solid $pink;
+	text-align: center;
+	font-size: 1.15em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	.wrap {
+		padding: 1em;
+	}
+	span a {
+		font-size: 1em;
+		color: #fff;
+		display: inline-block;
+		margin-left: 1em;
+		padding: 0.35em 1em;
+		border: 1px solid rgba(255,255,255,0.75);
+		background: transparent;
+		@include transition(all, 0.3s, ease);
+		&:hover, &:active, &:focus {
+			border: 1px solid rgba($pink,0.75);
+			background: lighten($pink, 10%);
+		}
+	}
+}
+
 .coaching {
 	background: #fff;
 	padding-bottom: 10em;

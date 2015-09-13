@@ -12,6 +12,10 @@ get_header(); the_post(); ?>
   		<p class="page-desc"><?php bloginfo('description'); ?></p>
   	</div>
 
+    <section class="accepting">
+      <div class="wrap clearfix">Now accepting projects for October, November & December 2015<span><a href="#contact">Contact Me</a></span></div>
+    </section>
+
     <?php get_template_part('inc/skills'); ?>
 
   	<?php get_template_part('inc/reviews'); ?>
