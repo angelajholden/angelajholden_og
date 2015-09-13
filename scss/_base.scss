@@ -110,7 +110,7 @@ video#bgvideo {
 .accepting {
 	background-image: linear-gradient($pink,lighten($pink,10%));
 	color: #fff;
-	border-bottom: 2px solid $pink;
+	border-bottom: 1px solid $pink;
 	text-align: center;
 	font-size: 1.15em;
 	letter-spacing: 1px;
@@ -128,8 +128,8 @@ video#bgvideo {
 		background: transparent;
 		@include transition(all, 0.3s, ease);
 		&:hover, &:active, &:focus {
-			border: 1px solid rgba($pink,0.75);
-			background: lighten($pink, 10%);
+			color: darken($pink,10%);
+			background: #fff;
 		}
 	}
 }
