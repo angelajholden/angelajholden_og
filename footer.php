@@ -6,6 +6,7 @@
 		    <section class="contact clearfix">
 		    	<div class="wrap">
 		    		<h2>Contact Me</h2>
+		    		<p class="sched"><span class="fa fa-calendar"></span><span class="message">You can call me anytime, but I prefer to schedule consultations so I can make sure I'm setting aside enough time to discuss your project. Let me know a date and time that works for you, and I'm usually available within 24 hours of your inquiry.</span></p>
 			    	<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); } ?>
 			    	<p class="info">
 			    		<span>(619) 798-6024</span>

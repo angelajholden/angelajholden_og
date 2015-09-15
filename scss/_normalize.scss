@@ -69,7 +69,8 @@ textarea {
 	outline: none;
 	border: none;
 	padding: 15px;
-	background: #eaeaea;
+	background: rgba(255,255,255,0.5);
+	border: 1px solid #eaeaea;
 }
 
 input[type="submit"] {
@@ -99,6 +100,30 @@ input[type="submit"] {
 .contact {
 	background: #f3f5f7 url(../images/symphony.png);
 	border-top: 2px solid #eaeaea;
+}
+
+.sched {
+	padding: 1em;
+	margin-bottom: 0.5em;
+	position: relative;
+	background: rgba(255,255,255,0.5);
+	border: 1px solid #eaeaea;
+	.message {
+		margin-left: 6.25em;
+		display: inline-block;
+		color: #888;
+	}
+	.fa.fa-calendar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 1.5em;
+		height: 100%;
+		color: $pink;
+		font-size: 5em;
+		padding: 0.275em;
+		line-height: 65px;
+	}
 }
 
 .info {
