@@ -15,7 +15,11 @@
 		    <a class="ajh-port" href="<?php the_permalink(); ?>">
 			    <article>
 			    	<h2><?php the_title(); ?></h2>
-			    	<figure class="project-img"><?php the_post_thumbnail('full'); ?></figure>
+			    	<figure class="project-img"><?php the_post_thumbnail('full'); ?>
+			    		<div class="overlay">
+				    		<h3>Read More</h3>
+			    		</div>
+			    	</figure>
 			    </article>
 		    </a>
 
