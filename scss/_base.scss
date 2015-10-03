@@ -493,20 +493,15 @@ video#bgvideo {
   font-style: italic;
 	margin-bottom: 2em;
 	max-width: 100%;
-	height: 0;
-	padding-bottom: 75%;
-	img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-	}
 	.overlay {
 		position: absolute;
 		background: transparent;
+		top: 0;
+		left: 0;
 		width: 100%;
 		height: 100%;
 		@include transition(all 0.3s ease);
-		h3 {
+		.project-link {
 			font-size: 0;
 			font-style: normal;
 			margin-top: 32%;
@@ -517,8 +512,8 @@ video#bgvideo {
 	}
 	&:hover > .overlay {
 		background: rgba(lighten($pink,10%),0.85);
-		h3 {
-			font-size: 2em;
+		.project-link {
+			font-size: 2.5em;
 		}
 	}
 }

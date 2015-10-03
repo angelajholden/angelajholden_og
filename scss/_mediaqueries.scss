@@ -163,7 +163,7 @@
 	}
 
 	.aboutMe {
-		img {
+		.about-img {
 			margin: -175px auto 0;
 		}
 	}
@@ -317,6 +317,16 @@
 		}
 	}
 
+}
+
+@media (max-width: 525px) {
+	.aboutMe .city-img .mpls,
+	.aboutMe .city-img .san {
+		width: auto;
+		float: none;
+		margin-right: 0;
+		margin-bottom: 1em;
+	}
 }
 
 @media (max-width: 400px) {
