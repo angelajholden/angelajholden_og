@@ -120,7 +120,7 @@ function ajh_login_logo() { ?>
       background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png');
       height: auto;
       width: 150px;
-      text-indent: 0;
+      text-indent: -9999px;
       padding: 175px 0 0 0;
       color: #555;
       background-size: 150px 168px;
