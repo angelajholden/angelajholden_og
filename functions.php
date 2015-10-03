@@ -118,13 +118,15 @@ function ajh_login_logo() { ?>
     }
     body.login div#login h1 a {
       background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png');
-      height: auto;
+      height: 15px;
       width: 150px;
       text-indent: -9999px;
-      padding: 175px 0 0 0;
+      margin: 0 auto;
+      padding: 168px 0 0 0;
       color: #555;
       background-size: 150px 168px;
       font-size: 18px;
+      line-height: 1;
     }
   </style>
 <?php }
