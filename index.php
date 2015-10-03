@@ -3,7 +3,7 @@
   <div class="wrap clearfix">
 
 	  <header>
-		  <h1>Main Archive</h1>
+		  <h1><?php single_post_title(); ?></h1>
 			<p>This is the main archive for all blog posts and categories.</p>
 	  </header>
 
