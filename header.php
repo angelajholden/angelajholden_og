@@ -22,7 +22,7 @@
       <div class="headerWrap">
         <div class="mainHead clearfix">
           
-          <header class="headerContainer clearfix">
+          <header class="headerContainer animated bounce clearfix">
             <a class="clearfix" href="<?php bloginfo('url'); ?>">
               <figure class="logoSVG"><?php ajh_logo(); ?></figure>
               <h1 class="blogTitle"><?php bloginfo('name'); ?></h1>
