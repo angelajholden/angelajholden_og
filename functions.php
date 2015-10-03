@@ -114,7 +114,7 @@ remove_action('wp_head', 'parent_post_rel_link', 10);
 function ajh_login_logo() { ?>
   <style type="text/css">
     body.login div#login {
-      padding-top: 3%;
+      padding: 2.5% 0;
     }
     body.login div#login h1 a {
       background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png');
