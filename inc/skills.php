@@ -28,12 +28,12 @@
       <aside>
         <span class="fa fa-wordpress"></span>
         <h3>WordPress</h3>
-        <p>I’ve dedicated my career as a front end developer to creating beautiful WordPress websites. I’m also very good at keeping WordPress sites safe, healthy and secure.</p>
+        <p>I’ve spent my career as a front end developer creating beautiful WordPress websites. I’m also very good at keeping WordPress sites safe, healthy and secure.</p>
       </aside>
       <aside>
-        <span class="fa fa-usd"></span>
-        <h3>eCommerce</h3>
-        <p>Whether it's physical, digital, or a service, I have experience with WooCommerce and Easy Digital Downloads, and I can integrate Etsy Shops with WordPress.</p>
+        <span class="fa fa-paint-brush"></span>
+        <h3>UI & UX Design</h3>
+        <p>I love coding great designs, and I enjoy creating User Interface and User Experience designs. I consider your content, audience, and your brand when I’m designing.</p>
       </aside>
     </div>
   </div><?php // End .wrap ?>
