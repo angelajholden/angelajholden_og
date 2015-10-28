@@ -2,12 +2,12 @@
 
 .aboutMe {
 	//background: #f3f5f7 url(../images/pink-bee.png) no-repeat center center;
-	background: #f7f7f7;
+	background: #fff;
 	@include background-size(contain);
-	border-top: 2px solid #eaeaea;
+	//border-top: 2px solid #eaeaea;
 	img.about-img {
 		width: 250px;
-		margin: -200px auto 0;
+		margin: 0 auto;
 		@include border-radius(50%);
 	}
 	.city-img {
@@ -29,14 +29,14 @@
 				height: 100%;
 				background: transparent;
 				font-size: 0;
-				color: #fff;
+				color: #eaeaea;
 				text-align: center;
 				padding-top: 25%;
 				@include transition(all 0.3s ease);
 				cursor: default;
 			}
 			&:hover > .overlay {
-				background: rgba(lighten($pink,10%),.85);
+				background: rgba(#000,0.65);
 				font-size: 1.5em;
 			}
 		}
