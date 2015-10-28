@@ -31,7 +31,7 @@
 	    'hierarchical'          => false,
 	    'menu_icon'             => 'dashicons-store',
 	    'rewrite'               => array('slug' => ''),
-	    'supports'              => array('title', 'editor', 'custom-fields'),
+	    'supports'              => array('title', 'editor', 'custom-fields', 'author'),
 	    'taxonomies'            => array('')
 	  );
 	  register_post_type( 'ajhskill' , $args );
@@ -106,7 +106,7 @@
 	    'hierarchical'          => false,
 	    'menu_icon'             => 'dashicons-star-filled',
 	    'rewrite'               => array('slug' => 'projects'),
-	    'supports'              => array('title', 'editor', 'custom-fields', 'thumbnail'),
+	    'supports'              => array('title', 'editor', 'custom-fields', 'thumbnail', 'author'),
 	    'taxonomies'            => array('post_tag')
 	  );
 	  register_post_type( 'ajhproject' , $args );
