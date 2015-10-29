@@ -111,21 +111,6 @@
 
 }
 
-@media (max-width: 815px) {
-	
-	.ui-tabs-vertical .ui-tabs-nav {
-		float: none;
-		width: auto;
-		margin-bottom: 1em;
-	}
-
-	.ui-tabs-vertical .ui-tabs-panel {
-		float: none;
-		width: auto;
-	}
-
-}
-
 @media (max-width: 768px) {
 
 	p {
@@ -154,14 +139,6 @@
 		}
 	}
 
-	.ui-accordion .ui-accordion-icons {
-		padding-left: 0.5em;
-	}
-
-	.ui-accordion .ui-accordion-content {
-		padding: 1em 0.5em;
-	}
-
 	.aboutMe {
 		.about-img {
 			margin: -175px auto 0;
@@ -176,16 +153,20 @@
 		}
 	}
 
-	.reviewbg {
-		//background: rgba(255,255,255,0.75);
-	}
-
 	.rslides_tabs {
 		position: static;
 	}
 
+	.page-id-1991 {
+		.field-wrap {
+			width: 100%;
+			float: none;
+			margin-right: 0;
+		}
+	}
+
 	.contact {
-		.text-wrap {
+		.field-wrap.text-wrap {
 			width: 100%;
 			float: none;
 			padding: 0;
@@ -193,12 +174,7 @@
 		.submit-wrap,
 		.textarea-wrap {
 			padding: 0;
-			max-height: 100px;
 		}
-	}
-
-	.textarea-wrap textarea {
-		height: 100px !important;
 	}
 
 	input[type="text"],
@@ -224,16 +200,6 @@
 		.widget {
 			width: 100%;
 			float: none;
-		}
-	}
-
-	.info {
-		margin-top: 1em;
-		span {
-			display: block;
-		}
-		span:after {
-			content: "";
 		}
 	}
 
@@ -357,4 +323,3 @@
 	}
 
 }
-
