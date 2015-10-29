@@ -113,6 +113,7 @@ video#bgvideo {
 	border-bottom: 1px solid $pink;
 	text-align: center;
 	font-size: 1.15em;
+	font-weight: 400;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	.wrap {
@@ -120,11 +121,12 @@ video#bgvideo {
 	}
 	span a {
 		font-size: 1em;
+		font-weight: 400;
 		color: #fff;
 		display: inline-block;
 		margin-left: 1em;
 		padding: 0.35em 1em;
-		border: 1px solid rgba(255,255,255,0.75);
+		border: 2px solid rgba(255,255,255,0.75);
 		background: transparent;
 		@include transition(all, 0.3s, ease);
 		&:hover, &:active, &:focus {

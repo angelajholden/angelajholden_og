@@ -239,6 +239,16 @@
 		}
 	}
 
+	.accepting span {
+		display: block;
+		width: 100%;
+		margin: 1em 0 0;
+		a {
+			margin: 0;
+			display: block;
+		}
+	}
+
 	.single-author,
 	.single-meta,
 	.gravatar {
