@@ -1,4 +1,4 @@
-/*! ResponsiveSlides.js v1.54
+/* ResponsiveSlides.js v1.54
  * http://responsiveslides.com
  * http://viljamis.com
  *
@@ -1201,6 +1201,7 @@ $a(document).ready(function() {
   $a(".rslides").responsiveSlides({
   	timeout: 10000,
 	  pager: true,
+    nav: true,
 	  pause: true,
   });
 

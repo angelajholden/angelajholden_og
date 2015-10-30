@@ -10,8 +10,8 @@
 		    	$args = array(
 		    		'post_type' => 'ajhreview',
 		    		'post_status' => 'publish',
-		    		'order' => 'desc',
-		    		'showposts' => -1
+		    		'orderby' => 'rand',
+		    		'showposts' => 5
 		    	);
 	    	$ajhreview_loop = new WP_Query( $args );
 	    	while ( $ajhreview_loop->have_posts() ) : $ajhreview_loop->the_post(); ?>

@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-  <section class="wrap">
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-  	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  	<section class="wrap">
 
       <article class="clearfix">
 
@@ -33,11 +33,16 @@
 
       </article>
 
-      <hr>
+    </section>
 
-        <?php wordpress_sharing(); ?>
+      
+
+    <section class="wrap">
+
+      <?php wordpress_sharing(); ?>
 
         <?php if (has_tag()) : ?>
+        	<hr>
           <div class="theTags"><?php the_tags( 'Tagged: ', ' <span class="bullet">&bull;</span> ', '' ); ?></div>
         <?php endif; ?>
 
@@ -53,9 +58,18 @@
 
       <div class="edit-button"><?php edit_post_link('Edit'); ?></div>
 
-    <?php endwhile; else : ?>
-		<?php endif; ?>
+  	</section>
 
-  </section><?php //Blog Wrap ?>
+	  <?php if (get_post_meta(get_the_ID(), 'testimonial', true)) { ?>
+	  	<section class="project-testimonial">
+	  		<div class="wrap">
+	  			<div class="title"><?php echo get_post_meta(get_the_ID(), 'title', true); ?></div>
+	  			<p><?php echo get_post_meta(get_the_ID(), 'testimonial', true); ?></p>
+	  		</div>
+	  	</section>
+	  <?php } ?>
+
+  	<?php endwhile; else : ?>
+	<?php endif; ?>
 
 <?php get_footer(); ?>

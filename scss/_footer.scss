@@ -1,48 +1,12 @@
 /* Footer */
 
 .aboutMe {
-	//background: #f3f5f7 url(../images/pink-bee.png) no-repeat center center;
 	background: #fff;
 	@include background-size(contain);
-	//border-top: 2px solid #eaeaea;
 	img.about-img {
 		width: 250px;
 		margin: 0 auto;
 		@include border-radius(50%);
-	}
-	.city-img {
-		margin: 1em 0;
-		.mpls,
-		.san {
-			position: relative;
-			display: block;
-			max-width: 100%;
-			width: 48%;
-			height: auto;
-			float: left;
-			margin-right: 4%;
-			.overlay {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: transparent;
-				font-size: 0;
-				color: #eaeaea;
-				text-align: center;
-				padding-top: 25%;
-				@include transition(all 0.3s ease);
-				cursor: default;
-			}
-			&:hover > .overlay {
-				background: rgba(#000,0.65);
-				font-size: 1.5em;
-			}
-		}
-		.san {
-			margin-right: 0;
-		}
 	}
 	p {
 		margin-top: 0;
@@ -174,10 +138,6 @@ footer {
 		height: 112px;
 	}
 }
-
-/* Smooth Scrolling Back to Top
-********************************************
-*/
  
 .scroll-top {
   display: none;

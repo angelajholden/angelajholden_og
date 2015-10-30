@@ -3,9 +3,6 @@
 		    	<section class="contact clearfix">
 		    		<div class="wrap">
 		    			<h2>Contact Me</h2>
-		    			<?php if(!is_page('questionnaire')) : ?>
-		    				<p>Please consider filling out my <a href="<?php bloginfo('url'); ?>/questionnaire/">questionnaire.</a></p>
-		    			<?php endif; ?>
 			  	  	<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); } ?>
 			  	  </div>
 		    	</section>

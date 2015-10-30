@@ -54,12 +54,12 @@ hr {
 }
 
 blockquote {
-	font-family: "Times New Roman", serif;
-	font-size: 1.1em;
-	font-style: italic;
-	margin: 1em;
-	padding: 1em;
-	border-left: 3px solid #ccc;
+	border-top: 1px solid #f7f7f7;
+	border-left: 1px solid #f7f7f7;
+	border-right: 1px solid #f7f7f7;
+	border-bottom: 5px solid lighten($pink,10%);
+	margin: 5em 0;
+	padding: 2em;
 	p {
 		margin: 0;
 	}
