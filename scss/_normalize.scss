@@ -72,11 +72,11 @@ textarea {
 	background: rgba(255,255,255,0.5);
 	border: 1px solid #eaeaea;
 	color: #888;
+	@include box-shadow(0 0 1px transparent);
 	@include transition(all 0.3s ease);
 	&:hover, &:active, &:focus {
-		border: 1px solid rgba(lighten($pink,10%),0.8);
-		background: rgba(lighten($pink,10%),0.8);
-		color: #fff;
+		border: 1px solid lighten($pink,5%);
+		@include box-shadow(0 0 1px rgba($pink,0.5));
 	}
 }
 

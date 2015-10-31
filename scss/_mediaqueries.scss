@@ -30,21 +30,8 @@
 	}
 
 	.mainHead {
-		padding: 0.25em 0 0;
-		max-width: inherit;
 		header {
-			width: 85%;
-			margin: 0.5em 0;
-			.logoSVG {
-				margin: 0 0.5em 0;
-				width: 45px;
-				height: 50px;
-				svg {
-					width: 45px;
-					height: 50px;
-					margin-left: 0;
-				}
-			}
+			margin: 0 0 0 0.25em;
 		}
 	.blogTitle {
 			font-size: 2em;
@@ -59,6 +46,7 @@
 		width: 100%;
 		margin-top: 0.25em;
 		background: url(../images/symphony.png);
+		// Top Level
 	  ul {
 			display: none;
 			margin: 0;
@@ -66,18 +54,57 @@
 			border-top: 1px solid #eaeaea;
 			li {
 				display: block;
-				margin: 0 0 0.25em;
-			}
-			a {
-				display: block;
-				padding-right: 1em;
-				padding-bottom: 0;
-				border-bottom: none;
-				color: #333;
-				&:hover, &:active, &:focus {
+				margin: 0 1.5em 0 0;
+				&:hover > a {
 					border-bottom: none;
-					color: $pink;
 				}
+				&.menu-item-has-children:after {
+					content: "";
+					display: none;
+				}
+				&.menu-item-has-children > a:after {
+					content: "";
+					display: inline-block;
+					vertical-align: middle;
+					width: 5px;
+					height: 5px;
+					border-top: 5px solid $pink;
+					border-left: 5px solid transparent;
+					border-right: 5px solid transparent;
+					margin-left: 5px;
+					margin-right: -15px;
+				}
+			}
+		}
+		// Second Level
+		ul ul {
+			display: none;
+			position: static;
+			width: auto;
+			background: none;
+			border: none;
+			box-shadow: none;
+			padding: 0;
+			li {
+				margin: 0;
+				a {
+					&:hover, &:active, &:focus {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+		a {
+			display: inline-block;
+			padding-right: 0;
+			padding-bottom: 0;
+			margin: 2px 0;
+			border-bottom: none;
+			color: #555;
+			font-weight: 400;
+			&:hover, &:active, &:focus {
+				border-bottom: none;
+				color: $pink;
 			}
 		}
 	}
@@ -97,8 +124,8 @@
 		text-align: right;
 	  text-decoration: none;
 	  border-bottom: none;
-	  margin-top: 1em;
-	  margin-right: 1em;
+	  margin-top: 1.1em;
+	  margin-right: 0.25em;
 	}
 
 	.single {
@@ -194,15 +221,6 @@
 		font-size: 0.9em;
 	}
 
-	.Input404 {
-		width: 100%;
-	}
-	.Image404 {
-		display: block;
-		width: 100%;
-		font-size: 0.9em;
-	}
-
 	.error404 {
 		.widget {
 			width: 100%;
@@ -226,15 +244,6 @@
 }
 
 @media (max-width: 600px) {
-
-	.mainHead a#pull {
-	  margin-right: 0.5em;
-	}
-
-	.mainMenu ul a {
-		padding-right: 0;
-		text-align: center;
-	}
 
 	.home {
 		.banner {
@@ -333,10 +342,13 @@
 }
 
 @media (max-width: 370px) {
+
+	.mainHead header .logoSVG {
+		margin-right: 0;
+	}
 	
 	.mainHead .blogTitle {
-		font-size: 1.5em;
-		line-height: 2;
+		font-size: 1.75em;
 	}
 
 }

@@ -1092,12 +1092,56 @@ Prism.hooks.add('after-highlight', function (env) {
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
 
-var $a = jQuery.noConflict();
+// Double Tap To Go
+// http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
+/*
+  By Osvaldas Valutis, www.osvaldas.info
+  Available for use under the MIT License
+*/
+;(function( $, window, document, undefined )
+{
+  $.fn.doubleTapToGo = function( params )
+  {
+    if( !( 'ontouchstart' in window ) &&
+      !navigator.msMaxTouchPoints &&
+      !navigator.userAgent.toLowerCase().match( /windows phone os 7/i ) ) return false;
 
+    this.each( function()
+    {
+      var curItem = false;
+
+      $( this ).on( 'click', function( e )
+      {
+        var item = $( this );
+        if( item[ 0 ] != curItem[ 0 ] )
+        {
+          e.preventDefault();
+          curItem = item;
+        }
+      });
+
+      $( document ).on( 'click touchstart MSPointerDown', function( e )
+      {
+        var resetItem = true,
+          parents   = $( e.target ).parents();
+
+        for( var i = 0; i < parents.length; i++ )
+          if( parents[ i ] == curItem[ 0 ] )
+            resetItem = false;
+
+        if( resetItem )
+          curItem = false;
+      });
+    });
+    return this;
+  };
+})( jQuery, window, document );
+
+var $a = jQuery.noConflict();
 // Responsive Nav
 $a(function() {  
   var pull      = $a('a#pull');  
-    menu        = $a('.mainMenu ul');  
+    menu        = $a('.mainMenu > ul');  
     menuHeight  = menu.height();
   $a(pull).on('click', function(e) {  
     e.preventDefault();  
@@ -1105,9 +1149,9 @@ $a(function() {
   });  
 });
 $a(window).resize(function(){  
-  var w = $a(window).width();  
+  var w = $a(window).width();
   if(w > 1024 && menu.is(':hidden')) {  
-    menu.removeAttr('style');  
+    menu.removeAttr('style');
   }  
 });
 
@@ -1222,6 +1266,9 @@ $a(document).ready(function() {
 
 	// Fit Vids
 	$a(".fitvids").fitVids();
+
+  // Double Tap To Go
+  $a( '.mainMenu ul li:has(ul)' ).doubleTapToGo();
 
   // Smooth Scroll to Top
   var offset = 220;

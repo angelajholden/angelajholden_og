@@ -43,11 +43,14 @@ input[type="search"].searchInput {
 
 .Input404 {
 	width: 75%;
+	float: left;
 }
 
-.Image404 {
-  margin-top: 10px;
+input[type="submit"].Image404 {
+  margin-left: 1%;
   width: 24%;
+  float: right;
+  border: 1px solid lighten($pink,5%);
 }
 
 .error404 {
