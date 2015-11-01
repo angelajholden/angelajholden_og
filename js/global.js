@@ -1268,7 +1268,7 @@ $a(document).ready(function() {
 	$a(".fitvids").fitVids();
 
   // Double Tap To Go
-  $a( '.mainMenu ul li:has(ul)' ).doubleTapToGo();
+  //$a( '.mainMenu ul li:has(ul)' ).doubleTapToGo();
 
   // Smooth Scroll to Top
   var offset = 220;
