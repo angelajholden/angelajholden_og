@@ -7,8 +7,8 @@
 	margin: 2em auto 0;
 	@include box-sizing(border-box);
 	@include border-radius(0);
-	-webkit-appearance: caret;
-	-moz-appearance: caret;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }
 
 input[type="search"].searchInput {
@@ -18,8 +18,8 @@ input[type="search"].searchInput {
 	color: #eaeaea;
 	border: none;
 	@include border-radius(0);
-	-webkit-appearance: caret;
-	-moz-appearance: caret;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 	&:hover, &:active, &:focus {
 		border: none;
 		box-shadow: none;

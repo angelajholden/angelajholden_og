@@ -73,8 +73,8 @@ textarea {
 	background: rgba(255,255,255,0.5);
 	border: 1px solid #eaeaea;
 	color: #888;
-	-webkit-appearance: caret;
-	-moz-appearance: caret;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 	@include border-radius(0);
 	@include box-shadow(0 0 1px transparent);
 	@include transition(all 0.3s ease);
@@ -95,6 +95,8 @@ input[type="submit"] {
 	padding: 15px;
 	text-align: center;
 	font-size: 1em;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 	@include border-radius(0);
 	@include single-transition(all, 0.3s, ease);
 	&:hover, &:active, &:focus {
@@ -150,14 +152,7 @@ input[type="submit"] {
 	border-top: 2px solid #eaeaea;
 	h2 {
 		text-shadow: 0 0 1px rgba(0,0,0,0.25);
-		color: #999;
-	}
-	.questionnaire {
-		text-align: center;
-		margin: -1em 0 2em;
-		font-size: 1.25em;
-		color: #999;
-		text-shadow: 0 0 1px rgba(0,0,0,0.25);
+		color: #555;
 	}
 }
 
