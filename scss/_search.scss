@@ -6,6 +6,7 @@
 	padding: 0;
 	margin: 2em auto 0;
 	@include box-sizing(border-box);
+	@include border-radius(0);
 }
 
 input[type="search"].searchInput {
@@ -14,6 +15,7 @@ input[type="search"].searchInput {
 	background: #555;
 	color: #eaeaea;
 	border: none;
+	@include border-radius(0);
 }
 
 .searchImage {
