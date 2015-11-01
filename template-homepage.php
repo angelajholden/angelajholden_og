@@ -4,7 +4,7 @@
 */
 get_header(); the_post(); ?>
 
-    <?php //get_template_part('inc/banner'); ?>
+    <?php get_template_part('inc/banner'); ?>
 
     <?php get_template_part('inc/skills'); ?>
 

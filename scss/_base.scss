@@ -67,6 +67,7 @@ body {
 		background-position: bottom -150px center;
 		background-size: cover;
 		position: relative;
+		height: 400px;
 		z-index: -1;
 	}
 	.page-title {
@@ -75,8 +76,8 @@ body {
 		font-size: 3.5em;
 		text-shadow: 0 1px 1px rgba(0,0,0,0.25);
     font-weight: 300;
-    margin: 5em 0 0;
-    padding: 0;
+    margin: 0;
+    padding: 2em 0 0.75em;
     line-height: 1.1;
 	}
 	.page-desc {
@@ -84,6 +85,7 @@ body {
 	  text-align: center;
 	  font-size: 2em;
 	  font-weight: 300;
+	  margin: 0;
 	  text-shadow: 0 1px 1px rgba(0,0,0,0.15);
 	}
 }
@@ -93,6 +95,7 @@ video#bgvideo {
 	bottom: -150px;
 	left: 0;
 	width: 100%;
+	z-index: -1;
 }
 
 .overlay {
