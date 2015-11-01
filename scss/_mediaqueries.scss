@@ -35,7 +35,7 @@
 			margin: 0 0 0 0.5em;
 		}
 	.blogTitle {
-			font-size: 2em;
+			//font-size: 2em;
 		}
 	}
 
@@ -324,6 +324,14 @@
 
 @media (max-width: 400px) {
 
+	.mainHead header .logoSVG {
+		margin-right: 0;
+	}
+	
+	.mainHead .blogTitle {
+		font-size: 1.75em;
+	}
+
 	.postMeta {
 		time {
 			float: none;
@@ -340,16 +348,4 @@
 			font-size: 0.9em;
 		}
 	}
-}
-
-@media (max-width: 370px) {
-
-	.mainHead header .logoSVG {
-		margin-right: 0;
-	}
-	
-	.mainHead .blogTitle {
-		font-size: 1.75em;
-	}
-
 }
