@@ -94,6 +94,7 @@ input[type="submit"] {
 	padding: 15px;
 	text-align: center;
 	font-size: 1em;
+	@include border-radius(0);
 	@include single-transition(all, 0.3s, ease);
 	&:hover, &:active, &:focus {
 		background: $pink;
