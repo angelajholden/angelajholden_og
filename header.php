@@ -37,7 +37,6 @@
 	              'theme_location'  => 'main_menu',
 	              'container'       => 'false',
 	              'container_class' => ''
-	              //'depth'						=> '1'
 	            ));
 	          ?>
 	        </nav>
