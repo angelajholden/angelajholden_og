@@ -181,12 +181,14 @@
 		padding: 0;
 		height: auto;
 		p {
-			font-size: 1em;
+			font-size: 0.95em;
 		}
-	}
-
-	.rslides_tabs {
-		position: static;
+		.rslides {
+			padding: 0 0 3em;
+		}
+		.rslides_tabs {
+			bottom: 1em;
+		}
 	}
 
 	.page-id-2065,
