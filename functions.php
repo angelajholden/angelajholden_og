@@ -142,14 +142,14 @@ function ajh_logo_url_title() {
   }
 add_filter( 'login_headertitle', 'ajh_logo_url_title' );
 
-//function ajh_bg_video() { ?>
-<?php //if (is_page_template('template-homepage.php')) : ?>
+function ajh_bg_video() { ?>
+<?php if (is_page_template('template-homepage.php')) : ?>
 	<script>
-	//var $a=jQuery.noConflict();$a(document).ready(function(){function scaleVideo(){var windowHeight=$a(window).height(),windowWidth=$a(window).width(),videoNativeWidth=$a("video#bgvideo")[0].videoWidth,videoNativeHeight=$a("video#bgvideo")[0].videoHeight,heightScaleFactor=windowHeight/videoNativeHeight,widthScaleFactor=windowWidth/videoNativeWidth;if(widthScaleFactor>heightScaleFactor)var scale=widthScaleFactor;else var scale=heightScaleFactor;var scaledVideoHeight=videoNativeHeight*scale,scaledVideoWidth=videoNativeWidth*scale;$a("video#bgvideo").height(scaledVideoHeight),$a("video#bgvideo").width(scaledVideoWidth)}$a("video#bgvideo").on("loadedmetadata",scaleVideo),$a(window).on("resize",scaleVideo)});
+	var $a=jQuery.noConflict();$a(document).ready(function(){function scaleVideo(){var windowHeight=$a(window).height(),windowWidth=$a(window).width(),videoNativeWidth=$a("video#bgvideo")[0].videoWidth,videoNativeHeight=$a("video#bgvideo")[0].videoHeight,heightScaleFactor=windowHeight/videoNativeHeight,widthScaleFactor=windowWidth/videoNativeWidth;if(widthScaleFactor>heightScaleFactor)var scale=widthScaleFactor;else var scale=heightScaleFactor;var scaledVideoHeight=videoNativeHeight*scale,scaledVideoWidth=videoNativeWidth*scale;$a("video#bgvideo").height(scaledVideoHeight),$a("video#bgvideo").width(scaledVideoWidth)}$a("video#bgvideo").on("loadedmetadata",scaleVideo),$a(window).on("resize",scaleVideo)});
 	</script>
-<?php //endif; ?>
-<?php //}
-//add_action('wp_head', 'ajh_bg_video');
+<?php endif; ?>
+<?php }
+add_action('wp_head', 'ajh_bg_video');
 
 // Update Your Browser
 function update_your_browser() { ?>
