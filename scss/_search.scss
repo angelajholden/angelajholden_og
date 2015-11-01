@@ -7,6 +7,8 @@
 	margin: 2em auto 0;
 	@include box-sizing(border-box);
 	@include border-radius(0);
+	-webkit-appearance: caret;
+	-moz-appearance: caret;
 }
 
 input[type="search"].searchInput {
@@ -16,6 +18,8 @@ input[type="search"].searchInput {
 	color: #eaeaea;
 	border: none;
 	@include border-radius(0);
+	-webkit-appearance: caret;
+	-moz-appearance: caret;
 }
 
 .searchImage {
