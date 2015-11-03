@@ -22,7 +22,7 @@
       <div class="headerWrap">
         <div class="mainHead clearfix">
           
-          <header class="headerContainer clearfix">
+          <header class="headerContainer animated tada clearfix">
             <a class="clearfix" href="<?php bloginfo('url'); ?>">
               <figure class="logoSVG"><?php ajh_logo(); ?></figure>
               <h1 class="blogTitle"><?php bloginfo('name'); ?></h1>
@@ -30,16 +30,27 @@
           </header>
 
           <a href="#" id="pull"><?php ajh_menu_icon(); ?></a>
+          <nav class="mobileMenu">
+            <?php
+              wp_nav_menu( array( 
+                'name'            => 'Mobile Menu',
+                'theme_location'  => 'mobile_menu',
+                'container'       => 'false',
+                'container_class' => ''
+              ));
+            ?>
+          </nav>
+
           <nav class="mainMenu">
-	          <?php
-	            wp_nav_menu( array( 
-	              'name'            => 'Main Menu',
-	              'theme_location'  => 'main_menu',
-	              'container'       => 'false',
-	              'container_class' => ''
-	            ));
-	          ?>
-	        </nav>
+            <?php
+              wp_nav_menu( array( 
+                'name'            => 'Main Menu',
+                'theme_location'  => 'main_menu',
+                'container'       => 'false',
+                'container_class' => ''
+              ));
+            ?>
+          </nav>
 
         </div><?php //Main Head ?>
       </div><?php //Header Wrap ?>

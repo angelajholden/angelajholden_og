@@ -17,7 +17,10 @@
 			    	<h2><?php the_title(); ?></h2>
 			    	<figure class="project-img"><?php the_post_thumbnail('full'); ?>
 			    		<div class="overlay">
-				    		<div class="project-link"><span class="fa fa-link"></span><span class="screen-reader-text">Read More</span></div>
+				    		<div class="project-link">
+				    			<span class="fa fa-link"></span>
+				    			<span class="screen-reader-text">Read More</span>
+				    		</div>
 			    		</div>
 			    	</figure>
 			    </article>

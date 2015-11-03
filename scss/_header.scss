@@ -68,6 +68,10 @@
 ------ Navigation ------
 ------------------------
 */
+.mobileMenu {
+  display: none;
+}
+
 .mainMenu {
 	width: auto;
 	float: right;
@@ -139,6 +143,7 @@
 	}
 }
 
+.mobileMenu ul li:hover > ul,
 .mainMenu ul li:hover > ul {
 	display: block;
 }
@@ -152,6 +157,7 @@ a#pull {
 	display: none;
 }
 
+.mobileMenu .current-menu-item > a,
 .mainMenu .current-menu-item > a {
 	border-bottom: 2px solid $pink;
 }

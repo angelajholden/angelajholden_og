@@ -45,7 +45,13 @@
 	}
 
 	.mainMenu {
+		display: none;
+	}
+
+	.mobileMenu {
+		display: block;
 		width: 100%;
+		float: right;
 		margin-top: 0.25em;
 		background: url(../images/symphony.png);
 		// Top Level
@@ -54,6 +60,7 @@
 			margin: 0;
 			padding: 0.5em 0;
 			border-top: 1px solid #eaeaea;
+			text-align: right;
 			li {
 				display: block;
 				margin: 0 1.5em 0 0;
@@ -111,10 +118,10 @@
 		}
 	}
 
-	.mainMenu .current-post-ancestor a,
-	.mainMenu .current-menu-parent a,
-	.mainMenu .current-menu-item a,
-	.mainMenu .current_page_item a {
+	.mobileMenu .current-post-ancestor a,
+	.mobileMenu .current-menu-parent a,
+	.mobileMenu .current-menu-item a,
+	.mobileMenu .current_page_item a {
 		border-bottom: none;
 		color: $pink;
 	}

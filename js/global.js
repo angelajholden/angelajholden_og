@@ -1141,7 +1141,7 @@ var $a = jQuery.noConflict();
 // Responsive Nav
 $a(function() {  
   var pull      = $a('a#pull');  
-    menu        = $a('.mainMenu > ul');  
+    menu        = $a('.mobileMenu > ul');  
     menuHeight  = menu.height();
   $a(pull).on('click', function(e) {  
     e.preventDefault();  
@@ -1268,7 +1268,7 @@ $a(document).ready(function() {
 	$a(".fitvids").fitVids();
 
   // Double Tap To Go
-  $a( '.mainMenu ul li:has(ul)' ).doubleTapToGo();
+  $a( '.mobileMenu ul li:has(ul)' ).doubleTapToGo();
 
   // Smooth Scroll to Top
   var offset = 220;

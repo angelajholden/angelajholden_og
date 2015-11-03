@@ -6,6 +6,7 @@ if ( ! function_exists( 'ajh_setup' ) ) :
 		// Main Nav
 		register_nav_menus( array(
 			'main_menu' => 'Main Menu',
+      'mobile_menu' => 'Mobile Menu',
 			'footer_one' => 'Footer One',
 		) );
 
