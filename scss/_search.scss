@@ -44,6 +44,7 @@ input[type="search"].searchInput {
   	position: absolute;
   	top: 0;
   	left: 0;
+  	fill: #999;
   }
 }
 
@@ -101,4 +102,101 @@ input[type="submit"].Image404 {
 			content: "";
 		}
 	}
+}
+
+/* Search Modal */
+.mainMenu {
+	.search-menu {
+		width: auto;
+		a {
+			color: #777;
+			&:hover, &:active, &:focus {
+				color: $pink;
+				border-bottom: 2px solid transparent;
+			}
+		}
+	}
+}
+
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 300ms ease-in;
+	-moz-transition: opacity 300ms ease-in;
+	transition: opacity 300ms ease-in;
+	pointer-events: none;
+	.searchField {
+		margin: 0;
+		max-width: 100%;
+	}
+	form.search-form {
+		position: relative;
+	}
+	input[type="search"] {
+		width: 100%;
+		padding: 1em;
+		background: #fff;
+		border: none;
+		color: #777;
+	}
+	label.searchImage {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: $pink;
+		font-size: 1em;
+		text-transform: uppercase;
+		line-height: 1;
+		color: #fff;
+		border: none;
+		width: 60px;
+		height: 100%;
+		@include transition(all 0.3s ease);
+		&:hover, &:active, &:focus {
+			background: lighten($pink,10%);
+			border: none;
+		}
+		svg {
+			top: 15px;
+			left: 18px;
+			fill: #fff;
+		}
+	}
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5em 2.5em 2.5em;
+	background: transparent;
+}
+
+a.close {
+	background: transparent;
+	color: #fff;
+	font-size: 4em;
+	width: 38px;
+	height: 38px;
+	line-height: 38px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	text-decoration: none;
+}
+
+a.close:hover { 
+	color: #fff;
 }

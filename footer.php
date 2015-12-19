@@ -3,6 +3,8 @@
 		    	<section class="contact clearfix">
 		    		<div class="wrap">
 		    			<h2>Contact Me</h2>
+		    			<p class="details"><a href="mailto:info@angelajholden.com" target="_blank"><span class="fa fa-envelope"></span>info@angelajholden.com</a>
+		    				<a href="tel:+16127156284"><span class="fa fa-phone"></span>(612) 715-6284</a></p>
 			  	  	<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); } ?>
 			  	  </div>
 		    	</section>
@@ -12,7 +14,9 @@
 		      <div class="wrap clearfix">
 
 		        <div class="ajh-footer">
-		          <a id="totop" href="#top"><figure class="logoSVGfooter"><?php ajh_logo(); ?></figure></a>
+		          <a id="totop" href="<?php bloginfo('url'); ?>">
+		          	<figure class="logoSVGfooter"><?php ajh_logo(); ?></figure>
+		          </a>
 		          <p class="copyright"><?php echo date('Y'); ?> &copy; <?php bloginfo('title'); ?></p>
 		        </div>
 

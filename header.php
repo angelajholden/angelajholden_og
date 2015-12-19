@@ -50,7 +50,17 @@
                 'container_class' => ''
               ));
             ?>
+            <ul class="search-menu">
+          		<li><a href="#search"><span class="fa fa-search"></span></a></li>
+          	</ul>
           </nav>
+
+          <div id="search" class="modalDialog">
+						<div>
+							<a href="#close" class="close">&times;</a>
+							<?php get_search_form(); ?>
+						</div>
+					</div>
 
         </div><?php //Main Head ?>
       </div><?php //Header Wrap ?>

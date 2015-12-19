@@ -135,6 +135,7 @@ input[type="submit"] {
 
 .ninja-forms-form-wrap .field-wrap > label {
 	text-transform: uppercase;
+	color: #555;
 }
 
 .ninja-forms-form-wrap .ninja-forms-req-symbol {
@@ -174,4 +175,27 @@ input[type="submit"] {
 	padding: 0;
 	clear: both;
 	max-height: 200px;
+}
+
+.contact .text-wrap.label-above label,
+.contact .textarea-wrap.label-above label {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+.contact {
+	.details {
+		margin: -1em 0 2em;
+		text-align: center;
+		a {
+			color: #777;
+			&:hover, &:active, &:focus {
+				color: $pink;
+			}
+		}
+		span {
+			margin: 0 0.5em;
+		}
+	}
 }
