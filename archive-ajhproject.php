@@ -6,7 +6,7 @@
 	  	<h1>Projects</h1>
 	  </header>
 
-	  <p>I'm a Front End Developer with an expertise building responsive WordPress websites. My skillset, however, is versatile and I'm hired to work on many different types of projects. Please see my <a href="https://github.com/angelajholden" target="_blank">Github</a> profile for code examples.</p>
+	  <p>I'm a web designer and front end developer, and my expertise is building custom, responsive WordPress websites. My skillset, however, is versatile and I'm hired to work on many different types of projects. Feel free to visit my <a href="https://github.com/angelajholden" target="_blank">Github</a> profile for code examples.</p>
 
 	  <hr>
 
