@@ -26,36 +26,24 @@ h2+.fitvids {
 }
 
 /* Insert Images into Post & Pages */
-img.alignright {
+.border {
+	padding: 1.5em;
+	background: #eaeaea;
+}
+
+.alignright {
 	float: right;
 	margin: 0 0 1em 1em;
 }
 
-img.alignleft {
+.alignleft {
 	float: left;
 	margin: 0 1em 1em 0;
 }
 
-img.alignnone {}
+.alignnone {}
 
-img.aligncenter {
-	display: block;
-	margin: 1em auto;
-}
-
-a img.alignright {
-	float: right;
-	margin: 0 0 1em 1em;
-}
-
-a img.alignleft {
-	float: left;
-	margin: 0 1em 1em 0;
-}
-
-a img.alignnone {}
-
-a img.aligncenter {
+.aligncenter {
 	display: block;
 	margin: 1em auto;
 }
