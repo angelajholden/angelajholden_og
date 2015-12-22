@@ -141,6 +141,12 @@
 	  margin-right: 0.5em;
 	}
 
+	.skills article p {
+		span {
+			display: inline;
+		}
+	}
+
 	.single {
 		h1 {
 			font-size: 2.25em;
@@ -176,7 +182,16 @@
 		padding: 2.5em 1em;
 	}
 
+	.skills {
+		article p {
+			margin-bottom: 0;
+			font-size: 0.9em;
+			font-weight: 400;
+		}
+	}
+
 	.ajh-skills {
+		margin-top: 3em;
 		aside {
 			width: 49%;
 			&:nth-child(3) {
