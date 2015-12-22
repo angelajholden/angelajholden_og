@@ -35,7 +35,14 @@
 
     </section>
 
-      
+    <?php if (get_post_meta(get_the_ID(), 'testimonial', true)) { ?>
+	  	<section class="project-testimonial">
+	  		<div class="wrap">
+	  			<div class="title"><?php echo get_post_meta(get_the_ID(), 'title', true); ?></div>
+	  			<p><?php echo get_post_meta(get_the_ID(), 'testimonial', true); ?></p>
+	  		</div>
+	  	</section>
+	  <?php } ?>
 
     <section class="wrap">
 
@@ -59,15 +66,6 @@
       <div class="edit-button"><?php edit_post_link('Edit'); ?></div>
 
   	</section>
-
-	  <?php if (get_post_meta(get_the_ID(), 'testimonial', true)) { ?>
-	  	<section class="project-testimonial">
-	  		<div class="wrap">
-	  			<div class="title"><?php echo get_post_meta(get_the_ID(), 'title', true); ?></div>
-	  			<p><?php echo get_post_meta(get_the_ID(), 'testimonial', true); ?></p>
-	  		</div>
-	  	</section>
-	  <?php } ?>
 
   	<?php endwhile; else : ?>
 	<?php endif; ?>
