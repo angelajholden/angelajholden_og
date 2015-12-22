@@ -217,7 +217,6 @@
 
 	.reviews {
 		padding: 0;
-		height: auto;
 		p {
 			font-size: 0.95em;
 		}
@@ -353,13 +352,9 @@
 
 }
 
-@media (max-width: 525px) {
-	.aboutMe .city-img .mpls,
-	.aboutMe .city-img .san {
-		width: auto;
-		float: none;
-		margin-right: 0;
-		margin-bottom: 1em;
+@media (max-width: 460px) {
+	.reviews {
+		height: 35em;
 	}
 }
 
@@ -388,5 +383,9 @@
 			padding: 5px;
 			font-size: 0.9em;
 		}
+	}
+
+	.contact .details a {
+		display: block;
 	}
 }
