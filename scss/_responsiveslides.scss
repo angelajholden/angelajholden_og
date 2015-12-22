@@ -4,12 +4,12 @@
 	position: relative;
 	background: #000 url(../images/angela-j-holden-reviews.jpg) no-repeat center center;
 	@include background-size(cover);
-	color: #333;
 	padding: 3.5em 0 5em;
-	height: 35em;
+	height: 30em;
 	&:before {
 		content: "";
-		background: url(../images/overlay.png);
+		background-color: rgba(#000,0.15);
+		background-image: url(../images/overlay.png);
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -34,11 +34,16 @@
 	}
 	p {
 		font-size: 1.15em;
+		font-weight: 300;
 		color: #fff;
 		text-shadow: 0 2px 2px rgba(0,0,0,0.5);
 		a {
-			color: $yellow;
-			border-bottom: 2px solid transparent;
+			color: #fff;
+			border-bottom: 1px solid #fff;
+			&:hover, &:active, &:focus {
+				color: rgba(#fff,0.7);
+				border-bottom: 1px solid rgba(#fff,0.7);
+			}
 		}
 	}
 }
@@ -83,7 +88,7 @@
 	position: absolute;
 	bottom: 3em;
 	left: 50%;
-	margin-left: -40px;
+	margin-left: -24px;
 	z-index: 0;
 	li {
 		display: inline;
@@ -93,9 +98,9 @@
 		  border-radius: 50%;
 		  background: rgba(#fff,0.5);
 		  display: inline-block;
-		  width: 12px;
-		  height: 12px;
-		  margin: 0 2px;
+		  width: 8px;
+		  height: 8px;
+		  margin: 0 4px;
 		}
 	}
 	.rslides_here a {

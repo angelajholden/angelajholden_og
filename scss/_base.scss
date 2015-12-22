@@ -109,17 +109,12 @@ video#bgvideo {
 	z-index: -1;
 }
 
-#welcome p {
-	margin-top: 0;
-	margin-bottom: 2em;
-}
-
 .accepting {
-	background: lighten($pink,5%);
+	background: rgba($pink,0.8);
 	color: #fff;
 	text-align: center;
-	font-size: 1.15em;
-	font-weight: 400;
+	font-size: 1.25em;
+	font-weight: 300;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	.wrap {
@@ -127,17 +122,17 @@ video#bgvideo {
 	}
 	span a {
 		font-size: 1em;
-		font-weight: 400;
+		font-weight: 300;
 		color: #fff;
 		display: inline-block;
 		margin-left: 1em;
 		padding: 0.35em 1em;
-		border: 2px solid rgba(255,255,255,0.75);
+		border: 2px solid rgba(#fff,0.75);
 		background: transparent;
 		@include transition(all, 0.3s, ease);
 		&:hover, &:active, &:focus {
-			color: $pink;
-			background: #fff;
+			background: lighten($pink,10%);
+			border: 2px solid lighten($pink,10%);
 		}
 	}
 }
@@ -192,15 +187,17 @@ video#bgvideo {
 	background: #fff;
 	h2 {
 		text-align: center;
-		margin: 0 0 1em;
+		margin: 0 0 0.5em;
 		font-size: 2.5em;
 	}
 }
 
-.single {
-	section.wrap {
-		padding-top: 1em;
-	}
+#welcome p {
+	margin-top: 0;
+	margin-bottom: 2em;
+	font-size: 1.25em;
+	font-weight: 300;
+	text-align: center;
 }
 
 .ajh-skills {
@@ -216,11 +213,10 @@ video#bgvideo {
 		margin-bottom: 5%;
 		padding: 0 2% 1%;
 		border: 1px solid #eaeaea;
-		&:nth-child(3),
-		&:nth-child(6) {
+		&:nth-child(3n+3) {
 			margin-right: 0;
 		}
-		&:nth-child(4) {
+		&:nth-child(3n+4) {
 			clear: both;
 		}
 	}
@@ -237,7 +233,7 @@ video#bgvideo {
 		border-radius: 50%;
 	}
 	p {
-		font-size: 0.85em;
+		font-size: 0.9em;
 		text-align: center;
 	}
 }
@@ -354,6 +350,12 @@ video#bgvideo {
 }
 
 /* Single */
+.single {
+	section.wrap {
+		padding-top: 1em;
+	}
+}
+
 .single-author,
 .single-meta {
 	width: 50%;
@@ -425,12 +427,12 @@ video#bgvideo {
 	@include background-size(cover);
 	background-attachment: fixed;
 	color: #fff;
-	font-weight: 400;
-	@include text-shadow(0 0 1px rgba(0,0,0,0.25));
+	text-shadow: 0 2px 2px rgba(0,0,0,0.5);
 	z-index: 0;
 	&:before {
 		content: "";
-		background: url(../images/overlay.png);
+		background-color: rgba(#000,0.15);
+		background-image: url(../images/overlay.png);
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -440,14 +442,13 @@ video#bgvideo {
 	}
 	.title {
 		font-size: 1.5em;
+		font-weight: 300;
 		margin-bottom: 1em;
 		text-align: center;
-		a {
-			color: $yellow;
-			&:hover, &:active, &:focus {
-				color: lighten($yellow,10%);
-			}
-		}
+	}
+	p {
+		font-size: 1.15em;
+		font-weight: 300;
 	}
 }
 

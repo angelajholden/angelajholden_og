@@ -2,13 +2,13 @@
   <div class="wrap">
   	<article id="<?php post_name(); ?>">
   		<h2>Skills & Services</h2>
-  		<?php the_content(); ?>
+  		<p>Web design is a broad field and many people specialize, or have an expertise. I work on the<br>front end of a website, which means I create a design, then I build it with HTML5, CSS and WordPress.<br>All of my work is responsive and optimized for tablets and mobile devices.</p>
   	</article>
     <div class="ajh-skills clearfix">
       <aside>
         <span class="fa fa-file-text-o"></span>
         <h3>Content</h3>
-        <p>Content Strategy is where web design and development begins. With a thorough understanding of the content, I can design a website that communicates clearly.</p>
+        <p>Content Strategy is where web design begins. With a thorough understanding of the content, I can design a website that communicates clearly.</p>
       </aside>
       <aside>
         <span class="fa fa-code"></span>
@@ -18,7 +18,7 @@
       <aside>
         <span class="fa fa-tablet"></span>
         <h3>Responsive Design</h3>
-        <p>My work is optimized for mobile devices. Responsive design is about understanding mobile operating systems, and giving users a great experience.</p>
+        <p>Responsive design is about understanding mobile operating systems, and giving users a great experience. All of my work is optimized for mobile devices.</p>
       </aside>
       <aside>
         <span class="fa fa-line-chart"></span>
@@ -33,7 +33,7 @@
       <aside>
         <span class="fa fa-paint-brush"></span>
         <h3>UI & UX Design</h3>
-        <p>I love coding great designs, and I enjoy creating User Interface and User Experience designs. I consider your content, audience, and your brand when I’m designing.</p>
+        <p>I love coding great designs, and I enjoy creating User Interface and User Experience designs. I consider content, audience, and brand when I’m designing.</p>
       </aside>
     </div>
   </div><?php // End .wrap ?>
