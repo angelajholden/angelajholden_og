@@ -214,6 +214,44 @@ function ajh_performance( $visible = false ) {
 }
 add_action( 'wp_footer', 'ajh_performance', 20 );
 
+/* ---------- SHOW FEATURED IMAGES ON POST & PAGE ADMIN ----------- */
+function cprmycareer_get_featured_image($post_ID) {
+  $post_thumbnail_id = get_post_thumbnail_id($post_ID);
+  if ($post_thumbnail_id) {
+      $post_thumbnail_img = wp_get_attachment_image_src($post_thumbnail_id, 'thumbnail');
+    return $post_thumbnail_img[0];
+  }
+}
+function cprmycareer_columns_head($defaults) {
+  $defaults['featured_image'] = 'Featured Image';
+return $defaults;
+}
+function cprmycareer_columns_content($column_name, $post_ID) {
+  if ($column_name == 'featured_image') {
+      $post_featured_image = cprmycareer_get_featured_image($post_ID);
+    if ($post_featured_image) {
+        echo '<img src="' . $post_featured_image . '" />';
+    }
+  }
+}
+add_filter('manage_posts_columns', 'cprmycareer_columns_head');
+add_action('manage_posts_custom_column', 'cprmycareer_columns_content', 10, 2);
+add_filter('manage_pages_columns', 'cprmycareer_columns_head');
+add_action('manage_pages_custom_column', 'cprmycareer_columns_content', 10, 2);
+
+/* ---------------- WxH COLUMN IN MEDIA LIBRARY ----------------- */
+function wh_column( $cols ) {
+  $cols["dimensions"] = "Dimensions (w, h)";
+  return $cols;
+}
+function wh_value( $column_name, $id ) {
+  $meta = wp_get_attachment_metadata($id);
+     if(isset($meta['width']))
+     echo $meta['width'].' x '.$meta['height'];
+}
+add_filter( 'manage_media_columns', 'wh_column' );
+add_action( 'manage_media_custom_column', 'wh_value', 10, 2 );
+
 // Custom Post Types
 require get_template_directory() . '/cpt/cpt.php';
 

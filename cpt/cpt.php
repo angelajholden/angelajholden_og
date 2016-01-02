@@ -3,36 +3,35 @@
 	// HOMEPAGE
 	function custom_post_type_skills() {
 	    $labels = array(
-	    'name'               => 'Skills',
-	    'singular_name'      => 'Skill',
-	    'add_new'            => 'Add a Skill',
-	    'add_new_item'       => 'Add New Skill',
-	    'edit_item'          => 'Edit Skill',
-	    'new_item'           => 'New Skill',
-	    'view_item'          => 'View Skill',
-	    'search_items'       => 'Search Skills',
+	    'name'               => 'Services',
+	    'singular_name'      => 'Service',
+	    'add_new'            => 'Add a Service',
+	    'add_new_item'       => 'Add New Service',
+	    'edit_item'          => 'Edit Service',
+	    'new_item'           => 'New Service',
+	    'view_item'          => 'View Service',
+	    'search_items'       => 'Search Services',
 	    'not_found'          => 'Nothing found',
 	    'not_found_in_trash' => 'Nothing found in Trash',
 	    'parent_item_colon'  => '',
-	    'menu_name'          => 'Homepage',
+	    'menu_name'          => 'Services',
 	    );
 
 	    $args = array(
 	    'labels'                => $labels,
 	    'public'                => true,
-	    'publicly_queryable'    => false,
-	    'exclude_from_search'		=> true,
+	    'publicly_queryable'    => true,
+	    'exclude_from_search'		=> false,
 	    'show_ui'               => true,
-	    'show_in_nav_menus'			=> false,
+	    'show_in_nav_menus'			=> true,
 	    'show_in_menu'					=> 'edit.php?post_type=page',
 	    'query_var'             => true,
 	    'rewrite'               => true,
 	    'capability_type'       => 'post',
-	    'has_archive'           => false,
+	    'has_archive'           => true,
 	    'hierarchical'          => false,
-	    'menu_icon'             => 'dashicons-store',
-	    'rewrite'               => array('slug' => ''),
-	    'supports'              => array('title', 'editor', 'custom-fields', 'author'),
+	    'rewrite'               => array('slug' => 'services'),
+	    'supports'              => array('title', 'editor', 'custom-fields', 'author', 'excerpt', 'thumbnail'),
 	    'taxonomies'            => array('')
 	  );
 	  register_post_type( 'ajhskill' , $args );
@@ -70,7 +69,7 @@
 	    'hierarchical'          => false,
 	    'menu_icon'             => 'dashicons-heart',
 	    'rewrite'               => array('slug' => ''),
-	    'supports'              => array('title', 'editor', 'excerpt'),
+	    'supports'              => array('title', 'editor', 'excerpt', 'author'),
 	    'taxonomies'            => array('')
 	  );
 	  register_post_type( 'ajhreview' , $args );

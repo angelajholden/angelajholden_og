@@ -10,8 +10,6 @@ get_header(); the_post(); ?>
 
   	<?php get_template_part('inc/reviews'); ?>
 
-    <?php //get_template_part('inc/logos'); ?>
-
     <?php get_template_part('inc/about'); ?>
 
 <?php get_footer(); ?>

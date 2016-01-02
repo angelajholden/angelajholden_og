@@ -129,10 +129,11 @@ video#bgvideo {
 		padding: 0.35em 1em;
 		border: 2px solid rgba(#fff,0.75);
 		background: transparent;
-		@include transition(all, 0.3s, ease);
+		@include transition(all, 0.2s, ease-in);
 		&:hover, &:active, &:focus {
-			background: lighten($pink,10%);
-			border: 2px solid lighten($pink,10%);
+			background: $pink;
+			border: 2px solid $pink;
+			box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
 		}
 	}
 }
@@ -204,10 +205,6 @@ video#bgvideo {
 
 .ajh-skills {
 	margin-top: 5em;
-	h3 {
-		text-align: center;
-		margin-top: 1em;
-	}
 	aside {
 		width: 32.666%;
 		float: left;
@@ -221,22 +218,62 @@ video#bgvideo {
 		&:nth-child(3n+4) {
 			clear: both;
 		}
+		a {
+			display: block;
+			h3 {
+				text-align: center;
+				margin-top: 1em;
+			}
+			p {
+				text-align: center;
+				color: #555;
+				font-size: 0.9em;
+			}
+			.fa {
+				font-size: 1.5em;
+				color: #fff;
+				background: lighten($pink,10%);
+				text-align: center;
+				margin: -25px auto 0;
+				display: block;
+				width: 50px;
+				height: 50px;
+				line-height: 46px;
+				border: 2px solid lighten($pink,10%);
+				border-radius: 50%;
+				@include transition(all 0.2s ease-in);
+			}
+			&:hover .fa {
+				background: #fff;
+				color: lighten($pink,10%);
+				@include transform(scale(1.07));
+			}
+		}
 	}
-	.fa {
-		font-size: 1.5em;
-		color: #fff;
-		background: lighten($pink,10%);
+}
+
+.skills-nav {
+	ul {
+		margin: 0;
+		padding: 0;
 		text-align: center;
-		margin: -25px auto 0;
-		display: block;
-		width: 50px;
-		height: 50px;
-		line-height: 50px;
-		border-radius: 50%;
-	}
-	p {
-		font-size: 0.9em;
-		text-align: center;
+		li {
+			list-style-type: none;
+			display: inline-block;
+			&:after {
+				content: "•";
+				color: #999;
+				margin-left: 4px;
+			}
+			&:last-child:after {
+				content: "";
+			}
+		}
+		a {
+			text-transform: uppercase;
+			font-size: 0.85em;
+			font-weight: 400;
+		}
 	}
 }
 
@@ -280,6 +317,10 @@ video#bgvideo {
 	font-size: 0.9em;
 	text-transform: uppercase;
 	font-weight: 400;
+}
+
+.post-type-archive-ajhskill .read-more {
+	margin-left: 0.5em;
 }
 
 .theTags {
