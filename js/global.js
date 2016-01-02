@@ -1255,14 +1255,7 @@ $a(document).ready(function() {
 		width:570,
 		centerScreen:1,
 		scrollbars:0
-		}); 
-
-	// jQuery Accordian
-	$a( "#accordion" ).accordion({
-    collapsible: true,
-    active: false,
-    heightStyle: "content"
-	});
+		});
 
 	// Fit Vids
 	$a(".fitvids").fitVids();
