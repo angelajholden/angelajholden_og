@@ -44,6 +44,10 @@
 		}
 	}
 
+	.single header {
+		margin: 0 0 1em;
+	}
+
 	.page-wrap {
 		top: 0;
 	}
@@ -167,10 +171,6 @@
 }
 
 @media (max-width: 768px) {
-
-	.single header {
-		margin: 0 0 1em;
-	}
 
 	p {
 		font-size: 0.95em;
