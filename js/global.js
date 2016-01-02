@@ -1150,7 +1150,7 @@ $a(function() {
 });
 $a(window).resize(function(){  
   var w = $a(window).width();
-  if(w > 1024 && menu.is(':hidden')) {  
+  if(w > 960 && menu.is(':hidden')) {  
     menu.removeAttr('style');
   }  
 });

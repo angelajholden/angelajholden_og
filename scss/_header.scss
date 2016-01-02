@@ -18,7 +18,7 @@
 
 .mainHead {
 	margin: 0 auto;
-	padding: 0.35em 0 0.25em;
+	padding: 0.35em 1em 0.25em;
 	max-width: 1024px;
 	header { // headerContainer
 		width: auto;
@@ -85,7 +85,7 @@
 		li {
 			position: relative;
 			display: inline-block;
-			margin: 0 0 0 25px;
+			margin: 0 0 0 20px;
 			padding: 0;
 			&.menu-item-has-children:after {
 				content: "";
