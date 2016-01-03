@@ -48,12 +48,9 @@
 
       <?php wordpress_sharing(); ?>
 
-        <?php if (has_tag()) : ?>
-        	<hr>
-          <div class="theTags"><?php the_tags( 'Tagged: ', ' <span class="bullet">&bull;</span> ', '' ); ?></div>
-        <?php endif; ?>
+      <hr>
 
-        <?php the_post_navigation(); ?>
+      <?php the_post_navigation(); ?>
 
    		<hr>
 

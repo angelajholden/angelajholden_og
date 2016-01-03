@@ -10,6 +10,26 @@
 			    <h1><?php the_title(); ?></h1>
 			  </header>
 
+		    <hr>
+
+				<nav class="skills-nav">
+			    <ul>
+
+				    <?php
+						$currentID = get_the_ID();
+						$service_query = new WP_Query( array('post_type' => 'ajhskill', 'post_status' => 'publish', 'order' => 'asc', 'showposts' => '-1', 'post__not_in' => array($currentID)));
+						while ( $service_query->have_posts() ) : $service_query->the_post(); ?>
+
+							<li><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></li>
+
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+
+			    </ul>
+			  </nav>
+
+		    <hr>
+
 		    <?php $video = get_post_meta( get_the_ID(), 'video_url', true );
 		      if( ! empty( $video ) ) { ?>
 		        <figure class="fitvids">
@@ -45,20 +65,7 @@
 
 	    <hr>
 
-			<nav class="skills-nav">
-		    <ul>
-
-			    <?php
-					$currentID = get_the_ID();
-					$service_query = new WP_Query( array('post_type' => 'ajhskill', 'post_status' => 'publish', 'order' => 'asc', 'showposts' => '-1', 'post__not_in' => array($currentID)));
-					while ( $service_query->have_posts() ) : $service_query->the_post(); ?>
-
-						<li><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></li>
-
-					<?php endwhile; ?>
-
-		    </ul>
-		  </nav>
+	    <?php the_post_navigation(); ?>
 
 	    <hr>
 
