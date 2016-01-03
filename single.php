@@ -13,7 +13,13 @@
       	</div>
 
         <div class="single-meta">
-        	<p>Category <span class="bullet">&bull;</span> <?php the_category(','); ?></p>
+        	
+        <p>Category <span class="bullet">&bull;</span> <?php the_category(','); ?></p>
+
+        <?php if (has_tag()) : ?>
+		      <div class="theTags"><?php the_tags( 'Tagged <span class="bullet">&bull;</span> ', ' <span class="bullet">&bull;</span> ', '' ); ?></div>
+		    <?php endif; ?>
+
         </div>
 
       </aside>
@@ -63,13 +69,9 @@
 
 	    </article>
 
-	    <hr>
-
 		    <?php wordpress_sharing(); ?>
 
-		    <?php if (has_tag()) : ?>
-		      <div class="theTags"><?php the_tags( 'Tagged: ', ' <span class="bullet">&bull;</span> ', '' ); ?></div>
-		    <?php endif; ?>
+		  <hr>
 
 		    <?php the_post_navigation(); ?>
 

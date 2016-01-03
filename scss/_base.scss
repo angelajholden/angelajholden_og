@@ -325,7 +325,8 @@ video#bgvideo {
 
 .theTags {
 	font-weight: 400;
-	margin: 1em 0;
+	margin: 0;
+	line-height: 1.25;
 }
 
 /* Archive & Post Navigation */
@@ -340,7 +341,7 @@ video#bgvideo {
 	clear: both;
 }
 
-.nav-previous {
+.nav-next {
 	font-weight: 400;
 	width: 49%;
 	float: left;
@@ -352,7 +353,7 @@ video#bgvideo {
 	}
 }
 
-.nav-next {
+.nav-previous {
 	font-weight: 400;
 	width: 49%;
 	float: right;
