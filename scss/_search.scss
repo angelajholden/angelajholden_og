@@ -108,6 +108,17 @@ input[type="submit"].Image404 {
 .mainMenu {
 	.search-menu {
 		width: auto;
+		svg {
+			width: 20px;
+			height: 20px;
+			position: relative;
+			top: 5px;
+			fill: #777;
+			@include transition(all 0.3s ease);
+			&:hover, &:active, &:focus {
+				fill: $pink;
+			}
+		}
 		a {
 			color: #777;
 			&:hover, &:active, &:focus {

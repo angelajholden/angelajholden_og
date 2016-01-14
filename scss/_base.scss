@@ -338,6 +338,21 @@ video#bgvideo {
 	margin: 1em 0;
 }
 
+.navigation.pagination {
+	.nav-links {
+		text-align: center;
+		font-weight: 400;
+	}
+	.prev.page-numbers,
+	.next.page-numbers {
+		font-size: 1.25em;
+		font-weight: 600;
+	}
+	a.page-numbers {
+		margin: 0 5px;
+	}
+}
+
 .post-navigation:after,
 .nav-links:after {
 	content: "";

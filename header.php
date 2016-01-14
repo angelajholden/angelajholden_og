@@ -43,7 +43,7 @@
 
           <nav class="mainMenu">
           	<ul class="search-menu">
-          		<li><a href="#search"><span class="fa fa-search"></span></a></li>
+          		<li><a href="#search"><?php ajh_search_icon(); ?></a></li>
           	</ul>
             <?php
               wp_nav_menu( array( 
