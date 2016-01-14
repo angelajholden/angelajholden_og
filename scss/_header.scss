@@ -158,7 +158,10 @@ a#pull {
 	display: none;
 }
 
-.mobileMenu .current-menu-item > a,
-.mainMenu .current-menu-item > a {
+.single-ajhskill .mainMenu .menu-item-object-ajhskill > a,
+.single-ajhproject .mainMenu .menu-item-object-ajhproject > a,
+.single-post .mainMenu .current_page_parent > a,
+.mainMenu .current-menu-item > a,
+.mainMenu .current-menu-parent > a {
 	border-bottom: 2px solid $pink;
 }

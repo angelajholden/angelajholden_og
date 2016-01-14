@@ -99,7 +99,7 @@
 	    'publicly_queryable'    => true,
 	    'exclude_from_search'		=> false,
 	    'show_ui'               => true,
-	    'show_in_nav_menus'			=> false,
+	    'show_in_nav_menus'			=> true,
 	    'show_in_menu'					=> 'edit.php?post_type=page',
 	    'query_var'             => true,
 	    'rewrite'               => true,

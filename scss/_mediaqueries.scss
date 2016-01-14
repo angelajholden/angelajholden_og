@@ -124,10 +124,11 @@
 		}
 	}
 
-	.mobileMenu .current-post-ancestor a,
-	.mobileMenu .current-menu-parent a,
-	.mobileMenu .current-menu-item a,
-	.mobileMenu .current_page_item a {
+	.single-ajhskill .mobileMenu .menu-item-object-ajhskill > a,
+	.single-ajhproject .mobileMenu .menu-item-object-ajhproject > a,
+	.single-post .mobileMenu .current_page_parent > a,
+	.mobileMenu .current-menu-item > a,
+	.mobileMenu .current-menu-parent > a {
 		border-bottom: none;
 		color: $pink;
 	}
