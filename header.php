@@ -42,6 +42,9 @@
           </nav>
 
           <nav class="mainMenu">
+          	<ul class="search-menu">
+          		<li><a href="#search"><span class="fa fa-search"></span></a></li>
+          	</ul>
             <?php
               wp_nav_menu( array( 
                 'name'            => 'Main Menu',
@@ -50,9 +53,6 @@
                 'container_class' => ''
               ));
             ?>
-            <ul class="search-menu">
-          		<li><a href="#search"><span class="fa fa-search"></span></a></li>
-          	</ul>
           </nav>
 
           <div id="search" class="modalDialog">
