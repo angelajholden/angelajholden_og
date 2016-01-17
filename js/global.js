@@ -1278,5 +1278,4 @@ $a(document).ready(function() {
     $a('html, body').animate({scrollTop: 0}, duration);
     return false;
   })
-
 });

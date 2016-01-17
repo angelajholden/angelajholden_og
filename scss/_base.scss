@@ -335,7 +335,8 @@ video#bgvideo {
 
 /* Archive & Post Navigation */
 .post-navigation {
-	margin: 1em 0;
+	margin: 0 0 5em;
+	border-top: 5px solid lighten($pink,10%);
 }
 
 .navigation.pagination {
@@ -362,9 +363,11 @@ video#bgvideo {
 
 .nav-next {
 	font-weight: 400;
-	width: 49%;
+	width: 50%;
 	float: left;
-	margin-right: 1%;
+	margin: 0;
+	padding: 2em 1em 2em 0;
+	line-height: 1.25;
 	&:before {
 		content: "←";
 		margin-right: 5px;
@@ -374,9 +377,11 @@ video#bgvideo {
 
 .nav-previous {
 	font-weight: 400;
-	width: 49%;
+	width: 50%;
 	float: right;
-	margin-left: 1%;
+	margin: 0;
+	padding: 2em 0 2em 1em;
+	line-height: 1.25;
 	text-align: right;
 	&:after {
 		content: "→";
@@ -415,7 +420,7 @@ video#bgvideo {
 /* Single */
 .single {
 	section.wrap {
-		padding-top: 1em;
+		padding-top: 2.5em;
 	}
 }
 
@@ -447,6 +452,9 @@ video#bgvideo {
 .gravatar {
 	float: left;
 	margin-right: 0.75em;
+	&.bottom-post {
+		margin-top: -0.5em;
+	}
 	img {
 		@include border-radius(50%);
 	}
@@ -470,7 +478,7 @@ video#bgvideo {
 }
 
 .single header {
-	margin: 2.5em 0;
+	margin: 2.5em 0 0;
 }
 
 .single-ajhproject {
@@ -519,7 +527,7 @@ video#bgvideo {
 }
 
 .author-bio {
-	margin-top: 3.25em;
+	margin: 0 0 7.5em;
 	p {
 		margin: 0.5em 0;
 	}
@@ -551,7 +559,8 @@ video#bgvideo {
 
 /* Sharing */
 .sharing {
-	margin: 2em 0 1.5em;
+	margin: 1em 0 2em;
+	text-align: right;
 	a {
 		display: inline-block;
 	  padding: 0;
@@ -620,7 +629,7 @@ video#bgvideo {
 	font-weight: 400;
   font-size: 0.85em;
   font-style: italic;
-	margin-bottom: 2em;
+	margin: 1.5em 0;
 	max-width: 100%;
 	.overlay {
 		position: absolute;

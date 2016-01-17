@@ -9,7 +9,8 @@ article {
 p {
 	font-size: 1em;
 	font-weight: 400;
-	margin: 1em 0;
+	margin: 1.5em 0;
+	line-height: 2;
 }
 
 .ui-tabs {
@@ -24,7 +25,7 @@ h1 {
   font-weight: 300;
   margin: 0;
   padding: 0;
-  line-height: 1.1;
+  line-height: 1.25;
   span {
     text-transform: capitalize;
   }
@@ -34,7 +35,7 @@ h2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 2em;
   font-weight: 300;
-  margin: 0;
+  margin: 24px 0;
   padding: 0;
   border: none;
   line-height: 1.25;
@@ -42,20 +43,21 @@ h2 {
 
 h3 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.25em;
+  font-size: 1.75em;
   font-weight: 300;
-  text-transform: uppercase;
-  color: $pink;
-  margin: 0.5em 0 0 0;
+  color: lighten($pink,10%);
+  margin: 24px 0;
   padding: 0;
+  line-height: 1.25;
 }
 
 h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.25em;
   font-weight: 400;
-  margin: 0;
+  margin: 24px 0;
   padding: 0;
+  line-height: 1.25;
 }
 
 /* Links & Buttons */
