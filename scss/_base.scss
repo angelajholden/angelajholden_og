@@ -284,10 +284,11 @@ video#bgvideo {
 	}
 }
 
+.single-ajhproject article,
 .single-ajhskill article {
-	margin-bottom: 2.5em;
+	//margin-bottom: 2.5em;
 	padding-bottom: 2.5em;
-	border-bottom: 2px solid #eaeaea;
+	//border-bottom: 2px solid #eaeaea;
 }
 
 /* SVGs */
@@ -347,7 +348,7 @@ video#bgvideo {
 /* Archive & Post Navigation */
 .post-navigation {
 	margin: 0 0 1em;
-	border-top: 5px solid lighten($pink,10%);
+	border-top: 2px solid #eaeaea;
 }
 
 .navigation.pagination {
