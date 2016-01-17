@@ -40,7 +40,7 @@ function wordpress_sharing() { ?>
 				<a class="linkedin share" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $encoded_url; ?>" title="LinkedIn" target="_blank">
 					<span class="fa fa-linkedin"></span>
 					<span class="screen-reader-text">LinkedIn</span></a>
-				<a class="email share" href="mailto:?body=<?php echo $encoded_url; ?>" title="Email" target="_blank">
+				<a class="email share" href="mailto:?subject=<?php the_title(); ?> | <?php bloginfo('title'); ?>&body=<?php the_title(); ?>:%0A%0A<?php echo $encoded_url; ?>" title="Email" target="_blank">
 					<span class="fa fa-envelope"></span>
 					<span class="screen-reader-text">LinkedIn</span></a>
 		<?php } ?>
