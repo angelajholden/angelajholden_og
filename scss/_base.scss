@@ -284,6 +284,10 @@ video#bgvideo {
 	}
 }
 
+.single-ajhskill article {
+	margin-bottom: 5em;
+}
+
 /* SVGs */
 .pink {
 	fill: lighten($pink,10%);
@@ -537,10 +541,14 @@ video#bgvideo {
 }
 
 .author-bio {
-	margin: 0 0 7.5em;
+	margin: 0;
 	p {
 		margin: 0.5em 0;
 	}
+}
+
+.single-post .author-bio {
+	margin-bottom: 7.5em;
 }
 
 /* Instafeed */
