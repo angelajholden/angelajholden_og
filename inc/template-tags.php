@@ -20,9 +20,10 @@ if ( ! function_exists( 'wordpress_sharing' ) ) :
 function wordpress_sharing() { ?>
 	<div class="sharing">
 	<?php function getUrl() {
-	  $url  = @( $_SERVER["HTTPS"] != 'on' ) ? 'http://'.$_SERVER["SERVER_NAME"] :  'https://'.$_SERVER["SERVER_NAME"];
-	  $url .= ( $_SERVER["SERVER_PORT"] !== 80 ) ? ":".$_SERVER["SERVER_PORT"] : "";
-	  $url .= $_SERVER["REQUEST_URI"];
+	  $url  = isset( $_SERVER['HTTPS'] ) && 'on' === $_SERVER['HTTPS'] ? 'https' : 'http';
+    $url .= '://' . $_SERVER['SERVER_NAME'];
+    $url .= in_array( $_SERVER['SERVER_PORT'], array('80', '443') ) ? '' : ':' . $_SERVER['SERVER_PORT'];
+    $url .= $_SERVER['REQUEST_URI'];
 	  return $url;
 	} ?>
 		<?php $encoded_url = urlencode( getUrl() );
