@@ -102,6 +102,9 @@
 			}
 		}
 	}
+	& .search-menu li:hover > a {
+		border-bottom: 2px solid transparent;
+	}
 }
 
 .mainMenu ul ul {

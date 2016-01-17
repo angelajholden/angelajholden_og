@@ -48,19 +48,13 @@
 
       <?php wordpress_sharing(); ?>
 
-      <hr>
-
       <?php the_post_navigation(); ?>
-
-   		<hr>
 
 	    <figure class="gravatar"><?php echo get_avatar( get_the_author_meta('email'), '150' ); ?></figure>
 	    <div class="author-bio clearfix">
 				<h2 class="author-name"><?php echo get_the_author(); ?></h2>
 				<p class="author-desc"><?php the_author_meta( 'description' ); ?></p>
 			</div>
-
-      <div class="edit-button"><?php edit_post_link('Edit'); ?></div>
 
   	</section>
 

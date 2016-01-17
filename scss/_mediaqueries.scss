@@ -179,14 +179,6 @@
 		font-size: 0.95em;
 	}
 
-	blockquote {
-		padding: 0;
-		p {
-			font-size: 1em;
-			padding: 1.5em;
-		}
-	}
-
 	.wrap {
 		padding: 2.5em 1em;
 	}
@@ -291,6 +283,18 @@
 }
 
 @media (max-width: 600px) {
+
+	blockquote {
+		padding: 0 1em;
+		&:before {
+			content: "";
+			display: none;
+		}
+		p {
+			font-size: 1em;
+			line-height: 1.75;
+		}
+	}
 
 	.home {
 		.banner {

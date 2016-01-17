@@ -8,8 +8,6 @@
 
 	  <p>I'm a web designer and front end developer, and my expertise is building custom, responsive WordPress websites. My skillset, however, is versatile and I'm hired to work on many different types of projects. Feel free to visit my <a href="https://github.com/angelajholden" target="_blank">Github</a> profile for code examples.</p>
 
-	  <hr>
-
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 		    <a class="ajh-port" href="<?php the_permalink(); ?>">

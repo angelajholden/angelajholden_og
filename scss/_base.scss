@@ -222,12 +222,15 @@ video#bgvideo {
 			display: block;
 			h3 {
 				text-align: center;
-				margin-top: 1em;
+				margin: 22px 0 14px;
+				font-size: 1.15em;
+				text-transform: uppercase;
 			}
 			p {
 				text-align: center;
 				color: #555;
 				font-size: 0.9em;
+				margin: 14px 0 16px;
 			}
 			.fa {
 				font-size: 1.5em;
@@ -295,12 +298,14 @@ video#bgvideo {
 }
 
 /* Archive */
+.blog header h1,
+.blog header p,
 .archive h1 {
 	text-align: center;
 }
 
 .postMeta {
-	margin-bottom: 0;
+	margin: 0;
 	time {
 		float: right;
 	}
@@ -314,7 +319,7 @@ video#bgvideo {
 
 .excerpt {
 	display: inline-block;
-	margin-bottom: 1em;
+	margin: 1em 0;
 }
 
 .read-more {
@@ -478,16 +483,21 @@ video#bgvideo {
 }
 
 .single header {
+	margin: 0 0 24px;
+}
+
+.single-post header {
 	margin: 2.5em 0 0;
 }
 
 .single-ajhproject {
 	header {
-		margin: 1em 0 2em;
+		margin: 0;
 		p {
 			text-transform: uppercase;
 			font-size: 0.95em;
 			color: $pink;
+			margin: 0;
 		}
 	}
 }
@@ -613,14 +623,14 @@ video#bgvideo {
 .ajh-port {
 	display: block;
 	width: 48%;
-	margin-bottom: 4%;
+	margin-bottom: 0;
 	float: left;
-	&:nth-child(even) {
+	&:nth-child(odd) {
 		margin-right: 4%;
 	}
 	h2 {
 		font-size: 1.65em;
-	  margin-bottom: 5px;
+	  margin: 16px 0;
 	}
 }
 

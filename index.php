@@ -7,10 +7,6 @@
 			<p>This is the main archive for all blog posts and categories.</p>
 	  </header>
 
-	  <?php ajh_search(); ?>
-
-	  <hr>
-
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
   		<article class="archivePost clearfix">

@@ -17,15 +17,11 @@
 				</nav>
 		    <?php echo category_description(); ?>
 		  <?php elseif (is_tag()) : ?>
-		  	<h1>Posts Tagged <?php single_tag_title(); ?></h1>
+		  	<h1>Posts Tagged: <?php single_tag_title(); ?></h1>
 		  <?php elseif (is_archive()) : ?>
 		  	<h1>Latest Posts</h1>
 		  <?php endif; ?>
 	  </header>
-
-	  <?php ajh_search(); ?>
-
-	  <hr>
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

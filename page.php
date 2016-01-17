@@ -25,8 +25,6 @@
 	    <?php endwhile; ?>
 			<?php endif; ?>
 
-		<?php edit_post_link('Edit'); ?>
-
   </div>
 
 <?php get_footer(); ?>
