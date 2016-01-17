@@ -44,11 +44,7 @@
 	  	</section>
 	  <?php } ?>
 
-    <section class="wrap">
-
-      <?php wordpress_sharing(); ?>
-
-      <?php the_post_navigation(); ?>
+    <section class="wrap project-author">
 
 	    <figure class="gravatar"><?php echo get_avatar( get_the_author_meta('email'), '150' ); ?></figure>
 	    <div class="author-bio clearfix">
