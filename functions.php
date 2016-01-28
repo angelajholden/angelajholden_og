@@ -233,6 +233,34 @@ function wh_value( $column_name, $id ) {
 add_filter( 'manage_media_columns', 'wh_column' );
 add_action( 'manage_media_custom_column', 'wh_value', 10, 2 );
 
+/* Add ID Column */
+add_filter( 'manage_posts_columns', 'revealid_add_id_column', 5 );
+add_action( 'manage_posts_custom_column', 'revealid_id_column_content', 5, 2 );
+add_filter( 'manage_pages_columns', 'revealid_add_id_column', 5 );
+add_action( 'manage_pages_custom_column', 'revealid_id_column_content', 5, 2 );
+function revealid_add_id_column( $columns ) {
+	$checkbox = array_slice( $columns , 0, 1 );
+	$columns = array_slice( $columns , 1 );
+
+	$id['revealid_id'] = 'ID';
+	
+	$columns = array_merge( $checkbox, $id, $columns );
+	return $columns;
+}
+function revealid_id_column_content( $column, $id ) {
+  if( 'revealid_id' == $column ) {
+    echo $id;
+  }
+}
+add_action('admin_head', 'cpr_admin_css');
+function cpr_admin_css() { 
+	echo '
+  <style>  
+  	.widefat .column-revealid_id {width:2.5em;}
+  </style>
+  ';
+}
+
 // Custom Post Types
 require get_template_directory() . '/cpt/cpt.php';
 
@@ -244,3 +272,6 @@ require get_template_directory() . '/inc/template-tags.php';
 
 // SVGs
 require get_template_directory() . '/inc/svg.php';
+
+// Admin Slug Column
+require get_template_directory() . '/inc/admin-slug-column.php';
