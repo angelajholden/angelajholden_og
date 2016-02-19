@@ -9,5 +9,5 @@
   	</div>
 
     <section class="accepting">
-      <div class="wrap clearfix">Now accepting projects for March, April & May 2016<span><a href="<?php bloginfo('url'); ?>/questionnaire/">Questionnaire</a></span></div>
+      <div class="wrap clearfix">Now accepting projects for May, June & July 2016<span><a href="<?php bloginfo('url'); ?>/questionnaire/">Questionnaire</a></span></div>
     </section>
