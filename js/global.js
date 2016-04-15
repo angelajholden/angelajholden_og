@@ -1158,8 +1158,8 @@ $a(window).resize(function(){
 // Smooth Scrolling
 // $('a[href*=#]:not([href=#])').not('#myCarousel a').click(function() {
 // https://css-tricks.com/snippets/jquery/smooth-scrolling/#comment-1584376
-/*$a(function() {
-  $a('a[href*=#]:not([href=#])').not('.search-menu a#search').click(function() {
+$a(function() {
+  $a('a[href*=#]:not([href=#]):not([href=#search])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $a(this.hash);
       target = target.length ? target : $a('[name=' + this.hash.slice(1) +']');
@@ -1171,7 +1171,7 @@ $a(window).resize(function(){
       }
     }
   });
-});*/
+});
 
 // PopupWindow.js
 // (http://swip.codylindley.com/popupWindowDemo.html)
