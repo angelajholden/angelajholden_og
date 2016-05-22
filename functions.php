@@ -261,6 +261,13 @@ function cpr_admin_css() {
   ';
 }
 
+// Categorize Images
+/** Register taxonomy for images */
+function ajh_register_taxonomy_for_images() {
+    register_taxonomy_for_object_type( 'category', 'attachment' );
+}
+add_action( 'init', 'ajh_register_taxonomy_for_images' );
+
 // Custom Post Types
 require get_template_directory() . '/cpt/cpt.php';
 

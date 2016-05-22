@@ -1156,8 +1156,6 @@ $a(window).resize(function(){
 });
 
 // Smooth Scrolling
-// $('a[href*=#]:not([href=#])').not('#myCarousel a').click(function() {
-// https://css-tricks.com/snippets/jquery/smooth-scrolling/#comment-1584376
 $a(function() {
   $a('a[href*=#]:not([href=#]):not([href=#search])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
