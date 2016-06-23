@@ -68,7 +68,7 @@ function ajh_social_profiles() { ?>
 		</li>
 
 		<li class="google">
-			<a href="//plus.google.com/u/0/+AngelaHoldenDesign/posts" title="Google Plus" target="_blank">
+			<a href="//plus.google.com/+Angelajholden/posts" title="Google Plus" target="_blank">
 				<span class="fa fa-google-plus"></span>
 				<span class="screen-reader-text">Google Plus</span>
 			</a>
