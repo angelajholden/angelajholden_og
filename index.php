@@ -19,6 +19,8 @@
 
       </article>
 
+      <hr />
+
 		<?php endwhile; else : ?>
 		<?php endif; ?>
 

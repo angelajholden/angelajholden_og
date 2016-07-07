@@ -34,7 +34,8 @@
       </article>
 
       <?php if (!get_post_meta(get_the_ID(), 'testimonial', true)) { ?>
-      <?php wordpress_sharing(); ?>
+      <?php //wordpress_sharing(); ?>
+      <hr class="bee" />
       	<figure class="gravatar"><?php echo get_avatar( get_the_author_meta('email'), '150' ); ?></figure>
 		    <div class="author-bio clearfix">
 					<h2 class="author-name"><?php echo get_the_author(); ?></h2>
@@ -52,7 +53,8 @@
 	  		</div>
 	  	</section>
 	    <section class="wrap project-author">
-	    	<?php wordpress_sharing(); ?>
+	    	<?php //wordpress_sharing(); ?>
+	    	<hr class="bee" />
 		    <figure class="gravatar"><?php echo get_avatar( get_the_author_meta('email'), '150' ); ?></figure>
 		    <div class="author-bio clearfix">
 					<h2 class="author-name"><?php echo get_the_author(); ?></h2>
