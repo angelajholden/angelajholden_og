@@ -9,5 +9,5 @@
   	</div>
 
     <section class="accepting">
-      <div class="wrap clearfix">Now accepting projects for August, September & October<span><a href="<?php bloginfo('url'); ?>/questionnaire/">Questionnaire</a></span></div>
+      <div class="wrap clearfix"><q>Brevity is a byproduct of vigor</q> – Strunk and White, The Elements of Style</div>
     </section>
