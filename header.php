@@ -24,8 +24,8 @@
           
           <header class="headerContainer clearfix">
             <a class="clearfix" href="<?php bloginfo('url'); ?>">
-              <figure class="logoSVG"><?php ajh_logo(); ?></figure>
-              <h1 class="blogTitle"><?php bloginfo('name'); ?></h1>
+              <!--<figure class="logoSVG"><?php //ajh_logo(); ?></figure>-->
+              <div class="blogTitle"><?php bloginfo('name'); ?></div>
             </a>
           </header>
 

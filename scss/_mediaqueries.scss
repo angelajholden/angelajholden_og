@@ -45,6 +45,12 @@
 		}
 	}
 
+	section.hero {
+		.headline {
+			font-size: 3em;
+		}
+	}
+
 	.page-wrap {
 		top: 0;
 	}
@@ -297,6 +303,26 @@
 		}
 	}
 
+	section.hero {
+		.headline {
+			font-size: 1.75em;
+			font-weight: 400;
+		}
+		p.lead {
+			font-size: 1.1em;
+		}
+		a.contact-me,
+		a.questionnaire {
+			display: block;
+			width: 100%;
+			max-width: 200px;
+			margin-bottom: 1em;
+			margin-right: 0;
+			font-size: 1em;
+			text-align: center;
+		}
+	}
+
 	.home {
 		.banner {
 			height: 200px;
@@ -381,7 +407,7 @@
 	}
 	
 	.mainHead .blogTitle {
-		font-size: 1.75em;
+		font-size: 2.25em;
 	}
 
 	.postMeta {

@@ -19,7 +19,7 @@
 .mainHead {
 	margin: 0 auto;
 	padding: 0.35em 1em 0.25em;
-	max-width: 1024px;
+	max-width: 1020px;
 	header { // headerContainer
 		width: auto;
 		float: left;
@@ -41,12 +41,12 @@
 	.blogTitle {
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 300;
-		font-size: 2.25em;
+		font-size: 2.5em;
 		line-height: 1;
-		margin: 0;
-		text-align: left;
-		display: inline-block;
-		vertical-align: middle;
+		margin: 10px 0 0;
+		//text-align: left;
+		//display: inline-block;
+		//vertical-align: middle;
 	}
 	p {
 		font-size: 1.5em;
@@ -78,7 +78,7 @@
 	ul {
 		display: inline-block;
 		list-style-type: none;
-		margin: 19px 0 0;
+		margin: 15px 0 0;
 		padding: 0;
 		font-size: 1.2em;
 		text-align: right;
