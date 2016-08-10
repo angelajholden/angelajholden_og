@@ -17,7 +17,7 @@
 		          <a id="totop" href="<?php bloginfo('url'); ?>">
 		          	<figure class="logoSVGfooter"><?php ajh_logo(); ?></figure>
 		          </a>
-		          <p class="copyright"><?php echo date('Y'); ?> &copy; <?php bloginfo('title'); ?></p>
+		          <p class="copyright"><?php echo date('Y'); ?> &copy; Angela Holden Design LLC</p>
 		        </div>
 
 		        <div class="ajh-footer">
