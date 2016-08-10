@@ -6,10 +6,16 @@
 	@include background-size(cover);
 	padding: 3.5em 0 5em;
 	height: 30em;
+	.lead,
+	iframe {
+		text-align: center;
+		position: relative;
+		z-index: 1;
+	}
 	&:before {
 		content: "";
-		background-color: rgba(#000,0.15);
-		background-image: url(../images/overlay.png);
+		background-color: rgba(#000,0.35);
+		//background-image: url(../images/overlay.png);
 		position: absolute;
 		top: 0;
 		left: 0;
