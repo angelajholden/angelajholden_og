@@ -26,7 +26,7 @@
 		        </div>
 
 		        <nav class="ajh-footer">
-		        	<h3>Projects</h3>
+		        	<h3>Side Projects</h3>
 		          <?php wp_nav_menu( array( 
 		            'name'            => 'Footer One',
 		            'theme_location'  => 'footer_one',
