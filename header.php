@@ -18,7 +18,7 @@
     <?php wp_head(); ?>
 
   </head>
-    <body id="top" <?php body_class(); ?>>
+    <body id="top" <?php body_class('animated fadeIn'); ?>>
       <div class="headerWrap">
         <div class="mainHead clearfix">
           

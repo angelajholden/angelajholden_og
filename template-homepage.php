@@ -5,9 +5,9 @@
 get_header(); the_post(); ?>
 
 	<section class="hero" style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/bg.jpg);">
-		<div class="wrap">
+		<div class="wrap animated fadeInDown">
 			<h1 class="headline">WordPress Web Design<br />&amp; Front End Development</h1>
-			<p class="lead">Contact me today to discuss your project.</p>
+			<p class="lead">Process–driven web design from start to finish.</p>
 			<p><a class="contact-me" href="#contact">Contact Me</a><a class="questionnaire" href="<?php bloginfo('url'); ?>/questionnaire/">Questionnaire</a></p>
 		</div>
 	</section>
