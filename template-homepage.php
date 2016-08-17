@@ -7,7 +7,7 @@ get_header(); the_post(); ?>
 	<section class="hero" style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/bg.jpg);">
 		<div class="wrap">
 			<h1 class="headline">WordPress Web Design<br />&amp; Front End Development</h1>
-			<p class="lead">Process–driven web design from start to finish.</p>
+			<p class="lead">Process–driven web design from soup to nuts.</p>
 			<p><a class="contact-me" href="#contact">Contact Me</a><a class="questionnaire" href="<?php bloginfo('url'); ?>/questionnaire/">Questionnaire</a></p>
 		</div>
 	</section>
