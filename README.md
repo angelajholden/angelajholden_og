@@ -1,3 +1,2 @@
-AJH v3
-======
-WordPress theme for AJH Blog
+#Angela J. Holden
+Custom WordPress Theme

@@ -2,11 +2,11 @@
 
 .aboutMe {
 	background: #fff;
-	@include background-size(contain);
+	background-size: contain;
 	img.about-img {
 		width: 250px;
 		margin: 0 auto;
-		@include border-radius(50%);
+		border-radius: 50%;
 	}
 	p {
 		margin-top: 0;
@@ -85,9 +85,9 @@ footer {
 		font-size: 1.25em;
 		color: #eaeaea;
 		background: #555;
-		@include border-radius(50%);
+		border-radius: 50%;
 		margin: 2px;
-		@include single-transition(all, 0.25s, ease);
+		transition: all 0.3s ease;
 		&:hover, &:active, &:focus {
 			color: #eaeaea;
 		}

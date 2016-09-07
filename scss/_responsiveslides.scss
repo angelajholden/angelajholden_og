@@ -2,8 +2,8 @@
 
 .reviews {
 	position: relative;
-	background: #000 url(../images/angela-j-holden-reviews.jpg) no-repeat center center;
-	@include background-size(cover);
+	background: #000 url(images/angela-j-holden-reviews.jpg) no-repeat center center;
+	background-size: cover;
 	padding: 3.5em 0 5em;
 	//height: 30em;
 	.lead,
@@ -123,8 +123,8 @@
 	line-height: 30px;
 	background: rgba(#fff,0.25);
 	opacity: 0.65;
-	@include border-radius(50%);
-	@include transition(all 0.3s ease);
+	border-radius: 50%;
+	transition: all 0.3s ease;
 	&:hover, &:active, &:focus {
 		opacity: 0.9;
 	}

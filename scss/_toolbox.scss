@@ -51,13 +51,13 @@ hr {
   border: 1px solid #eaeaea;
   margin: 35px 0;
   position: relative;
-  @include box-sizing(content-box);
+  box-sizing: content-box;
   &.bee {
   	margin: 50px 0;
   }
   &.bee:before {
   	content: "";
-  	background: url(../images/ajh-bee.png) no-repeat center center;
+  	background: url(images/ajh-bee.png) no-repeat center center;
   	background-size: 35px;
   	position: absolute;
   	width: 50px;

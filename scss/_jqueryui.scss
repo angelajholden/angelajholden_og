@@ -3,9 +3,6 @@
 * Includes: core.css, accordion.css, autocomplete.css, button.css, datepicker.css, dialog.css, draggable.css, menu.css, progressbar.css, resizable.css, selectable.css, selectmenu.css, slider.css, sortable.css, spinner.css, tabs.css, tooltip.css, theme.css
 * Copyright 2015 jQuery Foundation and other contributors; Licensed MIT */
 
-@import "mixins";
-@import "compass/css3";
-
 /* Layout helpers
 ----------------------------------*/
 .ui-helper-hidden {
@@ -115,7 +112,7 @@
 	background: transparent;
 	font-weight: normal;
 	color: #333;
-	@include single-transition(all, 0.25s, ease);
+	transition: all 0.3s ease;
 }
 .ui-state-default a,
 .ui-state-default a:link,
@@ -130,7 +127,7 @@
 	background: lighten($pink,10%);
 	font-weight: normal;
 	color: #fff;
-	@include single-transition(all, 0.25s, ease);
+	transition: all 0.3s ease;
 }
 .ui-state-focus,
 .ui-widget-content .ui-state-focus,
@@ -156,7 +153,7 @@
 	background: lighten($pink,10%);
 	font-weight: normal;
 	color: #fff;
-	@include single-transition(all, 0.25s, ease);
+	transition: all 0.3s ease;
 }
 .ui-state-active a,
 .ui-state-active a:link,

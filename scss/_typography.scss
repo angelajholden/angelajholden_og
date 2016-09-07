@@ -83,7 +83,7 @@ a {
   color: lighten($pink, 10%);
   text-decoration: none;
   outline: none;
-  @include single-transition(all, 0.25s, ease);
+  transition: all 0.3s ease;
   &:hover, &:active, &:focus {
   	color: $pink;
   }

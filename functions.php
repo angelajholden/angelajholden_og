@@ -1,100 +1,73 @@
 <?php 
-
 if ( ! function_exists( 'ajh_setup' ) ) :
 	function ajh_setup() {
-
 		// Main Nav
 		register_nav_menus( array(
 			'main_menu' => 'Main Menu',
       'mobile_menu' => 'Mobile Menu',
 			'footer_one' => 'Footer One',
 		) );
-
 		add_theme_support( 'html5', array(
 			'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 		) );
-
 		// Featured Images
 	  add_theme_support( 'post-thumbnails' );
 	  add_image_size( 'project', 1000, 563, array( 'center', 'top') );
-
 	}
 endif; // ajh_setup
 add_action( 'after_setup_theme', 'ajh_setup' );
-
 // Load jQuery
 if (!is_admin()) {
 function ajh_enqueue_scripts_styles() {
   // Styles
 	wp_enqueue_style( 'font-awesome', "//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" );
 	wp_enqueue_style( 'web-fonts', "//fonts.googleapis.com/css?family=Open+Sans:400italic,300italic,400,300,600" );
-	wp_enqueue_style( 'main', get_stylesheet_directory_uri() . "/css/main.css" );
-
+	wp_enqueue_style( 'main-styles', get_stylesheet_directory_uri() . "/style.css" );
   // jQuery
   wp_deregister_script('jquery');
   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js", false, null);
   wp_enqueue_script('jquery');
-
-  // Global
-  wp_register_script('global', get_stylesheet_directory_uri() . "/js/global.min.js");
-  wp_enqueue_script('global');
-
+  // Base JS
+  wp_register_script('base', get_stylesheet_directory_uri() . "/compiled/base.min.js");
+  wp_enqueue_script('base');
 	}
 }
 add_action("wp_enqueue_scripts", "ajh_enqueue_scripts_styles", 11);
-
-/*function ajh_bg_video() { ?>
-	<?php if (is_page_template('template-homepage.php')) : ?>
-		<script>
-			var $a=jQuery.noConflict();$a(document).ready(function(){function scaleVideo(){var windowHeight=$a(window).height(),windowWidth=$a(window).width(),videoNativeWidth=$a("video#bgvideo")[0].videoWidth,videoNativeHeight=$a("video#bgvideo")[0].videoHeight,heightScaleFactor=windowHeight/videoNativeHeight,widthScaleFactor=windowWidth/videoNativeWidth;if(widthScaleFactor>heightScaleFactor)var scale=widthScaleFactor;else var scale=heightScaleFactor;var scaledVideoHeight=videoNativeHeight*scale,scaledVideoWidth=videoNativeWidth*scale;$a("video#bgvideo").height(scaledVideoHeight),$a("video#bgvideo").width(scaledVideoWidth)}$a("video#bgvideo").on("loadedmetadata",scaleVideo),$a(window).on("resize",scaleVideo)});
-		</script>
-	<?php endif; ?>
-<?php }
-add_action('wp_head', 'ajh_bg_video');*/
-
 // Sanitized Version of the Post Title
 function post_name() {
   global $post;
   $title = sanitize_title($post->post_title);
   echo $title;
 }
-  
 // Edit the Excerpt Length & String
 function custom_excerpt_length( $length ) {
 	return 40;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
 function new_excerpt_more( $more ) {
 	return '';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
-
 // Remove 'More...' link scroll
 function remove_more_link_scroll( $link ) {
 	$link = preg_replace( '|#more-[0-9]+|', '', $link );
 	return $link;
 }
 add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
-
 // Limit Post Revisions
 if (!defined('WP_POST_REVISIONS')) define('WP_POST_REVISIONS', 5);
-
 // Remove <p> tags from around images
 function filter_ptags_on_images($content){
    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 add_filter('the_content', 'filter_ptags_on_images');
-
 // Small Performance Boost
 remove_filter('atom_service_url','atom_service_url_filter');
-
 // remove version info from head and feeds for security reasons
 function complete_version_removal() { 
 	return ''; 
 }
 add_filter('the_generator', 'complete_version_removal');
-
 // remove wp version param from any enqueued scripts and styles
 function remove_wp_ver_css_js( $src ) {
     if ( strpos( $src, 'ver=' . get_bloginfo( 'version' ) ) )
@@ -103,7 +76,6 @@ function remove_wp_ver_css_js( $src ) {
 }
 add_filter( 'style_loader_src', 'remove_wp_ver_css_js', 9999 );
 add_filter( 'script_loader_src', 'remove_wp_ver_css_js', 9999 );
-
 // Clean up the <head>
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'wlwmanifest_link');
@@ -115,7 +87,6 @@ remove_action('wp_head', 'feed_links_extra');
 remove_action('wp_head', 'feed_links');
 remove_action('wp_head', 'index_rel_link' );
 remove_action('wp_head', 'parent_post_rel_link', 10);
-
 // Customize the Login Form
 function ajh_login_logo() { ?>
   <style type="text/css">
@@ -137,17 +108,14 @@ function ajh_login_logo() { ?>
   </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'ajh_login_logo' );
-
 function ajh_logo_url() {
     return home_url();
   }
 add_filter( 'login_headerurl', 'ajh_logo_url' );
-
 function ajh_logo_url_title() {
     return 'Angela J. Holden';
   }
 add_filter( 'login_headertitle', 'ajh_logo_url_title' );
-
 /**
  * Disable the emoji's
  */
@@ -162,7 +130,6 @@ function ajh_disable_emojis() {
 	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 }
 add_action( 'init', 'ajh_disable_emojis' );
-
 /**
  * Filter function used to remove the tinymce emoji plugin.
  * 
@@ -176,14 +143,12 @@ function disable_emojis_tinymce( $plugins ) {
 		return array();
 	}
 }
-
 // Check if there are any search results
 function is_search_has_results() {
   global $wp_query;
   $result = ( 0 != $wp_query->found_posts ) ? true : false;
   return $result;
 }
-
 // Shows Performance in the Footer
 function ajh_performance( $visible = false ) {
   $stat = sprintf(  '%d queries in %.3f seconds, using %.2fMB memory',
@@ -194,32 +159,30 @@ function ajh_performance( $visible = false ) {
   echo $visible ? $stat : "<!-- {$stat} -->" ;
 }
 add_action( 'wp_footer', 'ajh_performance', 20 );
-
 /* ---------- SHOW FEATURED IMAGES ON POST & PAGE ADMIN ----------- */
-function cprmycareer_get_featured_image($post_ID) {
+function ajh_get_featured_image($post_ID) {
   $post_thumbnail_id = get_post_thumbnail_id($post_ID);
   if ($post_thumbnail_id) {
       $post_thumbnail_img = wp_get_attachment_image_src($post_thumbnail_id, 'thumbnail');
     return $post_thumbnail_img[0];
   }
 }
-function cprmycareer_columns_head($defaults) {
+function ajh_columns_head($defaults) {
   $defaults['featured_image'] = 'Featured Image';
 return $defaults;
 }
-function cprmycareer_columns_content($column_name, $post_ID) {
+function ajh_columns_content($column_name, $post_ID) {
   if ($column_name == 'featured_image') {
-      $post_featured_image = cprmycareer_get_featured_image($post_ID);
+      $post_featured_image = ajh_get_featured_image($post_ID);
     if ($post_featured_image) {
         echo '<img src="' . $post_featured_image . '" />';
     }
   }
 }
-add_filter('manage_posts_columns', 'cprmycareer_columns_head');
-add_action('manage_posts_custom_column', 'cprmycareer_columns_content', 10, 2);
-add_filter('manage_pages_columns', 'cprmycareer_columns_head');
-add_action('manage_pages_custom_column', 'cprmycareer_columns_content', 10, 2);
-
+add_filter('manage_posts_columns', 'ajh_columns_head');
+add_action('manage_posts_custom_column', 'ajh_columns_content', 10, 2);
+add_filter('manage_pages_columns', 'ajh_columns_head');
+add_action('manage_pages_custom_column', 'ajh_columns_content', 10, 2);
 /* ---------------- WxH COLUMN IN MEDIA LIBRARY ----------------- */
 function wh_column( $cols ) {
   $cols["dimensions"] = "Dimensions (w, h)";
@@ -232,53 +195,39 @@ function wh_value( $column_name, $id ) {
 }
 add_filter( 'manage_media_columns', 'wh_column' );
 add_action( 'manage_media_custom_column', 'wh_value', 10, 2 );
-
 /* Add ID Column */
-add_filter( 'manage_posts_columns', 'revealid_add_id_column', 5 );
-add_action( 'manage_posts_custom_column', 'revealid_id_column_content', 5, 2 );
-add_filter( 'manage_pages_columns', 'revealid_add_id_column', 5 );
-add_action( 'manage_pages_custom_column', 'revealid_id_column_content', 5, 2 );
-function revealid_add_id_column( $columns ) {
+add_filter( 'manage_posts_columns', 'ajh_add_id_column', 5 );
+add_action( 'manage_posts_custom_column', 'ajh_id_column_content', 5, 2 );
+add_filter( 'manage_pages_columns', 'ajh_add_id_column', 5 );
+add_action( 'manage_pages_custom_column', 'ajh_id_column_content', 5, 2 );
+function ajh_add_id_column( $columns ) {
 	$checkbox = array_slice( $columns , 0, 1 );
 	$columns = array_slice( $columns , 1 );
-
-	$id['revealid_id'] = 'ID';
+	$id['ajh_id'] = 'ID';
 	
 	$columns = array_merge( $checkbox, $id, $columns );
 	return $columns;
 }
-function revealid_id_column_content( $column, $id ) {
-  if( 'revealid_id' == $column ) {
+function ajh_id_column_content( $column, $id ) {
+  if( 'ajh_id' == $column ) {
     echo $id;
   }
 }
-add_action('admin_head', 'cpr_admin_css');
-function cpr_admin_css() { 
+add_action('admin_head', 'ajh_admin_css');
+function ajh_admin_css() { 
 	echo '
   <style>  
-  	.widefat .column-revealid_id {width:2.5em;}
+  	.widefat .column-ajh_id {width:2.5em;}
   </style>
   ';
 }
-
-// Categorize Images
-/** Register taxonomy for images */
-function ajh_register_taxonomy_for_images() {
-    register_taxonomy_for_object_type( 'category', 'attachment' );
-}
-add_action( 'init', 'ajh_register_taxonomy_for_images' );
-
 // Custom Post Types
 require get_template_directory() . '/cpt/cpt.php';
-
 // Parse Youtube URL
 require get_template_directory() . '/inc/youtube-url.php';
-
 // Template Tags
 require get_template_directory() . '/inc/template-tags.php';
-
 // SVGs
 require get_template_directory() . '/inc/svg.php';
-
 // Admin Slug Column
 require get_template_directory() . '/inc/admin-slug-column.php';

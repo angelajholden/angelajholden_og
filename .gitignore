@@ -1,1 +1,6 @@
 google.txt
+node_modules
+.npm-debug.log
+tmp
+.sass-cache
+*.css.map

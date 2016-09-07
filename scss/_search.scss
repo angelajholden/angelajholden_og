@@ -5,8 +5,8 @@
 	display: block;
 	padding: 0;
 	margin: 2em auto 0;
-	@include box-sizing(border-box);
-	@include border-radius(0);
+	box-sizing: border-box;
+	border-radius: 0;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
@@ -17,7 +17,7 @@ input[type="search"].searchInput {
 	background: #555;
 	color: #eaeaea;
 	border: none;
-	@include border-radius(0);
+	border-radius: 0;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	&:hover, &:active, &:focus {
@@ -62,7 +62,7 @@ input[type="submit"].Image404 {
   width: 24%;
   float: right;
   border: 1px solid lighten($pink,5%);
-  @include border-radius(0);
+  border-radius: 0;
 }
 
 .error404 {
@@ -115,7 +115,7 @@ input[type="submit"].Image404 {
 			position: relative;
 			top: 5px;
 			fill: #777;
-			@include transition(all 0.3s ease);
+			transition: all 0.3s ease;
 			&:hover, &:active, &:focus {
 				fill: $pink;
 			}
@@ -169,7 +169,7 @@ input[type="submit"].Image404 {
 		border: none;
 		width: 60px;
 		height: 100%;
-		@include transition(all 0.3s ease);
+		transition: all 0.3s ease;
 		&:hover, &:active, &:focus {
 			background: lighten($pink,10%);
 			border: none;
