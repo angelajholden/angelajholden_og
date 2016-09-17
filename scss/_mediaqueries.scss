@@ -305,12 +305,15 @@
 	}
 
 	section.hero {
+		.wrap {
+			padding-bottom: 1em;
+		}
 		.headline {
-			font-size: 1.75em;
+			font-size: 2em;
 			//font-weight: 400;
 		}
 		p.lead {
-			font-size: 1.1em;
+			font-size: 1.25em;
 		}
 		a.contact-me,
 		a.questionnaire {
