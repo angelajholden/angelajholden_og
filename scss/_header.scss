@@ -3,6 +3,13 @@
 -------- Header --------
 ------------------------
 */
+.home {
+	.headerWrap {
+		background: rgba(#fff,0.85);
+		box-shadow: none;
+	}
+}
+
 .headerWrap {
 	background: #fff;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
@@ -44,6 +51,8 @@
 		font-size: 2.5em;
 		line-height: 1;
 		margin: 10px 0 0;
+		//color: #fff;
+		//text-shadow: 1px 1px 1px rgba(#000,0.25);
 		//text-align: left;
 		//display: inline-block;
 		//vertical-align: middle;
@@ -139,6 +148,8 @@
 
 .mainMenu a {
 	display: inline;
+	font-size: 0.85em;
+	text-transform: uppercase;
 	color: #333;
 	border-bottom: 2px solid transparent;
 	&:hover, &:active, &:focus {
