@@ -1284,10 +1284,12 @@ $a(document).ready(function() {
 
 	search.addEventListener("click", function(){
 		overlay.style.opacity = "1";
+		overlay.style.pointerEvents = "auto";
 	});
 
 	close.addEventListener("click", function(){
 		overlay.style.opacity = "0";
+		overlay.style.pointerEvents = "none";
 	});
 
 });

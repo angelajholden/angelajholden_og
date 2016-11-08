@@ -29,7 +29,7 @@
             </a>
           </header>
 
-          <a href="#" id="pull"><?php ajh_menu_icon(); ?></a>
+          <a id="pull"><?php ajh_menu_icon(); ?></a>
           <nav class="mobileMenu">
             <?php
               wp_nav_menu( array( 
@@ -43,7 +43,7 @@
 
           <nav class="mainMenu">
           	<ul class="search-menu">
-          		<li><a><?php ajh_search_icon(); ?></a></li>
+          		<li><a class="search"><?php ajh_search_icon(); ?></a></li>
           	</ul>
             <?php
               wp_nav_menu( array( 
@@ -57,7 +57,7 @@
 
           <div class="modalDialog">
 						<div>
-							<a class="close">&times;</a>
+							<a id="search" class="close">&times;</a>
 							<?php get_search_form(); ?>
 						</div>
 					</div>

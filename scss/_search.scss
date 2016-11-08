@@ -184,11 +184,6 @@ input[type="submit"].Image404 {
 	}
 }
 
-.modalDialog:target {
-	opacity:1;
-	pointer-events: auto;
-}
-
 .modalDialog > div {
 	width: 400px;
 	position: relative;
