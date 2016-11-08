@@ -1270,18 +1270,23 @@ $a(document).ready(function() {
   })
 
 	// Open Search Overlay
-	var search = document.querySelector(".search-menu li a");
+	var open = document.querySelector(".search-menu li a");
 	var overlay = document.querySelector(".modalDialog");
 	var close = document.querySelector("a.close");
+	var form = document.querySelector(".modalDialog .searchField");
 
-	search.addEventListener("click", function(){
+	open.addEventListener("click", function(){
 		overlay.style.opacity = "1";
 		overlay.style.pointerEvents = "auto";
+		close.style.pointerEvents = "auto";
+		form.style.pointerEvents = "auto";
 	});
 
 	close.addEventListener("click", function(){
 		overlay.style.opacity = "0";
 		overlay.style.pointerEvents = "none";
+		close.style.pointerEvents = "none";
+		form.style.pointerEvents = "none";
 	});
 
 });

@@ -147,7 +147,7 @@ input[type="submit"].Image404 {
 	.searchField {
 		margin: 0;
 		max-width: 100%;
-		pointer-events: auto;
+		pointer-events: none;
 	}
 	form.search-form {
 		position: relative;
@@ -204,7 +204,7 @@ a.close {
 	right: 0;
 	text-align: center;
 	text-decoration: none;
-	pointer-events: auto;
+	pointer-events: none;
 	cursor: pointer;
 }
 
