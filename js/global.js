@@ -1276,4 +1276,18 @@ $a(document).ready(function() {
     $a('html, body').animate({scrollTop: 0}, duration);
     return false;
   })
+
+	// Open Search Overlay
+	var search = document.querySelector(".search-menu li a");
+	var overlay = document.querySelector(".modalDialog");
+	var close = document.querySelector("a.close");
+
+	search.addEventListener("click", function(){
+		overlay.style.opacity = "1";
+	});
+
+	close.addEventListener("click", function(){
+		overlay.style.opacity = "0";
+	});
+
 });

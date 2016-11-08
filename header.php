@@ -43,7 +43,7 @@
 
           <nav class="mainMenu">
           	<ul class="search-menu">
-          		<li><a href="#search"><?php ajh_search_icon(); ?></a></li>
+          		<li><a><?php ajh_search_icon(); ?></a></li>
           	</ul>
             <?php
               wp_nav_menu( array( 
@@ -55,9 +55,9 @@
             ?>
           </nav>
 
-          <div id="search" class="modalDialog">
+          <div class="modalDialog">
 						<div>
-							<a href="#close" class="close">&times;</a>
+							<a class="close">&times;</a>
 							<?php get_search_form(); ?>
 						</div>
 					</div>
