@@ -32,7 +32,7 @@
 		          <?php echo parse_youtube_url($video,'embed'); ?>
 		        </figure>
 		    <?php } elseif (has_post_thumbnail()) { ?>
-		    	<figure class="project-img"><?php the_post_thumbnail('full', array('draggable' => 'false')); echo get_post(get_post_thumbnail_id())->post_excerpt; ?></figure>
+		    	<figure class="project-img"><?php the_post_thumbnail('services', array('draggable' => 'false')); echo get_post(get_post_thumbnail_id())->post_excerpt; ?></figure>
 		    <?php } ?>
 
 		    <?php if (get_post_meta(get_the_ID(), 'live_demo', true)) { ?>

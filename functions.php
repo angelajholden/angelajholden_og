@@ -13,6 +13,7 @@ if ( ! function_exists( 'ajh_setup' ) ) :
 		// Featured Images
 	  add_theme_support( 'post-thumbnails' );
 	  add_image_size( 'project', 1000, 563, array( 'center', 'top') );
+	  add_image_size( 'services', 1024, 330, true );
 	}
 endif; // ajh_setup
 add_action( 'after_setup_theme', 'ajh_setup' );
