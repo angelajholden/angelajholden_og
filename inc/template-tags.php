@@ -53,6 +53,12 @@ endif;
 if ( ! function_exists('ajh_social_profiles') ) :
 function ajh_social_profiles() { ?>
 	<ul class="social">
+		<li class="facebook">
+			<a href="//www.facebook.com/angelaholdendesign" title="Facebook" target="_blank">
+				<span class="fa fa-facebook"></span>
+				<span class="screen-reader-text">Facebook</span>
+			</a>
+		</li>
 		<li class="linkedin">
 			<a href="//www.linkedin.com/in/angelajholden" title="LinkedIn" target="_blank">
 				<span class="fa fa-linkedin"></span>
