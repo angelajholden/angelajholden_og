@@ -2,9 +2,6 @@
   <div class="wrap">
   	<article>
   		<h2>Skills & Services</h2>
-  		<p>
-  			<span>Web design is a broad field and many people specialize, or have an expertise. I work on the</span><span>front end of a website, which means I create a design, then I build it with HTML5, CSS and WordPress.</span><span>All of my work is responsive and optimized for tablets and mobile devices.</span>
-  		</p>
   	</article>
   	
     <div class="ajh-skills clearfix">
