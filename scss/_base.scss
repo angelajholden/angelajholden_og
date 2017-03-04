@@ -36,7 +36,7 @@ body {
 	font-weight: 300;
 	color: #555;
 	line-height: 1.75;
-	background: #fff;
+	background-color: #fff;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -46,10 +46,12 @@ body {
 
 body.home {
 	background-image: url(images/bg.jpg);
+	background-color: #000;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
+	height: 100vh;
 	&:before {
 		content: "";
 		background-color: rgba(#000,0.2);
