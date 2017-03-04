@@ -11,7 +11,7 @@
 		    <p class="completed">Completed <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F Y'); ?></time></p>
 		  </header>
 
-        <figure class="project-img"><?php the_post_thumbnail('full', array('draggable' => 'false')); ?></figure>
+        <figure class="project-img"><?php the_post_thumbnail('large', array('draggable' => 'false')); ?></figure>
 
         <?php if (get_post_meta(get_the_ID(), 'live_demo', true)) { ?>
 		      <p class="demo-button">

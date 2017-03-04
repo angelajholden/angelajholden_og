@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><?php wp_title(''); ?></title>
-    <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
+    <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.png">
 
     <?php if (is_search()) { ?>
       <meta name="robots" content="noindex, nofollow">
