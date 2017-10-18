@@ -11,7 +11,7 @@
 		    <a class="ajh-port" href="<?php the_permalink(); ?>">
 			    <article>
 			    	<h2><?php the_title(); ?></h2>
-			    	<p class="completed">Completed <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F Y'); ?></time></p>
+			    	<p class="completed"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F Y'); ?></time></p>
 			    	<figure class="project-img"><?php the_post_thumbnail('large'); ?>
 			    		<div class="overlay">
 				    		<div class="project-link">
