@@ -64,6 +64,8 @@ body.home {
 	@media (max-width: 1024px) {
 		background-position: top center;
 		background-size: 200%;
+		background-attachment: scroll;
+		height: auto;
 	}
 }
 
