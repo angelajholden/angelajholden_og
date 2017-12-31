@@ -1,5 +1,4 @@
 		    	<div id="contact"></div>
-
 		    	<section class="contact clearfix">
 		    		<div class="wrap">
 		    			<h2>Contact Me</h2>
@@ -8,23 +7,18 @@
 			  	  	<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 5 ); } ?>
 			  	  </div>
 		    	</section>
-
 		    <footer>
-
 		      <div class="wrap clearfix">
-
 		        <div class="ajh-footer">
 		          <a id="totop" href="<?php bloginfo('url'); ?>">
 		          	<figure class="logoSVGfooter"><?php ajh_logo(); ?></figure>
 		          </a>
 		          <p class="copyright"><?php echo date('Y'); ?> &copy; Angela Holden Design LLC</p>
 		        </div>
-
 		        <div class="ajh-footer">
 		          <?php ajh_social_profiles(); ?>
 		          <?php echo get_search_form(); ?>
 		        </div>
-
 		        <nav class="ajh-footer">
 		        	<h3>Side Projects</h3>
 		          <?php wp_nav_menu( array( 
@@ -35,11 +29,10 @@
 		            'depth'						=> '1'
 		          )); ?>
 		        </nav>
-
-		      </div><?php // End Footer Wrap ?>
+		      </div>
 		      <a href="#" class="scroll-top">↑</a>
 		    </footer>
-  		</div><?php // End .page-wrap ?>
+  		</div>
     <?php wp_footer(); ?>
   </body>
 </html>
