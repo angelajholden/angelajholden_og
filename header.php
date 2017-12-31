@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="robots" content="noindex, nofollow">
-    <?php if (is_home() || is_front_page()) : ?>
+    <?php if (is_front_page()) : ?>
     	<title><?php bloginfo('title'); ?> • <?php bloginfo('description'); ?></title>
   	<?php else : ?>
   		<title><?php bloginfo('title'); ?><?php single_post_title(' • '); ?></title>
     <?php endif; ?>
     <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.png">
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
     <?php wp_head(); ?>
     <?php if ( $_SERVER["SERVER_ADDR"] == '159.203.172.16' ) : ?>
 	    <!-- Global site tag (gtag.js) - Google Analytics -->
