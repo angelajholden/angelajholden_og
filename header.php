@@ -7,10 +7,8 @@
     <meta name="robots" content="noindex, nofollow">
     <?php if (is_home() || is_front_page()) : ?>
     	<title><?php bloginfo('title'); ?> • <?php bloginfo('description'); ?></title>
-    	<meta name="description" content="Frontend Developer and WordPress Web Designer">
   	<?php else : ?>
   		<title><?php bloginfo('title'); ?><?php single_post_title(' • '); ?></title>
-    	<meta name="description" content="<?php echo get_the_excerpt(); ?>">
     <?php endif; ?>
     <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.png">
     <!--[if lt IE 9]>
