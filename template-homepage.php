@@ -6,7 +6,7 @@ get_header(); the_post(); ?>
 
 	<section class="hero">
 		<div class="wrap">
-			<h1 class="headline">Frontend Development blah blah blah<br />&amp;WordPress Web Design</h1>
+			<h1 class="headline">Frontend Development<br />&amp;WordPress Web Design</h1>
 			<p><a class="contact-me" href="#contact">Contact Me</a><a class="questionnaire" href="<?php bloginfo('url'); ?>/projects/">View Projects</a></p>
 		</div>
 	</section>
