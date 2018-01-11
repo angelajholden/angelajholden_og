@@ -224,8 +224,12 @@
 		}
 	}
 
-	.reviews {
-		padding: 0;
+	.reviews { 
+		padding: 0 0 2em;
+		background-image: url(images/bg.jpg);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
 		p {
 			font-size: 0.95em;
 		}
