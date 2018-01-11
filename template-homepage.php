@@ -19,7 +19,7 @@ get_header(); the_post(); ?>
 			<div class="reviewbg">
 				<div class="wrap">
 					<h2>Front End Development</h2>
-					<p class="lead">I'm available for UI/UX and front end development work.<br />I can create the design and develop the front end code for any project.</p>
+					<p class="lead">I'm available for UI/UX and frontend development work.<br />I can create the design and develop the frontend code for any project.</p>
 			  </div>
 			</div>
 		</section>
