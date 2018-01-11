@@ -9,7 +9,7 @@
 
 		<p>This website has a <a href="<?php bloginfo('url'); ?>/projects/">portfolio of the projects</a> I’ve worked on. I love HTML, CSS and JavaScript, and I’m living the dream as a frontend developer. I work on a variety of projects in numerous industries, and I thoroughly enjoy the collaborative experience I have with my clients.</p>
 
-    <p>For more information about what I can do, please <a href="#contact">contact</a> me for a consultation. You can also review my <a href="<?php bloginfo('url') ?>/terms-conditions/">project terms</a>.</p>
+    <p>For more information about what I can do, please <a href="#contact">contact</a> me for a consultation.</p>
 
     <p>Cheers!</p>
 
