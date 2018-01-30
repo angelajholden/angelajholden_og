@@ -15,7 +15,6 @@
 				  	); wp_list_categories( $args ); ?>
 				  </ul>
 				</nav>
-		    <?php echo category_description(); ?>
 		  <?php elseif (is_tag()) : ?>
 		  	<h1>Posts Tagged: <?php single_tag_title(); ?></h1>
 		  <?php elseif (is_archive()) : ?>
@@ -23,22 +22,38 @@
 		  <?php endif; ?>
 	  </header>
 
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	  <hr />
 
-  		<article class="archivePost clearfix">
+	  <main class="content">
 
-        <h2 class="archiveTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-          <p class="postMeta">Category <span class="bullet">&bull;</span> <?php the_category(','); ?><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time></p>
+	  		<article <?php post_class('archivePost clearfix'); ?>>
 
-          <p class="excerpt"><?php echo get_the_excerpt(); ?>... <a class="read-more" href="<?php the_permalink(); ?>">Read More</a></p>
+					<?php if(has_post_thumbnail()) : ?>
+						<a class="feat-title-link" href="<?php the_permalink(); ?>">
+							<figure class="feat-img-post"><?php the_post_thumbnail(); ?></figure>
+						</a>
+					<?php else : ?>
+						<a class="feat-title-link" href="<?php the_permalink(); ?>">
+							<div class="feat-img-placeholder">
+								<div class="feat-title"><?php the_title(); ?></div>
+							</div>
+						</a>
+					<?php endif; ?>
 
-      </article>
+	        <h2 class="archiveTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-      <hr />
+	        <p class="postMeta">Category <span class="bullet">&bull;</span> <?php the_category(','); ?></p>
 
-		<?php endwhile; else : ?>
-		<?php endif; ?>
+	      </article>
+
+			<?php endwhile; else : ?>
+			<?php endif; ?>
+
+		</main>
+
+		<hr />
 
 		<?php the_posts_pagination( array(
 		  'mid_size' => 2,
