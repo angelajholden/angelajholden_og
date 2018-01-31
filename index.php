@@ -4,6 +4,7 @@
 
 	  <header>
 		  <h1><?php single_post_title(); ?></h1>
+				<?php /*
 				<nav>
 			  	<ul class="cat-nav">
 			  		<li><a href="<?php bloginfo('url') ?>/blog/">All Posts</a></li>
@@ -13,7 +14,7 @@
 				  		'use_desc_for_title' => 0
 				  	); wp_list_categories( $args ); ?>
 				  </ul>
-				</nav>
+				</nav> */ ?>
 	  </header>
 
 	  <hr />

@@ -5,6 +5,7 @@
 	  <header>
 		  <?php if (is_category()) : ?>
 		    <h1><?php single_cat_title(); ?></h1>
+		    <?php /*
   	  	<nav>
 			  	<ul class="cat-nav">
 			  		<li><a href="<?php bloginfo('url') ?>/blog/">All Posts</a></li>
@@ -14,7 +15,7 @@
 				  		'use_desc_for_title' => 0
 				  	); wp_list_categories( $args ); ?>
 				  </ul>
-				</nav>
+				</nav> */ ?>
 		  <?php elseif (is_tag()) : ?>
 		  	<h1>Posts Tagged: <?php single_tag_title(); ?></h1>
 		  <?php elseif (is_archive()) : ?>
