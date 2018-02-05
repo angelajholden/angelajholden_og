@@ -2,8 +2,10 @@
 		    	<section class="contact clearfix">
 		    		<div class="wrap">
 		    			<h2>Contact Me</h2>
+		    			<?php /*
 		    			<p class="details"><a href="mailto:info@angelajholden.com" target="_blank"><span class="fa fa-envelope"></span>info@angelajholden.com</a>
 		    				<a href="tel:+16127156284"><span class="fa fa-phone"></span>(612) 715-6284</a></p>
+		    				*/ ?>
 			  	  	<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 5 ); } ?>
 			  	  </div>
 		    	</section>
