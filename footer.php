@@ -22,7 +22,7 @@
 		          <?php echo get_search_form(); ?>
 		        </div>
 		        <nav class="ajh-footer">
-		        	<h3>Side Projects</h3>
+		        	<h3>Recent Projects</h3>
 		          <?php wp_nav_menu( array( 
 		            'name'            => 'Footer One',
 		            'theme_location'  => 'footer_one',
