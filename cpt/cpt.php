@@ -1,6 +1,5 @@
 <?php 
 
-	// HOMEPAGE
 	function custom_post_type_skills() {
 	    $labels = array(
 	    'name'               => 'Services',
@@ -24,12 +23,13 @@
 	    'exclude_from_search'		=> false,
 	    'show_ui'               => true,
 	    'show_in_nav_menus'			=> true,
-	    'show_in_menu'					=> 'edit.php?post_type=page',
+	    'show_in_rest'					=> true,
 	    'query_var'             => true,
 	    'rewrite'               => true,
 	    'capability_type'       => 'post',
 	    'has_archive'           => true,
 	    'hierarchical'          => false,
+	    'menu_icon'             => 'dashicons-coffee',
 	    'rewrite'               => array('slug' => 'services'),
 	    'supports'              => array('title', 'editor', 'custom-fields', 'author', 'excerpt', 'thumbnail'),
 	    'taxonomies'            => array('')
@@ -38,45 +38,6 @@
 	};
 	add_action('init', 'custom_post_type_skills');
 
-	// HOMEPAGE
-	function custom_post_type_reviews() {
-	    $labels = array(
-	    'name'               => 'Reviews',
-	    'singular_name'      => 'Review',
-	    'add_new'            => 'Add a Review',
-	    'add_new_item'       => 'Add New Review',
-	    'edit_item'          => 'Edit Review',
-	    'new_item'           => 'New Review',
-	    'view_item'          => 'View Review',
-	    'search_items'       => 'Search Reviews',
-	    'not_found'          => 'Nothing found',
-	    'not_found_in_trash' => 'Nothing found in Trash',
-	    'menu_name'          => 'Reviews',
-	    );
-
-	    $args = array(
-	    'labels'                => $labels,
-	    'public'                => true,
-	    'publicly_queryable'    => false,
-	    'exclude_from_search'		=> true,
-	    'show_ui'               => true,
-	    'show_in_nav_menus'			=> false,
-	    'show_in_menu'					=> 'edit.php?post_type=page',
-	    'query_var'             => true,
-	    'rewrite'               => true,
-	    'capability_type'       => 'post',
-	    'has_archive'           => false,
-	    'hierarchical'          => false,
-	    'menu_icon'             => 'dashicons-heart',
-	    'rewrite'               => array('slug' => ''),
-	    'supports'              => array('title', 'editor', 'excerpt', 'author'),
-	    'taxonomies'            => array('')
-	  );
-	  register_post_type( 'ajhreview' , $args );
-	};
-	add_action('init', 'custom_post_type_reviews');
-
-	// PROJECTS
 	function custom_post_type_projects() {
 	    $labels = array(
 	    'name'               => 'Projects',
@@ -100,7 +61,7 @@
 	    'exclude_from_search'		=> false,
 	    'show_ui'               => true,
 	    'show_in_nav_menus'			=> true,
-	    'show_in_menu'					=> 'edit.php?post_type=page',
+	    'show_in_rest'					=> true,
 	    'query_var'             => true,
 	    'rewrite'               => true,
 	    'capability_type'       => 'post',
