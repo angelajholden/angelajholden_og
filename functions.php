@@ -113,10 +113,10 @@ function ajh_logo_url() {
     return home_url();
   }
 add_filter( 'login_headerurl', 'ajh_logo_url' );
-function ajh_logo_url_title() {
-    return 'Angela J. Holden';
-  }
-add_filter( 'login_headertitle', 'ajh_logo_url_title' );
+// function ajh_logo_url_title() {
+//     return 'Angela J. Holden';
+//   }
+// add_filter( 'login_headertitle', 'ajh_logo_url_title' );
 /**
  * Disable the emoji's
  */
