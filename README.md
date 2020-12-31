@@ -14,7 +14,7 @@ I made my first commit in 2013 before I even had my first job as a developer.
 
 ### Many Iterations
 
-This is a custom WordPress theme that has been developed six-ways-from-Sunday over the last seven years. It is available for fork or clone for anyone who wants to use it.
+This is a custom WordPress theme that has been developed six-ways-from-Sunday over the last seven years. It is available to fork or clone for anyone who wants to use it.
 
 ```bash
 git clone git@github.com:angelajholden/angelajholden_v3.git
