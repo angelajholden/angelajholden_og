@@ -15,19 +15,21 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <div class="headerWrap">
+    <header class="headerWrap">
         <div class="mainHead">
 
-            <header class="headerContainer">
-                <a href="<?php bloginfo('url'); ?>">
-                    <div class="blogTitle"><?php bloginfo('name'); ?></div>
-                </a>
-            </header>
+            <div class="headerContainer">
+                <a class="blogTitle" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+            </div>
 
             <nav class="mainMenu">
                 <ul class="search-menu">
-                    <li><a class="search"><?php ajh_search_icon(); ?></a></li>
+                    <li>
+                        <a href="#" aria-label="Search this Site" class="search"><?php ajh_search_icon(); ?></a>
+                    </li>
                 </ul>
+
+                <a class="screen-reader-text" href="#skip-nav">Skip Navigation</a>
 
                 <button aria-label="Open Menu" id="menu-icon" class="menu_open">
                     <span class="line"></span>
@@ -47,9 +49,9 @@
         </div>
         <div class="modalDialog">
             <div>
-                <a id="search" class="close">&times;</a>
+                <a href="#" aria-label="Close the Search Form" id="search" class="close">&times;</a>
                 <?php get_search_form(); ?>
             </div>
         </div>
-    </div>
-    <div class="page-wrap">
+    </header>
+    <main id="skip-nav" class="page-wrap">

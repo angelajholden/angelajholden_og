@@ -35,7 +35,7 @@
 
 @media (max-width: 960px) {
 	.mainHead {
-		header {
+		.headerContainer {
 			margin: 0;
 		}
 	}
@@ -59,7 +59,7 @@
 	}
 
 	.single {
-		header {
+		.headerContainer {
 			margin: 0;
 		}
 
@@ -318,7 +318,7 @@
 }
 
 @media (max-width: 420px) {
-	.mainHead header .logoSVG {
+	.mainHead .headerContainer .logoSVG {
 		margin-right: 0;
 	}
 
