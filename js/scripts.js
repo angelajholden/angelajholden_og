@@ -1,5 +1,4 @@
 function openSearchOverlay() {
-	// Open Search Overlay
 	const open = document.querySelector(".search-menu");
 	const overlay = document.querySelector(".modalDialog");
 	const close = document.querySelector(".dialogClose");

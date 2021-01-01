@@ -15,6 +15,14 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+    <?php if (is_front_page()) : ?>
+    <figure class=bgImage>
+        <!-- placeholder value intentionally null; skipped by screen readers -->
+        <img src="<?php bloginfo('template_url'); ?>/images/bg.jpg" alt="">
+    </figure>
+    <?php endif; ?>
+
     <header class="headerWrap">
         <div class="mainHead">
 
@@ -50,4 +58,4 @@
             </div>
         </div>
     </header>
-    <main id="skip-nav" class="page-wrap">
+    <main id="skip-nav" class="pageWrap">
