@@ -4,6 +4,20 @@
 
 This is the third version of my first website.
 
+---
+
+### To Do:
+
+-   convert em --> rem
+-   convert floats --> flex-box
+-   cleanup `functions.php`
+-   need a homepage/banner image overlay
+-   fix homepage hero height
+-   need styles for homepage "reviews" section
+-   update grunt js
+
+---
+
 ### November 21, 2013
 
 I made my first commit in 2013 before I even had my first job as a developer.
