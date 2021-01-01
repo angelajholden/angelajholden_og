@@ -1,9 +1,9 @@
 function openSearchOverlay() {
 	// Open Search Overlay
-	const open = document.querySelector(".search-menu li a");
+	const open = document.querySelector(".search-menu");
 	const overlay = document.querySelector(".modalDialog");
-	const close = document.querySelector("a.close");
-	const form = document.querySelector(".modalDialog .searchField");
+	const close = document.querySelector(".dialogClose");
+	const form = document.querySelector(".searchField");
 
 	open.addEventListener("click", () => {
 		overlay.style.opacity = "1";

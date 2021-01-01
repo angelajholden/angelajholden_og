@@ -59,7 +59,7 @@
 		}
 	}
 
-	@media (max-width: 960px) {
+	@media (max-width: 420px) {
 		padding: 0.5rem 1rem;
 	}
 }
@@ -69,6 +69,8 @@
 ------ Navigation ------
 ------------------------
 */
+button.dialogClose,
+button.search-menu,
 button.menu_open {
 	appearance: none;
 	border: none;
@@ -83,7 +85,7 @@ button.menu_open {
 	background-color: #555;
 	border-radius: 50vh;
 	transform: rotateZ(0) translate(0, 0);
-	transition: all 325ms ease;
+	transition: all 350ms ease;
 
 	&:nth-of-type(1) {
 		width: 75%;
@@ -140,32 +142,27 @@ button.menu_open {
 .mainMenu {
 	display: flex;
 	justify-content: flex-end;
-	align-items: flex-end;
+	align-items: center;
 
-	ul.menu {
+	.menu {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 		font-size: 1.2em;
 		text-align: right;
+	}
 
-		li {
-			position: relative;
-			display: inline-block;
-			margin: 0 0 0 16px;
-			padding: 0;
+	li {
+		position: relative;
+		display: inline-block;
+		margin: 0 0 0 16px;
+		padding: 0;
+	}
 
-			@media (max-width: 960px) {
-				display: block;
-				margin: 0;
-			}
+	@media (max-width: 960px) {
+		align-items: flex-start;
 
-			&:hover > a {
-				border-bottom: 2px solid $pink;
-			}
-		}
-
-		@media (max-width: 960px) {
+		.menu {
 			position: fixed;
 			top: 0;
 			right: -300px;
@@ -180,40 +177,47 @@ button.menu_open {
 				right: 0;
 				border-left: 2px solid $pink;
 			}
+		}
 
-			li:hover > a {
-				border-bottom: none;
+		li {
+			display: block;
+			margin: 0;
+
+			&:first-of-type a {
+				border-top: 1px solid #eaeaea;
 			}
 		}
-	}
-
-	& .search-menu li:hover > a {
-		border-bottom: 2px solid transparent;
-	}
-
-	@media (max-width: 960px) {
-		align-items: flex-start;
 	}
 }
 
 .mainMenu a {
 	display: inline;
-	font-size: 0.85em;
+	font-size: 0.9rem;
 	text-transform: uppercase;
+	letter-spacing: 1px;
 	color: #333;
+	background-color: transparent;
 	border-bottom: 2px solid transparent;
+	transition: all 300ms ease;
 
 	&:hover,
 	&:active {
-		color: #333;
 		border-bottom: 2px solid $pink;
 	}
 
 	@media (max-width: 960px) {
 		display: block;
 		padding: 0.5rem 1rem;
-		border-bottom: none;
-		color: $pink;
+		background-color: rgba(#fff, 0.5);
+		border-bottom: 1px solid #eaeaea;
+		color: #333;
+
+		&:hover,
+		&:active {
+			color: #fff;
+			background-color: $pink;
+			border-bottom: 1px solid darken($pink, 5%);
+		}
 	}
 }
 
@@ -226,7 +230,8 @@ button.menu_open {
 
 	@media (max-width: 960px) {
 		display: block;
-		border-bottom: none;
-		color: $pink;
+		color: #fff;
+		background-color: $pink;
+		border-bottom: 1px solid darken($pink, 5%);
 	}
 }

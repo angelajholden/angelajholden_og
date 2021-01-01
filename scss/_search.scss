@@ -123,10 +123,6 @@ input[type="submit"].Image404 {
 		list-style-type: none;
 		z-index: 1;
 
-		li {
-			margin: 0;
-		}
-
 		svg {
 			width: 20px;
 			height: 20px;
@@ -139,19 +135,6 @@ input[type="submit"].Image404 {
 			&:active,
 			&:focus {
 				fill: $pink;
-			}
-		}
-
-		a {
-			padding: 0;
-			color: #777;
-			cursor: pointer;
-
-			&:hover,
-			&:active,
-			&:focus {
-				color: $pink;
-				border-bottom: 2px solid transparent;
 			}
 		}
 
@@ -168,10 +151,8 @@ input[type="submit"].Image404 {
 	bottom: 0;
 	left: 0;
 	background: rgba(0, 0, 0, 0.8);
-	z-index: 99999;
+	z-index: 1;
 	opacity: 0;
-	-webkit-transition: opacity 300ms ease-in;
-	-moz-transition: opacity 300ms ease-in;
 	transition: opacity 300ms ease-in;
 	pointer-events: none;
 
@@ -181,7 +162,7 @@ input[type="submit"].Image404 {
 		pointer-events: none;
 	}
 
-	form.search-form {
+	.search-form {
 		position: relative;
 	}
 
@@ -193,7 +174,7 @@ input[type="submit"].Image404 {
 		color: #777;
 	}
 
-	label.searchImage {
+	.searchImage {
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -215,22 +196,23 @@ input[type="submit"].Image404 {
 		}
 
 		svg {
-			top: 15px;
+			top: 12px;
 			left: 18px;
 			fill: #fff;
 		}
 	}
 }
 
-.modalDialog > div {
-	width: 400px;
+.modalDialog > .dialog {
+	max-width: 400px;
 	position: relative;
 	margin: 10% auto;
-	padding: 5em 2.5em 2.5em;
+	padding: 5em 1em 2.5em;
 	background: transparent;
 }
 
-a.close {
+.dialogClose {
+	display: block;
 	background: transparent;
 	color: #fff;
 	font-size: 4em;
@@ -239,13 +221,13 @@ a.close {
 	line-height: 38px;
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 1rem;
 	text-align: center;
 	text-decoration: none;
 	pointer-events: none;
-	cursor: pointer;
-}
 
-a.close:hover {
-	color: #fff;
+	&:hover,
+	&:active {
+		color: #fff;
+	}
 }

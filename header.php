@@ -23,11 +23,7 @@
             </div>
 
             <nav class="mainMenu">
-                <ul class="search-menu">
-                    <li>
-                        <a href="#" aria-label="Search this Site" class="search"><?php ajh_search_icon(); ?></a>
-                    </li>
-                </ul>
+                <button class="search-menu" aria-label="Search this Site"><?php ajh_search_icon(); ?></button>
 
                 <a class="screen-reader-text" href="#skip-nav">Skip Navigation</a>
 
@@ -48,8 +44,8 @@
             </nav>
         </div>
         <div class="modalDialog">
-            <div>
-                <a href="#" aria-label="Close the Search Form" id="search" class="close">&times;</a>
+            <div class="dialog">
+                <button aria-label="Close the Search Form" id="search" class="dialogClose">&times;</button>
                 <?php get_search_form(); ?>
             </div>
         </div>

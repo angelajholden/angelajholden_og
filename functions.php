@@ -1,4 +1,5 @@
 <?php 
+
 if ( ! function_exists( 'ajh_setup' ) ) :
 	function ajh_setup() {
 		// Main Nav
@@ -18,7 +19,7 @@ if ( ! function_exists( 'ajh_setup' ) ) :
 endif; // ajh_setup
 add_action( 'after_setup_theme', 'ajh_setup' );
 
-// Load jQuery
+// Load Styles & Scripts
 if (!is_admin()) {
 function ajh_enqueue_scripts_styles() {
   // Styles
@@ -26,7 +27,7 @@ function ajh_enqueue_scripts_styles() {
 	wp_enqueue_style( 'web-fonts', "//fonts.googleapis.com/css?family=Open+Sans:400italic,300italic,400,300,600" );
 	wp_enqueue_style( 'main-styles', get_stylesheet_directory_uri() . "/compiled/style.css" );
 
-  // Base JS
+  // Vanilla JS
   wp_register_script('base', get_stylesheet_directory_uri() . "/compiled/base.min.js");
   wp_enqueue_script('base');
 	}
