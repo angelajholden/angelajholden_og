@@ -169,11 +169,16 @@ button.menu_open {
 			height: 100vh;
 			padding-top: 5rem;
 			text-align: left;
-			background-color: #f8f8f8;
+			background: url(images/symphony.png) repeat top left;
 			transition: right 300ms ease;
 
 			&.active {
 				right: 0;
+				border-left: 2px solid $pink;
+			}
+
+			li:hover > a {
+				border-bottom: none;
 			}
 		}
 	}
