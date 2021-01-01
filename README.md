@@ -8,13 +8,20 @@ This is the third version of my first website.
 
 ### To Do:
 
--   convert em --> rem
--   convert floats --> flex-box
--   cleanup `functions.php`
--   need a homepage/banner image overlay
--   fix homepage hero height
--   need styles for homepage "reviews" section
--   update grunt js
+-   [x] restyle mobile navigation
+-   [x] cleanup scss files
+-   [x] remove jQuery
+-   [x] remove old JS file
+-   [x] rewrite jQuery as vanilla JavaScript
+-   [x] redo search icon/button
+-   [x] restyle homepage/banner image
+-   [ ] convert em --> rem
+-   [ ] convert floats --> flex-box
+-   [ ] cleanup `functions.php`
+-   [ ] need a homepage/banner image overlay
+-   [ ] fix homepage hero height
+-   [ ] need styles for homepage "reviews" section
+-   [ ] update grunt js
 
 ---
 
