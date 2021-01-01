@@ -2,7 +2,7 @@
 
 ## A custom WordPress theme and portfolio.
 
-This is the third version of my first website.
+This is the ~~third~~ fourth version of my first website.
 
 ---
 
@@ -22,6 +22,7 @@ This is the third version of my first website.
 -   [ ] fix homepage hero height
 -   [ ] need styles for homepage "reviews" section
 -   [ ] update grunt js
+-   [ ] rename git repo
 
 ---
 
