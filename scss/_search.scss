@@ -20,6 +20,7 @@ input[type="search"].searchInput {
 	border-radius: 0;
 	-webkit-appearance: none;
 	-moz-appearance: none;
+
 	&:hover,
 	&:active,
 	&:focus {
@@ -37,11 +38,13 @@ input[type="search"].searchInput {
 	width: 25px;
 	height: auto;
 	cursor: pointer;
+
 	input[type="submit"] {
 		padding: 0;
 		background: transparent;
 		font-size: 0;
 	}
+
 	svg {
 		position: absolute;
 		top: 0;
@@ -71,6 +74,7 @@ input[type="submit"].Image404 {
 	.widget.widget_archive {
 		margin-bottom: 2em;
 	}
+
 	#archives-dropdown--1 {
 		border: 1px solid #ccc;
 		padding: 10px;
@@ -78,6 +82,7 @@ input[type="submit"].Image404 {
 		max-width: 250px;
 		outline: none;
 	}
+
 	.widget {
 		width: 50%;
 		float: left;
@@ -95,11 +100,13 @@ input[type="submit"].Image404 {
 .tagcloud {
 	a {
 		font-size: 1em !important;
+
 		&:after {
 			content: "•";
 			color: #ccc;
 			margin-left: 5px;
 		}
+
 		&:last-child:after {
 			content: "";
 		}
@@ -127,12 +134,14 @@ input[type="submit"].Image404 {
 			top: 5px;
 			fill: #555;
 			transition: all 0.3s ease;
+
 			&:hover,
 			&:active,
 			&:focus {
 				fill: $pink;
 			}
 		}
+
 		a {
 			padding: 0;
 			color: #777;
@@ -165,14 +174,17 @@ input[type="submit"].Image404 {
 	-moz-transition: opacity 300ms ease-in;
 	transition: opacity 300ms ease-in;
 	pointer-events: none;
+
 	.searchField {
 		margin: 0;
 		max-width: 100%;
 		pointer-events: none;
 	}
+
 	form.search-form {
 		position: relative;
 	}
+
 	input[type="search"] {
 		width: 100%;
 		padding: 1em;
@@ -180,6 +192,7 @@ input[type="submit"].Image404 {
 		border: none;
 		color: #777;
 	}
+
 	label.searchImage {
 		position: absolute;
 		top: 0;
@@ -193,12 +206,14 @@ input[type="submit"].Image404 {
 		width: 60px;
 		height: 100%;
 		transition: all 0.3s ease;
+
 		&:hover,
 		&:active,
 		&:focus {
 			background: lighten($pink, 10%);
 			border: none;
 		}
+
 		svg {
 			top: 15px;
 			left: 18px;

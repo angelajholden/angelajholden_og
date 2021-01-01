@@ -3,13 +3,16 @@
 .aboutMe {
 	background: #fff;
 	background-size: contain;
+
 	img.about-img {
 		width: 250px;
 		margin: 0 auto;
 		border-radius: 50%;
 	}
+
 	p {
 		margin-top: 0;
+
 		.first-hi {
 			font-size: 3em;
 			font-weight: 300;
@@ -19,6 +22,7 @@
 			margin-right: 10px;
 		}
 	}
+
 	.signature {
 		width: 145px;
 		float: none;
@@ -30,6 +34,7 @@
 footer {
 	background: #333;
 	color: #eaeaea;
+
 	.copyright {
 		font-weight: 300;
 		text-align: center;
@@ -42,24 +47,31 @@ footer {
 	width: 33.333%;
 	float: left;
 	text-align: center;
+
 	#totop {
 		display: inline-block;
 	}
+
 	img {
 		width: 100px;
 		height: auto;
 		display: block;
 		margin: 0 auto;
 	}
+
 	h3 {
 		color: #eaeaea;
 		font-weight: 300;
 		font-size: 1.25em;
 		margin-bottom: 0.5em;
 	}
+
 	a {
 		color: #eaeaea;
-		&:active, &:hover, &:focus {
+
+		&:active,
+		&:hover,
+		&:focus {
 			color: #999;
 		}
 	}
@@ -76,9 +88,11 @@ footer {
 	margin: 1em 0 0;
 	padding: 0;
 	text-align: center;
+
 	li {
 		display: inline-block;
 	}
+
 	span {
 		width: 40px;
 		height: 40px;
@@ -89,44 +103,59 @@ footer {
 		border-radius: 50%;
 		margin: 2px;
 		transition: all 0.3s ease;
-		&:hover, &:active, &:focus {
+
+		&:hover,
+		&:active,
+		&:focus {
 			color: #eaeaea;
 		}
 	}
 }
 
 .facebook span {
-	&:hover, &:active, &:focus {
+	&:hover,
+	&:active,
+	&:focus {
 		background: $facebook;
 	}
 }
 
 .instagram span {
-	&:hover, &:active, &:focus {
+	&:hover,
+	&:active,
+	&:focus {
 		background: $instagram;
 	}
 }
 
 .linkedin span {
-	&:hover, &:active, &:focus {
+	&:hover,
+	&:active,
+	&:focus {
 		background: $linkedin;
 	}
 }
 
 .github span {
-	&:hover, &:active, &:focus {
+	&:hover,
+	&:active,
+	&:focus {
 		background: $github;
 	}
 }
 
 .google span {
-	&:hover, &:active, &:focus {
+	&:hover,
+	&:active,
+	&:focus {
 		background: $google;
 	}
 }
 
 .pinterest span {
-	&:hover, &:active, &:focus {
+	&:hover,
+	&:active,
+	&:focus {
 		background: $pinterest;
 	}
 }
@@ -134,31 +163,33 @@ footer {
 .logoSVGfooter {
 	width: 100px;
 	height: 112px;
+
 	svg {
 		width: 100px;
 		height: 112px;
 	}
 }
- 
+
 .scroll-top {
-  display: none;
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  width: 3.2rem;
-  height: 3.2rem;
-  line-height: 2.25;
-  font-size: 1.4rem;
-  color: #fff;
-  background: lighten($pink,10%);
-  opacity: 0.8;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  z-index: 1;
-  &:hover {
-  	opacity: 1;
-  	text-decoration: none;
-  	color: #fff;
-  }
+	display: none;
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	width: 3.2rem;
+	height: 3.2rem;
+	line-height: 2.25;
+	font-size: 1.4rem;
+	color: #fff;
+	background: lighten($pink, 10%);
+	opacity: 0.8;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	z-index: 1;
+
+	&:hover {
+		opacity: 1;
+		text-decoration: none;
+		color: #fff;
+	}
 }

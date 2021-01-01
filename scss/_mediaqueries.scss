@@ -22,9 +22,11 @@
 	.home .banner {
 		background-position: center center;
 	}
+
 	video#bgvideo {
 		display: none;
 	}
+
 	.accepting {
 		background: $pink;
 		font-size: 1em;
@@ -40,6 +42,7 @@
 
 	section.hero {
 		padding: 0;
+
 		.headline {
 			font-size: 3em;
 		}
@@ -59,6 +62,7 @@
 		header {
 			margin: 0;
 		}
+
 		h1 {
 			font-size: 2.25em;
 			line-height: 1.25;
@@ -96,17 +100,22 @@
 
 	.ajh-skills {
 		margin-top: 3em;
+
 		aside {
 			width: 49%;
+
 			&:nth-child(3) {
 				margin-right: 1%;
 			}
+
 			&:nth-child(4) {
 				clear: none;
 			}
+
 			&:nth-child(even) {
 				margin-right: 0;
 			}
+
 			&:nth-child(odd) {
 				clear: both;
 			}
@@ -125,12 +134,15 @@
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
+
 		p {
 			font-size: 0.95em;
 		}
+
 		.rslides {
 			padding: 0 0 3em;
 		}
+
 		.rslides_tabs {
 			bottom: 1em;
 		}
@@ -151,6 +163,7 @@
 			float: none;
 			padding: 0;
 		}
+
 		.submit-wrap,
 		.textarea-wrap {
 			padding: 0;
@@ -177,6 +190,7 @@
 	.ajh-port {
 		width: 100%;
 		float: none;
+
 		&:nth-child(even) {
 			margin-right: 0;
 		}
@@ -191,10 +205,12 @@
 @media (max-width: 600px) {
 	blockquote {
 		padding: 0 1em;
+
 		&:before {
 			content: "";
 			display: none;
 		}
+
 		p {
 			font-size: 1em;
 			line-height: 1.75;
@@ -205,12 +221,15 @@
 		.wrap {
 			padding-bottom: 1em;
 		}
+
 		.headline {
 			font-size: 2em;
 		}
+
 		p.lead {
 			font-size: 1.25em;
 		}
+
 		a.contact-me,
 		a.questionnaire {
 			display: block;
@@ -227,9 +246,11 @@
 		.banner {
 			height: 200px;
 		}
+
 		.page-title {
 			padding: 1em 0;
 		}
+
 		.page-desc {
 			display: none;
 		}
@@ -239,6 +260,7 @@
 		display: block;
 		max-width: 300px;
 		margin: 0.5em auto 0;
+
 		a {
 			margin: 0;
 			display: block;
@@ -252,6 +274,7 @@
 		float: none;
 		text-align: center;
 		margin: 0;
+
 		img {
 			display: block;
 			width: 75px;
@@ -286,6 +309,7 @@
 			margin-right: 0;
 			margin-bottom: 15%;
 			padding: 0 5% 5%;
+
 			&:nth-child(3) {
 				margin-right: 0;
 			}
@@ -311,6 +335,7 @@
 
 	.demo-button {
 		margin: 0.5em 0 0;
+
 		a {
 			display: block;
 			margin-bottom: 0.5em;

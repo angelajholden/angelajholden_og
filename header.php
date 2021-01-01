@@ -14,11 +14,11 @@
     <?php wp_head(); ?>
 </head>
 
-<body id="top" <?php body_class('animated fadeIn'); ?>>
+<body <?php body_class(); ?>>
     <div class="headerWrap">
         <div class="mainHead">
 
-            <header class="headerContainer clearfix">
+            <header class="headerContainer">
                 <a href="<?php bloginfo('url'); ?>">
                     <div class="blogTitle"><?php bloginfo('name'); ?></div>
                 </a>

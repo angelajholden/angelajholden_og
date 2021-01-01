@@ -69,33 +69,35 @@
 ------ Navigation ------
 ------------------------
 */
-.line {
-	display: block;
-	height: 3px;
-	margin: 5px 0;
-	background-color: #333;
-	border-radius: 50vh;
-	transform: rotateZ(0) translate(0, 0);
-	transition: all 350ms ease;
-
-	&:nth-of-type(1) {
-		width: 50%;
-	}
-
-	&:nth-of-type(2) {
-		width: 75%;
-	}
-
-	&:nth-of-type(3) {
-		width: 100%;
-	}
-}
-
 button.menu_open {
 	appearance: none;
 	border: none;
 	background: none;
 	padding: 0;
+}
+
+.line {
+	display: block;
+	height: 3px;
+	margin: 5px 0;
+	background-color: #555;
+	border-radius: 50vh;
+	transform: rotateZ(0) translate(0, 0);
+	transition: all 325ms ease;
+
+	&:nth-of-type(1) {
+		width: 75%;
+		margin-left: 25%;
+	}
+
+	&:nth-of-type(2) {
+		width: 100%;
+	}
+
+	&:nth-of-type(3) {
+		width: 75%;
+		margin-left: 25%;
+	}
 }
 
 .menu_open {
@@ -107,15 +109,17 @@ button.menu_open {
 
 	&:hover > .line {
 		width: 100%;
+		margin-left: 0;
 	}
 
 	&:active > .line,
 	&.clicked > .line {
+		width: 100%;
+		margin-left: 0;
 		background-color: $pink;
 		pointer-events: none;
 
 		&:nth-of-type(1) {
-			width: 100%;
 			transform: rotateZ(45deg) translate(6px, 5.667px);
 		}
 

@@ -4,7 +4,7 @@ img {
 	height: auto;
 	display: block;
 	border: 0;
-	box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 img.signature {
@@ -12,7 +12,7 @@ img.signature {
 }
 
 /* Videos */
-h2+.fitvids {
+h2 + .fitvids {
 	margin-top: 1.5em;
 }
 
@@ -41,7 +41,8 @@ h2+.fitvids {
 	margin: 0 1em 1em 0;
 }
 
-.alignnone {}
+.alignnone {
+}
 
 .aligncenter {
 	display: block;
