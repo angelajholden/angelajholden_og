@@ -1,6 +1,7 @@
 .DS_store
 .revision
 google.txt
+assets
 node_modules
 .npm-debug.log
 tmp

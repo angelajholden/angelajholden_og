@@ -1,5 +1,4 @@
 @media (max-width: 1366px) {
-
 	.home .banner {
 		background-position: bottom -80px center;
 	}
@@ -33,13 +32,11 @@
 }
 
 @media (max-width: 960px) {
-
 	.headerWrap {
 		position: relative;
 	}
 
 	.mainHead {
-		padding-bottom: 0;
 		header {
 			margin: 0;
 		}
@@ -54,102 +51,6 @@
 
 	.page-wrap {
 		top: 0;
-	}
-
-	.mainMenu {
-		display: none;
-	}
-
-	.mobileMenu {
-		display: block;
-		width: auto;
-		float: none;
-		margin-top: 4em;
-		margin-left: -1em;
-		margin-right: -1em;
-		background: url(images/symphony.png);
-		// Top Level
-	  ul {
-			display: none;
-			margin: 0;
-			padding: 0.5em 0;
-			border-top: 1px solid #eaeaea;
-			text-align: right;
-			li {
-				display: block;
-				margin: 0 1.5em 0 0;
-				&:hover > a {
-					border-bottom: none;
-				}
-				&.menu-item-has-children:after {
-					content: "";
-					display: none;
-				}
-				&.menu-item-has-children > a:after {
-					content: "";
-					display: inline-block;
-					vertical-align: middle;
-					width: 5px;
-					height: 5px;
-					border-top: 5px solid $pink;
-					border-left: 5px solid transparent;
-					border-right: 5px solid transparent;
-					margin-left: 5px;
-					margin-right: -15px;
-				}
-			}
-		}
-		// Second Level
-		ul ul {
-			display: none;
-			position: static;
-			width: auto;
-			background: none;
-			border: none;
-			box-shadow: none;
-			padding: 0;
-			li {
-				margin: 0;
-				a {
-					&:hover, &:active, &:focus {
-						border-bottom: none;
-					}
-				}
-			}
-		}
-		a {
-			display: inline-block;
-			padding-right: 0;
-			padding-bottom: 0;
-			margin: 2px 0;
-			border-bottom: none;
-			color: #555;
-			font-weight: 400;
-			&:hover, &:active, &:focus {
-				border-bottom: none;
-				color: $pink;
-			}
-		}
-	}
-
-	.single-ajhskill .mobileMenu .menu-item-object-ajhskill > a,
-	.single-ajhproject .mobileMenu .menu-item-object-ajhproject > a,
-	.single-post .mobileMenu .current_page_parent > a,
-	.mobileMenu .current-menu-item > a,
-	.mobileMenu .current-menu-parent > a {
-		border-bottom: none;
-		color: $pink;
-	}
-
-	.mainHead a#pull {
-		display: block;
-		width: auto;
-		float: right;
-		text-align: right;
-	  text-decoration: none;
-	  border-bottom: none;
-	  margin-top: 1em;
-	  margin-right: 0;
 	}
 
 	.skills article p {
@@ -177,11 +78,9 @@
 	#contact {
 		top: 0;
 	}
-
 }
 
 @media (max-width: 768px) {
-
 	p {
 		font-size: 0.95em;
 		line-height: 1.75;
@@ -224,7 +123,7 @@
 		}
 	}
 
-	.reviews { 
+	.reviews {
 		padding: 0 0 2em;
 		background-image: url(images/bg.jpg);
 		background-position: center center;
@@ -291,11 +190,9 @@
 		width: 100%;
 		float: none;
 	}
-
 }
 
 @media (max-width: 600px) {
-
 	blockquote {
 		padding: 0 1em;
 		&:before {
@@ -314,7 +211,6 @@
 		}
 		.headline {
 			font-size: 2em;
-			//font-weight: 400;
 		}
 		p.lead {
 			font-size: 1.25em;
@@ -399,21 +295,13 @@
 			}
 		}
 	}
-
-}
-
-@media (max-width: 460px) {
-	.reviews {
-		//height: 35em;
-	}
 }
 
 @media (max-width: 420px) {
-
 	.mainHead header .logoSVG {
 		margin-right: 0;
 	}
-	
+
 	.mainHead .blogTitle {
 		font-size: 2.25em;
 	}
@@ -443,6 +331,6 @@
 @media (max-width: 360px) {
 	.mainHead .blogTitle {
 		font-size: 1.75em;
-		margin: 15px 0 0;
+		margin: 0;
 	}
 }
