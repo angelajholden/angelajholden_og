@@ -18,6 +18,7 @@ body {
 	position: relative;
 	font-family: "Open Sans", sans-serif;
 	font-size: 100%;
+	font-weight: 300;
 	color: #555;
 	line-height: 1.75;
 	background-color: #fff;
@@ -46,16 +47,24 @@ body {
 	top: 70px;
 }
 
+.wrap {
+	max-width: 1020px;
+	margin: 0 auto;
+	padding: 5em 1em;
+}
+
 .home {
 	.pageWrap {
 		top: 0;
 	}
 }
 
-.wrap {
-	max-width: 1020px;
-	margin: 0 auto;
-	padding: 5em 1em;
+.hero {
+	@media (max-width: 960px) {
+		.wrap {
+			padding: 8rem 1rem 4rem;
+		}
+	}
 }
 
 /* 
@@ -772,5 +781,22 @@ main.content {
 		.project-link {
 			font-size: 2.5em;
 		}
+	}
+}
+
+.reviews {
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(#000, 0.2);
+
+	.wrap {
+		max-width: 768px;
+	}
+
+	h2 {
+		font-size: 3rem;
+	}
+
+	p {
+		font-size: 1.25rem;
 	}
 }
