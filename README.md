@@ -22,7 +22,7 @@ This is the ~~third~~ fourth version of my first website.
 -   [x] fix homepage hero height
 -   [x] styles for homepage "reviews" section
 -   [ ] update grunt js
--   [ ] rename git repo
+-   [x] rename git repo
 
 ---
 
@@ -39,7 +39,7 @@ I made my first commit in 2013 before I even had my first job as a developer.
 This is a custom WordPress theme that has been developed six-ways-from-Sunday over the last seven years. It is available to fork or clone for anyone who wants to use it.
 
 ```bash
-git clone git@github.com:angelajholden/angelajholden_v3.git
+git clone git@github.com:angelajholden/angelajholden_og.git
 ```
 
 Cheers! :two_hearts:  
